@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Class: Misunderstandings</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;1,400&family=Overpass+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<!--
+LESSON-META
+track: podcast_business
+title: "Misunderstandings"
+series: "BBC Learning English: Office English"
+level: B1
+vocabulary_focus: "clarifying instructions, checking understanding, and resolving miscommunication at work"
+theme: "crossed wires, static on the line"
+date: 2026-10-06
+source_url: "https://www.bbc.co.uk/learningenglish/english/features/office-english/250428"
+-->
+<style>
+  :root{
+    --ink: #241b2f;
+    --paper: #faf6f2;
+    --cream: #efe3e9;
+    --rule: #b79cc9;
+    --accent: #8c5e8a;
+    --accent2: #5c6f9c;
+    --gold: #d98e3f;
+    --highlight-vocab: #fbe8b5;
+    --highlight-idiom: #d9c6ea;
+    --highlight-express: #f3cfa0;
+    --correct: #2e7d4f;
+    --wrong: #b23a3a;
+    --light-correct: #e3f3e8;
+    --light-wrong: #fbe5e5;
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin:0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.65;
+    padding-bottom: 60px;
+  }
+
+  .wrap{ max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+  /* MASTHEAD */
+  .masthead{
+    position: relative;
+    background:
+      repeating-linear-gradient(115deg, rgba(140,94,138,0.07) 0px, rgba(140,94,138,0.07) 1px, transparent 1px, transparent 34px),
+      repeating-linear-gradient(25deg, rgba(92,111,156,0.07) 0px, rgba(92,111,156,0.07) 1px, transparent 1px, transparent 34px),
+      linear-gradient(160deg, #f1e4ec 0%, var(--paper) 62%);
+    border-bottom: 1px solid var(--rule);
+    padding: 32px 0 22px;
+    overflow: hidden;
+  }
+  .eyebrow{
+    font-family: 'Overpass Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 10px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .eyebrow::before{ content:"🔀"; font-size: 0.8rem; }
+  h1.headline{
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 800;
+    font-size: clamp(1.7rem, 4.6vw, 2.5rem);
+    line-height: 1.15;
+    margin: 0 0 12px;
+    color: var(--ink);
+  }
+  .deck{
+    font-size: 1.05rem;
+    color: #4a3d52;
+    margin: 0 0 18px;
+    max-width: 640px;
+  }
+  .facts-row{
+    display:flex; flex-wrap:wrap; gap: 10px;
+  }
+  .fact-chip{
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 0.76rem;
+    display:flex; align-items:center; gap:6px;
+    color: var(--ink);
+  }
+  .fact-chip a{ color: var(--accent); text-decoration: none; font-weight: 600; }
+  .fact-chip a:hover{ text-decoration: underline; }
+
+  /* TABS */
+  .tabnav{
+    display:flex;
+    max-width: 860px;
+    margin: 0 auto;
+    background: #ffffff;
+    position: sticky; top:0; z-index: 50;
+    border-bottom: 1px solid var(--rule);
+    box-shadow: 0 2px 8px rgba(36,27,47,0.08);
+  }
+  .tabbtn{
+    flex:1;
+    background: transparent;
+    color: #7a6f82;
+    border:none;
+    padding: 14px 6px;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 0.76rem;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.15s;
+  }
+  .tabbtn:hover{ background: #f7eff4; }
+  .tabbtn.active{
+    color: var(--accent);
+    border-bottom: 3px solid var(--accent);
+    font-weight: 600;
+  }
+
+  .tabpanel{ display:none; padding: 28px 0 10px; }
+  .tabpanel.active{ display:block; }
+
+  /* LEGEND */
+  .legend{
+    display:flex; flex-wrap:wrap; gap: 14px;
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 22px;
+    font-size: 0.85rem;
+  }
+  .legend-item{ display:flex; align-items:center; gap:7px; }
+  .swatch{ width:14px; height:14px; border-radius:4px; display:inline-block; border:1px solid rgba(0,0,0,0.15); }
+  .sw-vocab{ background: var(--highlight-vocab); }
+  .sw-idiom{ background: var(--highlight-idiom); }
+  .sw-express{ background: var(--highlight-express); }
+
+  /* TRANSCRIPT / EXCERPT BLOCKS */
+  .excerpt-block{
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .excerpt-tag{
+    background: var(--ink);
+    color: #ece3ea;
+    font-family: 'Overpass Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    padding: 8px 16px;
+    text-transform: uppercase;
+  }
+  .turn{ padding: 14px 18px; border-bottom: 1px solid #f3ecf0; }
+  .turn:last-child{ border-bottom: none; }
+  .speaker{
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display:flex; align-items:center; gap:8px;
+    margin-bottom: 6px;
+  }
+  .avatar{
+    width: 22px; height: 22px; border-radius: 50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size: 0.68rem; color:#fff; font-family:'Overpass Mono',monospace;
+  }
+  .turn.pippa .speaker{ color: var(--accent); }
+  .turn.pippa .avatar{ background: var(--accent); }
+  .turn.phil .speaker{ color: var(--accent2); }
+  .turn.phil .avatar{ background: var(--accent2); }
+  .turn.neil .speaker{ color: var(--gold); }
+  .turn.neil .avatar{ background: var(--gold); }
+  .turn.beth .speaker{ color: var(--ink); }
+  .turn.beth .avatar{ background: var(--ink); }
+  .turn p{ margin: 0 0 10px; }
+  .turn p:last-child{ margin-bottom: 0; }
+
+  /* HIGHLIGHTS */
+  .hl{
+    border-radius: 3px;
+    padding: 0 2px;
+    cursor: help;
+    position: relative;
+  }
+  .hl.vocab{ background: var(--highlight-vocab); }
+  .hl.idiom{ background: var(--highlight-idiom); }
+  .hl.express{ background: var(--highlight-express); }
+  .hl:focus{ outline: 2px solid var(--accent2); }
+
+  #tooltip{
+    position: fixed;
+    max-width: 260px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'Overpass Mono', monospace;
+    font-size: 0.76rem;
+    line-height: 1.4;
+    padding: 9px 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    z-index: 999;
+    display: none;
+    pointer-events:none;
+  }
+  #tooltip .tip-cat{ color: var(--gold); text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.06em; display:block; margin-bottom: 3px;}
+
+  .pullquote{
+    border-left: 4px solid var(--accent);
+    background: #ffffff;
+    padding: 16px 20px;
+    margin: 26px 0;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--ink);
+    border-radius: 0 10px 10px 0;
+  }
+
+  /* VOCAB TAB */
+  .vocab-intro{ background:#ffffff; border:1px solid var(--rule); border-radius:10px; padding:14px 18px; margin-bottom:22px; font-size: 0.92rem;}
+  .card-section-title{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.15rem;
+    margin: 26px 0 12px;
+    display:flex; align-items:center; gap:8px;
+    border-bottom: 2px solid var(--rule);
+    padding-bottom: 6px;
+  }
+  .card-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap:12px; }
+  .vcard{
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .vcard.idiom{ border-left-color: var(--accent2); }
+  .vcard.express{ border-left-color: var(--gold); }
+  .vcard .term{ font-family:'Urbanist', sans-serif; font-weight:700; font-size: 1.0rem; }
+  .vcard .pos{ font-family:'Overpass Mono', monospace; font-size: 0.68rem; color: var(--accent2); margin: 2px 0 6px; text-transform: uppercase; letter-spacing: 0.03em;}
+  .vcard .def{ font-size: 0.86rem; margin-bottom: 8px; }
+  .vcard .ex{ font-size: 0.83rem; color: #5a4e5f; font-style: italic; }
+
+  /* VOCABULARY IN USE TAB */
+  .vu-section{ margin-bottom: 30px; }
+  .vu-title{ font-family:'Urbanist', sans-serif; font-size: 1.25rem; margin-bottom: 6px; }
+  .vu-sub{ font-size: 0.92rem; color: #4a3d52; margin-bottom: 18px;}
+  .vu-term-card{
+    background: #ffffff; border: 1px solid var(--rule); border-radius: 10px;
+    padding: 14px 18px; margin-bottom: 14px;
+  }
+  .vu-term-card .vu-term{
+    font-family: 'Urbanist', sans-serif; font-weight: 700; font-size: 1.05rem;
+    color: var(--accent); margin-bottom: 8px;
+  }
+  .vu-term-card ul{ margin: 0; padding-left: 20px; }
+  .vu-term-card li{ margin-bottom: 5px; font-size: 0.92rem; }
+  table.gtable{ width:100%; border-collapse: collapse; background: #ffffff; border: 1px solid var(--rule); font-size: 0.88rem; border-radius: 8px; overflow:hidden;}
+  table.gtable th, table.gtable td{ border: 1px solid var(--rule); padding: 9px 12px; text-align:left; vertical-align: top; }
+  table.gtable th{ background: var(--cream); font-family:'Overpass Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em;}
+  .practice-table td{ font-size: 0.9rem; }
+  details summary{
+    cursor: pointer; color: var(--accent2); font-weight:600;
+    font-family:'Overpass Mono', monospace; font-size: 0.8rem;
+  }
+  details[open] summary{ margin-bottom: 4px; }
+  details .ans{ color: var(--ink); }
+
+  /* EXERCISES */
+  .ex-intro{ background:#ffffff; border:1px solid var(--rule); border-radius:10px; padding:14px 18px; margin-bottom:20px; font-size: 0.92rem; }
+  .score-bar{
+    position: sticky; top: 50px; z-index: 40;
+    background: var(--ink); color: var(--paper);
+    font-family: 'Overpass Mono', monospace;
+    padding: 8px 16px; border-radius: 8px;
+    margin-bottom: 20px; font-size: 0.85rem;
+    display:flex; justify-content: space-between; align-items:center;
+  }
+  .score-bar button{
+    background: var(--accent); color: #fff; border:none;
+    padding: 6px 12px; border-radius: 6px; cursor:pointer; font-family: inherit; font-size: 0.78rem;
+  }
+  .ex-section-title{
+    font-family:'Urbanist', sans-serif; font-size: 1.1rem; margin: 24px 0 10px;
+    border-bottom: 2px solid var(--rule); padding-bottom: 5px;
+  }
+  .q-block{
+    background: #ffffff; border: 1px solid var(--rule); border-radius: 10px;
+    padding: 14px 16px; margin-bottom: 14px;
+  }
+  .q-text{ font-weight: 600; margin-bottom: 10px; }
+  .q-options{ display:flex; flex-direction:column; gap: 7px; }
+  .opt-btn{
+    text-align:left;
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    color: var(--ink);
+  }
+  .opt-btn:hover:not(:disabled){ background: #e6d7e3; }
+  .opt-btn:disabled{ cursor: default; }
+  .opt-btn.correct{ background: var(--light-correct); border-color: var(--correct); }
+  .opt-btn.wrong{ background: var(--light-wrong); border-color: var(--wrong); }
+  .opt-explain{
+    font-size: 0.8rem; margin-top: 3px; padding-left: 12px;
+    color: #5a4e5f; display:none;
+  }
+  .opt-explain.show{ display:block; }
+  .final-msg{
+    display:none; margin-top: 18px; padding: 16px; border-radius: 10px;
+    font-family:'Urbanist', sans-serif; font-size: 1.05rem; text-align:center;
+    background: #ffffff; border: 1px solid var(--rule);
+  }
+
+  @media (max-width: 600px){
+    .masthead{ padding: 24px 0 16px; }
+    .tabbtn{ font-size: 0.65rem; padding: 12px 3px; }
+    .card-grid{ grid-template-columns: 1fr; }
+    h1.headline{ font-size: 1.5rem; }
+    .score-bar{ flex-direction: column; gap: 8px; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div id="tooltip"></div>
+
+<div class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">English Language Class · Business &amp; Work · B1</div>
+    <h1 class="headline">Misunderstandings</h1>
+    <p class="deck">Phil and Pippa talk through what to say when you don't understand someone at work, and what to do when you suspect someone hasn't understood you.</p>
+    <div class="facts-row">
+      <div class="fact-chip">🎙 Series: Office English (BBC Learning English)</div>
+      <div class="fact-chip">🎚 Level: B1</div>
+      <div class="fact-chip">🔗 <a href="https://www.bbc.co.uk/learningenglish/english/features/office-english/250428" target="_blank" rel="noopener">Listen to the original episode</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="tabnav">
+  <button class="tabbtn active" data-tab="reading">🔀 Reading</button>
+  <button class="tabbtn" data-tab="vocab">🗒️ Vocabulary</button>
+  <button class="tabbtn" data-tab="vuse">🔁 Vocabulary in Use</button>
+  <button class="tabbtn" data-tab="exercises">✅ Exercises</button>
+</div>
+
+<div class="wrap">
+
+  <!-- READING TAB -->
+  <div class="tabpanel active" id="tab-reading">
+    <div class="legend">
+      <div class="legend-item"><span class="swatch sw-vocab"></span> Vocabulary</div>
+      <div class="legend-item"><span class="swatch sw-idiom"></span> Idioms &amp; Set Phrases</div>
+      <div class="legend-item"><span class="swatch sw-express"></span> Useful Expressions</div>
+    </div>
+
+    <div class="excerpt-block">
+      <div class="excerpt-tag">Transmission 1 of 7: Real reactions from the office</div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>Do you ever find you don't understand people at work?</p></div>
+      <div class="turn neil"><div class="speaker"><span class="avatar">N</span> Neil</div><p>If I don't understand a task at work, I feel <span class="hl vocab" data-cat="Vocabulary" data-term="frustrated" data-def="feeling annoyed or upset because you cannot do or understand something">frustrated</span>. It can be a bit stressful.</p></div>
+      <div class="turn beth"><div class="speaker"><span class="avatar">B</span> Beth</div><p>It's really annoying. And you have to ask other people to help you with something.</p></div>
+      <div class="turn neil"><div class="speaker"><span class="avatar">N</span> Neil</div><p>Nobody likes to keep asking how to do something so you can end up feeling a bit stupid, really.</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>In today's episode of Office English, we're talking about what to say when you don't understand.</p></div>
+    </div>
+
+    <div class="excerpt-block">
+      <div class="excerpt-tag">Transmission 2 of 7: Welcome to Office English</div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>Hello and welcome to Office English. In this series, we talk about the language you need in the modern workplace. I'm Phil.</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>And I'm Pippa. Find a transcript for this podcast on our website bbclearningenglish.com.</p></div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>We've just heard from some of our BBC Learning English colleagues that it can be frustrating and <span class="hl vocab" data-cat="Vocabulary" data-term="embarrassing" data-def="making you feel awkward or ashamed in front of others">embarrassing</span> when there are misunderstandings at work. Is that something you've experienced, Pippa?</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>Yes. I think it can feel quite <span class="hl vocab" data-cat="Vocabulary" data-term="awkward" data-def="uncomfortable or difficult to deal with">awkward</span> if you realise that you and a colleague have <span class="hl vocab" data-cat="Vocabulary" data-term="interpreted" data-def="understood or explained the meaning of something in a particular way">interpreted</span> something in a different way. Sometimes it just is annoying because it leads to kind of wasted time, wasted effort, and it can lead to conflict. Not in my experience. Usually, you know, we just said, 'we've got <span class="hl idiom" data-cat="Idiom" data-term="our wires crossed" data-def="used when two people have misunderstood each other, often because of confusing or unclear communication">our wires crossed</span> there and we've misunderstood each other.'</p></div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>It can depend what the misunderstanding's about, of course. If we're thinking about conflict, some misunderstandings might be more dangerous than others. Today we're going to talk about what to do when you don't understand, or when you think someone might have misunderstood you.</p></div>
+    </div>
+
+    <div class="excerpt-block">
+      <div class="excerpt-tag">Transmission 3 of 7: When you don't understand your boss</div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>Let's start with a <span class="hl vocab" data-cat="Vocabulary" data-term="scenario" data-def="a possible situation or sequence of events, often used to imagine what could happen">scenario</span>, Phil. So, imagine your boss has given you a task to do, but you're not sure if you've understood them correctly. You don't want to do the task wrong, but you also don't want your boss to think you're not good enough, you're a bit stupid. What should you say to them?</p></div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>You could just ask them to explain it again, you know, '<span class="hl express" data-cat="Useful Expression" data-term="Can I just check that I've understood that right?" data-def="a polite way to confirm you've understood an instruction correctly">Can I just check that I've understood that right?</span>'</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>Yeah. That's nice because it's still polite. You could also say '<span class="hl express" data-cat="Useful Expression" data-term="I'm sorry but could I just clarify?" data-def="a polite way to ask for more detail without sounding like you weren't listening">I'm sorry but could I just clarify?</span>' I think people would usually rather explain it more times and it be done right than think you have understood them and then you do it wrong, because that actually is going to waste more time. What about if somebody can't ask their boss? Maybe they're just not able to, or they're a bit worried to ask for a clarification from their boss. What would you recommend then?</p></div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>It might be that you've got a colleague who's really experienced in that area, and you're <span class="hl vocab" data-cat="Vocabulary" data-term="confident" data-def="sure that something is true, or sure of your own abilities">confident</span> that they know, they know what they're talking about. So, you could always ask them.</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>Yeah, you could say something like, 'can you <span class="hl idiom" data-cat="Idiom" data-term="walk me through" data-def="ask someone to explain something to you step by step">walk me through</span> how you usually do this?' And then you've just made sure that you're understanding the process. This is particularly useful if you're new, I guess.</p></div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>Sometimes I think it can also be useful to know why you're doing something that can help avoid misunderstandings. So, you might be asked something like, 'Are we doing this because...' and then giving what you think is the reason for something.</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>Yeah, it will depend on your kind of workplace culture where you work and the kind of thing you've been asked to do. Some places, it's not normal to kind of question your boss. You wouldn't want to kind of give the impression that you think you know better, or you have kind of thought that they're wrong. So, it's just about kind of clarifying rather than kind of questioning the whole task altogether.</p></div>
+    </div>
+
+    <div class="excerpt-block">
+      <div class="excerpt-tag">Transmission 4 of 7: When you don't understand a colleague</div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>OK, so that's some ideas for when you don't understand your boss. What about if you don't understand something that a colleague says. For example, you might be in a meeting and a colleague makes a <span class="hl vocab" data-cat="Vocabulary" data-term="contribution" data-def="something you say or add during a discussion or meeting">contribution</span>, but you don't understand what they mean.</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>Yeah that's a tricky one, I think. I would often start with an apology. So I might say 'I'm sorry Phil, but could you explain that a little bit more?' And just get you to kind of tell me more about it.</p></div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>Yeah. Or another way of saying it is '<span class="hl idiom" data-cat="Idiom" data-term="I'm not sure I follow you" data-def="a polite way of saying you don't understand what someone has just said">I'm not sure I follow you</span>. Can you just talk me through that again?'</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>Another phrase you could use is '<span class="hl express" data-cat="Useful Expression" data-term="I just want to be sure I've got you 100% right" data-def="used to check you've completely understood what someone meant before acting on it">I just want to be sure I've got you 100% right</span>. Do you mean...' And then again, explain what you think they've said. So, then you're just kind of checking that you're both interpreting what's been said in the same way. Right. We've talked about lots of things we can say when we don't understand other people at work. But what if we think somebody doesn't understand us, Phil?</p></div>
+    </div>
+
+    <div class="excerpt-block">
+      <div class="excerpt-tag">Transmission 5 of 7: Checking that you've been understood</div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>Well, we can always ask other people '<span class="hl express" data-cat="Useful Expression" data-term="Does that make sense?" data-def="a quick, friendly way to check whether your explanation was clear">Does that make sense?</span>' Or invite questions maybe.</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>Yeah. Sometimes I'll say things like 'if any of this is confusing just let me know' or '<span class="hl idiom" data-cat="Idiom" data-term="just shout" data-def="informal way of telling someone to let you know if they need help or have a question">just shout</span>'. I would put that in an email as well, often. If I've sent a really long email with lots of complicated instructions, I'd usually end with '<span class="hl express" data-cat="Useful Expression" data-term="If any of this doesn't make any sense, let me know" data-def="an open invitation, often used in emails, for the reader to ask questions if something isn't clear">If any of this doesn't make any sense, let me know</span>' because sometimes it makes sense to you, but you maybe haven't explained it as well as you could have done.</p></div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>Also, yeah, you, sometimes you might want to say things in different ways, particularly, I don't know, you're in a meeting explaining something and you could see lots of <span class="hl idiom" data-cat="Idiom" data-term="blank faces" data-def="the confused or empty expressions people have when they don't understand something">blank faces</span>, or you're getting the feeling that people haven't understood exactly what you said. You might say, '<span class="hl express" data-cat="Useful Expression" data-term="let me make myself really clear" data-def="signals that you're about to restate something in a simpler or more direct way">let me make myself really clear</span>. What I mean is...' and then you find a different way to explain what you've just said.</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>Yeah. So, rather than just using the same language all the time, particularly, I guess, in an international workplace where people are speaking English as their second language, you kind of want to use a few different ways of saying it so that you make sure that everyone knows what you're talking about. And maybe in that kind of workplace, trying not to use a lot of very complicated language, trying to keep things very simple and very clear.</p></div>
+    </div>
+
+    <div class="excerpt-block">
+      <div class="excerpt-tag">Transmission 6 of 7: When misunderstandings happen anyway</div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>So, we have lots of ways we can try and avoid confusion and misunderstandings at work. But sometimes they happen. Let's listen to our BBC colleagues Neil and Beth again.</p></div>
+      <div class="turn beth"><div class="speaker"><span class="avatar">B</span> Beth</div><p>It's not a problem that you have misunderstood. It's just it's got to be explained.</p></div>
+      <div class="turn neil"><div class="speaker"><span class="avatar">N</span> Neil</div><p>I think first of all, you have to draw attention to the fact there has been a misunderstanding. Then you have to explain how you saw something from your perspective, and then maybe that will reveal why a misunderstanding happened, and that helps to get it all <span class="hl idiom" data-cat="Idiom" data-term="smoothed out" data-def="resolved or settled calmly after a problem or disagreement">smoothed out</span>.</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>So yeah, as we mentioned at the start of the programme, if there's been a misunderstanding, sometimes it can lead to conflict. Sometimes maybe someone's misunderstood someone, they've become <span class="hl vocab" data-cat="Vocabulary" data-term="offended" data-def="feeling hurt or upset because of something someone said or did">offended</span>. But also it just might mean that somebody ended up doing something wrong. They've ended up doing a task in the wrong way or wasted some time on a task they didn't need to do in the first place.</p></div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>Yeah, and it can also often be best to deal with the <span class="hl vocab" data-cat="Vocabulary" data-term="consequences" data-def="the results or effects of an action or decision">consequences</span> of the misunderstanding first, rather than, you know, getting angry and blaming people. Sort out the issue first.</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>Yes. And then once you've dealt with the consequences, it can be useful to know why the misunderstanding happened. But you probably want to focus on why it happened and making sure that in the future you avoid the <span class="hl vocab" data-cat="Vocabulary" data-term="miscommunication" data-def="a failure to communicate clearly, leading to confusion or misunderstanding">miscommunication</span>. That's it for this episode of Office English. We'd love to hear about the English you use in the office and answer your questions. Email learningenglish@bbc.co.uk.</p></div>
+    </div>
+
+    <div class="excerpt-block">
+      <div class="excerpt-tag">Transmission 7 of 7: Sign off</div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>Next time we're going to talk about cold calling, which is where you have to contact people you don't know at work.</p></div>
+      <div class="turn pippa"><div class="speaker"><span class="avatar">P</span> Pippa</div><p>I hate cold calling, but I'm looking forward to talking about it. See you then, bye.</p></div>
+      <div class="turn phil"><div class="speaker"><span class="avatar">F</span> Phil</div><p>Bye.</p></div>
+    </div>
+
+    <div class="pullquote">"I think first of all, you have to draw attention to the fact there has been a misunderstanding. Then you have to explain how you saw something from your perspective."</div>
+  </div>
+
+  <!-- VOCABULARY TAB -->
+  <div class="tabpanel" id="tab-vocab">
+    <div class="vocab-intro">This lesson highlights three kinds of language: <strong>Vocabulary</strong> (single words about misunderstanding and clarifying, shown in yellow), <strong>Idioms &amp; Set Phrases</strong> (fixed expressions with a special meaning, shown in blue), and <strong>Useful Expressions</strong> (the actual clarifying phrases Pippa and Phil use, shown in orange).</div>
+
+    <div class="card-section-title">🟡 Vocabulary</div>
+    <div class="card-grid">
+      <div class="vcard"><div class="term">frustrated</div><div class="pos">adjective</div><div class="def">feeling annoyed or upset because you cannot do or understand something.</div><div class="ex">Maria felt <strong>frustrated</strong> when the new software crashed twice before lunch.</div></div>
+      <div class="vcard"><div class="term">embarrassing</div><div class="pos">adjective</div><div class="def">making you feel awkward or ashamed in front of others.</div><div class="ex">Forgetting a client's name mid-meeting was <strong>embarrassing</strong>, but nobody seemed to mind.</div></div>
+      <div class="vcard"><div class="term">awkward</div><div class="pos">adjective</div><div class="def">uncomfortable or difficult to deal with.</div><div class="ex">There was an <strong>awkward</strong> silence after he realised he'd replied to the wrong thread.</div></div>
+      <div class="vcard"><div class="term">interpreted</div><div class="pos">verb</div><div class="def">understood or explained the meaning of something in a particular way.</div><div class="ex">Two team members <strong>interpreted</strong> the brief completely differently.</div></div>
+      <div class="vcard"><div class="term">scenario</div><div class="pos">noun</div><div class="def">a possible situation or sequence of events, often used to imagine what could happen.</div><div class="ex">Let's walk through a <strong>scenario</strong> where the client asks for a same-day turnaround.</div></div>
+      <div class="vcard"><div class="term">confident</div><div class="pos">adjective</div><div class="def">sure that something is true, or sure of your own abilities.</div><div class="ex">She felt <strong>confident</strong> explaining the new policy because she'd read it twice.</div></div>
+      <div class="vcard"><div class="term">contribution</div><div class="pos">noun</div><div class="def">something you say or add during a discussion or meeting.</div><div class="ex">His <strong>contribution</strong> about the budget sparked a longer conversation than planned.</div></div>
+      <div class="vcard"><div class="term">offended</div><div class="pos">adjective</div><div class="def">feeling hurt or upset because of something someone said or did.</div><div class="ex">He seemed <strong>offended</strong> when his idea was rejected without discussion.</div></div>
+      <div class="vcard"><div class="term">consequences</div><div class="pos">noun</div><div class="def">the results or effects of an action or decision.</div><div class="ex">Before approving the change, the team mapped out the possible <strong>consequences</strong>.</div></div>
+      <div class="vcard"><div class="term">miscommunication</div><div class="pos">noun</div><div class="def">a failure to communicate clearly, leading to confusion or misunderstanding.</div><div class="ex">The missed deadline turned out to be a simple <strong>miscommunication</strong>, not a lack of effort.</div></div>
+    </div>
+
+    <div class="card-section-title">🔵 Idioms &amp; Set Phrases</div>
+    <div class="card-grid">
+      <div class="vcard idiom"><div class="term">our wires crossed</div><div class="pos">idiom</div><div class="def">used when two people have misunderstood each other, often because of confusing or unclear communication.</div><div class="ex">I think we've got <strong>our wires crossed</strong>, I thought you were sending the file, not me.</div></div>
+      <div class="vcard idiom"><div class="term">walk me through</div><div class="pos">set phrase</div><div class="def">ask someone to explain something to you step by step.</div><div class="ex">Could you <strong>walk me through</strong> how the approval process actually works?</div></div>
+      <div class="vcard idiom"><div class="term">I'm not sure I follow you</div><div class="pos">set phrase</div><div class="def">a polite way of saying you don't understand what someone has just said.</div><div class="ex"><strong>I'm not sure I follow you</strong>, could you give a quick example?</div></div>
+      <div class="vcard idiom"><div class="term">just shout</div><div class="pos">idiom</div><div class="def">informal way of telling someone to let you know if they need help or have a question.</div><div class="ex">If anything's unclear once you start, <strong>just shout</strong>.</div></div>
+      <div class="vcard idiom"><div class="term">blank faces</div><div class="pos">idiom</div><div class="def">the confused or empty expressions people have when they don't understand something.</div><div class="ex">He looked around the room and saw nothing but <strong>blank faces</strong>.</div></div>
+      <div class="vcard idiom"><div class="term">smoothed out</div><div class="pos">idiom</div><div class="def">resolved or settled calmly after a problem or disagreement.</div><div class="ex">Once we compared notes, the whole misunderstanding got <strong>smoothed out</strong> quickly.</div></div>
+    </div>
+
+    <div class="card-section-title">🟠 Useful Expressions</div>
+    <div class="card-grid">
+      <div class="vcard express"><div class="term">Can I just check that I've understood that right?</div><div class="pos">clarifying phrase</div><div class="def">a polite way to confirm you've understood an instruction correctly.</div><div class="ex">Before I start, <strong>can I just check that I've understood that right?</strong></div></div>
+      <div class="vcard express"><div class="term">I'm sorry but could I just clarify?</div><div class="pos">clarifying phrase</div><div class="def">a polite way to ask for more detail without sounding like you weren't listening.</div><div class="ex"><strong>I'm sorry but could I just clarify</strong>, do you mean today or tomorrow?</div></div>
+      <div class="vcard express"><div class="term">I just want to be sure I've got you 100% right</div><div class="pos">clarifying phrase</div><div class="def">used to check you've completely understood what someone meant before acting on it.</div><div class="ex"><strong>I just want to be sure I've got you 100% right</strong>, so you'll handle the call and I'll handle the email?</div></div>
+      <div class="vcard express"><div class="term">Does that make sense?</div><div class="pos">checking phrase</div><div class="def">a quick, friendly way to check whether your explanation was clear.</div><div class="ex">So we send the draft first and the invoice after. <strong>Does that make sense?</strong></div></div>
+      <div class="vcard express"><div class="term">let me make myself really clear</div><div class="pos">checking phrase</div><div class="def">signals that you're about to restate something in a simpler or more direct way.</div><div class="ex"><strong>Let me make myself really clear</strong>, the deadline is Friday, not Monday.</div></div>
+      <div class="vcard express"><div class="term">If any of this doesn't make any sense, let me know</div><div class="pos">checking phrase</div><div class="def">an open invitation, often used in emails, for the reader to ask questions if something isn't clear.</div><div class="ex">I've listed the next steps below. <strong>If any of this doesn't make any sense, let me know</strong>.</div></div>
+    </div>
+  </div>
+
+  <!-- VOCABULARY IN USE TAB -->
+  <div class="tabpanel" id="tab-vuse">
+    <div class="vu-section">
+      <div class="vu-title">Vocabulary in Use</div>
+      <div class="vu-sub">This episode has no grammar focus. Instead, this tab drills the episode's key language for clarifying and checking understanding in fresh workplace situations, so you can use it beyond the podcast itself.</div>
+
+      <div class="vu-term-card"><div class="vu-term">frustrated</div><ul>
+        <li>After the third version of the report got rejected, James admitted he was feeling <strong>frustrated</strong>.</li>
+        <li>It's completely normal to feel <strong>frustrated</strong> when a new system doesn't work the way the training promised.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">awkward</div><ul>
+        <li>The handover call got a bit <strong>awkward</strong> once both managers realised they'd given the client different deadlines.</li>
+        <li>There's an <strong>awkward</strong> pause in most onboarding chats right before someone admits they've forgotten their login.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">confident</div><ul>
+        <li>Once she'd read the onboarding guide twice, she felt <strong>confident</strong> enough to answer client questions alone.</li>
+        <li>He sounded <strong>confident</strong> on the call, but he double-checked the figures with his manager right after.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">miscommunication</div><ul>
+        <li>The two departments blamed each other for weeks before realising it was just a <strong>miscommunication</strong> about dates.</li>
+        <li>A single <strong>miscommunication</strong> about the shipping address cost the warehouse an extra day of work.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">we've got our wires crossed</div><ul>
+        <li>I booked the room for 2pm and you booked it for 3pm, <strong>we've clearly got our wires crossed</strong>.</li>
+        <li>Looks like <strong>we've got our wires crossed</strong> on who was sending the invoice to the client.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">walk me through</div><ul>
+        <li>Before I touch the live server, can you <strong>walk me through</strong> the deployment steps one more time?</li>
+        <li>New hires usually ask a teammate to <strong>walk them through</strong> the expenses system in their first week.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">I'm not sure I follow you</div><ul>
+        <li><strong>I'm not sure I follow you</strong>, do you mean we delay the launch or just the press release?</li>
+        <li>She paused the presenter politely and said, <strong>I'm not sure I follow you</strong>, could you go back a slide?</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">smoothed out</div><ul>
+        <li>Once finance and sales compared spreadsheets, the pricing confusion was <strong>smoothed out</strong> in ten minutes.</li>
+        <li>The rough start to the project got <strong>smoothed out</strong> after the first proper planning meeting.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">Does that make sense?</div><ul>
+        <li>After explaining the new approval flow, she added, <strong>Does that make sense</strong>, or should I draw a diagram?</li>
+        <li>He finished the demo and asked the client, <strong>Does that make sense</strong> so far?</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">let me make myself really clear</div><ul>
+        <li><strong>Let me make myself really clear</strong>, this deadline cannot move, whatever happens with the supplier.</li>
+        <li>Seeing the confused faces on the call, the director said, <strong>let me make myself really clear</strong>, before repeating the plan slowly.</li>
+      </ul></div>
+
+      <div class="vu-title" style="font-size:1.05rem; margin-top:26px;">Practice</div>
+      <table class="gtable practice-table">
+        <tr><th>Task</th><th>Model Answer</th></tr>
+        <tr>
+          <td>Could you ___ me ___ the new expenses process? I've never submitted a claim before. (walk / through)</td>
+          <td><details><summary>Show answer</summary><span class="ans">Could you walk me through the new expenses process? I've never submitted a claim before.</span></details></td>
+        </tr>
+        <tr>
+          <td>I think we've got our ___ ___, I was expecting you to send the file first. (wires / crossed)</td>
+          <td><details><summary>Show answer</summary><span class="ans">I think we've got our wires crossed, I was expecting you to send the file first.</span></details></td>
+        </tr>
+        <tr>
+          <td>I'm not sure I ___ you, are we launching on Monday or on Wednesday? (follow)</td>
+          <td><details><summary>Show answer</summary><span class="ans">I'm not sure I follow you, are we launching on Monday or on Wednesday?</span></details></td>
+        </tr>
+        <tr>
+          <td>After a long chat, the confusion about the invoice finally got ___ ___. (smoothed / out)</td>
+          <td><details><summary>Show answer</summary><span class="ans">After a long chat, the confusion about the invoice finally got smoothed out.</span></details></td>
+        </tr>
+        <tr>
+          <td>___ that make sense, or would it help if I sent a written summary too? (Does)</td>
+          <td><details><summary>Show answer</summary><span class="ans">Does that make sense, or would it help if I sent a written summary too?</span></details></td>
+        </tr>
+      </table>
+
+      <div class="vu-title" style="font-size:1.05rem; margin-top:26px;">Mix and Match</div>
+      <table class="gtable">
+        <tr><th>Term</th><th>Meaning</th><th>Workplace Situation</th></tr>
+        <tr><td>frustrated</td><td>Feeling annoyed because you can't do or understand something</td><td>After several failed attempts to fix a recurring bug</td></tr>
+        <tr><td>awkward</td><td>Uncomfortable or difficult to handle</td><td>Realising you and a colleague gave a client two different answers</td></tr>
+        <tr><td>confident</td><td>Sure of your understanding or ability</td><td>Explaining a process you've just learned to someone newer</td></tr>
+        <tr><td>miscommunication</td><td>A breakdown in understanding between people</td><td>Two departments blaming each other over a missed deadline</td></tr>
+        <tr><td>we've got our wires crossed</td><td>Two people have misunderstood each other</td><td>Discovering you and a colleague booked the same room for different times</td></tr>
+        <tr><td>walk me through</td><td>Explain something to me step by step</td><td>Learning a new system from a teammate before your first shift alone</td></tr>
+        <tr><td>I'm not sure I follow you</td><td>A polite way to say you don't understand</td><td>A meeting where an explanation got too technical too quickly</td></tr>
+        <tr><td>smoothed out</td><td>A problem or disagreement gets resolved calmly</td><td>After two teams compare notes and fix a scheduling mix-up</td></tr>
+        <tr><td>Does that make sense?</td><td>Checking that your explanation was clear</td><td>Finishing a demo and checking in with the listener</td></tr>
+        <tr><td>let me make myself really clear</td><td>Signalling you're about to restate something more simply</td><td>Repeating instructions after noticing confused faces on a call</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- EXERCISES TAB -->
+  <div class="tabpanel" id="tab-exercises">
+    <div class="ex-intro">Answer all 15 questions. Each button locks once clicked, and the correct answer is always revealed. Your score updates as you go.</div>
+    <div class="score-bar">
+      <span id="scoreDisplay">Score: 0 / 15</span>
+      <button onclick="resetExercises()">↺ Reset</button>
+    </div>
+    <div id="exContainer"></div>
+    <div class="final-msg" id="finalMsg"></div>
+  </div>
+
+</div>
+
+<script>
+  // TAB SWITCHING
+  document.querySelectorAll('.tabbtn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.tabbtn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tabpanel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // TOOLTIPS
+  const tip = document.getElementById('tooltip');
+  function showTip(el){
+    const cat = el.dataset.cat;
+    const term = el.dataset.term;
+    const def = el.dataset.def;
+    tip.innerHTML = '<span class="tip-cat">'+cat+' · '+term+'</span>'+def;
+    tip.style.display = 'block';
+    const rect = el.getBoundingClientRect();
+    let top = rect.top - tip.offsetHeight - 10;
+    if(top < 8) top = rect.bottom + 10;
+    let left = rect.left;
+    if(left + 260 > window.innerWidth) left = window.innerWidth - 270;
+    tip.style.top = top + 'px';
+    tip.style.left = Math.max(8,left) + 'px';
+  }
+  function hideTip(){ tip.style.display = 'none'; }
+  document.querySelectorAll('.hl').forEach(el=>{
+    el.setAttribute('tabindex','0');
+    el.addEventListener('mouseenter', ()=>showTip(el));
+    el.addEventListener('mouseleave', hideTip);
+    el.addEventListener('focus', ()=>showTip(el));
+    el.addEventListener('blur', hideTip);
+    el.addEventListener('click', (e)=>{ e.stopPropagation(); showTip(el); });
+  });
+  document.body.addEventListener('click', hideTip);
+
+  // EXERCISES DATA
+  const questions = [
+    // SECTION A. Reading Comprehension
+    {section:'A. Reading Comprehension', text:'Why does Neil say he feels frustrated when he doesn\'t understand a task at work?',
+     options:[
+       'Because he dislikes working with Beth and Pippa on shared tasks.',
+       'Because not understanding a task makes the work feel stressful to finish.',
+       'Because he thinks his manager explains instructions too quickly every time.',
+       'Because he prefers working alone rather than asking anyone for help.'
+     ], correct:1,
+     explain:[
+       'Not quite. Neil doesn\'t mention any disagreement with colleagues, only his own frustration with unclear tasks.',
+       'Correct. Neil says not understanding a task "can be a bit stressful," linking his frustration to the difficulty of finishing the work.',
+       'Not quite. Neil never criticises how his manager gives instructions in this clip.',
+       'Not quite. Neil actually says people avoid asking repeatedly because it can feel embarrassing, not because he prefers working alone.'
+     ]},
+    {section:'A. Reading Comprehension', text:'According to Beth and Neil, why do people often avoid asking a colleague the same question more than once?',
+     options:[
+       'Because most workplaces only allow one clarifying question per topic.',
+       'Because colleagues are usually too busy to answer a second question.',
+       'Because repeated questions are normally against company policy.',
+       'Because asking again can make someone feel a bit stupid or incapable.'
+     ], correct:3,
+     explain:[
+       'Not quite. No rule like this is mentioned anywhere in the clip.',
+       'Not quite. Being busy isn\'t given as the reason for avoiding repeat questions.',
+       'Not quite. Company policy is never discussed in this part of the episode.',
+       'Correct. Neil says nobody likes asking repeatedly "so you can end up feeling a bit stupid, really."'
+     ]},
+    {section:'A. Reading Comprehension', text:'Why does Pippa suggest asking "Can I just check that I\'ve understood that right?" instead of simply guessing?',
+     options:[
+       'Because getting it wrong after guessing usually wastes more time overall.',
+       'Because most managers expect every instruction to be repeated back exactly.',
+       'Because asking questions is required before starting any new task.',
+       'Because guessing is considered rude in most office environments generally.'
+     ], correct:0,
+     explain:[
+       'Correct. Pippa says people would rather explain again than have the task done wrong, "because that actually is going to waste more time."',
+       'Not quite. There\'s no mention of instructions needing to be repeated word for word.',
+       'Not quite. Asking isn\'t framed as a strict requirement, just a sensible habit.',
+       'Not quite. Rudeness is never mentioned as the reason for checking understanding.'
+     ]},
+    {section:'A. Reading Comprehension', text:'Who does Phil suggest asking if you don\'t feel able to question your boss directly?',
+     options:[
+       'A friend who works at a completely different company.',
+       'The human resources department, since they handle most disputes.',
+       'A colleague who is experienced and clearly knows the subject well.',
+       'Nobody, since Phil recommends always working it out alone.'
+     ], correct:2,
+     explain:[
+       'Not quite. Phil\'s suggestion is about someone inside the same workplace, not an outside friend.',
+       'Not quite. HR is not mentioned anywhere in this discussion.',
+       'Correct. Phil recommends a colleague "who\'s really experienced in that area" and clearly knows the topic.',
+       'Not quite. Phil explicitly offers an alternative rather than suggesting the person work it out alone.'
+     ]},
+    {section:'A. Reading Comprehension', text:'What does Pippa say can help avoid questioning your boss directly in some workplace cultures?',
+     options:[
+       'Sending every question through a formal written complaint process.',
+       'Waiting until a scheduled performance review to raise any doubts.',
+       'Asking a different manager instead of your own supervisor.',
+       'Framing your question as a clarification rather than a challenge.'
+     ], correct:3,
+     explain:[
+       'Not quite. A formal complaint process is never suggested in the discussion.',
+       'Not quite. Performance reviews are not mentioned at all in this part.',
+       'Not quite. Pippa doesn\'t suggest going around your manager to someone else.',
+       'Correct. Pippa explains it\'s "about kind of clarifying rather than kind of questioning the whole task," so framing matters.'
+     ]},
+    {section:'A. Reading Comprehension', text:'What situation does Pippa describe when talking about a colleague\'s contribution in a meeting?',
+     options:[
+       'A colleague emails a long list of complicated instructions instead.',
+       'A colleague says something in a meeting that isn\'t fully understood.',
+       'A colleague refuses to answer a question raised during a meeting.',
+       'A colleague arrives late and misses the start of a meeting.'
+     ], correct:1,
+     explain:[
+       'Not quite. The email scenario is discussed separately, later in the episode.',
+       'Correct. Pippa describes a colleague who "makes a contribution" that you "don\'t understand what they mean."',
+       'Not quite. Refusing to answer is never part of this example.',
+       'Not quite. Arriving late isn\'t mentioned in this particular scenario.'
+     ]},
+    {section:'A. Reading Comprehension', text:'Why does Phil say he sometimes starts with an apology when he doesn\'t understand a colleague?',
+     options:[
+       'He doesn\'t; it\'s actually Pippa who says she\'d start with an apology.',
+       'He says apologising always guarantees a clearer, more detailed answer.',
+       'He explains that apologies are required by most company codes of conduct.',
+       'He believes apologising first prevents any further misunderstanding entirely.'
+     ], correct:0,
+     explain:[
+       'Correct. It\'s Pippa, not Phil, who says she\'d "often start with an apology" before asking for clarification.',
+       'Not quite. No guarantee like this is mentioned by either speaker.',
+       'Not quite. Company codes of conduct are never referenced in the episode.',
+       'Not quite. Apologising isn\'t claimed to prevent every future misunderstanding.'
+     ]},
+    {section:'A. Reading Comprehension', text:'Why does Pippa suggest varying your language when explaining something at work?',
+     options:[
+       'Because repeating the exact same sentence is against most company style guides.',
+       'Because using different wording is faster than explaining something once.',
+       'Because not everyone understands the same explanation in the same way.',
+       'Because varying your language is mainly useful for written emails only.'
+     ], correct:2,
+     explain:[
+       'Not quite. Style guides are never mentioned in this part of the discussion.',
+       'Not quite. Pippa isn\'t talking about speed, but about being understood.',
+       'Correct. Pippa says this matters especially where people "are speaking English as their second language," so different wording helps understanding.',
+       'Not quite. Pippa\'s advice applies to spoken explanations too, such as in meetings.'
+     ]},
+    // SECTION B. Vocabulary in Context
+    {section:'B. Vocabulary in Context', text:'In the episode, what does it mean when Pippa says she and a colleague "got their wires crossed"?',
+     options:[
+       'They disagreed strongly about who should lead a specific project.',
+       'They both finished the same task twice without realising it.',
+       'They were working on two completely unrelated tasks all day.',
+       'They each understood the same situation in a different way.'
+     ], correct:3,
+     explain:[
+       'Not quite. A strong disagreement about leadership isn\'t what the phrase describes here.',
+       'Not quite. Doing the same task twice is a possible result, not the meaning of the phrase itself.',
+       'Not quite. The phrase isn\'t about working on unrelated tasks.',
+       'Correct. "Got our wires crossed" means two people have understood the same situation differently.'
+     ]},
+    {section:'B. Vocabulary in Context', text:'Which situation best matches how Pippa uses the word "awkward" in the episode?',
+     options:[
+       'Realising you and a colleague understood the same task differently.',
+       'Receiving some positive feedback from your manager about a project.',
+       'Finding out a meeting has been moved to a more convenient time slot.',
+       'Learning that a deadline has been extended by a couple of extra weeks.'
+     ], correct:0,
+     explain:[
+       'Correct. Pippa uses "awkward" to describe the uncomfortable feeling of realising a misunderstanding with a colleague.',
+       'Not quite. Positive feedback wouldn\'t typically be described as awkward.',
+       'Not quite. A more convenient meeting time isn\'t an awkward situation.',
+       'Not quite. An extended deadline is generally good news, not an awkward moment.'
+     ]},
+    {section:'B. Vocabulary in Context', text:'If a colleague says "I\'m not sure I follow you," what are they most likely asking for?',
+     options:[
+       'A completely different topic to discuss instead of the current one.',
+       'Permission to leave the meeting a few minutes early today.',
+       'A clearer or slower explanation of what you just said.',
+       'A written copy of the presentation slides after the meeting.'
+     ], correct:2,
+     explain:[
+       'Not quite. The phrase isn\'t a request to change the subject.',
+       'Not quite. It has nothing to do with leaving a meeting.',
+       'Correct. "I\'m not sure I follow you" is a polite way of asking someone to explain something more clearly.',
+       'Not quite. It isn\'t specifically a request for written materials.'
+     ]},
+    {section:'B. Vocabulary in Context', text:'What does it mean when Neil says a misunderstanding gets "smoothed out"?',
+     options:[
+       'The misunderstanding is ignored until everyone simply forgets about it.',
+       'The misunderstanding is resolved calmly once it\'s properly explained.',
+       'The misunderstanding is passed on to a manager to deal with instead.',
+       'The misunderstanding is written down so it can be reviewed later.'
+     ], correct:1,
+     explain:[
+       'Not quite. Ignoring the issue is the opposite of what "smoothed out" suggests.',
+       'Correct. Neil describes explaining perspectives so the misunderstanding "helps to get it all smoothed out," meaning resolved calmly.',
+       'Not quite. Passing the issue to a manager isn\'t part of Neil\'s explanation.',
+       'Not quite. Writing it down for later review isn\'t mentioned.'
+     ]},
+    {section:'B. Vocabulary in Context', text:'What does Phil mean by "blank faces" when describing a meeting?',
+     options:[
+       'Colleagues who are smiling and clearly enjoying the presentation.',
+       'Colleagues who are taking detailed notes throughout the meeting.',
+       'Colleagues who are actively disagreeing with what\'s being said.',
+       'Colleagues whose expressions show they haven\'t understood something.'
+     ], correct:3,
+     explain:[
+       'Not quite. Smiling and enjoyment isn\'t what "blank faces" describes.',
+       'Not quite. Taking notes wouldn\'t usually be called having a "blank face."',
+       'Not quite. Active disagreement would look quite different from a blank expression.',
+       'Correct. "Blank faces" describes confused or empty expressions that suggest people haven\'t followed what was said.'
+     ]},
+    {section:'B. Vocabulary in Context', text:'How does Pippa use the word "scenario" at the start of the discussion about asking a boss for help?',
+     options:[
+       'To introduce an imagined situation they can use as an example.',
+       'To describe something that has definitely already happened to her.',
+       'To refer to a document the listener should read before continuing.',
+       'To name a specific rule that every workplace must always follow.'
+     ], correct:0,
+     explain:[
+       'Correct. Pippa says "let\'s start with a scenario," introducing an imagined example situation to discuss.',
+       'Not quite. She frames it as hypothetical, not something that definitely happened.',
+       'Not quite. There\'s no document referenced by the word "scenario" here.',
+       'Not quite. A scenario isn\'t presented as a fixed workplace rule.'
+     ]},
+    {section:'B. Vocabulary in Context', text:'What is Pippa suggesting when she tells listeners to tell colleagues to "just shout" if something\'s unclear?',
+     options:[
+       'To raise your voice so that everyone in the office can hear you.',
+       'To send a formal written request before asking any question.',
+       'To feel free to speak up right away if anything isn\'t clear.',
+       'To wait until the next scheduled meeting to mention the issue.'
+     ], correct:2,
+     explain:[
+       'Not quite. "Just shout" isn\'t literally about volume, it\'s an informal invitation to speak up.',
+       'Not quite. It\'s an informal invitation, not a request for formal paperwork.',
+       'Correct. "Just shout" informally means to feel free to say something right away if there\'s an issue.',
+       'Not quite. The phrase encourages speaking up immediately, not waiting for a later meeting.'
+     ]}
+  ];
+
+  let answered = new Array(questions.length).fill(false);
+  let score = 0;
+
+  function renderExercises(){
+    const container = document.getElementById('exContainer');
+    container.innerHTML = '';
+    let currentSection = '';
+    questions.forEach((q, qi)=>{
+      if(q.section !== currentSection){
+        currentSection = q.section;
+        const h = document.createElement('div');
+        h.className = 'ex-section-title';
+        h.textContent = currentSection;
+        container.appendChild(h);
+      }
+      const qBlock = document.createElement('div');
+      qBlock.className = 'q-block';
+      qBlock.id = 'q'+qi;
+      const qText = document.createElement('div');
+      qText.className = 'q-text';
+      qText.textContent = (qi+1)+'. '+q.text;
+      qBlock.appendChild(qText);
+      const optWrap = document.createElement('div');
+      optWrap.className = 'q-options';
+      q.options.forEach((opt, oi)=>{
+        const optDiv = document.createElement('div');
+        const btn = document.createElement('button');
+        btn.className = 'opt-btn';
+        btn.textContent = String.fromCharCode(65+oi)+') '+opt;
+        btn.addEventListener('click', ()=>answerQuestion(qi, oi));
+        const exp = document.createElement('div');
+        exp.className = 'opt-explain';
+        exp.id = 'exp-'+qi+'-'+oi;
+        exp.textContent = q.explain[oi];
+        optDiv.appendChild(btn);
+        optDiv.appendChild(exp);
+        optWrap.appendChild(optDiv);
+      });
+      qBlock.appendChild(optWrap);
+      container.appendChild(qBlock);
+    });
+  }
+
+  function answerQuestion(qi, oi){
+    if(answered[qi]) return;
+    answered[qi] = true;
+    const q = questions[qi];
+    if(oi === q.correct) score++;
+    const qBlock = document.getElementById('q'+qi);
+    const buttons = qBlock.querySelectorAll('.opt-btn');
+    buttons.forEach((b, bi)=>{
+      b.disabled = true;
+      if(bi === q.correct) b.classList.add('correct');
+      if(bi === oi && oi !== q.correct) b.classList.add('wrong');
+      document.getElementById('exp-'+qi+'-'+bi).classList.add('show');
+    });
+    updateScore();
+  }
+
+  function updateScore(){
+    document.getElementById('scoreDisplay').textContent = 'Score: '+score+' / '+questions.length;
+    if(answered.every(a=>a)){
+      showFinalMessage();
+    }
+  }
+
+  function showFinalMessage(){
+    const el = document.getElementById('finalMsg');
+    const pct = score / questions.length;
+    let msg;
+    if(pct >= 0.87) msg = "🏆 Outstanding! You've clearly got a feel for clarifying and checking understanding at work.";
+    else if(pct >= 0.67) msg = '👍 Solid work! A quick review of a few phrases and this will be second nature.';
+    else if(pct >= 0.4) msg = '📘 Good start! Another pass through the Reading and Vocabulary in Use tabs will help.';
+    else msg = "🔁 Give the Reading tab another look, then try again. You'll notice a big improvement.";
+    el.textContent = 'Final score: '+score+' / '+questions.length+'. '+msg;
+    el.style.display = 'block';
+  }
+
+  function resetExercises(){
+    answered = new Array(questions.length).fill(false);
+    score = 0;
+    document.getElementById('finalMsg').style.display = 'none';
+    renderExercises();
+    updateScore();
+  }
+
+  renderExercises();
+  updateScore();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+LESSON-META
+track: general_reading
+title: "The Renewal: How Larkspur Kept Its Biggest Client at the Table"
+sub_topic: "Negotiation & deal-making tactics"
+genre: case_study
+level: B2
+grammar_focus: Reported Speech (Statements)
+theme: confidential deal file / manila case folder
+date: 2026-10-06
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Class: The Renewal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:               #2b2420;
+  --paper:              #f7f1e3;
+  --cream:              #ece0c4;
+  --rule:               #c9b896;
+  --accent:             #8b2e2e;
+  --accent2:            #2f4858;
+  --gold:               #b8860b;
+  --highlight-vocab:    #f6d978;
+  --highlight-idiom:    #cfe0d8;
+  --highlight-express:  #f0b98a;
+  --correct:            #2f7a4f;
+  --wrong:              #b23c2e;
+  --light-correct:      #e2f4e8;
+  --light-wrong:        #fbe4df;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Karla', 'Segoe UI', sans-serif;
+  --font-mono:    'Fira Code', 'Courier New', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background:
+    repeating-linear-gradient(0deg, rgba(139,46,46,0.03) 0 2px, transparent 2px 38px),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+::selection { background: var(--accent); color: #fff; }
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+.tilebar {
+  height: 10px;
+  width: 100%;
+  background: repeating-linear-gradient(90deg, var(--accent) 0 26px, var(--gold) 26px 52px);
+}
+
+.masthead {
+  background: linear-gradient(180deg, var(--cream), var(--paper));
+  border-bottom: 6px solid var(--accent);
+  padding: 2.4rem 0 1.6rem;
+  text-align: center;
+  position: relative;
+}
+.stamp {
+  position: absolute; top: 18px; right: 24px;
+  border: 3px solid var(--accent); color: var(--accent);
+  font-family: var(--font-mono); font-weight: 600; font-size: 0.72rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.3rem 0.6rem; border-radius: 6px; transform: rotate(6deg);
+  opacity: 0.75;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  font-weight: 500;
+  margin-bottom: 0.9rem;
+}
+.headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 4.4vw, 2.7rem);
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 0.9rem;
+  padding: 0 0.5rem;
+}
+.deck {
+  font-size: 1.08rem;
+  max-width: 640px;
+  margin: 0 auto 0.9rem;
+  color: #4a3f34;
+  font-style: italic;
+}
+.byline {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #6b5c48;
+  margin-bottom: 1.3rem;
+}
+.factrow { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem 1.2rem; }
+.fact {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: var(--paper);
+  border: 2px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+}
+
+.tabnav {
+  position: sticky; top: 0; z-index: 50;
+  display: flex;
+  background: var(--ink);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+.tabbtn {
+  flex: 1; border: none; background: transparent;
+  color: #e4d7ba;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.95rem 0.4rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-bottom: 4px solid transparent;
+}
+.tabbtn:hover { background: rgba(255,255,255,0.08); }
+.tabbtn.active { color: #fff; background: var(--accent); border-bottom: 4px solid var(--gold); }
+
+.panel { display: none; padding: 2.2rem 0 1rem; animation: fadeIn 0.25s ease; }
+.panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.sectitle { font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; color: var(--accent); margin-bottom: 0.3rem; }
+.subtitle { color: #5c4f3f; margin-bottom: 1.5rem; font-size: 0.95rem; }
+
+.tag {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.7rem;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  background: var(--accent2); color: #fff;
+  padding: 0.25rem 0.7rem; border-radius: 999px; margin-bottom: 0.8rem;
+}
+
+.legend {
+  display: flex; flex-wrap: wrap; gap: 1rem;
+  background: var(--cream); border: 2px dashed var(--rule); border-radius: 14px;
+  padding: 0.9rem 1.2rem; margin-bottom: 1.8rem; font-size: 0.88rem;
+}
+.legend-item { display: flex; align-items: center; gap: 0.5rem; }
+.swatch { width: 16px; height: 16px; border-radius: 4px; display: inline-block; }
+
+.excerpt {
+  background: var(--paper); border: 2px solid var(--rule); border-radius: 10px;
+  padding: 1.5rem 1.6rem; margin-bottom: 1.6rem; position: relative;
+}
+.excerpt::before {
+  content: "📁"; position: absolute; top: -16px; left: 20px;
+  font-size: 1.4rem; background: var(--paper); padding: 0 6px;
+}
+.exlabel {
+  font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--accent); font-weight: 600;
+  margin-bottom: 0.6rem; display: block;
+}
+.excerpt p { margin-bottom: 0.9rem; }
+.excerpt p:last-child { margin-bottom: 0; }
+
+.hl-v, .hl-i, .hl-e {
+  border-radius: 4px; padding: 0.05em 0.2em; cursor: help; font-weight: 600;
+  position: relative; border-bottom: 2px dotted currentColor;
+}
+.hl-v { background: var(--highlight-vocab); color: #6b4f06; }
+.hl-i { background: var(--highlight-idiom); color: #205048; }
+.hl-e { background: var(--highlight-express); color: #8a3f10; }
+
+[data-tip] { position: relative; }
+[data-tip]:hover::after, [data-tip]:focus::after {
+  content: attr(data-tip); position: absolute; bottom: 130%; left: 50%;
+  transform: translateX(-50%); background: var(--ink); color: #fff;
+  font-family: var(--font-body); font-weight: 400; font-size: 0.82rem; line-height: 1.4;
+  padding: 0.6rem 0.8rem; border-radius: 10px; width: max-content; max-width: 260px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25); z-index: 100; white-space: normal;
+}
+[data-tip]:hover::before, [data-tip]:focus::before {
+  content: ""; position: absolute; bottom: 118%; left: 50%; transform: translateX(-50%);
+  border: 6px solid transparent; border-top-color: var(--ink); z-index: 100;
+}
+
+.pullquote {
+  font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--accent2);
+  text-align: center; border-top: 3px dotted var(--rule); border-bottom: 3px dotted var(--rule);
+  padding: 1.6rem 1rem; margin: 2rem 0;
+}
+
+.vocab-intro { background: var(--cream); border-radius: 14px; padding: 1rem 1.3rem; margin-bottom: 1.8rem; font-size: 0.93rem; }
+.vgroup-title { font-family: var(--font-display); font-size: 1.15rem; margin: 1.6rem 0 0.9rem; color: var(--ink); display: flex; align-items: center; gap: 0.5rem; }
+.vgroup-title .dot { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.vcard { background: var(--paper); border: 2px solid var(--rule); border-radius: 10px; padding: 1rem 1.2rem; border-top: 5px solid var(--accent); }
+.vcard.idiom { border-top-color: var(--accent2); }
+.vcard.expr { border-top-color: var(--gold); }
+.vterm { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
+.vpos { font-family: var(--font-mono); font-size: 0.72rem; color: var(--rule); text-transform: uppercase; margin-bottom: 0.4rem; }
+.vdef { font-size: 0.92rem; margin-bottom: 0.5rem; }
+.vex { font-size: 0.88rem; font-style: italic; color: #4a3f34; }
+
+.gwhy { background: var(--cream); border-left: 5px solid var(--accent); border-radius: 10px; padding: 1rem 1.3rem; margin-bottom: 1.6rem; font-size: 0.95rem; }
+.gsub { font-family: var(--font-display); font-size: 1.25rem; margin: 1.8rem 0 0.8rem; color: var(--accent2); }
+.formula {
+  background: var(--ink); color: #e4d7ba; font-family: var(--font-mono); font-size: 0.95rem;
+  padding: 1rem 1.3rem; border-radius: 10px; margin-bottom: 1.2rem; text-align: center; letter-spacing: 0.02em;
+}
+table.gtable { width: 100%; border-collapse: collapse; margin-bottom: 1.4rem; font-size: 0.9rem; }
+table.gtable th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; text-align: left; font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; }
+table.gtable td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table.gtable tr:nth-child(even) td { background: var(--cream); }
+table.gtable details { cursor: pointer; }
+table.gtable summary { color: var(--accent2); font-weight: 600; font-family: var(--font-mono); font-size: 0.82rem; }
+
+.exintro { background: var(--cream); border-radius: 14px; padding: 1rem 1.3rem; margin-bottom: 1.6rem; font-size: 0.93rem; }
+.exsection-title {
+  font-family: var(--font-display); font-size: 1.3rem; color: var(--accent);
+  margin: 1.8rem 0 1rem; border-bottom: 3px solid var(--gold); padding-bottom: 0.3rem;
+}
+.qblock { background: var(--paper); border: 2px solid var(--rule); border-radius: 10px; padding: 1.2rem 1.3rem; margin-bottom: 1.1rem; }
+.qtext { font-weight: 700; margin-bottom: 0.8rem; }
+.opt-btn {
+  display: block; width: 100%; text-align: left; background: var(--paper);
+  border: 2px solid var(--rule); border-radius: 10px; padding: 0.6rem 0.9rem; margin-bottom: 0.5rem;
+  cursor: pointer; font-family: var(--font-body); font-size: 0.94rem; transition: all 0.15s;
+}
+.opt-btn:hover:not(:disabled) { border-color: var(--accent2); background: var(--cream); }
+.opt-btn:disabled { cursor: default; }
+.opt-btn.correct { background: var(--light-correct); border-color: var(--correct); color: #205c3d; font-weight: 700; }
+.opt-btn.wrong { background: var(--light-wrong); border-color: var(--wrong); color: #8a2b2f; font-weight: 700; }
+.opt-btn.reveal-correct { background: var(--light-correct); border-color: var(--correct); font-weight: 700; }
+.feedback { display: none; margin-top: 0.6rem; padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.9rem; }
+.feedback.show { display: block; }
+.feedback.correct { background: var(--light-correct); color: #205c3d; }
+.feedback.wrong { background: var(--light-wrong); color: #8a2b2f; }
+.fb-icon { font-weight: 800; margin-right: 0.3rem; }
+
+.qblock.answered-correct { border-color: var(--correct); }
+.qblock.answered-wrong { border-color: var(--wrong); }
+
+#score-bar { display: none; text-align: center; background: var(--ink); color: #fff; border-radius: 14px; padding: 1.8rem; margin-top: 2rem; }
+#score-bar.show { display: block; }
+#score-num { font-family: var(--font-display); font-size: 3rem; color: var(--gold); }
+#score-title { font-family: var(--font-display); font-size: 1.4rem; margin: 0.4rem 0; }
+#score-msg { font-size: 0.92rem; margin-bottom: 1rem; color: #e4d7ba; }
+.reset-btn {
+  background: var(--accent); color: #fff; border: none; font-family: var(--font-display);
+  font-weight: 700; padding: 0.7rem 1.6rem; border-radius: 999px; cursor: pointer; font-size: 0.95rem;
+}
+.reset-btn:hover { background: var(--gold); }
+
+@media (max-width: 600px) {
+  .tabbtn { font-size: 0.78rem; padding: 0.75rem 0.2rem; }
+  .headline { font-size: 1.5rem; }
+  .vgrid { grid-template-columns: 1fr; }
+  table.gtable { font-size: 0.78rem; }
+  .excerpt { padding: 1.2rem 1rem; }
+  .stamp { position: static; display: inline-block; margin-bottom: 0.8rem; transform: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="stamp">Case File</div>
+  <p class="eyebrow">English Language Class · Negotiation &amp; Deal-Making · Case Study · B2</p>
+  <h1 class="headline">The Renewal: How Larkspur Kept Its Biggest Client at the Table</h1>
+  <p class="deck">A software vendor's biggest account was ready to walk. Here's exactly how two negotiators, three weeks, and a lot of careful concessions brought the deal back from the brink.</p>
+  <p class="byline">Case File: Larkspur Software, Commercial Strategy Review</p>
+  <div class="factrow">
+    <span class="fact">🤝 Topic: Negotiation &amp; Deal-Making</span>
+    <span class="fact">🎯 Level: B2</span>
+    <span class="fact">📝 Grammar: Reported Speech</span>
+  </div>
+</header>
+<div class="tilebar"></div>
+
+<nav class="tabnav">
+  <button class="tabbtn active" onclick="switchTab('reading', this)">📁 Reading</button>
+  <button class="tabbtn" onclick="switchTab('vocab', this)">📖 Vocabulary</button>
+  <button class="tabbtn" onclick="switchTab('grammar', this)">💬 Grammar</button>
+  <button class="tabbtn" onclick="switchTab('exercises', this)">✅ Exercises</button>
+</nav>
+
+<div class="wrap">
+
+<!-- ══════════════ READING ══════════════ -->
+<section id="panel-reading" class="panel active">
+  <span class="tag">Case Study</span>
+  <h2 class="sectitle">The Renewal</h2>
+  <p class="subtitle">How a four-year client almost walked, and what brought the deal back. Hover or tap any highlighted term for its meaning.</p>
+
+  <div class="legend">
+    <div class="legend-item"><span class="swatch" style="background:var(--highlight-vocab)"></span>Vocabulary</div>
+    <div class="legend-item"><span class="swatch" style="background:var(--highlight-idiom)"></span>Idiom / Set Phrase</div>
+    <div class="legend-item"><span class="swatch" style="background:var(--highlight-express)"></span>Useful Expression</div>
+  </div>
+
+  <div class="excerpt">
+    <span class="exlabel">Excerpt 1 · The Account at Risk</span>
+    <p>Meridian Retail Group had been a Larkspur Software client for four years, running its entire inventory and point-of-sale system on Larkspur's platform. When the <span class="hl-v" data-tip="Vocabulary · renewal (n.) · the act of extending a contract or agreement for a further period">renewal</span> date for Meridian's contract came up for review, nobody at Larkspur treated it as routine. Meridian was the company's second-largest account, and its procurement lead, Priya Nandakumar, had a reputation inside Larkspur for being a tough negotiator who read every clause of a contract twice. Daniel Osei, Larkspur's head of account management, was given one instruction from his director: keep the account, whatever it took, without giving away the company's margin in the process.</p>
+    <p>Three months before the contract's expiry, Daniel requested an early meeting. He knew that waiting until the final weeks would hand Meridian all the <span class="hl-v" data-tip="Vocabulary · leverage (n.) · power or influence used to gain an advantage in a negotiation">leverage</span>, since a client with no time pressure can simply let a deadline pass and renegotiate on its own terms. Priya agreed to <span class="hl-e" data-tip="Useful Expression · come to the table · to agree to take part in a negotiation or discussion">come to the table</span>, but she opened by setting expectations. She told Daniel that Meridian had already received an unsolicited proposal from a rival platform, and that the board expected procurement to at least explore it before any renewal was signed.</p>
+  </div>
+
+  <div class="excerpt">
+    <span class="exlabel">Excerpt 2 · Opening Positions</span>
+    <p>At the first real negotiation session, both sides arrived with a clear <span class="hl-v" data-tip="Vocabulary · anchor (n.) · an initial price or offer used to set the starting point of a negotiation">anchor</span>. Larkspur proposed a twelve percent price increase, citing new features and rising infrastructure costs. Once that figure was <span class="hl-e" data-tip="Useful Expression · on the table · currently being offered or discussed as part of a negotiation">on the table</span>, Priya rejected it immediately. She said that a twelve percent increase was far beyond what Meridian's finance team had budgeted for, and that she would need a far stronger justification before taking any number back to her board. Daniel had expected resistance, but he hadn't expected her <span class="hl-v" data-tip="Vocabulary · counteroffer (n.) · an alternative offer made in response to a previous one">counteroffer</span>: a flat renewal at the existing price, with no increase at all.</p>
+    <p>Both positions were, in negotiation terms, extreme anchors designed to shape everything that followed. Daniel didn't reject Priya's counteroffer outright. Instead, he asked what would actually move Meridian toward a yes. Priya mentioned that a competitor had already offered a lower rate for a comparable service, though she admitted that the competitor's platform lacked several integrations Meridian's warehouse team relied on daily. That admission, small as it was, told Daniel that price wasn't the only lever available to him.</p>
+  </div>
+
+  <div class="excerpt">
+    <span class="exlabel">Excerpt 3 · Trading Concessions</span>
+    <p>Over the following two weeks, the negotiation settled into a rhythm of small, careful <span class="hl-v" data-tip="Vocabulary · concession (n.) · something given up or agreed to in order to reach an agreement">concessions</span> on both sides. Larkspur dropped its proposed increase from twelve percent to seven, but only after agreeing to extend the contract term from two years to three, locking in Meridian's business for longer in exchange for softening the price. Daniel also floated a small early-renewal <span class="hl-v" data-tip="Vocabulary · incentive (n.) · something offered to encourage a person or company to act in a particular way">incentive</span>: a short-term discount if Meridian signed within the month. He was careful never to offer a concession without asking for something back; every time Larkspur moved, he made sure Meridian moved too.</p>
+    <p>Priya, for her part, refused to <span class="hl-i" data-tip="Idiom · play hardball · to negotiate in an aggressive, uncompromising way">play hardball</span> on every single point. After an hour of back-and-forth, both sides agreed to <span class="hl-i" data-tip="Idiom · meet in the middle · to compromise, with each side moving partway toward the other's position">meet in the middle</span> on the support-response clause, settling on terms neither had originally proposed. She let a few other minor requests go unchallenged so that she could <span class="hl-i" data-tip="Idiom · hold the line · to refuse to give any more ground on a position, staying firm">hold the line</span> firmly on the issues that actually mattered to her: a dedicated account manager, and a cap on future price increases, which she described as completely <span class="hl-e" data-tip="Useful Expression · non-negotiable · not open to discussion or change; a fixed requirement">non-negotiable</span>. Daniel explained that a dedicated account manager wasn't normally included below a certain contract size, but that he could <span class="hl-i" data-tip="Idiom · sweeten the deal · to make an offer more attractive by adding extra benefits">sweeten the deal</span> by offering one if Meridian agreed to the three-year term outright, rather than negotiating it separately.</p>
+  </div>
+
+  <div class="excerpt">
+    <span class="exlabel">Excerpt 4 · The Deadline</span>
+    <p>With eleven days left before the contract lapsed, talks reached a <span class="hl-v" data-tip="Vocabulary · deadlock (n.) · a situation in which neither side will move, and no agreement can be reached">deadlock</span>. Meridian's board had approved the three-year term and the dedicated account manager, but it refused to accept anything above a five percent increase, arguing that Larkspur's support had noticeably declined over the past year. Daniel knew that figure was below what his director would approve without a fight, and for the first time in the process, he considered <span class="hl-i" data-tip="Idiom · walk away from the table · to end a negotiation without reaching an agreement">walking away from the table</span> rather than accepting a deal that damaged Larkspur's margin on its biggest account.</p>
+    <p>Instead, he <span class="hl-v" data-tip="Vocabulary · escalate (v.) · to involve someone more senior, or make an issue more serious, in order to resolve it">escalated</span> the <span class="hl-v" data-tip="Vocabulary · stakeholder (n.) · a person with an interest in, or influence over, a decision or outcome">stakeholder</span> conversation, bringing in Larkspur's VP of Customer Success. Daniel privately doubted it would be enough, and he was ready, if it failed, to <span class="hl-i" data-tip="Idiom · go back to the drawing board · to start planning again from the beginning after a failed attempt">go back to the drawing board</span> entirely. The VP admitted openly that two support incidents earlier in the year had been handled poorly, and offered a service-credit package as a <span class="hl-v" data-tip="Vocabulary · contingency (n.) · a provision made for a possible future event or problem">contingency</span> against any future lapse. Priya said that an acknowledgement like that, paired with real guarantees, mattered more to her board than another half a percentage point on the price. She agreed to move from five to six percent, on condition that the service credits were written directly into the contract rather than promised verbally.</p>
+  </div>
+
+  <div class="excerpt">
+    <span class="exlabel">Excerpt 5 · Closing the Deal</span>
+    <p>The final offer landed at a six percent increase, a three-year term, a named account manager, a price-increase cap for the contract's duration, and a written service-credit contingency. Neither side got everything from its opening position, but both sides got the parts that mattered most to them. When the contract was signed, Priya told Daniel, only half joking, that she'd expected Larkspur to hold firm at ten percent and was pleasantly surprised they'd come down as far as they had. Daniel admitted that Larkspur's opening anchor of twelve percent had always been a starting point, not a real expectation, built deliberately high so there was room to make concessions that would feel meaningful to Meridian without actually costing Larkspur very much.</p>
+    <p>Both sides described the outcome afterward as <span class="hl-e" data-tip="Useful Expression · a win-win · an outcome that benefits both sides of an agreement">a win-win</span>: Meridian secured price protection and better support, while Larkspur locked in three more years of its second-largest account at a sustainable margin. The deal closed <span class="hl-e" data-tip="Useful Expression · in good faith · with honest, sincere intentions, without trying to deceive the other side">in good faith</span>, with <span class="hl-e" data-tip="Useful Expression · no hard feelings · no lasting anger or resentment after a disagreement">no hard feelings</span> on either side, four days before the original contract would have lapsed.</p>
+  </div>
+
+  <div class="excerpt">
+    <span class="exlabel">Excerpt 6 · What the Case Teaches</span>
+    <p>Larkspur's internal review of the renewal, written for its sales training programme, drew out a few lessons that now get taught to every new account manager. The first is about anchoring: an opening number only works as leverage if the other side believes there's room to move from it, so an anchor set too rigidly can backfire by making a counterparty walk away from the table rather than negotiate at all. The second lesson concerns concessions: every concession should be traded, not given away, because a negotiator who gives ground for free teaches the other side that future demands will also be free.</p>
+    <p>The third lesson is less about tactics and more about trust. Priya's decision to accept a lower price increase in exchange for a genuine acknowledgement of Larkspur's service failures suggests that, for many clients, a sincere admission carries real commercial value, sometimes more than another percentage point ever could. Daniel's own note in the file put it simply: a <span class="hl-e" data-tip="Useful Expression · best and final offer · the last offer a party is willing to make, with no further room to negotiate">best and final offer</span> only works if the other side believes you'll actually walk away if they don't take it, and in this case, both sides eventually believed exactly that about the other.</p>
+  </div>
+
+  <p class="pullquote">"An opening number only works as leverage if the other side believes there's room to move from it."</p>
+</section>
+
+<!-- ══════════════ VOCABULARY ══════════════ -->
+<section id="panel-vocab" class="panel">
+  <span class="tag">Vocabulary</span>
+  <h2 class="sectitle">Key Words &amp; Phrases</h2>
+  <div class="vocab-intro">Three families of language from the reading: <strong>Vocabulary</strong> (single words worth learning), <strong>Idioms &amp; Set Phrases</strong> (fixed expressions with a figurative meaning), and <strong>Useful Expressions</strong> (the actual negotiation language the case study uses).</div>
+
+  <h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-vocab)"></span>Vocabulary</h3>
+  <div class="vgrid">
+    <div class="vcard"><div class="vterm">renewal</div><div class="vpos">noun</div><div class="vdef">The act of extending a contract or agreement for a further period.</div><div class="vex">The <strong>renewal</strong> talks started three months before the deadline.</div></div>
+    <div class="vcard"><div class="vterm">leverage</div><div class="vpos">noun</div><div class="vdef">Power or influence used to gain an advantage in a negotiation.</div><div class="vex">A tight deadline on your side gives the other party more <strong>leverage</strong>.</div></div>
+    <div class="vcard"><div class="vterm">anchor</div><div class="vpos">noun</div><div class="vdef">An initial price or offer used to set the starting point of a negotiation.</div><div class="vex">Their opening <strong>anchor</strong> was far higher than anyone expected to pay.</div></div>
+    <div class="vcard"><div class="vterm">counteroffer</div><div class="vpos">noun</div><div class="vdef">An alternative offer made in response to a previous one.</div><div class="vex">Her <strong>counteroffer</strong> rejected the price increase completely.</div></div>
+    <div class="vcard"><div class="vterm">concession</div><div class="vpos">noun</div><div class="vdef">Something given up or agreed to in order to reach an agreement.</div><div class="vex">Each side made a small <strong>concession</strong> to keep talks moving.</div></div>
+    <div class="vcard"><div class="vterm">incentive</div><div class="vpos">noun</div><div class="vdef">Something offered to encourage a person or company to act in a particular way.</div><div class="vex">They added a discount as an <strong>incentive</strong> to sign early.</div></div>
+    <div class="vcard"><div class="vterm">deadlock</div><div class="vpos">noun</div><div class="vdef">A situation in which neither side will move, and no agreement can be reached.</div><div class="vex">The talks hit a <strong>deadlock</strong> over the price increase.</div></div>
+    <div class="vcard"><div class="vterm">escalate</div><div class="vpos">verb</div><div class="vdef">To involve someone more senior, or make an issue more serious, in order to resolve it.</div><div class="vex">When the two sides couldn't agree, she <strong>escalated</strong> the issue to her director.</div></div>
+    <div class="vcard"><div class="vterm">stakeholder</div><div class="vpos">noun</div><div class="vdef">A person with an interest in, or influence over, a decision or outcome.</div><div class="vex">Every key <strong>stakeholder</strong> had to approve the final contract.</div></div>
+    <div class="vcard"><div class="vterm">contingency</div><div class="vpos">noun</div><div class="vdef">A provision made for a possible future event or problem.</div><div class="vex">The contract included a <strong>contingency</strong> for late deliveries.</div></div>
+  </div>
+
+  <h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-idiom)"></span>Idioms &amp; Set Phrases</h3>
+  <div class="vgrid">
+    <div class="vcard idiom"><div class="vterm">play hardball</div><div class="vpos">idiom</div><div class="vdef">To negotiate in an aggressive, uncompromising way.</div><div class="vex">He decided to <strong>play hardball</strong> on the delivery deadline.</div></div>
+    <div class="vcard idiom"><div class="vterm">sweeten the deal</div><div class="vpos">idiom</div><div class="vdef">To make an offer more attractive by adding extra benefits.</div><div class="vex">They <strong>sweetened the deal</strong> with a year of free support.</div></div>
+    <div class="vcard idiom"><div class="vterm">hold the line</div><div class="vpos">idiom</div><div class="vdef">To refuse to give any more ground on a position, staying firm.</div><div class="vex">Management told the team to <strong>hold the line</strong> on price.</div></div>
+    <div class="vcard idiom"><div class="vterm">meet in the middle</div><div class="vpos">idiom</div><div class="vdef">To compromise, with each side moving partway toward the other's position.</div><div class="vex">Neither side got everything, but they agreed to <strong>meet in the middle</strong>.</div></div>
+    <div class="vcard idiom"><div class="vterm">walk away from the table</div><div class="vpos">idiom</div><div class="vdef">To end a negotiation without reaching an agreement.</div><div class="vex">She was ready to <strong>walk away from the table</strong> if the terms didn't change.</div></div>
+    <div class="vcard idiom"><div class="vterm">go back to the drawing board</div><div class="vpos">idiom</div><div class="vdef">To start planning again from the beginning after a failed attempt.</div><div class="vex">When the offer fell through, the team went <strong>back to the drawing board</strong>.</div></div>
+  </div>
+
+  <h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-express)"></span>Useful Expressions</h3>
+  <div class="vgrid">
+    <div class="vcard expr"><div class="vterm">come to the table</div><div class="vpos">negotiation phrase</div><div class="vdef">To agree to take part in a negotiation or discussion.</div><div class="vex">Both sides finally agreed to <strong>come to the table</strong>.</div></div>
+    <div class="vcard expr"><div class="vterm">on the table</div><div class="vpos">negotiation phrase</div><div class="vdef">Currently being offered or discussed as part of a negotiation.</div><div class="vex">A three-year contract is still <strong>on the table</strong>.</div></div>
+    <div class="vcard expr"><div class="vterm">non-negotiable</div><div class="vpos">negotiation phrase</div><div class="vdef">Not open to discussion or change; a fixed requirement.</div><div class="vex">The delivery date was completely <strong>non-negotiable</strong>.</div></div>
+    <div class="vcard expr"><div class="vterm">a win-win</div><div class="vpos">negotiation phrase</div><div class="vdef">An outcome that benefits both sides of an agreement.</div><div class="vex">The final deal turned out to be <strong>a win-win</strong> for both companies.</div></div>
+    <div class="vcard expr"><div class="vterm">in good faith</div><div class="vpos">negotiation phrase</div><div class="vdef">With honest, sincere intentions, without trying to deceive the other side.</div><div class="vex">Both parties negotiated <strong>in good faith</strong> from the start.</div></div>
+    <div class="vcard expr"><div class="vterm">no hard feelings</div><div class="vpos">negotiation phrase</div><div class="vdef">No lasting anger or resentment after a disagreement.</div><div class="vex">The deal was tough, but there were <strong>no hard feelings</strong> afterward.</div></div>
+    <div class="vcard expr"><div class="vterm">best and final offer</div><div class="vpos">negotiation phrase</div><div class="vdef">The last offer a party is willing to make, with no further room to negotiate.</div><div class="vex">This is our <strong>best and final offer</strong>: take it or leave it.</div></div>
+  </div>
+</section>
+
+<!-- ══════════════ GRAMMAR ══════════════ -->
+<section id="panel-grammar" class="panel">
+  <span class="tag">Grammar</span>
+  <h2 class="sectitle">Reported Speech: Statements</h2>
+  <div class="gwhy">A case study like this one almost never quotes a negotiator word for word. Instead, it reports what each side said, summarizing conversations that often happened over days or weeks. Reported speech lets the writer compress "she said X" into a smooth, professional sentence, while a reporting verb like <em>said</em>, <em>told</em>, <em>explained</em>, <em>mentioned</em>, or <em>admitted</em> plus <em>that</em> shows whose claim or statement it is, and the backshifted tense marks it as something spoken in the past, not a fact happening right now.</div>
+
+  <h3 class="gsub">01 · What Is It?</h3>
+  <table class="gtable">
+    <tr><th>Form</th><th>Used for</th><th>Example from the text</th></tr>
+    <tr><td>Direct speech</td><td>The exact words someone said, in quotation marks</td><td>Priya: "I will need a far stronger justification."</td></tr>
+    <tr><td>Reported speech</td><td>A summary of what someone said, with the tense shifted back</td><td>"She said that she <strong>would need</strong> a far stronger justification."</td></tr>
+  </table>
+
+  <h3 class="gsub">02 · How to Form It</h3>
+  <div class="formula">Subject + said/told/explained/admitted + (that) + subject + backshifted verb</div>
+  <table class="gtable">
+    <tr><th>Direct Speech Tense</th><th>Reported Speech Tense</th><th>Example from the Text</th></tr>
+    <tr><td>present simple (is/has)</td><td>past simple (was/had)</td><td>"a competitor <strong>had</strong> already offered a lower rate"</td></tr>
+    <tr><td>will</td><td>would</td><td>"she <strong>would need</strong> a far stronger justification"</td></tr>
+    <tr><td>can</td><td>could</td><td>"he <strong>could</strong> sweeten the deal by offering one"</td></tr>
+    <tr><td>present perfect (has declined)</td><td>past perfect (had declined)</td><td>"Larkspur's support <strong>had</strong> noticeably declined"</td></tr>
+  </table>
+
+  <h3 class="gsub">03 · Why This Text Uses It</h3>
+  <p style="margin-bottom:1rem;">A business case study needs to summarize many separate conversations into a readable narrative, without pretending to quote every sentence exactly. Reported speech lets the writer attribute specific claims and positions to specific people, Priya's objections, Daniel's explanations, without the clutter of constant quotation marks. The backshifted tense also signals that these were things said in the past, during the negotiation, as distinct from the facts and figures the case study states directly as its own narration.</p>
+
+  <h3 class="gsub">04 · Spotted in the Reading</h3>
+  <table class="gtable">
+    <tr><th>Excerpt</th><th>Phrase</th><th>Reported from</th></tr>
+    <tr><td>1</td><td>"She told Daniel that Meridian had already received an unsolicited proposal"</td><td>"We have already received an unsolicited proposal"</td></tr>
+    <tr><td>2</td><td>"She said that... she would need a far stronger justification"</td><td>"I will need a far stronger justification"</td></tr>
+    <tr><td>2</td><td>"Priya mentioned that a competitor had already offered a lower rate"</td><td>"A competitor has already offered a lower rate"</td></tr>
+    <tr><td>3</td><td>"Daniel explained that... he could sweeten the deal by offering one"</td><td>"I can sweeten the deal by offering one"</td></tr>
+    <tr><td>4</td><td>"Priya said that an acknowledgement like that... mattered more to her board"</td><td>"An acknowledgement like that matters more to my board"</td></tr>
+    <tr><td>5</td><td>"Daniel admitted that Larkspur's opening anchor... had always been a starting point"</td><td>"Larkspur's opening anchor has always been a starting point"</td></tr>
+  </table>
+
+  <h3 class="gsub">05 · Practice: Report the Statement</h3>
+  <table class="gtable">
+    <tr><th>Direct Speech</th><th>Your Turn: Report It</th></tr>
+    <tr><td>Daniel said: "I can offer a small discount if you sign this month."</td><td><details><summary>Show answer</summary>Daniel said that he could offer a small discount if they signed that month.</details></td></tr>
+    <tr><td>Priya told her board: "We have received a better offer from a competitor."</td><td><details><summary>Show answer</summary>Priya told her board that they had received a better offer from a competitor.</details></td></tr>
+    <tr><td>The VP admitted: "Our support has declined over the past year."</td><td><details><summary>Show answer</summary>The VP admitted that their support had declined over the past year.</details></td></tr>
+    <tr><td>Priya said: "I will need to check this with my finance team first."</td><td><details><summary>Show answer</summary>Priya said that she would need to check it with her finance team first.</details></td></tr>
+    <tr><td>Daniel explained: "This price is our best and final offer."</td><td><details><summary>Show answer</summary>Daniel explained that the price was their best and final offer.</details></td></tr>
+  </table>
+</section>
+
+<!-- ══════════════ EXERCISES ══════════════ -->
+<section id="panel-exercises" class="panel">
+  <span class="tag">Exercises</span>
+  <h2 class="sectitle">Test Yourself</h2>
+  <div class="exintro">15 questions across three sections. Click an answer to see instant feedback: every option, right or wrong, comes with an explanation.</div>
+
+  <h3 class="exsection-title">A · Reading Comprehension</h3>
+
+  <div class="qblock" id="qA1">
+    <p class="qtext">1. Why did Daniel request an early meeting, three months before the contract's expiry?</p>
+    <button class="opt-btn" data-q="qA1" data-correct="true" data-expl="Correct: waiting too long would hand Meridian all the leverage, since a relaxed deadline favours the client.">He knew that waiting too long would hand Meridian all the leverage.</button>
+    <button class="opt-btn" data-q="qA1" data-correct="false" data-expl="Not stated: no company policy requiring early meetings is mentioned.">Larkspur's company policy required every renewal to start early.</button>
+    <button class="opt-btn" data-q="qA1" data-correct="false" data-expl="Not stated: Priya's reputation didn't force an earlier start date.">Priya had personally insisted the meeting happen sooner.</button>
+    <button class="opt-btn" data-q="qA1" data-correct="false" data-expl="Not stated: no competing clients are mentioned as the reason.">Larkspur was already negotiating with several other clients.</button>
+    <div class="feedback" id="fb-qA1"></div>
+  </div>
+
+  <div class="qblock" id="qA2">
+    <p class="qtext">2. What was Priya's opening counteroffer in response to Larkspur's twelve percent increase?</p>
+    <button class="opt-btn" data-q="qA2" data-correct="true" data-expl="Correct: she countered with a flat renewal at the existing price, no increase at all.">A flat renewal at the existing price, no increase.</button>
+    <button class="opt-btn" data-q="qA2" data-correct="false" data-expl="Not what happened: she didn't propose a smaller increase at this stage.">A smaller increase of around five percent instead.</button>
+    <button class="opt-btn" data-q="qA2" data-correct="false" data-expl="Not what happened: cancelling the contract outright isn't her counteroffer.">An immediate cancellation of the entire contract.</button>
+    <button class="opt-btn" data-q="qA2" data-correct="false" data-expl="Not what happened: a longer contract term wasn't her first counteroffer.">A longer five-year contract at a reduced rate.</button>
+    <div class="feedback" id="fb-qA2"></div>
+  </div>
+
+  <div class="qblock" id="qA3">
+    <p class="qtext">3. What did Larkspur agree to give Meridian in exchange for dropping the increase from twelve to seven percent?</p>
+    <button class="opt-btn" data-q="qA3" data-correct="false" data-expl="Not what happened: no free staff training is described in this exchange.">Free staff training for Meridian's whole team.</button>
+    <button class="opt-btn" data-q="qA3" data-correct="true" data-expl="Correct: Larkspur agreed to extend the contract term from two years to three.">An extension of the contract term to three years.</button>
+    <button class="opt-btn" data-q="qA3" data-correct="false" data-expl="Not what happened: a refund isn't mentioned at this point in the case.">A full refund of the previous year's fees.</button>
+    <button class="opt-btn" data-q="qA3" data-correct="false" data-expl="Not what happened: new office software isn't part of this exchange.">New office software for Meridian's head office.</button>
+    <div class="feedback" id="fb-qA3"></div>
+  </div>
+
+  <div class="qblock" id="qA4">
+    <p class="qtext">4. Why did Daniel escalate the conversation and bring in Larkspur's VP of Customer Success?</p>
+    <button class="opt-btn" data-q="qA4" data-correct="false" data-expl="Not stated: no request from Meridian's own board for the VP is mentioned.">Meridian's board had specifically requested to meet the VP.</button>
+    <button class="opt-btn" data-q="qA4" data-correct="false" data-expl="Not stated: legal review isn't given as the reason here.">Larkspur's legal team required senior sign-off first.</button>
+    <button class="opt-btn" data-q="qA4" data-correct="false" data-expl="Not stated: the contract hadn't yet been signed at this point.">The contract had already been signed and needed review.</button>
+    <button class="opt-btn" data-q="qA4" data-correct="true" data-expl="Correct: talks had hit a deadlock over price, so he escalated rather than accept a damaging deal or walk away.">Talks had reached a deadlock, and he needed another way forward.</button>
+    <div class="feedback" id="fb-qA4"></div>
+  </div>
+
+  <div class="qblock" id="qA5">
+    <p class="qtext">5. According to the case study's final lesson, why might a sincere admission matter more to a client than another percentage point on price?</p>
+    <button class="opt-btn" data-q="qA5" data-correct="false" data-expl="Not what the case argues: price is still relevant, just not the only factor.">Because price never actually matters in any negotiation.</button>
+    <button class="opt-btn" data-q="qA5" data-correct="true" data-expl="Correct: a sincere admission can carry real commercial value, sometimes more than a small price change.">Because a sincere admission can carry real commercial value.</button>
+    <button class="opt-btn" data-q="qA5" data-correct="false" data-expl="Not what the case argues: legal requirements aren't mentioned here.">Because admissions are legally required in every contract.</button>
+    <button class="opt-btn" data-q="qA5" data-correct="false" data-expl="Not what the case argues: this reverses the point being made.">Because clients never actually care about service quality.</button>
+    <div class="feedback" id="fb-qA5"></div>
+  </div>
+
+  <h3 class="exsection-title">B · Vocabulary in Context</h3>
+
+  <div class="qblock" id="qB1">
+    <p class="qtext">6. In "waiting would hand Meridian all the leverage," leverage most nearly means:</p>
+    <button class="opt-btn" data-q="qB1" data-correct="true" data-expl="Correct: leverage means power or influence used to gain an advantage.">power or influence that gives an advantage</button>
+    <button class="opt-btn" data-q="qB1" data-correct="false" data-expl="Leverage isn't about money saved directly.">extra money saved during a negotiation</button>
+    <button class="opt-btn" data-q="qB1" data-correct="false" data-expl="Leverage isn't a type of legal document.">a specific type of legal paperwork</button>
+    <button class="opt-btn" data-q="qB1" data-correct="false" data-expl="Leverage isn't about how long a meeting lasts.">the total length of a meeting</button>
+    <div class="feedback" id="fb-qB1"></div>
+  </div>
+
+  <div class="qblock" id="qB2">
+    <p class="qtext">7. When Priya calls the price cap "completely non-negotiable," she means it is:</p>
+    <button class="opt-btn" data-q="qB2" data-correct="false" data-expl="Non-negotiable doesn't mean it's unimportant; the opposite is true.">a minor detail nobody really cares about</button>
+    <button class="opt-btn" data-q="qB2" data-correct="false" data-expl="Non-negotiable has nothing to do with being illegal.">something that would be illegal to include</button>
+    <button class="opt-btn" data-q="qB2" data-correct="false" data-expl="Non-negotiable isn't about requiring more signatures.">a clause that requires extra signatures</button>
+    <button class="opt-btn" data-q="qB2" data-correct="true" data-expl="Correct: non-negotiable means not open to discussion or change.">not open to any discussion or change</button>
+    <div class="feedback" id="fb-qB2"></div>
+  </div>
+
+  <div class="qblock" id="qB3">
+    <p class="qtext">8. What does it mean that Daniel considered "walking away from the table"?</p>
+    <button class="opt-btn" data-q="qB3" data-correct="false" data-expl="This takes the phrase too literally, as a physical action in a room.">Physically leaving the meeting room for a short break</button>
+    <button class="opt-btn" data-q="qB3" data-correct="true" data-expl="Correct: walking away from the table means ending the negotiation without an agreement.">Ending the negotiation without reaching any agreement</button>
+    <button class="opt-btn" data-q="qB3" data-correct="false" data-expl="This isn't what the idiom describes; no furniture is involved.">Moving the meeting to a different, larger table</button>
+    <button class="opt-btn" data-q="qB3" data-correct="false" data-expl="This is close in meaning to signing, which is the opposite idea.">Agreeing to sign the contract immediately</button>
+    <div class="feedback" id="fb-qB3"></div>
+  </div>
+
+  <div class="qblock" id="qB4">
+    <p class="qtext">9. What does it mean to "sweeten the deal," as Daniel does by offering a dedicated account manager?</p>
+    <button class="opt-btn" data-q="qB4" data-correct="false" data-expl="This takes the idiom literally; no actual sugar or food is involved.">To add a literal sweet treat to a business gift</button>
+    <button class="opt-btn" data-q="qB4" data-correct="false" data-expl="This is roughly the opposite of what the idiom means.">To make an offer noticeably worse than before</button>
+    <button class="opt-btn" data-q="qB4" data-correct="true" data-expl="Correct: sweeten the deal means to make an offer more attractive by adding extra benefits.">To make an offer more attractive with extra benefits</button>
+    <button class="opt-btn" data-q="qB4" data-correct="false" data-expl="This isn't the meaning; the idiom is about the offer, not the paperwork.">To delay signing the final paperwork for longer</button>
+    <div class="feedback" id="fb-qB4"></div>
+  </div>
+
+  <div class="qblock" id="qB5">
+    <p class="qtext">10. Describing the final outcome as "a win-win" suggests that:</p>
+    <button class="opt-btn" data-q="qB5" data-correct="false" data-expl="A win-win doesn't mean one side lost everything.">one side lost almost everything it wanted</button>
+    <button class="opt-btn" data-q="qB5" data-correct="false" data-expl="A win-win doesn't require identical terms for both sides.">both sides received exactly identical contract terms</button>
+    <button class="opt-btn" data-q="qB5" data-correct="true" data-expl="Correct: a win-win means an outcome that benefits both sides of an agreement.">both sides benefited from the final agreement</button>
+    <button class="opt-btn" data-q="qB5" data-correct="false" data-expl="A win-win doesn't involve a third, uninvolved party.">a third company unexpectedly joined the deal</button>
+    <div class="feedback" id="fb-qB5"></div>
+  </div>
+
+  <h3 class="exsection-title">C · Grammar: Reported Speech</h3>
+
+  <div class="qblock" id="qC1">
+    <p class="qtext">11. Priya said: "I will need to check this with my finance team." Which reported version is correct?</p>
+    <button class="opt-btn" data-q="qC1" data-correct="true" data-expl="Correct: 'will' backshifts to 'would' in reported speech.">Priya said that she would need to check it with her finance team.</button>
+    <button class="opt-btn" data-q="qC1" data-correct="false" data-expl="This keeps 'will,' which should shift to 'would' in reported speech.">Priya said that she will need to check it with her finance team.</button>
+    <button class="opt-btn" data-q="qC1" data-correct="false" data-expl="This changes the meaning to a past ability, not a future need.">Priya said that she could check it with her finance team.</button>
+    <button class="opt-btn" data-q="qC1" data-correct="false" data-expl="This drops the reporting structure entirely and keeps the direct-speech form.">Priya said I will need to check this with my finance team.</button>
+    <div class="feedback" id="fb-qC1"></div>
+  </div>
+
+  <div class="qblock" id="qC2">
+    <p class="qtext">12. The VP said: "Our support has declined over the past year." Which reported version is correct?</p>
+    <button class="opt-btn" data-q="qC2" data-correct="false" data-expl="This keeps the present perfect, which should backshift to the past perfect.">The VP admitted that their support has declined over the past year.</button>
+    <button class="opt-btn" data-q="qC2" data-correct="false" data-expl="This uses the simple past instead of the correct past perfect form.">The VP admitted that their support declined over the past year.</button>
+    <button class="opt-btn" data-q="qC2" data-correct="false" data-expl="This future form doesn't match the original statement's meaning at all.">The VP admitted that their support will decline over the past year.</button>
+    <button class="opt-btn" data-q="qC2" data-correct="true" data-expl="Correct: present perfect ('has declined') backshifts to past perfect ('had declined').">The VP admitted that their support had declined over the past year.</button>
+    <div class="feedback" id="fb-qC2"></div>
+  </div>
+
+  <div class="qblock" id="qC3">
+    <p class="qtext">13. Daniel said: "I can offer a small discount." Which reported version correctly backshifts the modal verb?</p>
+    <button class="opt-btn" data-q="qC3" data-correct="false" data-expl="This keeps 'can' unchanged, instead of backshifting it.">Daniel said that he can offer a small discount.</button>
+    <button class="opt-btn" data-q="qC3" data-correct="false" data-expl="This changes the meaning to future possibility, not the original ability.">Daniel said that he will offer a small discount.</button>
+    <button class="opt-btn" data-q="qC3" data-correct="true" data-expl="Correct: 'can' backshifts to 'could' in reported speech.">Daniel said that he could offer a small discount.</button>
+    <button class="opt-btn" data-q="qC3" data-correct="false" data-expl="This changes the meaning to an obligation, not an ability.">Daniel said that he must offer a small discount.</button>
+    <div class="feedback" id="fb-qC3"></div>
+  </div>
+
+  <div class="qblock" id="qC4">
+    <p class="qtext">14. Why does this case study rely so heavily on reported speech rather than direct quotations?</p>
+    <button class="opt-btn" data-q="qC4" data-correct="false" data-expl="Variety alone isn't the reason; reported speech serves a clear structural purpose here.">Simply to make the sentences sound more varied.</button>
+    <button class="opt-btn" data-q="qC4" data-correct="false" data-expl="Formality isn't the main reason given; summarizing conversation is.">To make the case study sound more casual overall.</button>
+    <button class="opt-btn" data-q="qC4" data-correct="true" data-expl="Correct: it lets the writer attribute claims and positions to specific people while summarizing long conversations smoothly.">To summarize conversations and attribute claims to people.</button>
+    <button class="opt-btn" data-q="qC4" data-correct="false" data-expl="Legal requirement isn't mentioned as a reason in the text.">Because case studies must legally avoid direct quotes.</button>
+    <div class="feedback" id="fb-qC4"></div>
+  </div>
+
+  <div class="qblock" id="qC5">
+    <p class="qtext">15. Priya told Daniel: "I expected you to hold firm at ten percent." Which reported version is correct?</p>
+    <button class="opt-btn" data-q="qC5" data-correct="false" data-expl="This keeps the direct-speech pronoun 'you,' which should change in reported speech.">Priya told Daniel that she expected you to hold firm at ten percent.</button>
+    <button class="opt-btn" data-q="qC5" data-correct="true" data-expl="Correct: the pronoun changes to 'him,' and 'expected' is already past tense, so it stays the same.">Priya told Daniel that she had expected him to hold firm at ten percent.</button>
+    <button class="opt-btn" data-q="qC5" data-correct="false" data-expl="This drops the reporting clause entirely, keeping the direct-speech form.">Priya told Daniel I expected you to hold firm at ten percent.</button>
+    <button class="opt-btn" data-q="qC5" data-correct="false" data-expl="This changes 'expected' into a future form, which doesn't fit a backshifted past statement.">Priya told Daniel that she will expect him to hold firm at ten percent.</button>
+    <div class="feedback" id="fb-qC5"></div>
+  </div>
+
+  <div id="score-bar">
+    <div id="score-num">0/15</div>
+    <div id="score-title"></div>
+    <div id="score-msg"></div>
+    <button class="reset-btn" onclick="resetAll()">📁 Try Again</button>
+  </div>
+</section>
+
+</div>
+
+<script>
+function switchTab(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tabbtn').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+const TOTAL = 15;
+let answered = {}, correct = {};
+
+function checkAnswer(btn) {
+  const qId = btn.dataset.q, isCorrect = btn.dataset.correct === 'true';
+  if (answered[qId]) return;
+  answered[qId] = true; correct[qId] = isCorrect;
+  const block = document.getElementById(qId);
+  const fb = document.getElementById('fb-' + qId);
+  block.querySelectorAll('.opt-btn').forEach(b => {
+    b.disabled = true;
+    if (b.dataset.correct === 'true') b.classList.add('reveal-correct');
+  });
+  btn.classList.remove('reveal-correct');
+  btn.classList.add(isCorrect ? 'correct' : 'wrong');
+  block.classList.add(isCorrect ? 'answered-correct' : 'answered-wrong');
+  fb.innerHTML = `<span class="fb-icon">${isCorrect ? '✓' : '✗'}</span> ${btn.dataset.expl}`;
+  fb.className = `feedback show ${isCorrect ? 'correct' : 'wrong'}`;
+  if (Object.keys(answered).length === TOTAL) showScore();
+}
+
+document.querySelectorAll('.opt-btn').forEach(b => b.addEventListener('click', () => checkAnswer(b)));
+
+function showScore() {
+  const score = Object.values(correct).filter(Boolean).length;
+  document.getElementById('score-num').textContent = score + '/15';
+  let title, msg;
+  if (score >= 13) { title = '🤝 Master Negotiator'; msg = "Outstanding: you've clearly got a feel for the tactics and the grammar that reports them."; }
+  else if (score >= 10) { title = '📋 Solid Deal'; msg = 'Strong result. Revisit the Grammar tab if any reported-speech questions tripped you up.'; }
+  else if (score >= 6) { title = '📝 Still Drafting'; msg = "Good start: reread the Reading tab's highlighted phrases and try again."; }
+  else { title = '📂 Back to the Table'; msg = 'Head back to the Reading and Grammar tabs, then give it another go.'; }
+  document.getElementById('score-title').textContent = title;
+  document.getElementById('score-msg').textContent = msg;
+  document.getElementById('score-bar').classList.add('show');
+}
+
+function resetAll() {
+  answered = {}; correct = {};
+  document.querySelectorAll('.qblock').forEach(b => b.classList.remove('answered-correct', 'answered-wrong'));
+  document.querySelectorAll('.opt-btn').forEach(b => { b.disabled = false; b.classList.remove('correct', 'wrong', 'reveal-correct'); });
+  document.querySelectorAll('.feedback').forEach(f => { f.className = 'feedback'; f.innerHTML = ''; });
+  document.getElementById('score-bar').classList.remove('show');
+  switchTab('exercises', document.querySelector('.tabbtn:nth-child(4)'));
+}
+</script>
+</body>
+</html>

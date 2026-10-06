@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Class: Delegating</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<!--
+LESSON-META
+track: podcast_business
+title: "Delegating"
+series: "Office English"
+level: B1
+vocabulary_focus: "handing off tasks clearly and politely at work"
+theme: "Relay Handoff: track-and-field baton pass"
+date: 2026-10-06
+source_url: "https://www.bbc.co.uk/learningenglish/english/features/office-english/250421"
+-->
+<style>
+  :root{
+    --ink: #241c18;
+    --paper: #fdf6ec;
+    --cream: #f2e2c8;
+    --rule: #d8b88e;
+    --accent: #bf3d1e;
+    --accent2: #1d5c6e;
+    --gold: #e2a63c;
+    --highlight-vocab: #fbe49a;
+    --highlight-idiom: #b8ddd2;
+    --highlight-express: #f0bf8a;
+    --correct: #2f7a4f;
+    --wrong: #b23c2e;
+    --light-correct: #e2f4e8;
+    --light-wrong: #fbe4df;
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin:0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: 'Mulish', sans-serif;
+    line-height: 1.65;
+    padding-bottom: 60px;
+  }
+
+  .wrap{ max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+  /* MASTHEAD */
+  .masthead{
+    background:
+      repeating-linear-gradient(100deg, transparent 0 46px, rgba(191,61,30,0.08) 46px 50px),
+      linear-gradient(160deg, #f6e9d2 0%, var(--paper) 60%);
+    border-bottom: 4px solid var(--accent);
+    padding: 32px 0 22px;
+    position: relative;
+  }
+  .eyebrow{
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent2);
+    margin-bottom: 10px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .eyebrow::before{ content:"🏁"; font-size: 0.8rem; }
+  h1.headline{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    font-size: clamp(2.1rem, 6vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0 0 12px;
+    color: var(--ink);
+    text-transform: uppercase;
+  }
+  .deck{
+    font-size: 1.05rem;
+    color: #4a3b2e;
+    margin: 0 0 18px;
+    max-width: 640px;
+  }
+  .facts-row{
+    display:flex; flex-wrap:wrap; gap: 10px;
+  }
+  .fact-chip{
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.76rem;
+    display:flex; align-items:center; gap:6px;
+    color: var(--ink);
+  }
+  .fact-chip a{ color: var(--accent); text-decoration: none; font-weight: 600; }
+  .fact-chip a:hover{ text-decoration: underline; }
+
+  /* TABS */
+  .tabnav{
+    display:flex;
+    max-width: 860px;
+    margin: 0 auto;
+    background: #ffffff;
+    position: sticky; top:0; z-index: 50;
+    border-bottom: 1px solid var(--rule);
+    box-shadow: 0 2px 8px rgba(36,28,24,0.08);
+  }
+  .tabbtn{
+    flex:1;
+    background: transparent;
+    color: #8a7355;
+    border:none;
+    padding: 14px 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.76rem;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.15s;
+  }
+  .tabbtn:hover{ background: #fbf3e2; }
+  .tabbtn.active{
+    color: var(--accent);
+    border-bottom: 3px solid var(--accent);
+    font-weight: 600;
+  }
+
+  .tabpanel{ display:none; padding: 28px 0 10px; }
+  .tabpanel.active{ display:block; }
+
+  /* LEGEND */
+  .legend{
+    display:flex; flex-wrap:wrap; gap: 14px;
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 22px;
+    font-size: 0.85rem;
+  }
+  .legend-item{ display:flex; align-items:center; gap:7px; }
+  .swatch{ width:14px; height:14px; border-radius:4px; display:inline-block; border:1px solid rgba(0,0,0,0.15); }
+  .sw-vocab{ background: var(--highlight-vocab); }
+  .sw-idiom{ background: var(--highlight-idiom); }
+  .sw-express{ background: var(--highlight-express); }
+
+  /* TRANSCRIPT / EXCERPT BLOCKS */
+  .excerpt-block{
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .excerpt-tag{
+    background: var(--ink);
+    color: #f3e4cf;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    padding: 8px 16px;
+    text-transform: uppercase;
+  }
+  .turn{ padding: 14px 18px; border-bottom: 1px solid #f5ecd9; }
+  .turn:last-child{ border-bottom: none; }
+  .speaker{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 0.85rem;
+    display:flex; align-items:center; gap:8px;
+    margin-bottom: 6px;
+  }
+  .avatar{
+    width: 22px; height: 22px; border-radius: 50%;
+    display:flex; align-items:center; justify-content:center;
+    font-size: 0.68rem; color:#fff; font-family:'IBM Plex Mono',monospace;
+  }
+  .turn.pippa .speaker{ color: var(--accent); }
+  .turn.pippa .avatar{ background: var(--accent); }
+  .turn.phil .speaker{ color: var(--accent2); }
+  .turn.phil .avatar{ background: var(--accent2); }
+  .turn.voicenote{ background: #fbf1e0; }
+  .turn.voicenote .speaker{ color: var(--gold); }
+  .turn.voicenote .avatar{ background: var(--gold); }
+  .turn p{ margin: 0 0 10px; }
+  .turn p:last-child{ margin-bottom: 0; }
+
+  /* HIGHLIGHTS */
+  .hl{
+    border-radius: 3px;
+    padding: 0 2px;
+    cursor: help;
+    position: relative;
+  }
+  .hl.vocab{ background: var(--highlight-vocab); }
+  .hl.idiom{ background: var(--highlight-idiom); }
+  .hl.express{ background: var(--highlight-express); }
+  .hl:focus{ outline: 2px solid var(--accent2); }
+
+  #tooltip{
+    position: fixed;
+    max-width: 260px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.76rem;
+    line-height: 1.4;
+    padding: 9px 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    z-index: 999;
+    display: none;
+    pointer-events:none;
+  }
+  #tooltip .tip-cat{ color: var(--gold); text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.06em; display:block; margin-bottom: 3px;}
+
+  .pullquote{
+    border-left: 4px solid var(--accent);
+    background: #ffffff;
+    padding: 16px 20px;
+    margin: 26px 0;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    font-size: 1.2rem;
+    color: var(--ink);
+    border-radius: 0 10px 10px 0;
+  }
+
+  /* VOCAB TAB */
+  .vocab-intro{ background:#ffffff; border:1px solid var(--rule); border-radius:10px; padding:14px 18px; margin-bottom:22px; font-size: 0.92rem;}
+  .card-section-title{
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin: 26px 0 12px;
+    display:flex; align-items:center; gap:8px;
+    border-bottom: 2px solid var(--rule);
+    padding-bottom: 6px;
+  }
+  .card-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap:12px; }
+  .vcard{
+    background: #ffffff;
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .vcard.idiom{ border-left-color: var(--accent2); }
+  .vcard.express{ border-left-color: var(--gold); }
+  .vcard .term{ font-family:'Anton', sans-serif; font-weight:400; font-size: 1.0rem; }
+  .vcard .pos{ font-family:'IBM Plex Mono', monospace; font-size: 0.68rem; color: var(--accent2); margin: 2px 0 6px; text-transform: uppercase; letter-spacing: 0.03em;}
+  .vcard .def{ font-size: 0.86rem; margin-bottom: 8px; }
+  .vcard .ex{ font-size: 0.83rem; color: #5a4a38; font-style: italic; }
+
+  /* VOCABULARY IN USE TAB */
+  .vu-section{ margin-bottom: 30px; }
+  .vu-title{ font-family:'Anton', sans-serif; font-weight:400; text-transform:uppercase; font-size: 1.3rem; margin-bottom: 6px; }
+  .vu-sub{ font-size: 0.92rem; color: #4a3b2e; margin-bottom: 18px;}
+  .vu-term-card{
+    background: #ffffff; border: 1px solid var(--rule); border-radius: 10px;
+    padding: 14px 18px; margin-bottom: 14px;
+  }
+  .vu-term-card .vu-term{
+    font-family: 'Anton', sans-serif; font-weight: 400; font-size: 1.05rem;
+    color: var(--accent); margin-bottom: 8px; text-transform: uppercase;
+  }
+  .vu-term-card ul{ margin: 0; padding-left: 20px; }
+  .vu-term-card li{ margin-bottom: 5px; font-size: 0.92rem; }
+  table.gtable{ width:100%; border-collapse: collapse; background: #ffffff; border: 1px solid var(--rule); font-size: 0.88rem; border-radius: 8px; overflow:hidden;}
+  table.gtable th, table.gtable td{ border: 1px solid var(--rule); padding: 9px 12px; text-align:left; vertical-align: top; }
+  table.gtable th{ background: var(--cream); font-family:'IBM Plex Mono', monospace; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.03em;}
+  .practice-table td{ font-size: 0.9rem; }
+  details summary{
+    cursor: pointer; color: var(--accent2); font-weight:600;
+    font-family:'IBM Plex Mono', monospace; font-size: 0.8rem;
+  }
+  details[open] summary{ margin-bottom: 4px; }
+  details .ans{ color: var(--ink); }
+
+  /* EXERCISES */
+  .ex-intro{ background:#ffffff; border:1px solid var(--rule); border-radius:10px; padding:14px 18px; margin-bottom:20px; font-size: 0.92rem; }
+  .score-bar{
+    position: sticky; top: 50px; z-index: 40;
+    background: var(--ink); color: var(--paper);
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 8px 16px; border-radius: 8px;
+    margin-bottom: 20px; font-size: 0.85rem;
+    display:flex; justify-content: space-between; align-items:center;
+  }
+  .score-bar button{
+    background: var(--accent); color: #fff; border:none;
+    padding: 6px 12px; border-radius: 6px; cursor:pointer; font-family: inherit; font-size: 0.78rem;
+  }
+  .ex-section-title{
+    font-family:'Anton', sans-serif; font-weight:400; text-transform:uppercase; font-size: 1.15rem; margin: 24px 0 10px;
+    border-bottom: 2px solid var(--rule); padding-bottom: 5px;
+  }
+  .q-block{
+    background: #ffffff; border: 1px solid var(--rule); border-radius: 10px;
+    padding: 14px 16px; margin-bottom: 14px;
+  }
+  .q-text{ font-weight: 600; margin-bottom: 10px; }
+  .q-options{ display:flex; flex-direction:column; gap: 7px; }
+  .opt-btn{
+    text-align:left;
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-family: 'Mulish', sans-serif;
+    font-size: 0.92rem;
+    color: var(--ink);
+  }
+  .opt-btn:hover:not(:disabled){ background: #ecdcc0; }
+  .opt-btn:disabled{ cursor: default; }
+  .opt-btn.correct{ background: var(--light-correct); border-color: var(--correct); }
+  .opt-btn.wrong{ background: var(--light-wrong); border-color: var(--wrong); }
+  .opt-explain{
+    font-size: 0.8rem; margin-top: 3px; padding-left: 12px;
+    color: #5a4a38; display:none;
+  }
+  .opt-explain.show{ display:block; }
+  .final-msg{
+    display:none; margin-top: 18px; padding: 16px; border-radius: 10px;
+    font-family:'Anton', sans-serif; font-weight:400; font-size: 1.1rem; text-align:center;
+    background: #ffffff; border: 1px solid var(--rule);
+  }
+
+  @media (max-width: 600px){
+    .masthead{ padding: 24px 0 16px; }
+    .tabbtn{ font-size: 0.65rem; padding: 12px 3px; }
+    .card-grid{ grid-template-columns: 1fr; }
+    h1.headline{ font-size: 1.9rem; }
+    .score-bar{ flex-direction: column; gap: 8px; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<div id="tooltip"></div>
+
+<div class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">English Language Class · Business &amp; Work · B1</div>
+    <h1 class="headline">Delegating</h1>
+    <p class="deck">Pippa and Phil work out when it's time to hand a task to someone else, and the phrases that make delegating feel like teamwork rather than bossing people around.</p>
+    <div class="facts-row">
+      <div class="fact-chip">🎙 Series: Office English</div>
+      <div class="fact-chip">🎚 Level: B1</div>
+      <div class="fact-chip">🔗 <a href="https://www.bbc.co.uk/learningenglish/english/features/office-english/250421" target="_blank" rel="noopener">Listen to the original episode</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="tabnav">
+  <button class="tabbtn active" data-tab="reading">🏁 Reading</button>
+  <button class="tabbtn" data-tab="vocab">📇 Vocabulary</button>
+  <button class="tabbtn" data-tab="vuse">🔁 Vocabulary in Use</button>
+  <button class="tabbtn" data-tab="exercises">✅ Exercises</button>
+</div>
+
+<div class="wrap">
+
+  <!-- READING TAB -->
+  <div class="tabpanel active" id="tab-reading">
+    <div class="legend">
+      <div class="legend-item"><span class="swatch sw-vocab"></span> Vocabulary</div>
+      <div class="legend-item"><span class="swatch sw-idiom"></span> Idioms &amp; Set Phrases</div>
+      <div class="legend-item"><span class="swatch sw-express"></span> Useful Expressions</div>
+    </div>
+
+    <div class="excerpt-block">
+      <div class="excerpt-tag">Excerpt 1 of 5: Are you a control freak?</div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>Do you let people help you at work, or are you <span class="hl idiom" data-cat="Idiom" data-term="a bit of a control freak" data-def="someone who needs to control everything and finds it hard to let others take charge">a bit of a control freak</span>?</p>
+      </div>
+      <div class="turn voicenote">
+        <div class="speaker"><span class="avatar">🔊</span> Voice clip</div>
+        <p>If it's something I feel strongly about and I have a very fixed idea of how I want it to happen, then it can be difficult to <span class="hl vocab" data-cat="Vocabulary" data-term="delegate" data-def="to give part of your own work or a task to someone else to do">delegate</span>. But generally, I think the more people involved, the better. And if people can help, then I'm very happy for them to, you know, do some of the tasks.</p>
+      </div>
+      <div class="turn voicenote">
+        <div class="speaker"><span class="avatar">🔊</span> Voice clip</div>
+        <p>Generally, if I've got a lot of people to work with, I think <span class="hl idiom" data-cat="Idiom" data-term="the more the merrier" data-def="the more people who join in or help, the better the result will be">the more the merrier</span>. You can produce an excellent group effort, I think.</p>
+      </div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>Today on Office English we're talking about delegating and giving other people instructions.</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>Hello and welcome to Office English, your podcast guide to the world of work. I'm Pippa.</p>
+      </div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>And I'm Phil. You can read along with this podcast on our website. Visit bbclearningenglish.com.</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>Today's episode is all about delegating. So what's delegating, Phil? And do you find it easy to delegate?</p>
+      </div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>No I don't. Delegating is when you give someone else something that you're doing to do, or you are someone to do some of your work. Yeah, I'm not very good at it. I try and do it all myself quite often.</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>Yeah, I think I'm often used to working on my own and so when I then need to delegate, I've got too much to do, I find it a bit difficult to do that. I'm a bit of a control freak, I think. Also sometimes like you feel like it would take so long to tell someone else how to do it that I might as well have just done it myself, which is probably not the right way to think. But it's sometimes what I think.</p>
+      </div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>Of course, Pippa, we're not managers, and I think that might be <span class="hl idiom" data-cat="Idiom" data-term="a big thing" data-def="an important factor that affects the whole situation">a big thing</span> here.</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>So today we'll talk about when and what to delegate and how you can be polite and clear when you give someone else instructions at work.</p>
+      </div>
+    </div>
+
+    <div class="excerpt-block">
+      <div class="excerpt-tag">Excerpt 2 of 5: What to delegate</div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>Let's start with what to delegate. Let's imagine you're working on a project and suddenly things become very busy and there's too much for you to do. Your boss decides that another member of your team will help you on the project and asks you to delegate some tasks to them. Where do you start?</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>Good question, Phil. I think this is where you have to try and <span class="hl idiom" data-cat="Idiom" data-term="sort out" data-def="to organize or work through something so it is clear and in order">sort out</span> your different tasks. And what could somebody help you with? So I always think about a few different questions. So what's <span class="hl vocab" data-cat="Vocabulary" data-term="urgent" data-def="needing to be dealt with immediately">urgent</span>? What needs to be done now? What's important that it's done in a certain way? So what maybe do I need to do? And then also what's what's easy to explain or what's easy for the other person to do? So you probably don't want to give them all of the difficult tasks, all of the boring tasks, and you do all the fun ones. So yeah, what's urgent? What's important? What's easy to explain? That's how I think about it.</p>
+      </div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>I think that's the really important one, actually. How easy is it to explain? Because as you said earlier, there are some things that actually can take longer to explain than to do. So there's probably, I don't know how much time you save by delegating those, but other things are just really easy or people don't need a lot of background. Some tasks maybe you need to know a lot of what is going on before it makes sense. Whereas other tasks are quite easy to OK, it's just this. It's quite <span class="hl vocab" data-cat="Vocabulary" data-term="independent" data-def="not needing help or extra explanation from anyone else">independent</span>. You do this, you do this, it's done.</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>If you're not a manager, if you're not someone who has to kind of sort through these tasks, I think it's really difficult to, initially when you look at a project, work out what are the right things to delegate. So, yeah, what's urgent, what's important, what's easy to explain?</p>
+      </div>
+    </div>
+
+    <div class="excerpt-block">
+      <div class="excerpt-tag">Excerpt 3 of 5: Indirect or direct?</div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>OK, so we've <span class="hl idiom" data-cat="Idiom" data-term="worked out" data-def="figured out or determined something after thinking it through">worked out</span> what to delegate. Now we need to do the delegating. How would you do this?</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>Well there's a couple of ways you could talk about different tasks. We could use <span class="hl vocab" data-cat="Vocabulary" data-term="indirect" data-def="not stating something plainly or bluntly; softer and more roundabout">indirect</span> language, or we could use <span class="hl vocab" data-cat="Vocabulary" data-term="direct" data-def="stating something plainly and clearly, without softening it">direct</span> language. So indirect language is quite common in British English in British workplaces. So I might say something like <span class="hl express" data-cat="Useful Expression" data-term="Would you mind helping me with...?" data-def="a very polite, indirect way to ask a colleague to take on a task">'would you mind helping me with...'</span> and then talk about the tasks. Or <span class="hl express" data-cat="Useful Expression" data-term="Could you give me a hand with...?" data-def="a friendly, indirect way to ask a colleague for help with a task">'could you give me a hand with...'</span> and then explain. So it's kind of strange because they have been asked by the boss to help you, but I would probably use those polite phrases rather than kind of becoming all <span class="hl vocab" data-cat="Vocabulary" data-term="bossy" data-def="behaving as if you have the right to order other people around">bossy</span> myself.</p>
+      </div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>I think I'm the same. I think this might be a very English way of doing it. Yeah, you, there are some ways you could do it more directly. These to me, sound more like what a manager would say. Like <span class="hl express" data-cat="Useful Expression" data-term="I'm making you responsible for..." data-def="a direct, managerial way of assigning a task to someone">'I'm making you responsible for'</span>. Or <span class="hl express" data-cat="Useful Expression" data-term="I'm handing this over to you." data-def="a direct way of formally passing a task to someone">'I'm handing this over to you'</span>. They're quite direct. And as I say, I think our work culture is often quite indirect, so I'm not sure I would feel comfortable just saying that to my colleagues. If I was a manager, I probably would, because they're expecting me to do that.</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>Another indirect phrase I might say is, <span class="hl express" data-cat="Useful Expression" data-term="I'm going to give this to you to do. Is that OK?" data-def="a semi-direct phrase that still softens the request by checking it's acceptable">'I'm going to give this to you to do. Is that OK?'</span> So just, like, you can be quite direct, but then asking, 'is that OK?' It makes it more polite. So you can easily kind of switch from the two or mix the two.</p>
+      </div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>Yes.</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>So a lot of people find it difficult to delegate because they think telling someone else how to do something, as we mentioned, would take just as long as doing it. Or they just worry that the other person might not do things in the right way and do things how they would do them.</p>
+      </div>
+    </div>
+
+    <div class="excerpt-block">
+      <div class="excerpt-tag">Excerpt 4 of 5: Giving clear instructions</div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>Yeah. So it's all about giving clear instructions. Let's listen to our BBC colleagues, Sian and George again.</p>
+      </div>
+      <div class="turn voicenote">
+        <div class="speaker"><span class="avatar">🔊</span> Voice clip</div>
+        <p>Yeah. Giving <span class="hl vocab" data-cat="Vocabulary" data-term="concrete" data-def="specific and real, rather than vague or abstract">concrete</span> examples, perhaps showing some examples of work that you've done before to give people a clear idea of what they're supposed to do.</p>
+      </div>
+      <div class="turn voicenote">
+        <div class="speaker"><span class="avatar">🔊</span> Voice clip</div>
+        <p>I guess, giving them a chance to ask questions in case they, you know, want anything <span class="hl vocab" data-cat="Vocabulary" data-term="clarifying" data-def="making something clearer or easier to understand">clarifying</span> and maybe checking they've understood by asking them questions.</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>So Sian and George talked about using examples to help when you're giving instructions at work.</p>
+      </div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>Yes. And they also mentioned checking that the person you're delegating to understands.</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>Yes. So let's talk about some language that we can use to do this politely. So if you were talking about an example, you could say 'here's a <span class="hl vocab" data-cat="Vocabulary" data-term="template" data-def="a ready-made example or pattern that shows how something should be done">template</span> for the spreadsheet. Let me know if everything makes sense to you.' So you're telling them about an example, and then you're giving them a chance to kind of question or ask any questions they have.</p>
+      </div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>Yeah. And if you want to show someone how you do something, you might just say something like, 'I usually make notes like this. <span class="hl idiom" data-cat="Idiom" data-term="give me a shout" data-def="let me know, or get in touch with me, if you need something">Give me a shout</span> if you have any questions', that just means ask me if you've got any questions.</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>Another way you could explain something, you could be more direct and say, <span class="hl express" data-cat="Useful Expression" data-term="Could you follow this process?" data-def="a direct way of instructing someone to carry out a set of steps">'could you follow this process?'</span> So you're not really giving them an option, 'but <span class="hl express" data-cat="Useful Expression" data-term="If you have any difficulties, just ask." data-def="an invitation to ask questions, used after giving instructions">if you have any difficulties, just ask</span>'. So again, you're giving them a chance to kind of say if they don't understand the instructions. It's hard because sometimes you feel <span class="hl vocab" data-cat="Vocabulary" data-term="awkward" data-def="uncomfortable or embarrassed in a social situation">awkward</span> with a colleague telling them how to do something. So those kind of phrases make it all quite polite, quite friendly, and also that you're not kind of treating them like they're an idiot and they don't understand how to do anything.</p>
+      </div>
+    </div>
+
+    <div class="excerpt-block">
+      <div class="excerpt-tag">Excerpt 5 of 5: Closing thoughts</div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>That's it for this episode of Office English. You can find more programmes to help you with your English at work on our website, bbclearningenglish.com.</p>
+      </div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>Next time we'll talk about what to do and say when you don't understand something at work. See you then.</p>
+      </div>
+      <div class="turn pippa">
+        <div class="speaker"><span class="avatar">P</span> Pippa</div>
+        <p>Bye.</p>
+      </div>
+      <div class="turn phil">
+        <div class="speaker"><span class="avatar">F</span> Phil</div>
+        <p>Bye!</p>
+      </div>
+    </div>
+
+    <div class="pullquote">"IF YOU HAVE ANY DIFFICULTIES, JUST ASK."</div>
+  </div>
+
+  <!-- VOCABULARY TAB -->
+  <div class="tabpanel" id="tab-vocab">
+    <div class="vocab-intro">This lesson highlights three kinds of language: <strong>Vocabulary</strong> (single words about handing off and explaining tasks, shown in yellow), <strong>Idioms &amp; Set Phrases</strong> (fixed expressions with a figurative meaning, shown in teal), and <strong>Useful Expressions</strong> (the actual delegating phrases Pippa and Phil teach, shown in orange).</div>
+
+    <div class="card-section-title">🟡 Vocabulary</div>
+    <div class="card-grid">
+      <div class="vcard"><div class="term">delegate</div><div class="pos">verb</div><div class="def">to give part of your own work or a task to someone else to do.</div><div class="ex">A good manager knows which jobs to <strong>delegate</strong> to the team.</div></div>
+      <div class="vcard"><div class="term">urgent</div><div class="pos">adjective</div><div class="def">needing to be dealt with immediately.</div><div class="ex">The client's complaint felt <strong>urgent</strong>, so she dropped everything else.</div></div>
+      <div class="vcard"><div class="term">independent</div><div class="pos">adjective</div><div class="def">not needing help or extra explanation from anyone else.</div><div class="ex">That task is fairly <strong>independent</strong>, so I can just hand it over.</div></div>
+      <div class="vcard"><div class="term">indirect</div><div class="pos">adjective</div><div class="def">not stating something plainly or bluntly; softer and more roundabout.</div><div class="ex">He used fairly <strong>indirect</strong> language so the request didn't sound like an order.</div></div>
+      <div class="vcard"><div class="term">direct</div><div class="pos">adjective</div><div class="def">stating something plainly and clearly, without softening it.</div><div class="ex">As the deadline got closer, her instructions became more <strong>direct</strong>.</div></div>
+      <div class="vcard"><div class="term">bossy</div><div class="pos">adjective</div><div class="def">behaving as if you have the right to order other people around.</div><div class="ex">He tried to soften his tone so he didn't come across as <strong>bossy</strong>.</div></div>
+      <div class="vcard"><div class="term">clarifying</div><div class="pos">verb (-ing)</div><div class="def">making something clearer or easier to understand.</div><div class="ex">She spent five minutes <strong>clarifying</strong> exactly what the report should include.</div></div>
+      <div class="vcard"><div class="term">template</div><div class="pos">noun</div><div class="def">a ready-made example or pattern that shows how something should be done.</div><div class="ex">I sent him a <strong>template</strong> so his report would match the usual format.</div></div>
+      <div class="vcard"><div class="term">awkward</div><div class="pos">adjective</div><div class="def">uncomfortable or embarrassed in a social situation.</div><div class="ex">It felt a bit <strong>awkward</strong> correcting someone more senior than me.</div></div>
+      <div class="vcard"><div class="term">concrete</div><div class="pos">adjective</div><div class="def">specific and real, rather than vague or abstract.</div><div class="ex">Give them a <strong>concrete</strong> example instead of a general description.</div></div>
+    </div>
+
+    <div class="card-section-title">🔵 Idioms &amp; Set Phrases</div>
+    <div class="card-grid">
+      <div class="vcard idiom"><div class="term">a bit of a control freak</div><div class="pos">idiom</div><div class="def">someone who needs to control everything and finds it hard to let others take charge.</div><div class="ex">I'm <strong>a bit of a control freak</strong>, so handing over this project isn't easy.</div></div>
+      <div class="vcard idiom"><div class="term">the more the merrier</div><div class="pos">idiom</div><div class="def">the more people who join in or help, the better the result will be.</div><div class="ex">We need extra hands on this launch, so <strong>the more the merrier</strong>.</div></div>
+      <div class="vcard idiom"><div class="term">a big thing</div><div class="pos">set phrase</div><div class="def">an important factor that affects the whole situation.</div><div class="ex">Trusting your team enough to let go of a task is <strong>a big thing</strong>.</div></div>
+      <div class="vcard idiom"><div class="term">sort out</div><div class="pos">phrasal verb</div><div class="def">to organize or work through something so it is clear and in order.</div><div class="ex">Let's <strong>sort out</strong> who's doing what before the meeting ends.</div></div>
+      <div class="vcard idiom"><div class="term">worked out</div><div class="pos">phrasal verb</div><div class="def">figured out or determined something after thinking it through.</div><div class="ex">We finally <strong>worked out</strong> who should own each part of the project.</div></div>
+      <div class="vcard idiom"><div class="term">give me a shout</div><div class="pos">set phrase</div><div class="def">let me know, or get in touch with me, if you need something.</div><div class="ex"><strong>Give me a shout</strong> if anything in the brief is unclear.</div></div>
+    </div>
+
+    <div class="card-section-title">🟠 Useful Expressions</div>
+    <div class="card-grid">
+      <div class="vcard express"><div class="term">Would you mind helping me with...?</div><div class="pos">indirect delegating opener</div><div class="def">a very polite, indirect way to ask a colleague to take on a task.</div><div class="ex"><strong>Would you mind helping me with</strong> the client slides for tomorrow?</div></div>
+      <div class="vcard express"><div class="term">Could you give me a hand with...?</div><div class="pos">indirect delegating opener</div><div class="def">a friendly, indirect way to ask a colleague for help with a task.</div><div class="ex"><strong>Could you give me a hand with</strong> the budget figures this week?</div></div>
+      <div class="vcard express"><div class="term">I'm making you responsible for...</div><div class="pos">direct delegating phrase</div><div class="def">a direct, managerial way of assigning a task to someone.</div><div class="ex"><strong>I'm making you responsible for</strong> the supplier emails from now on.</div></div>
+      <div class="vcard express"><div class="term">I'm handing this over to you.</div><div class="pos">direct delegating phrase</div><div class="def">a direct way of formally passing a task to someone.</div><div class="ex">Here's the account file. <strong>I'm handing this over to you</strong> as of Monday.</div></div>
+      <div class="vcard express"><div class="term">I'm going to give this to you to do. Is that OK?</div><div class="pos">semi-direct delegating phrase</div><div class="def">a phrase that stays direct but softens the request by checking it's acceptable.</div><div class="ex"><strong>I'm going to give this to you to do. Is that OK?</strong> It shouldn't take too long.</div></div>
+      <div class="vcard express"><div class="term">Could you follow this process?</div><div class="pos">direct instruction phrase</div><div class="def">a direct way of instructing someone to carry out a set of steps.</div><div class="ex"><strong>Could you follow this process</strong> every time a new order comes in?</div></div>
+      <div class="vcard express"><div class="term">If you have any difficulties, just ask.</div><div class="pos">reassurance phrase</div><div class="def">an invitation to ask questions, used after giving instructions.</div><div class="ex">Here's the full checklist. <strong>If you have any difficulties, just ask</strong>.</div></div>
+    </div>
+  </div>
+
+  <!-- VOCABULARY IN USE TAB -->
+  <div class="tabpanel" id="tab-vuse">
+    <div class="vu-section">
+      <div class="vu-title">Vocabulary in Use</div>
+      <div class="vu-sub">This episode has no grammar focus. Instead, this tab drills the episode's key delegating phrases in fresh workplace situations, so you can flex them beyond the podcast itself.</div>
+
+      <div class="vu-term-card"><div class="vu-term">delegate</div><ul>
+        <li>As the new team lead, she had to learn to <strong>delegate</strong> rather than do everything herself.</li>
+        <li>You should <strong>delegate</strong> the data entry so you can focus on the strategy.</li>
+        <li>He finds it hard to <strong>delegate</strong>, even when he's clearly overloaded.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">Would you mind helping me with...?</div><ul>
+        <li><strong>Would you mind helping me with</strong> the onboarding pack for the new starter?</li>
+        <li><strong>Would you mind helping me with</strong> checking these figures before I send them off?</li>
+        <li>This softer opener works well with a colleague at the same level as you.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">Could you give me a hand with...?</div><ul>
+        <li><strong>Could you give me a hand with</strong> the client presentation this afternoon?</li>
+        <li><strong>Could you give me a hand with</strong> sorting the inbox while I'm on leave?</li>
+        <li>It sounds friendly rather than like a formal instruction.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">I'm making you responsible for...</div><ul>
+        <li><strong>I'm making you responsible for</strong> all supplier queries going forward.</li>
+        <li><strong>I'm making you responsible for</strong> the rota from next month onwards.</li>
+        <li>Use this when you genuinely have the authority to assign ownership.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">I'm handing this over to you.</div><ul>
+        <li>The account is in good shape now. <strong>I'm handing this over to you</strong> from Friday.</li>
+        <li>I've finished the first draft. <strong>I'm handing this over to you</strong> for the edit.</li>
+        <li>It signals a clean, complete transfer of a task or project.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">Could you follow this process?</div><ul>
+        <li><strong>Could you follow this process</strong> every time a refund request comes in?</li>
+        <li><strong>Could you follow this process</strong> for logging new leads from now on?</li>
+        <li>It's direct, so it suits instructions that must be followed exactly.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">give me a shout</div><ul>
+        <li><strong>Give me a shout</strong> once the first batch is ready for review.</li>
+        <li><strong>Give me a shout</strong> if the printer gives you any trouble again.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">sort out</div><ul>
+        <li>Can you <strong>sort out</strong> who's covering the desk while I'm at the conference?</li>
+        <li>We still need to <strong>sort out</strong> the schedule for next week's launch.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">the more the merrier</div><ul>
+        <li>We're short-staffed this week, so <strong>the more the merrier</strong> on the helpdesk.</li>
+        <li>Anyone who wants to join the planning call is welcome; <strong>the more the merrier</strong>.</li>
+      </ul></div>
+
+      <div class="vu-term-card"><div class="vu-term">template</div><ul>
+        <li>I've built a <strong>template</strong> so the weekly report always looks the same.</li>
+        <li>Use the <strong>template</strong> in the shared folder before you send out the invoice.</li>
+      </ul></div>
+
+      <div class="vu-title" style="font-size:1.05rem; margin-top:26px;">Practice</div>
+      <table class="gtable practice-table">
+        <tr><th>Task</th><th>Model Answer</th></tr>
+        <tr>
+          <td>You're asking a colleague at your level to help with a report, politely and indirectly. Write the opening sentence.</td>
+          <td><details><summary>Show answer</summary><span class="ans">Would you mind helping me with the report?</span></details></td>
+        </tr>
+        <tr>
+          <td>As a manager, you're formally assigning the weekly rota to someone. Write a direct delegating sentence.</td>
+          <td><details><summary>Show answer</summary><span class="ans">I'm making you responsible for the rota from now on.</span></details></td>
+        </tr>
+        <tr>
+          <td>You've given someone a set of steps to follow for logging orders. Add a reassuring sentence inviting questions.</td>
+          <td><details><summary>Show answer</summary><span class="ans">If you have any difficulties, just ask.</span></details></td>
+        </tr>
+        <tr>
+          <td>You want to pass a finished project cleanly to a colleague starting Monday. Write the handover sentence.</td>
+          <td><details><summary>Show answer</summary><span class="ans">I'm handing this over to you from Monday.</span></details></td>
+        </tr>
+        <tr>
+          <td>You're not sure two colleagues have agreed who covers the desk tomorrow. Use "sort out" in a sentence asking them to fix this.</td>
+          <td><details><summary>Show answer</summary><span class="ans">Can you two sort out who's covering the desk tomorrow?</span></details></td>
+        </tr>
+      </table>
+
+      <div class="vu-title" style="font-size:1.05rem; margin-top:26px;">Mix and Match</div>
+      <table class="gtable">
+        <tr><th>Term</th><th>Meaning</th><th>Workplace Situation</th></tr>
+        <tr><td>Would you mind helping me with...?</td><td>Polite, indirect request for help</td><td>Asking a peer to help with a shared task</td></tr>
+        <tr><td>Could you give me a hand with...?</td><td>Friendly, indirect request for help</td><td>Asking a colleague for quick support</td></tr>
+        <tr><td>I'm making you responsible for...</td><td>Direct, formal way to assign a task</td><td>A manager permanently assigning ownership</td></tr>
+        <tr><td>I'm handing this over to you.</td><td>Direct way to formally pass something on</td><td>Closing out a finished project before leave</td></tr>
+        <tr><td>Could you follow this process?</td><td>Direct instruction to follow set steps</td><td>Standardising how a routine task is done</td></tr>
+        <tr><td>give me a shout</td><td>Let me know informally if needed</td><td>Inviting questions after explaining a task</td></tr>
+        <tr><td>sort out</td><td>Organize something so it's clear and settled</td><td>Dividing up who does what before a deadline</td></tr>
+        <tr><td>template</td><td>A ready-made pattern to copy</td><td>Keeping recurring reports consistent</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- EXERCISES TAB -->
+  <div class="tabpanel" id="tab-exercises">
+    <div class="ex-intro">Answer all 15 questions. Each button locks once clicked, and the correct answer is always revealed. Your score updates as you go.</div>
+    <div class="score-bar">
+      <span id="scoreDisplay">Score: 0 / 15</span>
+      <button onclick="resetExercises()">↺ Reset</button>
+    </div>
+    <div id="exContainer"></div>
+    <div class="final-msg" id="finalMsg"></div>
+  </div>
+
+</div>
+
+<script>
+  // TAB SWITCHING
+  document.querySelectorAll('.tabbtn').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.tabbtn').forEach(b=>b.classList.remove('active'));
+      document.querySelectorAll('.tabpanel').forEach(p=>p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-'+btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // TOOLTIPS
+  const tip = document.getElementById('tooltip');
+  function showTip(el){
+    const cat = el.dataset.cat;
+    const term = el.dataset.term;
+    const def = el.dataset.def;
+    tip.innerHTML = '<span class="tip-cat">'+cat+' · '+term+'</span>'+def;
+    tip.style.display = 'block';
+    const rect = el.getBoundingClientRect();
+    let top = rect.top - tip.offsetHeight - 10;
+    if(top < 8) top = rect.bottom + 10;
+    let left = rect.left;
+    if(left + 260 > window.innerWidth) left = window.innerWidth - 270;
+    tip.style.top = top + 'px';
+    tip.style.left = Math.max(8,left) + 'px';
+  }
+  function hideTip(){ tip.style.display = 'none'; }
+  document.querySelectorAll('.hl').forEach(el=>{
+    el.setAttribute('tabindex','0');
+    el.addEventListener('mouseenter', ()=>showTip(el));
+    el.addEventListener('mouseleave', hideTip);
+    el.addEventListener('focus', ()=>showTip(el));
+    el.addEventListener('blur', hideTip);
+    el.addEventListener('click', (e)=>{ e.stopPropagation(); showTip(el); });
+  });
+  document.body.addEventListener('click', hideTip);
+
+  // EXERCISES DATA
+  const questions = [
+    // SECTION A. Reading Comprehension
+    {section:'A. Reading Comprehension', text:'What three questions does Pippa say she asks herself when deciding what to delegate?',
+     options:[
+       "What's finished, what's late, and what's forgotten.",
+       "What's cheap, what's quick, and what's enjoyable to do.",
+       "What's boring, what's risky, and what's creative.",
+       "What's urgent, what's important, and what's easy to explain."
+     ], correct:3,
+     explain:[
+       "Not quite. these describe task status, not her sorting questions.",
+       "Not quite. cost and enjoyment aren't the questions Pippa describes.",
+       "Not quite. these aren't the categories Pippa mentions.",
+       "Correct. Pippa lists these three questions as her way of sorting tasks."
+     ]},
+    {section:'A. Reading Comprehension', text:'Why does Phil say delegating some tasks doesn\'t actually save much time?',
+     options:[
+       "Because those tasks take longer to explain than to simply do yourself.",
+       "Because his boss always redoes the work afterwards anyway.",
+       "Because the company doesn't allow certain tasks to be shared.",
+       "Because his colleagues usually refuse to take on any new tasks."
+     ], correct:0,
+     explain:[
+       "Not quite. his boss redoing work isn't mentioned at all.",
+       "Correct. Phil says some tasks take longer to explain than to do.",
+       "Not quite. no company rule against sharing tasks is mentioned.",
+       "Not quite. refusing tasks isn't given as a reason here."
+     ]},
+    {section:'A. Reading Comprehension', text:'What does Pippa say is common in British workplaces when asking a colleague to take on a task?',
+     options:[
+       "Sending a written memo instead of speaking to them directly.",
+       "Giving the task without any explanation of why it matters.",
+       "Using indirect, polite language rather than blunt commands.",
+       "Waiting for the colleague to offer to help without being asked."
+     ], correct:2,
+     explain:[
+       "Not quite. written memos aren't mentioned in the episode.",
+       "Not quite. explaining why isn't the point being made here.",
+       "Correct. Pippa says indirect language is common in British workplaces.",
+       "Not quite. waiting passively isn't what Pippa describes."
+     ]},
+    {section:'A. Reading Comprehension', text:'According to Phil, what kind of phrase does "I\'m making you responsible for..." sound like?',
+     options:[
+       "A question a new employee would ask during training.",
+       "A casual remark you'd only make to a close friend.",
+       "An apology for giving someone too much extra work.",
+       "Something a manager would typically say to a team member."
+     ], correct:3,
+     explain:[
+       "Not quite. it isn't framed as a trainee's question.",
+       "Not quite. Phil describes it as direct, not casual friend-talk.",
+       "Not quite. it isn't presented as an apology.",
+       "Correct. Phil says this direct phrase sounds like what a manager would say."
+     ]},
+    {section:'A. Reading Comprehension', text:'Why does Pippa say indirect phrases can feel "kind of strange" when a colleague has already been asked by the boss to help?',
+     options:[
+       "Because polite phrasing is kept even though help was already arranged.",
+       "Because the colleague usually refuses once asked so politely.",
+       "Because indirect phrases are banned in most British offices.",
+       "Because the boss always prefers hearing direct commands instead."
+     ], correct:0,
+     explain:[
+       "Correct. she finds it odd to stay polite when help was already agreed with the boss.",
+       "Not quite. refusal after polite phrasing isn't mentioned.",
+       "Not quite. no such ban is mentioned in the podcast.",
+       "Not quite. the boss's preference isn't discussed here."
+     ]},
+    {section:'A. Reading Comprehension', text:'What do Sian and George suggest helps avoid misunderstandings when giving instructions?',
+     options:[
+       "Giving concrete examples and letting people ask questions.",
+       "Writing every instruction down in a very long email.",
+       "Repeating the exact same instructions several times in a row.",
+       "Avoiding any examples so the person works it out themselves."
+     ], correct:0,
+     explain:[
+       "Correct. they mention concrete examples and a chance to ask questions.",
+       "Not quite. long emails aren't what they recommend.",
+       "Not quite. repetition isn't the technique described.",
+       "Not quite. this is the opposite of giving examples."
+     ]},
+    {section:'A. Reading Comprehension', text:'What does Pippa suggest saying after you\'ve shown someone a template or example?',
+     options:[
+       "Please redo this by tomorrow morning at the latest.",
+       "Let me know if everything makes sense to you.",
+       "I expect this to be perfect on the first attempt.",
+       "Don't worry about asking me anything about this."
+     ], correct:1,
+     explain:[
+       "Not quite. a strict deadline line isn't what Pippa suggests here.",
+       "Correct. Pippa gives this exact phrase as a way to invite questions.",
+       "Not quite. this would discourage questions, not invite them.",
+       "Not quite. this also discourages questions, unlike Pippa's advice."
+     ]},
+    {section:'A. Reading Comprehension', text:'Why might Phil say "Give me a shout if you have any questions" after explaining a task?',
+     options:[
+       "To warn the colleague not to ask too many questions at once.",
+       "To remind the colleague that the deadline cannot be changed.",
+       "To invite questions in a casual, friendly, and approachable way.",
+       "To tell the colleague the task has already been cancelled."
+     ], correct:2,
+     explain:[
+       "Not quite. limiting questions isn't the intention here.",
+       "Not quite. deadlines aren't mentioned in this part of the episode.",
+       "Correct. it's a casual, friendly invitation to ask if anything is unclear.",
+       "Not quite. cancelling the task isn't what this phrase suggests."
+     ]},
+    // SECTION B. Vocabulary in Context
+    {section:'B. Vocabulary in Context', text:'What does it mean to say someone is "a bit of a control freak"?',
+     options:[
+       "They enjoy letting other people make most of the decisions.",
+       "They find it hard to let go and let other people take charge.",
+       "They are extremely relaxed about how any task gets finished.",
+       "They prefer never speaking to colleagues about shared work."
+     ], correct:1,
+     explain:[
+       "Not quite. this describes the opposite kind of person.",
+       "Correct. a control freak struggles to hand control to others.",
+       "Not quite. being relaxed is the opposite of this idiom's meaning.",
+       "Not quite. avoiding colleagues isn't part of this idiom."
+     ]},
+    {section:'B. Vocabulary in Context', text:'In the podcast, what does "sort out" mean when Pippa talks about tasks?',
+     options:[
+       "To completely delete or remove a task from the list.",
+       "To postpone a task until a much later date.",
+       "To organize or work through something until it's clear.",
+       "To hand a task to the most senior person available."
+     ], correct:2,
+     explain:[
+       "Not quite. deleting tasks isn't the meaning of this phrase.",
+       "Not quite. postponing isn't what sort out means here.",
+       "Correct. sort out means organizing or working through something.",
+       "Not quite. seniority isn't part of this phrase's meaning."
+     ]},
+    {section:'B. Vocabulary in Context', text:'What does "Could you give me a hand with...?" mean, as Pippa uses it?',
+     options:[
+       "A formal way of firing someone from a project.",
+       "A phrase used only when writing a resignation letter.",
+       "An order telling someone exactly what to do immediately.",
+       "A friendly, indirect way of asking a colleague for help."
+     ], correct:3,
+     explain:[
+       "Not quite. this has nothing to do with ending someone's role.",
+       "Not quite. resignation letters aren't connected to this phrase.",
+       "Not quite. this phrase is indirect, not an immediate order.",
+       "Correct. it's a friendly, indirect request for help with a task."
+     ]},
+    {section:'B. Vocabulary in Context', text:'What does "the more the merrier" mean, as George uses it?',
+     options:[
+       "The more people involved, the better the result tends to be.",
+       "The fewer people involved, the faster the work gets done.",
+       "The more people involved, the more arguments usually happen.",
+       "The more people involved, the less work actually gets finished."
+     ], correct:0,
+     explain:[
+       "Correct. George uses it to mean more helpers lead to a better outcome.",
+       "Not quite. this is the opposite of what the idiom suggests.",
+       "Not quite. arguments aren't implied by this idiom.",
+       "Not quite. less output isn't suggested by this idiom."
+     ]},
+    {section:'B. Vocabulary in Context', text:'Why does Phil describe "I\'m making you responsible for..." as sounding like a manager?',
+     options:[
+       "Because it uses a softer, more indirect style of language.",
+       "Because it directly and formally assigns ownership of a task.",
+       "Because it is always followed by a polite apology afterwards.",
+       "Because it can only be used when speaking to new employees."
+     ], correct:1,
+     explain:[
+       "Not quite. Phil describes it as direct, not softer or indirect.",
+       "Correct. it directly and formally hands over ownership, like a manager would.",
+       "Not quite. an apology afterwards isn't mentioned.",
+       "Not quite. no restriction to new employees is mentioned."
+     ]},
+    {section:'B. Vocabulary in Context', text:'What does "worked out" mean in "we\'ve worked out what to delegate"?',
+     options:[
+       "Exercised physically before starting the working day.",
+       "Figured out or determined something after thinking it through.",
+       "Completely forgotten about a task that needed doing.",
+       "Argued with a colleague about who should do a task."
+     ], correct:1,
+     explain:[
+       "Not quite. this takes the phrase too literally, as physical exercise.",
+       "Correct. worked out here means figured out through discussion.",
+       "Not quite. forgetting is the opposite of working something out.",
+       "Not quite. no argument is implied by this phrase."
+     ]},
+    {section:'B. Vocabulary in Context', text:'What does "a big thing" mean in Phil\'s line, "that might be a big thing here"?',
+     options:[
+       "A large physical object that is difficult to move.",
+       "A minor detail that nobody needs to pay much attention to.",
+       "An important factor that affects the whole situation.",
+       "A joke that Phil doesn't expect Pippa to take seriously."
+     ], correct:2,
+     explain:[
+       "Not quite. this takes the phrase literally rather than figuratively.",
+       "Not quite. this is the opposite of what the phrase suggests.",
+       "Correct. a big thing here means an important factor in the situation.",
+       "Not quite. Phil isn't presenting this as a joke."
+     ]}
+  ];
+
+  let answered = new Array(questions.length).fill(false);
+  let score = 0;
+
+  function renderExercises(){
+    const container = document.getElementById('exContainer');
+    container.innerHTML = '';
+    let currentSection = '';
+    questions.forEach((q, qi)=>{
+      if(q.section !== currentSection){
+        currentSection = q.section;
+        const h = document.createElement('div');
+        h.className = 'ex-section-title';
+        h.textContent = currentSection;
+        container.appendChild(h);
+      }
+      const qBlock = document.createElement('div');
+      qBlock.className = 'q-block';
+      qBlock.id = 'q'+qi;
+      const qText = document.createElement('div');
+      qText.className = 'q-text';
+      qText.textContent = (qi+1)+'. '+q.text;
+      qBlock.appendChild(qText);
+      const optWrap = document.createElement('div');
+      optWrap.className = 'q-options';
+      q.options.forEach((opt, oi)=>{
+        const optDiv = document.createElement('div');
+        const btn = document.createElement('button');
+        btn.className = 'opt-btn';
+        btn.textContent = String.fromCharCode(65+oi)+') '+opt;
+        btn.addEventListener('click', ()=>answerQuestion(qi, oi));
+        const exp = document.createElement('div');
+        exp.className = 'opt-explain';
+        exp.id = 'exp-'+qi+'-'+oi;
+        exp.textContent = q.explain[oi];
+        optDiv.appendChild(btn);
+        optDiv.appendChild(exp);
+        optWrap.appendChild(optDiv);
+      });
+      qBlock.appendChild(optWrap);
+      container.appendChild(qBlock);
+    });
+  }
+
+  function answerQuestion(qi, oi){
+    if(answered[qi]) return;
+    answered[qi] = true;
+    const q = questions[qi];
+    if(oi === q.correct) score++;
+    const qBlock = document.getElementById('q'+qi);
+    const buttons = qBlock.querySelectorAll('.opt-btn');
+    buttons.forEach((b, bi)=>{
+      b.disabled = true;
+      if(bi === q.correct) b.classList.add('correct');
+      if(bi === oi && oi !== q.correct) b.classList.add('wrong');
+      document.getElementById('exp-'+qi+'-'+bi).classList.add('show');
+    });
+    updateScore();
+  }
+
+  function updateScore(){
+    document.getElementById('scoreDisplay').textContent = 'Score: '+score+' / '+questions.length;
+    if(answered.every(a=>a)){
+      showFinalMessage();
+    }
+  }
+
+  function showFinalMessage(){
+    const el = document.getElementById('finalMsg');
+    const pct = score / questions.length;
+    let msg;
+    if(pct >= 0.87) msg = "Outstanding! You've clearly got a feel for delegating with confidence and tact.";
+    else if(pct >= 0.67) msg = 'Solid work! A quick review of a few phrases and this will be second nature.';
+    else if(pct >= 0.4) msg = 'Good start! Another pass through the Reading and Vocabulary in Use tabs will help.';
+    else msg = "Give the Reading tab another look, then try again. You'll notice a big improvement.";
+    el.textContent = 'Final score: '+score+' / '+questions.length+'. '+msg;
+    el.style.display = 'block';
+  }
+
+  function resetExercises(){
+    answered = new Array(questions.length).fill(false);
+    score = 0;
+    document.getElementById('finalMsg').style.display = 'none';
+    renderExercises();
+    updateScore();
+  }
+
+  renderExercises();
+  updateScore();
+</script>
+
+</body>
+</html>

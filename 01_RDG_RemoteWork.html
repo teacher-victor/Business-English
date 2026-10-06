@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+LESSON-META
+track: general_reading
+title: "Hybrid Work, One Year Later: What's Really Going to Happen to the Office?"
+sub_topic: "Remote work & hybrid team productivity"
+genre: blog_post
+level: B1
+grammar_focus: Future Forms: will vs. going to
+theme: video-call-grid / digital workspace
+date: 2026-10-06
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Class: Hybrid Work, One Year Later</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink:               #16222b;
+  --paper:              #f6faf9;
+  --cream:              #e3eef0;
+  --rule:               #8fb3bd;
+  --accent:             #2a9d8f;
+  --accent2:            #e07a5f;
+  --gold:               #f2b134;
+  --highlight-vocab:    #fff3b0;
+  --highlight-idiom:    #cde7f0;
+  --highlight-express:  #ffd9c4;
+  --correct:            #2a9d6f;
+  --wrong:              #d6555f;
+  --light-correct:      #e3f6ec;
+  --light-wrong:        #fbe3e5;
+
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-body:    'Mulish', 'Segoe UI', sans-serif;
+  --font-mono:    'Space Mono', 'Courier New', monospace;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background:
+    linear-gradient(rgba(42,157,143,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42,157,143,0.06) 1px, transparent 1px),
+    var(--paper);
+  background-size: 34px 34px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+
+::selection { background: var(--accent); color: #fff; }
+
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+.tilebar {
+  height: 10px;
+  width: 100%;
+  background: repeating-linear-gradient(90deg, var(--accent) 0 26px, var(--accent2) 26px 52px);
+}
+
+.masthead {
+  background: linear-gradient(180deg, var(--cream), var(--paper));
+  border-bottom: 6px solid var(--accent);
+  padding: 2.4rem 0 1.6rem;
+  text-align: center;
+  position: relative;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent2);
+  font-weight: 500;
+  margin-bottom: 0.9rem;
+}
+.headline {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4.6vw, 2.9rem);
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 0.9rem;
+  padding: 0 0.5rem;
+}
+.deck {
+  font-size: 1.08rem;
+  max-width: 620px;
+  margin: 0 auto 0.9rem;
+  color: #3c5157;
+  font-style: italic;
+}
+.byline {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #5a7a82;
+  margin-bottom: 1.3rem;
+}
+.factrow { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem 1.2rem; }
+.fact {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  background: var(--paper);
+  border: 2px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+}
+
+.tabnav {
+  position: sticky; top: 0; z-index: 50;
+  display: flex;
+  background: var(--ink);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+.tabbtn {
+  flex: 1; border: none; background: transparent;
+  color: #cfe7e3;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.95rem 0.4rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-bottom: 4px solid transparent;
+}
+.tabbtn:hover { background: rgba(255,255,255,0.08); }
+.tabbtn.active { color: #fff; background: var(--accent); border-bottom: 4px solid var(--gold); }
+
+.panel { display: none; padding: 2.2rem 0 1rem; animation: fadeIn 0.25s ease; }
+.panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.sectitle { font-family: var(--font-display); font-size: 1.7rem; font-weight: 700; color: var(--accent); margin-bottom: 0.3rem; }
+.subtitle { color: #4e6b72; margin-bottom: 1.5rem; font-size: 0.95rem; }
+
+.tag {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.7rem;
+  text-transform: uppercase; letter-spacing: 0.08em;
+  background: var(--accent2); color: #fff;
+  padding: 0.25rem 0.7rem; border-radius: 999px; margin-bottom: 0.8rem;
+}
+
+.legend {
+  display: flex; flex-wrap: wrap; gap: 1rem;
+  background: var(--cream); border: 2px dashed var(--rule); border-radius: 14px;
+  padding: 0.9rem 1.2rem; margin-bottom: 1.8rem; font-size: 0.88rem;
+}
+.legend-item { display: flex; align-items: center; gap: 0.5rem; }
+.swatch { width: 16px; height: 16px; border-radius: 4px; display: inline-block; }
+
+.excerpt {
+  background: var(--paper); border: 2px solid var(--rule); border-radius: 18px;
+  padding: 1.5rem 1.6rem; margin-bottom: 1.6rem; position: relative;
+}
+.excerpt::before {
+  content: "💻"; position: absolute; top: -16px; left: 20px;
+  font-size: 1.4rem; background: var(--paper); padding: 0 6px;
+}
+.exlabel {
+  font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--accent); font-weight: 600;
+  margin-bottom: 0.6rem; display: block;
+}
+.excerpt p { margin-bottom: 0.9rem; }
+.excerpt p:last-child { margin-bottom: 0; }
+
+.hl-v, .hl-i, .hl-e {
+  border-radius: 4px; padding: 0.05em 0.2em; cursor: help; font-weight: 600;
+  position: relative; border-bottom: 2px dotted currentColor;
+}
+.hl-v { background: var(--highlight-vocab); color: #7a5b06; }
+.hl-i { background: var(--highlight-idiom); color: #1a5a8a; }
+.hl-e { background: var(--highlight-express); color: #a04a10; }
+
+[data-tip] { position: relative; }
+[data-tip]:hover::after, [data-tip]:focus::after {
+  content: attr(data-tip); position: absolute; bottom: 130%; left: 50%;
+  transform: translateX(-50%); background: var(--ink); color: #fff;
+  font-family: var(--font-body); font-weight: 400; font-size: 0.82rem; line-height: 1.4;
+  padding: 0.6rem 0.8rem; border-radius: 10px; width: max-content; max-width: 260px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25); z-index: 100; white-space: normal;
+}
+[data-tip]:hover::before, [data-tip]:focus::before {
+  content: ""; position: absolute; bottom: 118%; left: 50%; transform: translateX(-50%);
+  border: 6px solid transparent; border-top-color: var(--ink); z-index: 100;
+}
+
+.pullquote {
+  font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--accent2);
+  text-align: center; border-top: 3px dotted var(--rule); border-bottom: 3px dotted var(--rule);
+  padding: 1.6rem 1rem; margin: 2rem 0;
+}
+
+.vocab-intro { background: var(--cream); border-radius: 14px; padding: 1rem 1.3rem; margin-bottom: 1.8rem; font-size: 0.93rem; }
+.vgroup-title { font-family: var(--font-display); font-size: 1.15rem; margin: 1.6rem 0 0.9rem; color: var(--ink); display: flex; align-items: center; gap: 0.5rem; }
+.vgroup-title .dot { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.vcard { background: var(--paper); border: 2px solid var(--rule); border-radius: 14px; padding: 1rem 1.2rem; border-top: 5px solid var(--accent); }
+.vcard.idiom { border-top-color: #3a86c8; }
+.vcard.expr { border-top-color: var(--gold); }
+.vterm { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
+.vpos { font-family: var(--font-mono); font-size: 0.72rem; color: var(--rule); text-transform: uppercase; margin-bottom: 0.4rem; }
+.vdef { font-size: 0.92rem; margin-bottom: 0.5rem; }
+.vex { font-size: 0.88rem; font-style: italic; color: #3c5157; }
+
+.gwhy { background: var(--cream); border-left: 5px solid var(--accent); border-radius: 10px; padding: 1rem 1.3rem; margin-bottom: 1.6rem; font-size: 0.95rem; }
+.gsub { font-family: var(--font-display); font-size: 1.25rem; margin: 1.8rem 0 0.8rem; color: var(--accent2); }
+.formula {
+  background: var(--ink); color: #cde7e3; font-family: var(--font-mono); font-size: 0.95rem;
+  padding: 1rem 1.3rem; border-radius: 12px; margin-bottom: 1.2rem; text-align: center; letter-spacing: 0.02em;
+}
+table.gtable { width: 100%; border-collapse: collapse; margin-bottom: 1.4rem; font-size: 0.9rem; }
+table.gtable th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; text-align: left; font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; }
+table.gtable td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+table.gtable tr:nth-child(even) td { background: var(--cream); }
+table.gtable details { cursor: pointer; }
+table.gtable summary { color: var(--accent2); font-weight: 600; font-family: var(--font-mono); font-size: 0.82rem; }
+
+.exintro { background: var(--cream); border-radius: 14px; padding: 1rem 1.3rem; margin-bottom: 1.6rem; font-size: 0.93rem; }
+.exsection-title {
+  font-family: var(--font-display); font-size: 1.3rem; color: var(--accent);
+  margin: 1.8rem 0 1rem; border-bottom: 3px solid var(--gold); padding-bottom: 0.3rem;
+}
+.qblock { background: var(--paper); border: 2px solid var(--rule); border-radius: 14px; padding: 1.2rem 1.3rem; margin-bottom: 1.1rem; }
+.qtext { font-weight: 700; margin-bottom: 0.8rem; }
+.opt-btn {
+  display: block; width: 100%; text-align: left; background: var(--paper);
+  border: 2px solid var(--rule); border-radius: 10px; padding: 0.6rem 0.9rem; margin-bottom: 0.5rem;
+  cursor: pointer; font-family: var(--font-body); font-size: 0.94rem; transition: all 0.15s;
+}
+.opt-btn:hover:not(:disabled) { border-color: var(--accent2); background: var(--cream); }
+.opt-btn:disabled { cursor: default; }
+.opt-btn.correct { background: var(--light-correct); border-color: var(--correct); color: #205c3d; font-weight: 700; }
+.opt-btn.wrong { background: var(--light-wrong); border-color: var(--wrong); color: #8a2b2f; font-weight: 700; }
+.opt-btn.reveal-correct { background: var(--light-correct); border-color: var(--correct); font-weight: 700; }
+.feedback { display: none; margin-top: 0.6rem; padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.9rem; }
+.feedback.show { display: block; }
+.feedback.correct { background: var(--light-correct); color: #205c3d; }
+.feedback.wrong { background: var(--light-wrong); color: #8a2b2f; }
+.fb-icon { font-weight: 800; margin-right: 0.3rem; }
+
+.qblock.answered-correct { border-color: var(--correct); }
+.qblock.answered-wrong { border-color: var(--wrong); }
+
+#score-bar { display: none; text-align: center; background: var(--ink); color: #fff; border-radius: 18px; padding: 1.8rem; margin-top: 2rem; }
+#score-bar.show { display: block; }
+#score-num { font-family: var(--font-display); font-size: 3rem; color: var(--gold); }
+#score-title { font-family: var(--font-display); font-size: 1.4rem; margin: 0.4rem 0; }
+#score-msg { font-size: 0.92rem; margin-bottom: 1rem; color: #cfe7e3; }
+.reset-btn {
+  background: var(--accent); color: #fff; border: none; font-family: var(--font-display);
+  font-weight: 700; padding: 0.7rem 1.6rem; border-radius: 999px; cursor: pointer; font-size: 0.95rem;
+}
+.reset-btn:hover { background: var(--gold); }
+
+@media (max-width: 600px) {
+  .tabbtn { font-size: 0.78rem; padding: 0.75rem 0.2rem; }
+  .headline { font-size: 1.6rem; }
+  .vgrid { grid-template-columns: 1fr; }
+  table.gtable { font-size: 0.78rem; }
+  .excerpt { padding: 1.2rem 1rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <p class="eyebrow">English Language Class · Remote Work &amp; Hybrid Teams · Blog Post · B1</p>
+  <h1 class="headline">Hybrid Work, One Year Later: What's Really Going to Happen to the Office?</h1>
+  <p class="deck">Our team went hybrid eighteen months ago. Here's what the data: and a lot of honest conversations: are telling us about where work is heading next.</p>
+  <p class="byline">Posted by Jamie Okonkwo-Reyes, Team Lead @ Bright Path Consulting · Workplace Culture Blog</p>
+  <div class="factrow">
+    <span class="fact">📍 Topic: Hybrid Work</span>
+    <span class="fact">🎯 Level: B1</span>
+    <span class="fact">📝 Grammar: Future Forms</span>
+  </div>
+</header>
+<div class="tilebar"></div>
+
+<nav class="tabnav">
+  <button class="tabbtn active" onclick="switchTab('reading', this)">💻 Reading</button>
+  <button class="tabbtn" onclick="switchTab('vocab', this)">📖 Vocabulary</button>
+  <button class="tabbtn" onclick="switchTab('grammar', this)">⏩ Grammar</button>
+  <button class="tabbtn" onclick="switchTab('exercises', this)">✅ Exercises</button>
+</nav>
+
+<div class="wrap">
+
+<!-- ══════════════ READING ══════════════ -->
+<section id="panel-reading" class="panel active">
+  <span class="tag">Blog Post</span>
+  <h2 class="sectitle">Hybrid Work, One Year Later</h2>
+  <p class="subtitle">What's really going to happen to the office? Hover or tap any highlighted term for its meaning.</p>
+
+  <div class="legend">
+    <div class="legend-item"><span class="swatch" style="background:var(--highlight-vocab)"></span>Vocabulary</div>
+    <div class="legend-item"><span class="swatch" style="background:var(--highlight-idiom)"></span>Idiom / Set Phrase</div>
+    <div class="legend-item"><span class="swatch" style="background:var(--highlight-express)"></span>Useful Expression</div>
+  </div>
+
+  <div class="excerpt">
+    <span class="exlabel">Excerpt 1 · The One-Year Mark</span>
+    <p>Eighteen months ago, my company switched to hybrid work. Two or three days in the office, the rest from home: no fixed rule about which days, just whatever worked best for each team. At the time, plenty of people predicted it was going to be a disaster. "Nobody is going to bother coming in," one manager told me. "The whole thing will <span class="hl-i" data-tip="Idiom · fall apart · to stop working or succeeding; to collapse">fall apart</span> within a month." It didn't fall apart. But it also didn't turn out quite the way anyone expected.</p>
+    <p><span class="hl-e" data-tip="Useful Expression · one year on · marks a point in time exactly one year after something happened">One year on</span>, what have we actually learned? I run a team of eleven people across three time zones, and I've spent the last few months looking at our own numbers: attendance, output, <span class="hl-v" data-tip="Vocabulary · turnover (n.) · the rate at which employees leave an organization and are replaced">turnover</span>, even how long new hires take to feel settled. Here's what the data, and a lot of honest conversations, are telling us about where work is really heading next.</p>
+  </div>
+
+  <div class="excerpt">
+    <span class="exlabel">Excerpt 2 · The Commute Nobody Misses</span>
+    <p>Let's start with the obvious. Nobody on my team misses the <span class="hl-v" data-tip="Vocabulary · commute (n.) · a regular journey between home and a place of work">commute</span>. Before hybrid work, the average person on my team spent almost nine hours a week getting to and from the office. That's more than a full workday, gone, every single week. When we asked people what they'd do with that time if they never had to commute again, the answers were almost all about sleep, family, or exercise: not extra work hours.</p>
+    <p>Does that hurt productivity? Based on our numbers, not really. Output on most of our core projects is roughly the same as it was two years ago, sometimes slightly higher. Where we have seen a real drop is in a handful of roles that depend heavily on <span class="hl-v" data-tip="Vocabulary · spontaneous (adj.) · happening or done without planning, in a natural, immediate way">spontaneous</span>, in-person problem-solving: design and early-stage product work, mostly. For those teams, something is lost when people aren't <span class="hl-i" data-tip="Idiom · bounce ideas back and forth · to discuss and develop ideas together, exchanging them repeatedly">bouncing ideas back and forth</span> at the same desk. We're still trying to work out how to fix that without forcing everyone back <span class="hl-i" data-tip="Idiom · under one roof · in the same building or location">under one roof</span> five days a week.</p>
+  </div>
+
+  <div class="excerpt">
+    <span class="exlabel">Excerpt 3 · The Collaboration Bottleneck</span>
+    <p>The biggest surprise for me has been collaboration. I expected meetings to get worse, and in some ways they did: more of them, longer, and spread across more time zones. But the real <span class="hl-v" data-tip="Vocabulary · bottleneck (n.) · a point in a process where progress is slowed or stopped">bottleneck</span> wasn't the number of meetings. It was decision-making. In the office, you could walk over to someone's desk, get a quick answer, and move on. At home, that same quick question often turns into a message that sits unread for two hours, then a reply that raises three more questions, then a meeting to <span class="hl-i" data-tip="Idiom · talk it through · to discuss something fully until it is understood or resolved">just talk it through</span>.</p>
+    <p>We fixed some of this by agreeing on "core hours": a four-hour window every day when everyone, wherever they're working from, is expected to be reachable. It's not perfect, but it cut our average response time on urgent questions almost in half. I think other companies are going to land on something similar, because the alternative: constant, low-level frustration about slow replies: isn't <span class="hl-v" data-tip="Vocabulary · sustainable (adj.) · able to continue over time without causing problems">sustainable</span> long-term.</p>
+  </div>
+
+  <div class="excerpt">
+    <span class="exlabel">Excerpt 4 · What Managers Got Wrong</span>
+    <p><span class="hl-e" data-tip="Useful Expression · if I'm honest · introduces a frank or possibly uncomfortable opinion">If I'm honest</span>, a lot of managers, including me at first, got hybrid work wrong in one specific way: we judged people by how <span class="hl-v" data-tip="Vocabulary · visible (adj.) · able to be seen or noticed by others">visible</span> they were, not by what they produced. Early on, I caught myself paying more attention to who <span class="hl-i" data-tip="Idiom · show up · to arrive or appear somewhere, especially at work or an event">showed up</span> for optional office days than to who was actually hitting their targets. That's a trap. Face time is comfortable to measure because you can see it with your own eyes. Output takes more effort to track properly, so some managers just <span class="hl-v" data-tip="Vocabulary · default (v.) · to choose or settle on a particular option automatically, without extra thought">default</span> to counting bodies in chairs instead.</p>
+    <p>The teams that are going to struggle most with hybrid work, I think, are the ones led by managers who never let go of that habit. If showing up is still quietly rewarded more than performing, people notice fast, and the whole <span class="hl-v" data-tip="Vocabulary · arrangement (n.) · a plan or system for doing something, often agreed between people">arrangement</span> starts to feel like a trick rather than a genuine choice.</p>
+  </div>
+
+  <div class="excerpt">
+    <span class="exlabel">Excerpt 5 · Onboarding Takes Longer, and That's Okay</span>
+    <p>One place hybrid work has clearly made things harder: onboarding. New hires on fully remote teams take, on average, about three weeks longer to feel confident in their role than people who started when we were fully in-office. Nobody is "pinging" a new colleague with a quick, informal question in the same easy way they might lean over a desk and ask. A lot of small, unofficial training: the kind that never makes it into a manual: is missing.</p>
+    <p>Our fix has been to bring new hires into the office for their entire first month, even if their team is mostly remote afterward. It's an extra cost, but turnover among new hires dropped <span class="hl-v" data-tip="Vocabulary · noticeably (adv.) · in a way that is easy to see or notice">noticeably</span> once we started doing this, so it's going to stay part of how we onboard people, at least for now.</p>
+  </div>
+
+  <div class="excerpt">
+    <span class="exlabel">Excerpt 6 · So, Is the Office Coming Back?</span>
+    <p>Will offices disappear completely? Almost certainly not. Will they go back to being full, five days a week, the way they were before 2020? I doubt it, at least not for most knowledge-work companies. What's going to happen, I suspect, is something less dramatic and more boring. <span class="hl-e" data-tip="Useful Expression · going forward · from this point in time into the future">Going forward</span>, offices will keep shrinking, hybrid schedules will keep becoming the default rather than the exception, and the real competition between companies will be less about where people work and more about whether managers actually trust their teams to get the job done.</p>
+    <p><span class="hl-e" data-tip="Useful Expression · at the end of the day · introduces the most important point, after considering everything">At the end of the day</span>, nobody on my team asked for a four-day commute back to how things were in 2019. What they want is flexibility they can rely on, fair treatment regardless of where they log in from, and managers who judge them by results. Whether most companies are going to deliver that, honestly, <span class="hl-e" data-tip="Useful Expression · it remains to be seen · says that something is not yet known and we must wait to find out">it remains to be seen</span>. But <span class="hl-e" data-tip="Useful Expression · one thing is clear · introduces a single confident conclusion after discussing uncertainty">one thing is clear</span>: there's <span class="hl-i" data-tip="Idiom · put the toothpaste back in the tube · to try to reverse a change that has already happened and can't easily be undone">no putting this particular toothpaste back in the tube</span>.</p>
+  </div>
+
+  <p class="pullquote">"There's no putting this particular toothpaste back in the tube."</p>
+</section>
+
+<!-- ══════════════ VOCABULARY ══════════════ -->
+<section id="panel-vocab" class="panel">
+  <span class="tag">Vocabulary</span>
+  <h2 class="sectitle">Key Words &amp; Phrases</h2>
+  <div class="vocab-intro">Three families of language from the reading: <strong>Vocabulary</strong> (single words worth learning), <strong>Idioms &amp; Set Phrases</strong> (fixed expressions with a figurative meaning), and <strong>Useful Expressions</strong> (functional, discourse-level phrases that frame an opinion or a conclusion).</div>
+
+  <h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-vocab)"></span>Vocabulary</h3>
+  <div class="vgrid">
+    <div class="vcard"><div class="vterm">commute</div><div class="vpos">noun</div><div class="vdef">A regular journey between home and a place of work.</div><div class="vex">Her <strong>commute</strong> takes almost an hour each way.</div></div>
+    <div class="vcard"><div class="vterm">turnover</div><div class="vpos">noun</div><div class="vdef">The rate at which employees leave an organization and are replaced.</div><div class="vex">High <strong>turnover</strong> makes it hard to keep a team's knowledge consistent.</div></div>
+    <div class="vcard"><div class="vterm">spontaneous</div><div class="vpos">adjective</div><div class="vdef">Happening or done without planning, in a natural, immediate way.</div><div class="vex">Some of our best ideas came from <strong>spontaneous</strong> hallway chats.</div></div>
+    <div class="vcard"><div class="vterm">bottleneck</div><div class="vpos">noun</div><div class="vdef">A point in a process where progress is slowed or stopped.</div><div class="vex">Approvals from one manager became a <strong>bottleneck</strong> for the whole team.</div></div>
+    <div class="vcard"><div class="vterm">sustainable</div><div class="vpos">adjective</div><div class="vdef">Able to continue over time without causing problems.</div><div class="vex">Working until midnight every night isn't a <strong>sustainable</strong> pace.</div></div>
+    <div class="vcard"><div class="vterm">visible</div><div class="vpos">adjective</div><div class="vdef">Able to be seen or noticed by others.</div><div class="vex">She wanted to be <strong>visible</strong> to leadership, so she spoke up in every meeting.</div></div>
+    <div class="vcard"><div class="vterm">default</div><div class="vpos">verb</div><div class="vdef">To choose or settle on a particular option automatically, without extra thought.</div><div class="vex">When unsure, people often <strong>default</strong> to the easiest option.</div></div>
+    <div class="vcard"><div class="vterm">arrangement</div><div class="vpos">noun</div><div class="vdef">A plan or system for doing something, often agreed between people.</div><div class="vex">The new shift <strong>arrangement</strong> suits most of the staff.</div></div>
+    <div class="vcard"><div class="vterm">noticeably</div><div class="vpos">adverb</div><div class="vdef">In a way that is easy to see or notice.</div><div class="vex">Sales improved <strong>noticeably</strong> after the new pricing launched.</div></div>
+  </div>
+
+  <h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-idiom)"></span>Idioms &amp; Set Phrases</h3>
+  <div class="vgrid">
+    <div class="vcard idiom"><div class="vterm">fall apart</div><div class="vpos">idiom</div><div class="vdef">To stop working or succeeding; to collapse.</div><div class="vex">Without a clear leader, the project started to <strong>fall apart</strong>.</div></div>
+    <div class="vcard idiom"><div class="vterm">under one roof</div><div class="vpos">idiom</div><div class="vdef">In the same building or location.</div><div class="vex">The whole family finally lives <strong>under one roof</strong> again.</div></div>
+    <div class="vcard idiom"><div class="vterm">bounce ideas back and forth</div><div class="vpos">idiom</div><div class="vdef">To discuss and develop ideas together, exchanging them repeatedly.</div><div class="vex">We spent an hour just <strong>bouncing ideas back and forth</strong> on the whiteboard.</div></div>
+    <div class="vcard idiom"><div class="vterm">talk it through</div><div class="vpos">idiom</div><div class="vdef">To discuss something fully until it is understood or resolved.</div><div class="vex">Let's <strong>talk it through</strong> before we make a final decision.</div></div>
+    <div class="vcard idiom"><div class="vterm">show up</div><div class="vpos">idiom / phrasal verb</div><div class="vdef">To arrive or appear somewhere, especially at work or an event.</div><div class="vex">Everyone <strong>showed up</strong> early for the client meeting.</div></div>
+    <div class="vcard idiom"><div class="vterm">put the toothpaste back in the tube</div><div class="vpos">idiom</div><div class="vdef">To try to reverse a change that has already happened and can't easily be undone.</div><div class="vex">Once customers knew the lower price, there was no putting the <strong>toothpaste back in the tube</strong>.</div></div>
+  </div>
+
+  <h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-express)"></span>Useful Expressions</h3>
+  <div class="vgrid">
+    <div class="vcard expr"><div class="vterm">one year on</div><div class="vpos">time expression</div><div class="vdef">Marks a point in time exactly one year after something happened.</div><div class="vex"><strong>One year on</strong>, the new policy is still working well.</div></div>
+    <div class="vcard expr"><div class="vterm">if I'm honest</div><div class="vpos">discourse marker</div><div class="vdef">Introduces a frank or possibly uncomfortable opinion.</div><div class="vex"><strong>If I'm honest</strong>, the plan needed more testing before launch.</div></div>
+    <div class="vcard expr"><div class="vterm">going forward</div><div class="vpos">discourse marker</div><div class="vdef">From this point in time into the future.</div><div class="vex"><strong>Going forward</strong>, all requests should go through the new form.</div></div>
+    <div class="vcard expr"><div class="vterm">at the end of the day</div><div class="vpos">discourse marker</div><div class="vdef">Introduces the most important point, after considering everything.</div><div class="vex"><strong>At the end of the day</strong>, the client just wants the project finished on time.</div></div>
+    <div class="vcard expr"><div class="vterm">it remains to be seen</div><div class="vpos">hedging phrase</div><div class="vdef">Says that something is not yet known and we must wait to find out.</div><div class="vex">Whether the new app will succeed, <strong>it remains to be seen</strong>.</div></div>
+    <div class="vcard expr"><div class="vterm">one thing is clear</div><div class="vpos">discourse marker</div><div class="vdef">Introduces a single confident conclusion after discussing uncertainty.</div><div class="vex">We don't know the final cost yet, but <strong>one thing is clear</strong>: it's over budget.</div></div>
+  </div>
+</section>
+
+<!-- ══════════════ GRAMMAR ══════════════ -->
+<section id="panel-grammar" class="panel">
+  <span class="tag">Grammar</span>
+  <h2 class="sectitle">Future Forms: Will vs. Going To</h2>
+  <div class="gwhy">This blog post makes predictions constantly: about offices, about managers, about where work is heading. Some of those predictions are personal opinions the writer can't fully prove; others are based on real numbers the company already has. English gives you two different future forms to signal that difference: <strong>will</strong> for opinion-based predictions and spontaneous decisions, and <strong>going to</strong> for predictions based on evidence you can already see, or plans already decided.</div>
+
+  <h3 class="gsub">01 · What Is It?</h3>
+  <table class="gtable">
+    <tr><th>Form</th><th>Used for</th><th>Example from the text</th></tr>
+    <tr><td><strong>will</strong> + base verb</td><td>Predictions based on opinion/belief; spontaneous decisions and promises made in the moment</td><td>"The whole thing <strong>will fall apart</strong> within a month."</td></tr>
+    <tr><td><strong>going to</strong> + base verb</td><td>Predictions based on evidence you can see now; plans already decided before speaking</td><td>"It's <strong>going to stay</strong> part of how we onboard people."</td></tr>
+  </table>
+
+  <h3 class="gsub">02 · How to Form It</h3>
+  <div class="formula">Subject + will (not) + base verb</div>
+  <div class="formula">Subject + am/is/are (not) + going to + base verb</div>
+  <table class="gtable">
+    <tr><th>Pattern</th><th>Form</th><th>Example from the Text</th></tr>
+    <tr><td>Affirmative: will</td><td>Subject + will + verb</td><td>"offices <strong>will</strong> keep shrinking"</td></tr>
+    <tr><td>Negative: will</td><td>Subject + won't + verb</td><td>"Will offices disappear completely? Almost certainly not" (= they <strong>won't</strong> disappear)</td></tr>
+    <tr><td>Affirmative: going to</td><td>Subject + am/is/are + going to + verb</td><td>"It's <strong>going to stay</strong> part of how we onboard people."</td></tr>
+    <tr><td>Question: will</td><td>Will + subject + verb?</td><td>"<strong>Will</strong> they go back to being full, five days a week?"</td></tr>
+  </table>
+
+  <h3 class="gsub">03 · Why This Text Uses It</h3>
+  <p style="margin-bottom:1rem;">A blog post about the future of work needs both forms to sound credible. "Will" lets the writer state personal predictions and opinions confidently, which suits the blog's informal, first-person voice: the reader accepts these as the author's honest guesses, not guarantees. "Going to" lets the writer report decisions and plans that are already backed by the company's own data, like the onboarding change, giving those specific claims more weight as settled fact rather than speculation. Mixing the two signals exactly how confident the writer is about each claim.</p>
+
+  <h3 class="gsub">04 · Spotted in the Reading</h3>
+  <table class="gtable">
+    <tr><th>Excerpt</th><th>Phrase</th><th>Form</th></tr>
+    <tr><td>1</td><td>"The whole thing will fall apart within a month"</td><td>will: opinion-based prediction</td></tr>
+    <tr><td>3</td><td>"other companies are going to land on something similar"</td><td>going to: prediction based on the writer's own evidence</td></tr>
+    <tr><td>4</td><td>"The teams that are going to struggle most..."</td><td>going to: prediction based on observed pattern</td></tr>
+    <tr><td>5</td><td>"it's going to stay part of how we onboard people"</td><td>going to: plan already decided, based on data</td></tr>
+    <tr><td>6</td><td>"offices will keep shrinking"</td><td>will: personal opinion-based prediction</td></tr>
+    <tr><td>6</td><td>"Whether most companies are going to deliver that..."</td><td>going to: prediction based on current evidence</td></tr>
+  </table>
+
+  <h3 class="gsub">05 · Practice: Choose the Right Future Form</h3>
+  <table class="gtable">
+    <tr><th>Situation</th><th>Your Turn</th></tr>
+    <tr><td>Your survey results are already clear: over 70% of staff want to keep two remote days. Complete the announcement: "Based on the results, we ___ (keep) the two-day remote policy next year."</td><td><details><summary>Show answer</summary>...are going to keep the two-day remote policy next year. (plan based on existing evidence)</details></td></tr>
+    <tr><td>A colleague suddenly offers to help you finish a late report. Respond: "Thanks! I ___ (send) you the file right now."</td><td><details><summary>Show answer</summary>I'll send you the file right now. (spontaneous decision)</details></td></tr>
+    <tr><td>You're sharing a personal opinion about the distant future of company culture. Complete: "I think company culture ___ (change) a lot over the next ten years, though nobody can be sure how."</td><td><details><summary>Show answer</summary>...will change a lot over the next ten years... (opinion-based prediction)</details></td></tr>
+    <tr><td>Management has already signed a contract to renovate the office. Complete: "The company ___ (renovate) the office next spring: it's already been approved."</td><td><details><summary>Show answer</summary>...is going to renovate the office next spring... (decided plan, based on evidence)</details></td></tr>
+    <tr><td>In a meeting, your manager suddenly decides to extend a trial after hearing positive feedback. Complete what she says: "Okay, given this feedback, we ___ (extend) the trial by another month."</td><td><details><summary>Show answer</summary>...will extend the trial by another month. (spontaneous decision reacting to new information)</details></td></tr>
+  </table>
+</section>
+
+<!-- ══════════════ EXERCISES ══════════════ -->
+<section id="panel-exercises" class="panel">
+  <span class="tag">Exercises</span>
+  <h2 class="sectitle">Test Yourself</h2>
+  <div class="exintro">15 questions across three sections. Click an answer to see instant feedback: every option, right or wrong, comes with an explanation.</div>
+
+  <h3 class="exsection-title">A · Reading Comprehension</h3>
+
+  <div class="qblock" id="qA1">
+    <p class="qtext">1. Why didn't Jamie's team's hybrid arrangement fall apart, according to the post?</p>
+    <button class="opt-btn" data-q="qA1" data-correct="false" data-expl="Not what happened: the post describes a flexible, not a fully office-based, arrangement.">Every employee was required to work from the office.</button>
+    <button class="opt-btn" data-q="qA1" data-correct="false" data-expl="Not mentioned: hybrid work continued past the first month.">The company cancelled hybrid work after a month.</button>
+    <button class="opt-btn" data-q="qA1" data-correct="true" data-expl="Correct: the post says it didn't fall apart, though it also didn't turn out quite as expected.">The team adapted and things turned out differently than feared.</button>
+    <button class="opt-btn" data-q="qA1" data-correct="false" data-expl="Not described: the post focuses on output and attendance data, not daily location tracking.">Managers tracked every employee's location every day.</button>
+    <div class="feedback" id="fb-qA1"></div>
+  </div>
+
+  <div class="qblock" id="qA2">
+    <p class="qtext">2. What did most employees say they would do with the time saved by not commuting?</p>
+    <button class="opt-btn" data-q="qA2" data-correct="true" data-expl="Correct: the answers were almost all about sleep, family, or exercise, not extra work.">Spend it on sleep, family, or exercise rather than extra work.</button>
+    <button class="opt-btn" data-q="qA2" data-correct="false" data-expl="Not mentioned: the post doesn't describe extra meeting attendance as a use of saved time.">Use it to attend more company meetings each week.</button>
+    <button class="opt-btn" data-q="qA2" data-correct="false" data-expl="Not stated in the post: no second job is mentioned.">Start a second job to earn additional income.</button>
+    <button class="opt-btn" data-q="qA2" data-correct="false" data-expl="Not stated in the post: online shopping is never mentioned.">Spend it mostly on personal online shopping.</button>
+    <div class="feedback" id="fb-qA2"></div>
+  </div>
+
+  <div class="qblock" id="qA3">
+    <p class="qtext">3. According to the post, which roles saw a real drop in output under hybrid work?</p>
+    <button class="opt-btn" data-q="qA3" data-correct="false" data-expl="The opposite is true: solo, independent tasks aren't the ones described as struggling.">Roles that depend mainly on independent, solo research tasks.</button>
+    <button class="opt-btn" data-q="qA3" data-correct="false" data-expl="Not mentioned anywhere in the post.">Roles that mostly involve routine data entry and filing.</button>
+    <button class="opt-btn" data-q="qA3" data-correct="false" data-expl="Not mentioned anywhere in the post.">Roles that are based entirely in customer call centers.</button>
+    <button class="opt-btn" data-q="qA3" data-correct="true" data-expl="Correct: design and early-stage product roles, which rely on spontaneous, in-person problem-solving.">Roles that depend heavily on spontaneous, in-person problem-solving.</button>
+    <div class="feedback" id="fb-qA3"></div>
+  </div>
+
+  <div class="qblock" id="qA4">
+    <p class="qtext">4. What was the real bottleneck in collaboration, according to Jamie?</p>
+    <button class="opt-btn" data-q="qA4" data-correct="false" data-expl="Meeting count increased, but the post names something else as the real bottleneck.">The total number of scheduled meetings each week.</button>
+    <button class="opt-btn" data-q="qA4" data-correct="true" data-expl="Correct: quick questions that used to get instant answers in person now took hours to resolve.">Slow decision-making once people weren't sitting near each other.</button>
+    <button class="opt-btn" data-q="qA4" data-correct="false" data-expl="Not mentioned: no lack of software tools is described.">A lack of software tools for online messaging.</button>
+    <button class="opt-btn" data-q="qA4" data-correct="false" data-expl="Not mentioned: email-answering refusal isn't described in the post.">Employees refusing to answer emails during office hours.</button>
+    <div class="feedback" id="fb-qA4"></div>
+  </div>
+
+  <div class="qblock" id="qA5">
+    <p class="qtext">5. Why did new hires take longer to feel confident in fully remote onboarding?</p>
+    <button class="opt-btn" data-q="qA5" data-correct="true" data-expl="Correct: the easy, informal training that happens near someone's desk was largely missing.">Small, informal training moments were largely missing for them.</button>
+    <button class="opt-btn" data-q="qA5" data-correct="false" data-expl="The opposite is implied: remote onboarding offered less of this kind of training, not more.">They were given far more formal training than before.</button>
+    <button class="opt-btn" data-q="qA5" data-correct="false" data-expl="Not stated: the post never says questions were banned.">They were not allowed to ask any questions at all.</button>
+    <button class="opt-btn" data-q="qA5" data-correct="false" data-expl="Not stated: the fix actually involves meeting new hires in person for a month.">Their managers refused to meet with them in the first month.</button>
+    <div class="feedback" id="fb-qA5"></div>
+  </div>
+
+  <h3 class="exsection-title">B · Vocabulary in Context</h3>
+
+  <div class="qblock" id="qB1">
+    <p class="qtext">6. In "managers just default to counting bodies in chairs," default most nearly means:</p>
+    <button class="opt-btn" data-q="qB1" data-correct="false" data-expl="Default doesn't mean a flat refusal to act.">to refuse completely to do something</button>
+    <button class="opt-btn" data-q="qB1" data-correct="false" data-expl="Default isn't about open discussion of a decision.">to openly discuss a difficult decision</button>
+    <button class="opt-btn" data-q="qB1" data-correct="false" data-expl="Default isn't about delaying a decision over time.">to delay a decision for a long time</button>
+    <button class="opt-btn" data-q="qB1" data-correct="true" data-expl="Correct: default means to automatically settle on an option without extra thought.">to automatically settle on an option without extra thought</button>
+    <div class="feedback" id="fb-qB1"></div>
+  </div>
+
+  <div class="qblock" id="qB2">
+    <p class="qtext">7. "The whole arrangement starts to feel like a trick": here, arrangement refers to:</p>
+    <button class="opt-btn" data-q="qB2" data-correct="false" data-expl="Arrangement here has nothing to do with furniture.">a piece of office furniture</button>
+    <button class="opt-btn" data-q="qB2" data-correct="true" data-expl="Correct: arrangement means a plan or system agreed between people, here referring to hybrid work.">a plan or system agreed between people</button>
+    <button class="opt-btn" data-q="qB2" data-correct="false" data-expl="Arrangement here has nothing to do with flowers.">a type of flower decoration</button>
+    <button class="opt-btn" data-q="qB2" data-correct="false" data-expl="Arrangement here has nothing to do with legal paperwork.">a legal document signed by a lawyer</button>
+    <div class="feedback" id="fb-qB2"></div>
+  </div>
+
+  <div class="qblock" id="qB3">
+    <p class="qtext">8. If a habit is "sustainable long-term," it is a habit that:</p>
+    <button class="opt-btn" data-q="qB3" data-correct="false" data-expl="Sustainable is about continuing over time, not about cost specifically.">quickly becomes too expensive for a company</button>
+    <button class="opt-btn" data-q="qB3" data-correct="false" data-expl="Sustainable is about time, not team size.">only works for a very small team size</button>
+    <button class="opt-btn" data-q="qB3" data-correct="true" data-expl="Correct: sustainable means able to continue over time without causing problems.">can continue over time without causing problems</button>
+    <button class="opt-btn" data-q="qB3" data-correct="false" data-expl="Sustainable isn't about a review schedule.">must be reviewed by senior management monthly</button>
+    <div class="feedback" id="fb-qB3"></div>
+  </div>
+
+  <div class="qblock" id="qB4">
+    <p class="qtext">9. "There's no putting this particular toothpaste back in the tube" means that:</p>
+    <button class="opt-btn" data-q="qB4" data-correct="true" data-expl="Correct: the idiom means a change has already happened and can't easily be reversed.">a change has already happened and can't easily be reversed</button>
+    <button class="opt-btn" data-q="qB4" data-correct="false" data-expl="No product recall is mentioned in the post.">a product recall is currently taking place</button>
+    <button class="opt-btn" data-q="qB4" data-correct="false" data-expl="No cleaning task is mentioned in the post.">a cleaning task still needs to be finished</button>
+    <button class="opt-btn" data-q="qB4" data-correct="false" data-expl="No meeting postponement is mentioned in the post.">a meeting has been postponed until further notice</button>
+    <div class="feedback" id="fb-qB4"></div>
+  </div>
+
+  <div class="qblock" id="qB5">
+    <p class="qtext">10. A manager who values "face time" mainly cares about:</p>
+    <button class="opt-btn" data-q="qB5" data-correct="false" data-expl="Face time isn't about writing skills.">how clearly an employee explains ideas in writing</button>
+    <button class="opt-btn" data-q="qB5" data-correct="false" data-expl="Face time isn't about email speed.">how quickly an employee answers emails at night</button>
+    <button class="opt-btn" data-q="qB5" data-correct="false" data-expl="Face time isn't about business travel.">how often an employee travels for work meetings</button>
+    <button class="opt-btn" data-q="qB5" data-correct="true" data-expl="Correct: face time means being visibly present, which the post says is easy to measure but misleading.">how visibly present an employee is in the office</button>
+    <div class="feedback" id="fb-qB5"></div>
+  </div>
+
+  <h3 class="exsection-title">C · Grammar: Future Forms</h3>
+
+  <div class="qblock" id="qC1">
+    <p class="qtext">11. Which phrase from the text is a prediction based on personal opinion rather than hard evidence?</p>
+    <button class="opt-btn" data-q="qC1" data-correct="false" data-expl="This uses 'going to,' tied to the company's own onboarding data, not a general opinion.">"it's going to stay part of how we onboard people"</button>
+    <button class="opt-btn" data-q="qC1" data-correct="true" data-expl="Correct: 'will' here expresses the writer's personal opinion about the future, without hard proof.">"offices will keep shrinking"</button>
+    <button class="opt-btn" data-q="qC1" data-correct="false" data-expl="This is a statement about the past, not a future prediction at all.">"turnover among new hires dropped noticeably"</button>
+    <button class="opt-btn" data-q="qC1" data-correct="false" data-expl="This is a past description of commute time, not a future prediction.">"nine hours a week getting to and from the office"</button>
+    <div class="feedback" id="fb-qC1"></div>
+  </div>
+
+  <div class="qblock" id="qC2">
+    <p class="qtext">12. "It's going to stay part of how we onboard people" is used here because the claim is based on:</p>
+    <button class="opt-btn" data-q="qC2" data-correct="false" data-expl="Nothing in the text suggests this was decided suddenly mid-meeting.">a sudden decision made in the middle of a meeting</button>
+    <button class="opt-btn" data-q="qC2" data-correct="false" data-expl="No promise to a new employee is described here.">a promise made to a brand-new employee</button>
+    <button class="opt-btn" data-q="qC2" data-correct="true" data-expl="Correct: the decision is based on real turnover data the company already has.">real data the company already has about turnover</button>
+    <button class="opt-btn" data-q="qC2" data-correct="false" data-expl="The opposite: this claim is supported by evidence, not an unsupported guess.">a guess with no supporting information at all</button>
+    <div class="feedback" id="fb-qC2"></div>
+  </div>
+
+  <div class="qblock" id="qC3">
+    <p class="qtext">13. Choose the correctly completed sentence: "The company ___ renovate the office next spring: it's already been approved."</p>
+    <button class="opt-btn" data-q="qC3" data-correct="true" data-expl="Correct: 'is going to' fits a plan that's already decided and approved.">is going to</button>
+    <button class="opt-btn" data-q="qC3" data-correct="false" data-expl="'Will' suits opinion or spontaneous decisions, not an already-approved plan.">will</button>
+    <button class="opt-btn" data-q="qC3" data-correct="false" data-expl="'Would' is used for hypothetical or conditional situations, not a confirmed plan.">would</button>
+    <button class="opt-btn" data-q="qC3" data-correct="false" data-expl="'Is' alone doesn't form a future tense with 'renovate' here.">is</button>
+    <div class="feedback" id="fb-qC3"></div>
+  </div>
+
+  <div class="qblock" id="qC4">
+    <p class="qtext">14. Choose the correctly completed sentence: "Okay, given this feedback, we ___ extend the trial by another month."</p>
+    <button class="opt-btn" data-q="qC4" data-correct="false" data-expl="'Are going to' suits a plan made before speaking, not this in-the-moment reaction.">are going to</button>
+    <button class="opt-btn" data-q="qC4" data-correct="false" data-expl="This past form doesn't fit a decision happening right now.">were going to</button>
+    <button class="opt-btn" data-q="qC4" data-correct="false" data-expl="This perfect form doesn't express a future decision at all.">have gone to</button>
+    <button class="opt-btn" data-q="qC4" data-correct="true" data-expl="Correct: 'will' fits a spontaneous decision made on the spot, reacting to new feedback.">will</button>
+    <div class="feedback" id="fb-qC4"></div>
+  </div>
+
+  <div class="qblock" id="qC5">
+    <p class="qtext">15. Why does this blog post mix both "will" and "going to" when discussing the future of work?</p>
+    <button class="opt-btn" data-q="qC5" data-correct="false" data-expl="Variety isn't the reason: each form carries a distinct meaning here.">To avoid repeating the same grammar structure too many times</button>
+    <button class="opt-btn" data-q="qC5" data-correct="true" data-expl="Correct: 'will' marks personal opinions, while 'going to' marks claims backed by the company's own data.">To separate confident opinions from claims based on real company data</button>
+    <button class="opt-btn" data-q="qC5" data-correct="false" data-expl="The post stays informal and personal throughout, regardless of which future form is used.">To make the post sound more formal and less personal</button>
+    <button class="opt-btn" data-q="qC5" data-correct="false" data-expl="Both forms exist in every major English variety; this isn't a regional difference.">Because British and American English require different forms</button>
+    <div class="feedback" id="fb-qC5"></div>
+  </div>
+
+  <div id="score-bar">
+    <div id="score-num">0/15</div>
+    <div id="score-title"></div>
+    <div id="score-msg"></div>
+    <button class="reset-btn" onclick="resetAll()">💻 Try Again</button>
+  </div>
+</section>
+
+</div>
+
+<script>
+function switchTab(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tabbtn').forEach(b => b.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+const TOTAL = 15;
+let answered = {}, correct = {};
+
+function checkAnswer(btn) {
+  const qId = btn.dataset.q, isCorrect = btn.dataset.correct === 'true';
+  if (answered[qId]) return;
+  answered[qId] = true; correct[qId] = isCorrect;
+  const block = document.getElementById(qId);
+  const fb = document.getElementById('fb-' + qId);
+  block.querySelectorAll('.opt-btn').forEach(b => {
+    b.disabled = true;
+    if (b.dataset.correct === 'true') b.classList.add('reveal-correct');
+  });
+  btn.classList.remove('reveal-correct');
+  btn.classList.add(isCorrect ? 'correct' : 'wrong');
+  block.classList.add(isCorrect ? 'answered-correct' : 'answered-wrong');
+  fb.innerHTML = `<span class="fb-icon">${isCorrect ? '✓' : '✗'}</span> ${btn.dataset.expl}`;
+  fb.className = `feedback show ${isCorrect ? 'correct' : 'wrong'}`;
+  if (Object.keys(answered).length === TOTAL) showScore();
+}
+
+document.querySelectorAll('.opt-btn').forEach(b => b.addEventListener('click', () => checkAnswer(b)));
+
+function showScore() {
+  const score = Object.values(correct).filter(Boolean).length;
+  document.getElementById('score-num').textContent = score + '/15';
+  let title, msg;
+  if (score >= 13) { title = '💻 Fully Synced'; msg = "Outstanding: you've mastered both the story and the future forms that tell it."; }
+  else if (score >= 10) { title = '📶 Strong Connection'; msg = 'Strong result. Revisit the Grammar tab if any future-form questions tripped you up.'; }
+  else if (score >= 6) { title = '🔄 Buffering'; msg = "Good start: reread the Reading tab's highlighted phrases and try again."; }
+  else { title = '📴 Connection Lost'; msg = 'Head back to the Reading and Grammar tabs, then give it another go.'; }
+  document.getElementById('score-title').textContent = title;
+  document.getElementById('score-msg').textContent = msg;
+  document.getElementById('score-bar').classList.add('show');
+}
+
+function resetAll() {
+  answered = {}; correct = {};
+  document.querySelectorAll('.qblock').forEach(b => b.classList.remove('answered-correct', 'answered-wrong'));
+  document.querySelectorAll('.opt-btn').forEach(b => { b.disabled = false; b.classList.remove('correct', 'wrong', 'reveal-correct'); });
+  document.querySelectorAll('.feedback').forEach(f => { f.className = 'feedback'; f.innerHTML = ''; });
+  document.getElementById('score-bar').classList.remove('show');
+  switchTab('exercises', document.querySelector('.tabbtn:nth-child(4)'));
+}
+</script>
+</body>
+</html>
