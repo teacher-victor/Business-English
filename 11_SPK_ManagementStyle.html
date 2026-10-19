@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+LESSON-META
+track: general_speaking
+title: "Boardroom Briefing: Management Style & Team Retention"
+week_theme: "Leadership & Management / Chasing People"
+level: B2
+dataset_focus: "Twenty teams grouped by leader style (hands-on, coaching, hands-off, structured): 12-month retention and engagement scores for all staff, new hires and veterans"
+theme: "thermal heat-map / people-analytics war table: aubergine and raspberry on pale lilac"
+date: 2026-10-19
+note: "Intentionally varied from Lessons 3 and 7. Chart: colour-graded heat-table matrix (03 used bar chart + table; 07 used a card-grid scorecard). Framework: 5-beat Hook / Map / Zoom / Weigh / Ask (03 used 4-part Open / Findings / Insight / Recommend; 07 used 3-part What / So What / Now What). Rubric: 3-level descriptor scorecard. Drill: fresh makeover lines about the heat table. Exercises: section A is board Q&A reply choices, section B is table reading."
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boardroom Briefing: Management Style &amp; Team Retention</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Chivo+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --ink: #241b35;
+  --paper: #fcf9fd;
+  --cream: #f1e8f7;
+  --rule: #cdb9dc;
+  --accent: #d6336c;
+  --accent2: #4c2a85;
+  --gold: #ffa94d;
+  --highlight-vocab: #fde9a8;
+  --highlight-idiom: #cfe3f1;
+  --highlight-express: #f5d4ae;
+  --correct: #2c8657;
+  --wrong: #bf4a4a;
+  --light-correct: #e2f4ea;
+  --light-wrong: #fae3e3;
+  --font-display: 'Bricolage Grotesque', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Public Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Chivo Mono', 'Courier New', monospace;
+}
+
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+  line-height: 1.7;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+::selection { background: var(--accent); color: #fff; }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+.masthead { text-align: center; padding: 2.4rem 0 1.6rem; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.9rem; }
+.headline { font-family: var(--font-display); font-weight: 400; line-height: 1.15; margin-bottom: 0.9rem; padding: 0 0.5rem; }
+.deck { font-size: 1.08rem; max-width: 660px; margin: 0 auto 0.9rem; }
+.byline { font-family: var(--font-mono); font-size: 0.78rem; margin-bottom: 1.3rem; }
+.byline a { color: inherit; }
+.factrow { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem 1.1rem; }
+.fact { font-family: var(--font-mono); font-size: 0.8rem; padding: 0.4rem 1rem; font-weight: 500; }
+
+.tabnav { position: sticky; top: 0; z-index: 50; display: flex; }
+.tabbtn {
+  flex: 1; border: none; background: transparent; cursor: pointer;
+  font-family: var(--font-display); font-size: 0.95rem; padding: 0.95rem 0.4rem;
+  transition: background 0.2s, color 0.2s;
+}
+.tabbtn:focus-visible, .opt-btn:focus-visible, .reset-btn:focus-visible, summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.panel { display: none; padding: 2.2rem 0 1rem; }
+.panel.active { display: block; animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.tag { display: inline-block; font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.25rem 0.7rem; margin-bottom: 0.8rem; }
+.sectitle { font-family: var(--font-display); font-weight: 400; font-size: 1.8rem; line-height: 1.2; margin-bottom: 0.3rem; }
+.subtitle { margin-bottom: 1.5rem; font-size: 0.95rem; opacity: 0.8; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 1rem; padding: 0.9rem 1.2rem; margin-bottom: 1.8rem; font-size: 0.88rem; }
+.legend-item { display: flex; align-items: center; gap: 0.5rem; }
+.swatch { width: 16px; height: 16px; border-radius: 4px; display: inline-block; border: 1px solid rgba(0,0,0,0.2); }
+
+.excerpt { padding: 1.5rem 1.6rem; margin-bottom: 1.6rem; position: relative; }
+.exlabel { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; margin-bottom: 0.6rem; display: block; }
+.excerpt p { margin-bottom: 0.9rem; }
+.excerpt p:last-child { margin-bottom: 0; }
+
+.hl { border-radius: 4px; padding: 0.05em 0.2em; cursor: help; font-weight: 600; border-bottom: 2px dotted currentColor; }
+.hl-v { background: var(--highlight-vocab); color: #6b4f06; }
+.hl-i { background: var(--highlight-idiom); color: #174a7c; }
+.hl-e { background: var(--highlight-express); color: #8a3f0e; }
+.hl:focus { outline: 2px solid var(--accent2); outline-offset: 1px; }
+
+#tooltip {
+  position: fixed; display: none; z-index: 999; max-width: 280px; pointer-events: none;
+  background: var(--ink); color: var(--paper); font-family: var(--font-body); font-size: 0.86rem; line-height: 1.4;
+  padding: 0.65rem 0.85rem; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+#tooltip .tip-cat { display: block; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.25rem; }
+
+.pullquote { font-family: var(--font-display); text-align: center; padding: 1.6rem 1rem; margin: 2rem 0; font-size: 1.5rem; line-height: 1.35; }
+
+.vocab-intro, .exintro { padding: 1rem 1.3rem; margin-bottom: 1.8rem; font-size: 0.95rem; }
+.vgroup-title { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; margin: 1.8rem 0 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+.vgroup-title .dot { width: 14px; height: 14px; border-radius: 3px; display: inline-block; border: 1px solid rgba(0,0,0,0.2); }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.vcard { padding: 1rem 1.2rem; border-top: 5px solid var(--accent); }
+.vcard.idiom { border-top-color: var(--accent2); }
+.vcard.expr { border-top-color: var(--gold); }
+.vterm { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; line-height: 1.3; }
+.vpos { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; margin: 0.15rem 0 0.4rem; opacity: 0.75; }
+.vdef { font-size: 0.94rem; margin-bottom: 0.5rem; }
+.vex { font-size: 0.9rem; font-style: italic; opacity: 0.9; }
+.vsrc { font-family: var(--font-mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.6rem; opacity: 0.7; }
+
+.gwhy { padding: 1rem 1.3rem; margin-bottom: 1.6rem; font-size: 0.97rem; }
+.gsub { font-family: var(--font-display); font-weight: 400; font-size: 1.45rem; margin: 1.9rem 0 0.8rem; }
+.formula { font-family: var(--font-mono); font-size: 0.92rem; padding: 1rem 1.3rem; margin-bottom: 1.2rem; text-align: center; letter-spacing: 0.02em; }
+table.gtable { width: 100%; border-collapse: collapse; margin-bottom: 1.4rem; font-size: 0.92rem; }
+table.gtable th { padding: 0.6rem 0.8rem; text-align: left; font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; }
+table.gtable td { padding: 0.65rem 0.8rem; vertical-align: top; }
+table.gtable details { cursor: pointer; }
+table.gtable summary { font-weight: 600; font-family: var(--font-mono); font-size: 0.82rem; }
+
+.exsection-title { font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; margin: 1.8rem 0 1rem; padding-bottom: 0.3rem; }
+.qblock { padding: 1.2rem 1.3rem; margin-bottom: 1.1rem; }
+.qtext { font-weight: 700; margin-bottom: 0.8rem; }
+.opt-btn {
+  display: flex; gap: 0.7rem; align-items: baseline; width: 100%; text-align: left; cursor: pointer;
+  padding: 0.6rem 0.9rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.98rem; color: inherit;
+  transition: background 0.15s, border-color 0.15s;
+}
+.opt-letter { font-family: var(--font-mono); font-weight: 700; flex: 0 0 auto; }
+.opt-btn:disabled { cursor: default; color: inherit; }
+.feedback { display: none; margin-top: 0.6rem; padding: 0.7rem 0.9rem; font-size: 0.93rem; }
+.feedback.show { display: block; }
+.fb-icon { font-weight: 800; margin-right: 0.3rem; }
+
+#score-bar { display: none; text-align: center; padding: 1.8rem; margin-top: 2rem; }
+#score-bar.show { display: block; }
+#score-num { font-family: var(--font-display); font-size: 3rem; line-height: 1.1; }
+#score-title { font-family: var(--font-display); font-size: 1.5rem; margin: 0.4rem 0; }
+#score-msg { font-size: 0.96rem; margin-bottom: 1rem; }
+.reset-btn { border: none; cursor: pointer; font-family: var(--font-mono); font-weight: 700; padding: 0.7rem 1.6rem; font-size: 0.9rem; }
+
+@media (max-width: 600px) {
+  body { font-size: 1rem; }
+  .tabbtn { font-size: 0.72rem; padding: 0.75rem 0.15rem; }
+  .vgrid { grid-template-columns: 1fr; }
+  table.gtable { font-size: 0.78rem; }
+  table.gtable th, table.gtable td { padding: 0.5rem 0.5rem; }
+  .excerpt { padding: 1.2rem 1rem; }
+  .pullquote { font-size: 1.25rem; }
+}
+
+
+body { background: var(--paper); }
+.thermo { height: 12px; background: linear-gradient(90deg, #f1e8f7, #c8a8e6, #8b52c9, #4c2a85, #d6336c, #ffa94d); }
+.masthead { background: var(--ink); color: #f6effb; padding: 2.4rem 0 1.8rem; }
+.eyebrow { color: var(--gold); }
+.headline { color: #fff; font-weight: 800; font-size: clamp(1.7rem, 4.4vw, 2.7rem); }
+.deck { color: #dccdf0; }
+.byline { color: #bba2d8; }
+.fact { background: transparent; color: #fff; border: 1px solid #8b6bb5; border-radius: 4px; }
+.heatstrip { display: flex; justify-content: center; gap: 4px; margin: 1.2rem 0 0; }
+.heatstrip i { display: block; width: 28px; height: 28px; border-radius: 3px; }
+.tabnav { background: var(--paper); border-bottom: 3px solid var(--ink); }
+.tabbtn { color: var(--ink); font-weight: 700; border-bottom: 5px solid transparent; }
+.tabbtn:hover { background: var(--cream); }
+.tabbtn.active { background: var(--accent2); color: #fff; border-bottom-color: var(--accent); }
+.tag { background: var(--accent); color: #fff; border-radius: 3px; }
+.sectitle { color: var(--accent2); font-weight: 800; }
+.legend { background: var(--cream); border: 1px solid var(--rule); border-radius: 4px; }
+.task-box { background: #fff; border: 2px solid var(--ink); border-left: 8px solid var(--accent); border-radius: 4px; padding: 1rem 1.3rem; margin-bottom: 1.8rem; font-size: 0.97rem; }
+.scenario { background: var(--cream); border-radius: 4px; padding: 1rem 1.3rem; margin-bottom: 1.6rem; font-size: 0.97rem; }
+.heatwrap { overflow-x: auto; margin-bottom: 0.6rem; }
+table.heat { width: 100%; border-collapse: separate; border-spacing: 4px; font-size: 0.9rem; min-width: 560px; }
+table.heat caption { text-align: left; font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; padding-bottom: 0.4rem; color: var(--ink); }
+table.heat th { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.03em; text-align: left; padding: 0.5rem 0.6rem; color: var(--ink); vertical-align: bottom; }
+table.heat tbody th { font-family: var(--font-display); font-size: 0.98rem; text-transform: none; letter-spacing: 0; }
+table.heat .teams { display: block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 400; opacity: 0.7; }
+table.heat td { text-align: center; padding: 0.7rem 0.4rem; border-radius: 4px; }
+table.heat .num { display: block; font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; line-height: 1.1; }
+table.heat .delta { display: block; font-family: var(--font-mono); font-size: 0.64rem; opacity: 0.85; }
+.h1 { background: #f1e8f7; color: #241b35; } .h2 { background: #d6bdee; color: #241b35; } .h3 { background: #a97bd8; color: #1b1030; } .h4 { background: #6d3fb2; color: #fff; } .h5 { background: #3b1e6e; color: #fff; }
+table.heat tr.avg td { background: transparent; border: 2px dashed var(--rule); }
+.heatkey { display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap; font-family: var(--font-mono); font-size: 0.7rem; margin-bottom: 1.8rem; }
+.heatkey i { width: 26px; height: 14px; border-radius: 2px; display: inline-block; }
+.heatkey em { flex-basis: 100%; font-style: normal; opacity: 0.8; margin-top: 0.2rem; }
+.excerpt { background: #fff; border: 2px solid var(--ink); border-radius: 4px; box-shadow: 6px 6px 0 var(--cream); }
+.exlabel { color: var(--accent); }
+.vocab-intro, .exintro, .gwhy { background: var(--cream); border-left: 5px solid var(--accent2); border-radius: 4px; }
+.vgroup-title { color: var(--ink); }
+.vcard { background: #fff; border: 1px solid var(--ink); border-radius: 4px; }
+.vcard.toolkit { border-top-color: var(--accent2); }
+.gsub { color: var(--accent2); font-weight: 700; }
+table.gtable th, .rubric th { background: var(--ink); color: #fff; }
+table.gtable td, .rubric td { border-bottom: 1px solid var(--rule); background: #fff; }
+table.gtable tr:nth-child(even) td, .rubric tr:nth-child(even) td { background: var(--paper); }
+table.gtable summary { color: var(--accent); }
+.rubric { width: 100%; border-collapse: collapse; margin-bottom: 1.4rem; font-size: 0.88rem; }
+.rubric th { padding: 0.55rem 0.7rem; text-align: left; font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; }
+.rubric td { padding: 0.6rem 0.7rem; vertical-align: top; }
+.script-line { background: #fff; border: 1px solid var(--ink); border-left: 6px solid var(--accent); border-radius: 4px; padding: 0.9rem 1.1rem; margin-bottom: 0.7rem; }
+.script-note { font-family: var(--font-mono); font-size: 0.74rem; color: var(--accent2); margin-top: 0.4rem; }
+.exsection-title { color: var(--accent2); border-bottom: 3px solid var(--accent); }
+.qblock { background: #fff; border: 1px solid var(--ink); border-radius: 4px; }
+.qblock.answered-correct { border-color: var(--correct); border-width: 2px; }
+.qblock.answered-wrong { border-color: var(--wrong); border-width: 2px; }
+.opt-btn { background: var(--paper); border: 1px solid var(--rule); border-radius: 3px; }
+.opt-btn:hover:not(:disabled) { border-color: var(--accent2); background: var(--cream); }
+.opt-btn.correct { background: var(--light-correct); border-color: var(--correct); color: #1d4a30; font-weight: 700; }
+.opt-btn.wrong { background: var(--light-wrong); border-color: var(--wrong); color: #7a2e2e; font-weight: 700; }
+.opt-btn.reveal-correct { background: var(--light-correct); border-color: var(--correct); font-weight: 700; }
+.feedback { border-radius: 3px; }
+.feedback.correct { background: var(--light-correct); color: #1d4a30; }
+.feedback.wrong { background: var(--light-wrong); color: #7a2e2e; }
+#score-bar { background: var(--ink); color: #fff; border-radius: 4px; }
+#score-num { color: var(--gold); }
+#score-msg { color: #dccdf0; }
+.reset-btn { background: var(--accent); color: #fff; border-radius: 3px; }
+.reset-btn:hover { background: var(--gold); color: var(--ink); }
+@media (max-width: 600px) { .heatstrip i { width: 18px; height: 18px; } .rubric { font-size: 0.74rem; } }
+
+</style>
+</head>
+<body>
+<div id="tooltip" role="tooltip"></div>
+
+<div class="thermo"></div>
+<header class="masthead"><div class="wrap">
+  <p class="eyebrow">English Language Class &middot; Boardroom Briefing &middot; B2</p>
+  <h1 class="headline">Boardroom Briefing: Management Style &amp; Team Retention</h1>
+  <p class="deck">Twenty teams, four management styles, one colour-coded table. Use what you learned in the previous Reading and Listening lessons to explain who stays, who leaves and what to do about it.</p>
+  <p class="byline">People Analytics, Kestrel Group: Executive Committee Pack</p>
+  <div class="factrow"><span class="fact">&#127777; Task: Data Presentation</span><span class="fact">&#127919; Level: B2</span><span class="fact">&#9201; Time: 3-4 minutes</span></div>
+  <div class="heatstrip" aria-hidden="true"><i class="h1"></i><i class="h1"></i><i class="h1"></i><i class="h2"></i><i class="h2"></i><i class="h2"></i><i class="h3"></i><i class="h3"></i><i class="h3"></i><i class="h4"></i><i class="h4"></i><i class="h4"></i><i class="h5"></i><i class="h5"></i></div>
+</div></header>
+<nav class="tabnav" aria-label="Lesson sections">
+  <button type="button" class="tabbtn active" data-tab="brief">&#128293; Briefing Pack</button>
+  <button type="button" class="tabbtn" data-tab="toolkit">&#128450; Language Bank</button>
+  <button type="button" class="tabbtn" data-tab="coach">&#127908; Rehearsal Room</button>
+  <button type="button" class="tabbtn" data-tab="exercises">&#10067; Board Q&amp;A</button>
+</nav>
+<div class="wrap">
+<section id="panel-brief" class="panel active">
+  <span class="tag">Briefing Pack</span>
+  <h2 class="sectitle">Boardroom Briefing: Management Style &amp; Team Retention</h2>
+  <p class="subtitle">Read the scenario, study the heat table, then read the memo. Hover over, tap, or tab to any highlighted term for a reminder of its meaning.</p>
+  <div class="legend"><div class="legend-item"><span class="swatch" style="background:var(--highlight-vocab)"></span>Vocabulary (from Lessons 9 and 10)</div><div class="legend-item"><span class="swatch" style="background:var(--highlight-idiom)"></span>Idiom / Set Phrase</div><div class="legend-item"><span class="swatch" style="background:var(--highlight-express)"></span>Useful Expression</div></div>
+  <div class="scenario"><strong>Scenario:</strong> Kestrel Group has twenty teams. Each team leader was placed in one of four groups by their main management style. The Executive Committee wants to know whether style affects who stays and how engaged people feel, and whether new hires and veterans experience the same style differently.</div>
+  <div class="task-box"><strong>Your task:</strong> You are the Head of People Analytics. In 3 to 4 minutes, present the heat table to the Executive Committee: orient them to the colours, pick the cells that matter, explain the trade-off, and ask for one decision with a date.</div>
+  <div class="heatwrap"><table class="heat"><caption>Management style and team results, Kestrel Group, 20 teams</caption><thead><tr><th scope="col">Leader style</th>
+<th scope="col">12-month retention (%)</th>
+<th scope="col">Engagement, all staff (/100)</th>
+<th scope="col">Engagement, new hires (/100)</th>
+<th scope="col">Engagement, veterans (/100)</th>
+</tr></thead><tbody>
+<tr><th scope="row">Hands-on<span class="teams">6 teams</span></th>
+<td class="h3"><span class="num">86</span><span class="delta">-1 vs avg</span></td>
+<td class="h2"><span class="num">72</span><span class="delta">-2 vs avg</span></td>
+<td class="h4"><span class="num">78</span><span class="delta">+5 vs avg</span></td>
+<td class="h1"><span class="num">64</span><span class="delta">-10 vs avg</span></td>
+</tr>
+<tr><th scope="row">Coaching<span class="teams">5 teams</span></th>
+<td class="h5"><span class="num">93</span><span class="delta">+6 vs avg</span></td>
+<td class="h5"><span class="num">84</span><span class="delta">+10 vs avg</span></td>
+<td class="h5"><span class="num">83</span><span class="delta">+10 vs avg</span></td>
+<td class="h5"><span class="num">85</span><span class="delta">+11 vs avg</span></td>
+</tr>
+<tr><th scope="row">Hands-off<span class="teams">4 teams</span></th>
+<td class="h1"><span class="num">79</span><span class="delta">-8 vs avg</span></td>
+<td class="h1"><span class="num">68</span><span class="delta">-6 vs avg</span></td>
+<td class="h1"><span class="num">52</span><span class="delta">-21 vs avg</span></td>
+<td class="h5"><span class="num">86</span><span class="delta">+12 vs avg</span></td>
+</tr>
+<tr><th scope="row">Structured<span class="teams">5 teams</span></th>
+<td class="h4"><span class="num">88</span><span class="delta">+1 vs avg</span></td>
+<td class="h1"><span class="num">70</span><span class="delta">-4 vs avg</span></td>
+<td class="h4"><span class="num">74</span><span class="delta">+1 vs avg</span></td>
+<td class="h1"><span class="num">66</span><span class="delta">-8 vs avg</span></td>
+</tr>
+<tr class="avg"><th scope="row">Company average<span class="teams">20 teams</span></th>
+<td><span class="num">87</span></td>
+<td><span class="num">74</span></td>
+<td><span class="num">73</span></td>
+<td><span class="num">74</span></td>
+</tr></tbody></table></div>
+<div class="heatkey" aria-label="Colour key"><span>Lower</span><i class="h1"></i><i class="h2"></i><i class="h3"></i><i class="h4"></i><i class="h5"></i><span>Higher</span><em>Darker cell = stronger result. Colours compare the four styles within each column.</em></div>
+  <div class="excerpt">
+    <span class="exlabel">People Analytics &middot; Briefing Memo</span>
+    <p>This quarter we compared twenty teams across Kestrel Group, grouped by the main management style of their team leader: <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="hands-on" data-def="Personally involved in the practical details of a job rather than only supervising from a distance.">hands-on</span>, coaching, hands-off and structured. <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="it is tempting to..." data-def="Introduces an easy or obvious idea that the writer is about to question.">It is tempting to</span> treat <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="engagement" data-def="The level of interest and commitment that employees feel towards their work.">engagement</span> as the whole story, but <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="retention" data-def="The ability of an organisation to keep its employees rather than lose them.">retention</span> tells us what people actually do, not just what they say in a survey.</p><p>Coaching teams lead on every measure, with 93 percent retention and an engagement score of 84. Teams with a <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="a hands-off approach" data-def="A style of management in which you leave people to work without close supervision.">hands-off approach</span> are the puzzle. Veterans there score 86 for engagement, higher than in any other group, yet new hires score only 52. <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="what matters is..." data-def="Puts emphasis on the single most important point.">What matters is</span> that one style is producing two very different experiences. <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="at any given moment" data-def="At whatever time you choose to look; at any single point in time.">At any given moment</span>, a hands-off leader may be giving experienced people exactly the <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="autonomy" data-def="The freedom to make your own decisions about how you do your work.">autonomy</span> they want while newcomers wait for direction that never arrives.</p><p>Hands-on and structured teams sit close to the company average, but they show the opposite pattern: veterans score lower (64 and 66) than new hires (78 and 74). A leader who <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="keep tabs on" data-def="To watch something closely so that you always know what is happening.">keeps tabs on</span> every task can slide into <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="micromanage" data-def="To control every small detail of other people&#x27;s work instead of trusting them.">micromanaging</span>, and a <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="rigid" data-def="Strict and unwilling to change plans or rules, even when the situation has changed.">rigid</span> structure can leave experienced staff feeling that nothing they say changes the plan. <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="for instance" data-def="Introduces a specific example of something you have just said.">For instance</span>, one structured team lost three senior analysts in a single month.</p><p>My recommendation is simple. Leaders should <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="change gear" data-def="To change your speed or style of working to suit a new situation.">change gear</span> for each person instead of applying one style to everyone, starting with the four hands-off teams. Clear weekly check-ins for new hires should be enough to keep those teams <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="on track" data-def="Progressing as planned and likely to reach the goal on time.">on track</span>. I would like each of those leaders to <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="get back to someone" data-def="To reply to someone, usually after you have checked something.">get back to me</span> with a plan by the end of the month. <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="otherwise" data-def="Used to say what will happen if the first thing does not happen.">Otherwise</span>, the <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="consequences" data-def="The things that happen as a result of an action or a decision.">consequences</span> are easy to predict: more exits among people we have worked hard to hire. If a plan has not arrived by the <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="deadline" data-def="The day or time by which something must be finished.">deadline</span>, I will <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="follow up" data-def="To contact someone again about something you said or sent earlier.">follow up</span> personally, and I will <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="escalate" data-def="To pass a problem to a more senior person because you cannot solve it alone.">escalate</span> to the executive committee only as a last step.</p>
+  </div>
+</section>
+<section id="panel-toolkit" class="panel">
+  <span class="tag">Language Bank</span>
+  <h2 class="sectitle">Earlier Language, Ready to Present</h2>
+  <div class="vocab-intro">First, a recap of the terms from the previous Reading and Listening lessons (Lesson 9 and Lesson 10) that appear in the memo above. Then, a phrase bank of presentation moves for a data table.</div>
+  <h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-vocab)"></span>Vocabulary Recap</h3><div class="vgrid">
+<div class="vcard"><div class="vterm">hands-on</div><div class="vpos">adjective</div><div class="vdef">Personally involved in the practical details of a job rather than only supervising from a distance.</div><div class="vex">The <strong>hands-on</strong> teams are close to the company average.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard"><div class="vterm">engagement</div><div class="vpos">noun</div><div class="vdef">The level of interest and commitment that employees feel towards their work.</div><div class="vex"><strong>Engagement</strong> is highest where leaders coach rather than command.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard"><div class="vterm">retention</div><div class="vpos">noun</div><div class="vdef">The ability of an organisation to keep its employees rather than lose them.</div><div class="vex">Our <strong>retention</strong> figure shows who actually stayed for twelve months.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard"><div class="vterm">autonomy</div><div class="vpos">noun</div><div class="vdef">The freedom to make your own decisions about how you do your work.</div><div class="vex">Veterans in these teams enjoy real <strong>autonomy</strong> over their own plans.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard"><div class="vterm">micromanage</div><div class="vpos">verb</div><div class="vdef">To control every small detail of other people's work instead of trusting them.</div><div class="vex">Checking every task daily slides into <strong>micromanaging</strong>.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard"><div class="vterm">rigid</div><div class="vpos">adjective</div><div class="vdef">Strict and unwilling to change plans or rules, even when the situation has changed.</div><div class="vex">A <strong>rigid</strong> structure can leave experienced people feeling unheard.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard"><div class="vterm">deadline</div><div class="vpos">noun</div><div class="vdef">The day or time by which something must be finished.</div><div class="vex">Each leader receives a clear <strong>deadline</strong> for the plan.</div><div class="vsrc">Lesson 10 (Listening)</div></div>
+<div class="vcard"><div class="vterm">consequences</div><div class="vpos">noun</div><div class="vdef">The things that happen as a result of an action or a decision.</div><div class="vex">The <strong>consequences</strong> of doing nothing are more exits among new hires.</div><div class="vsrc">Lesson 10 (Listening)</div></div>
+<div class="vcard"><div class="vterm">escalate</div><div class="vpos">verb</div><div class="vdef">To pass a problem to a more senior person because you cannot solve it alone.</div><div class="vex">I will <strong>escalate</strong> only if no plan arrives.</div><div class="vsrc">Lesson 10 (Listening)</div></div>
+</div><h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-idiom)"></span>Idioms &amp; Set Phrases Recap</h3><div class="vgrid">
+<div class="vcard idiom"><div class="vterm">a hands-off approach</div><div class="vpos">set phrase</div><div class="vdef">A style of management in which you leave people to work without close supervision.</div><div class="vex">A <strong>hands-off approach</strong> works only if people already know what to do.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard idiom"><div class="vterm">keep tabs on</div><div class="vpos">idiom</div><div class="vdef">To watch something closely so that you always know what is happening.</div><div class="vex">A leader who <strong>keeps tabs on</strong> every task may start to control it.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard idiom"><div class="vterm">change gear</div><div class="vpos">idiom</div><div class="vdef">To change your speed or style of working to suit a new situation.</div><div class="vex">Leaders must <strong>change gear</strong> between new hires and veterans.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard idiom"><div class="vterm">on track</div><div class="vpos">idiom</div><div class="vdef">Progressing as planned and likely to reach the goal on time.</div><div class="vex">Weekly check-ins should keep new hires <strong>on track</strong>.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard idiom"><div class="vterm">follow up</div><div class="vpos">phrasal verb</div><div class="vdef">To contact someone again about something you said or sent earlier.</div><div class="vex">I will <strong>follow up</strong> with each leader personally.</div><div class="vsrc">Lesson 10 (Listening)</div></div>
+<div class="vcard idiom"><div class="vterm">get back to someone</div><div class="vpos">phrasal verb</div><div class="vdef">To reply to someone, usually after you have checked something.</div><div class="vex">Please <strong>get back to me</strong> with your plan by the end of the month.</div><div class="vsrc">Lesson 10 (Listening)</div></div>
+</div><h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-express)"></span>Useful Expressions Recap</h3><div class="vgrid">
+<div class="vcard expr"><div class="vterm">it is tempting to...</div><div class="vpos">discourse marker</div><div class="vdef">Introduces an easy or obvious idea that the writer is about to question.</div><div class="vex"><strong>It is tempting to</strong> call the best row the winner and stop there.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard expr"><div class="vterm">what matters is...</div><div class="vpos">discourse marker</div><div class="vdef">Puts emphasis on the single most important point.</div><div class="vex"><strong>What matters is</strong> the gap between new hires and veterans.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard expr"><div class="vterm">at any given moment</div><div class="vpos">set phrase</div><div class="vdef">At whatever time you choose to look; at any single point in time.</div><div class="vex"><strong>At any given moment</strong>, the same leader serves two different needs.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard expr"><div class="vterm">for instance</div><div class="vpos">discourse marker</div><div class="vdef">Introduces a specific example of something you have just said.</div><div class="vex"><strong>For instance</strong>, one structured team lost three senior analysts in a month.</div><div class="vsrc">Lesson 9 (Reading)</div></div>
+<div class="vcard expr"><div class="vterm">otherwise</div><div class="vpos">linking word</div><div class="vdef">Used to say what will happen if the first thing does not happen.</div><div class="vex"><strong>Otherwise</strong>, we will keep losing the people we worked hard to hire.</div><div class="vsrc">Lesson 10 (Listening)</div></div>
+</div>
+  <h3 class="vgroup-title"><span class="dot" style="background:var(--accent2)"></span>Presentation Phrase Bank</h3>
+  <div class="vgrid"><div class="vcard toolkit"><div class="vterm">Orienting the Audience</div><div class="vpos">presentation move</div><div class="vdef">Before the numbers, tell people how to read the chart.</div><div class="vex">“The darker the cell, the stronger the result, so look for the deepest violet.”</div></div><div class="vcard toolkit"><div class="vterm">Stating a Headline Number</div><div class="vpos">presentation move</div><div class="vdef">Say the figure first, with its unit and its comparison.</div><div class="vex">“Coaching teams keep 93 percent of their people, six points above average.”</div></div><div class="vcard toolkit"><div class="vterm">Explaining Why It Matters</div><div class="vpos">presentation move</div><div class="vdef">Connect the number to a cost or a decision.</div><div class="vex">“That gap means we are paying to hire people who then leave.”</div></div><div class="vcard toolkit"><div class="vterm">Comparing</div><div class="vpos">presentation move</div><div class="vdef">Put two cells side by side and name the gap.</div><div class="vex">“In the hands-off row, veterans score 34 points higher than new hires.”</div></div><div class="vcard toolkit"><div class="vterm">Hedging vs. Certainty</div><div class="vpos">presentation move</div><div class="vdef">Match your verb to the strength of your evidence.</div><div class="vex">“This may reflect missing support” (hedged) vs. “The gap is clear” (certain).</div></div><div class="vcard toolkit"><div class="vterm">Recommending</div><div class="vpos">presentation move</div><div class="vdef">Name one action, one owner and one date.</div><div class="vex">“I recommend that each hands-off leader brings us a plan by the 30th.”</div></div><div class="vcard toolkit"><div class="vterm">Inviting Questions &amp; Closing</div><div class="vpos">presentation move</div><div class="vdef">Close the loop, then open the floor.</div><div class="vex">“That is the picture. I would be glad to take your questions.”</div></div></div>
+</section>
+<section id="panel-coach" class="panel">
+  <span class="tag">Rehearsal Room</span>
+  <h2 class="sectitle">The Five-Beat Rhythm: Hook, Map, Zoom, Weigh, Ask</h2>
+  <div class="gwhy">A heat table can overwhelm an audience in seconds. This five-beat rhythm gives them a path: a <strong>Hook</strong> to wake them up, a <strong>Map</strong> to teach them the colours, a <strong>Zoom</strong> on the cells that matter, a <strong>Weigh</strong> of what it means, and an <strong>Ask</strong> that ends in a decision.</div>
+
+  <h3 class="gsub">01 &middot; The Five Beats</h3>
+  <table class="gtable"><tr><th>Beat</th><th>Time</th><th>Job</th><th>Sample line</th></tr><tr><td><strong>1. Hook</strong></td><td>About 20 sec</td><td>Open with the one surprising fact, not with the agenda.</td><td><em>“The happiest veterans in our company are in the teams where new hires are the least happy.”</em></td></tr><tr><td><strong>2. Map</strong></td><td>About 30 sec</td><td>Tell the board how to read the heat table.</td><td><em>“Each row is a leader style. The darker the cell, the stronger the result.”</em></td></tr><tr><td><strong>3. Zoom</strong></td><td>About 90 sec</td><td>Pick two or three cells and say the numbers aloud.</td><td><em>“Look at the hands-off row: 86 for veterans, only 52 for new hires.”</em></td></tr><tr><td><strong>4. Weigh</strong></td><td>About 40 sec</td><td>Explain the trade-off and show how sure you are.</td><td><em>“The data suggests that new hires are missing direction, though we should check this.”</em></td></tr><tr><td><strong>5. Ask</strong></td><td>About 30 sec</td><td>Make one request with a date, then invite questions.</td><td><em>“I need a plan from each hands-off leader by the 30th. I am happy to take questions.”</em></td></tr></table>
+
+  <h3 class="gsub">02 &middot; Model Script</h3>
+  <div class="script-line">“The happiest veterans in our company work in the teams where new hires are the least happy.”<div class="script-note">→ Hook: one surprising fact, said plainly, before any chart talk.</div></div><div class="script-line">“Each row on this table is a leader style, and the darker the cell, the stronger the result. Retention is the first column, then three engagement scores.”<div class="script-note">→ Map: two sentences that teach the board how to read the heat table.</div></div><div class="script-line">“Look at the hands-off row. Veterans score 86, the highest of any group, but new hires score only 52. In the coaching row, both groups score above 80, and retention is 93 percent.”<div class="script-note">→ Zoom: three cells, each with a real number said aloud.</div></div><div class="script-line">“What matters is that one style is serving two very different needs. The data suggests that new hires are missing direction, although we should confirm this with exit interviews.”<div class="script-note">→ Weigh: a clear point, then honest hedging only where the evidence is thin.</div></div><div class="script-line">“I am asking each hands-off leader to bring me a plan by the end of the month. Otherwise, I will follow up personally. I am happy to take your questions.”<div class="script-note">→ Ask: one request, one date, one invitation.</div></div>
+
+  <h3 class="gsub">03 &middot; Self-Scorecard</h3>
+  <p class="subtitle">Rate yourself after a practice run. Be honest: most people sit in the middle column first time.</p>
+  <table class="rubric"><tr><th>Skill</th><th>Needs work</th><th>Solid</th><th>Standout</th></tr><tr><td><strong>Hook</strong></td><td>Opens with the agenda or a greeting only.</td><td>Opens with the main finding.</td><td>Opens with a surprising fact the board remembers.</td></tr><tr><td><strong>Map</strong></td><td>Never explains how to read the heat table.</td><td>Names what the rows and colours mean.</td><td>Does it in one short sentence and then points at the right cells.</td></tr><tr><td><strong>Number discipline</strong></td><td>Says “higher” or “lower” with no figures.</td><td>Gives at least three real numbers.</td><td>Gives numbers plus a comparison (a gap or a distance from average).</td></tr><tr><td><strong>Trade-off honesty</strong></td><td>States every claim as a fact.</td><td>Hedges one claim that is unclear.</td><td>Separates what the table shows from what you guess.</td></tr><tr><td><strong>The ask</strong></td><td>No clear request.</td><td>One request, but no date or owner.</td><td>One request, a named owner and a date, then questions.</td></tr><tr><td><strong>Borrowed language</strong></td><td>Uses no terms from the previous Reading and Listening lessons.</td><td>Uses three terms from those lessons.</td><td>Uses five or more terms, each used naturally.</td></tr></table>
+
+  <h3 class="gsub">04 &middot; Makeover Drill</h3>
+  <p class="subtitle">Each row shows a weak line. Think of a stronger version first, then press &ldquo;Show answer&rdquo; to compare.</p>
+  <table class="gtable"><tr><th>Weak line</th><th>Stronger version</th></tr>
+<tr><td>“So, um, the table is kind of colourful, as you can see.”</td><td><details><summary>Show answer</summary>“The darker the cell, the stronger the result, so look for the deepest violet in the coaching row.”</details></td></tr>
+<tr><td>“Hands-off is a bit weird, to be honest, nobody really knows why.”</td><td><details><summary>Show answer</summary>“The hands-off row is the puzzle: veterans score 86, but new hires score only 52.”</details></td></tr>
+<tr><td>“Retention is better in some of them, I guess.”</td><td><details><summary>Show answer</summary>“Coaching teams keep 93 percent of their people, six points above the company average.”</details></td></tr>
+<tr><td>“I think maybe we could possibly do something at some point.”</td><td><details><summary>Show answer</summary>“I recommend that each hands-off leader brings me a plan by the end of the month.”</details></td></tr>
+<tr><td>“That is all I had, sorry, it was a bit long.”</td><td><details><summary>Show answer</summary>“That is the picture. The decision I need is a plan from each hands-off leader, and I am happy to take questions.”</details></td></tr>
+</table>
+</section>
+<section id="panel-exercises" class="panel">
+  <span class="tag">Board Q&amp;A</span>
+  <h2 class="sectitle">Test Yourself</h2>
+  <div class="exintro">10 questions in two sections. Click an answer for instant feedback: every option, right or wrong, comes with an explanation.</div>
+  <h3 class="exsection-title">A · Board Q&amp;A: Choose Your Reply</h3>
+<div class="qblock" id="qA1">
+<p class="qtext">1. A director asks, “Isn’t a hands-off style simply easier for everyone?” Which reply is firm but respectful?</p>
+<button type="button" class="opt-btn" data-q="qA1" data-letter="A" data-correct="false" data-expl="This is rude and gives the director no evidence."><span class="opt-letter">A</span><span class="opt-text">“No, and I think that is a silly question.”</span></button>
+<button type="button" class="opt-btn" data-q="qA1" data-letter="B" data-correct="false" data-expl="This avoids the question instead of answering it."><span class="opt-letter">B</span><span class="opt-text">“Maybe, I really have no idea about that.”</span></button>
+<button type="button" class="opt-btn" data-q="qA1" data-letter="C" data-correct="false" data-expl="This agrees with the question and ignores the data."><span class="opt-letter">C</span><span class="opt-text">“Yes, so we should do nothing at all, then.”</span></button>
+<button type="button" class="opt-btn" data-q="qA1" data-letter="D" data-correct="true" data-expl="Correct: it answers with a number from the table and stays polite."><span class="opt-letter">D</span><span class="opt-text">“Not for new hires: they score only 52.”</span></button>
+<div class="feedback" id="fb-qA1" role="status"></div>
+</div>
+<div class="qblock" id="qA2">
+<p class="qtext">2. You want to help the board read the heat table before you give numbers. Which sentence does that best?</p>
+<button type="button" class="opt-btn" data-q="qA2" data-letter="A" data-correct="true" data-expl="Correct: it tells the audience what the colours mean, so they can read every cell."><span class="opt-letter">A</span><span class="opt-text">“Darker cells mean stronger results here.”</span></button>
+<button type="button" class="opt-btn" data-q="qA2" data-letter="B" data-correct="false" data-expl="This describes the table but does not teach the audience how to read it."><span class="opt-letter">B</span><span class="opt-text">“As you know, this table is very detailed.”</span></button>
+<button type="button" class="opt-btn" data-q="qA2" data-letter="C" data-correct="false" data-expl="Ignoring the colours would waste the main feature of the table."><span class="opt-letter">C</span><span class="opt-text">“Please do not look at the colours yet.”</span></button>
+<button type="button" class="opt-btn" data-q="qA2" data-letter="D" data-correct="false" data-expl="Counting rows and columns says nothing about meaning."><span class="opt-letter">D</span><span class="opt-text">“There are four rows and four columns here.”</span></button>
+<div class="feedback" id="fb-qA2" role="status"></div>
+</div>
+<div class="qblock" id="qA3">
+<p class="qtext">3. Which sentence hedges correctly about WHY new hires score low in hands-off teams?</p>
+<button type="button" class="opt-btn" data-q="qA3" data-letter="A" data-correct="false" data-expl="“Proves” and “all” claim far more than a table can show."><span class="opt-letter">A</span><span class="opt-text">“The data proves that they all dislike the leaders.”</span></button>
+<button type="button" class="opt-btn" data-q="qA3" data-letter="B" data-correct="false" data-expl="This dismisses the data instead of interpreting it."><span class="opt-letter">B</span><span class="opt-text">“The data suggests nothing and means nothing.”</span></button>
+<button type="button" class="opt-btn" data-q="qA3" data-letter="C" data-correct="true" data-expl="Correct: “suggests” shows a reasonable explanation without claiming certainty."><span class="opt-letter">C</span><span class="opt-text">“The data suggests that they lack clear direction.”</span></button>
+<button type="button" class="opt-btn" data-q="qA3" data-letter="D" data-correct="false" data-expl="This is an extreme claim that the table does not support."><span class="opt-letter">D</span><span class="opt-text">“The data says that nobody there can ever learn.”</span></button>
+<div class="feedback" id="fb-qA3" role="status"></div>
+</div>
+<div class="qblock" id="qA4">
+<p class="qtext">4. Which sentence uses language from the previous Reading and Listening lessons to set a deadline?</p>
+<button type="button" class="opt-btn" data-q="qA4" data-letter="A" data-correct="false" data-expl="No date is given, so nothing is being asked."><span class="opt-letter">A</span><span class="opt-text">“Maybe a plan will arrive at some point soon.”</span></button>
+<button type="button" class="opt-btn" data-q="qA4" data-letter="B" data-correct="true" data-expl="Correct: it names a deadline and a clear next step, using terms from Lesson 10."><span class="opt-letter">B</span><span class="opt-text">“No plan by the deadline? I will follow up.”</span></button>
+<button type="button" class="opt-btn" data-q="qA4" data-letter="C" data-correct="false" data-expl="This tells the leaders the plan is unimportant."><span class="opt-letter">C</span><span class="opt-text">“A plan is not very important to me today.”</span></button>
+<button type="button" class="opt-btn" data-q="qA4" data-letter="D" data-correct="false" data-expl="This is a general complaint, not a request with a date."><span class="opt-letter">D</span><span class="opt-text">“Plans are always late in this company, I think.”</span></button>
+<div class="feedback" id="fb-qA4" role="status"></div>
+</div>
+<div class="qblock" id="qA5">
+<p class="qtext">5. Which phrase best introduces the single most important point after several numbers?</p>
+<button type="button" class="opt-btn" data-q="qA5" data-letter="A" data-correct="false" data-expl="This opens a topic; it does not highlight a key point."><span class="opt-letter">A</span><span class="opt-text">“For a start, there is a table on this page.”</span></button>
+<button type="button" class="opt-btn" data-q="qA5" data-letter="B" data-correct="false" data-expl="This postpones the point instead of making it."><span class="opt-letter">B</span><span class="opt-text">“Anyway, we could look at colours later.”</span></button>
+<button type="button" class="opt-btn" data-q="qA5" data-letter="C" data-correct="true" data-expl="Correct: “what matters is” (Lesson 9) puts emphasis on the key point."><span class="opt-letter">C</span><span class="opt-text">“What matters is the gap between groups.”</span></button>
+<button type="button" class="opt-btn" data-q="qA5" data-letter="D" data-correct="false" data-expl="This is an afterthought, not an emphasis."><span class="opt-letter">D</span><span class="opt-text">“By the way, I forgot to mention the date.”</span></button>
+<div class="feedback" id="fb-qA5" role="status"></div>
+</div>
+<h3 class="exsection-title">B · Heat Table Detective</h3>
+<div class="qblock" id="qB1">
+<p class="qtext">6. Which leader style has the highest 12-month retention?</p>
+<button type="button" class="opt-btn" data-q="qB1" data-letter="A" data-correct="false" data-expl="Hands-on is at 86, below coaching."><span class="opt-letter">A</span><span class="opt-text">Hands-on, at 86 percent</span></button>
+<button type="button" class="opt-btn" data-q="qB1" data-letter="B" data-correct="true" data-expl="Correct: coaching teams keep 93 percent of their people, the darkest cell in the column."><span class="opt-letter">B</span><span class="opt-text">Coaching, at 93 percent</span></button>
+<button type="button" class="opt-btn" data-q="qB1" data-letter="C" data-correct="false" data-expl="Hands-off is the lowest, at 79."><span class="opt-letter">C</span><span class="opt-text">Hands-off, at 79 percent</span></button>
+<button type="button" class="opt-btn" data-q="qB1" data-letter="D" data-correct="false" data-expl="Structured is at 88, still below coaching."><span class="opt-letter">D</span><span class="opt-text">Structured, at 88 percent</span></button>
+<div class="feedback" id="fb-qB1" role="status"></div>
+</div>
+<div class="qblock" id="qB2">
+<p class="qtext">7. In the hands-off row, how large is the gap between veterans and new hires?</p>
+<button type="button" class="opt-btn" data-q="qB2" data-letter="A" data-correct="false" data-expl="New hires score lower, not higher."><span class="opt-letter">A</span><span class="opt-text">34 points, with new hires higher</span></button>
+<button type="button" class="opt-btn" data-q="qB2" data-letter="B" data-correct="false" data-expl="12 is not the difference between 86 and 52."><span class="opt-letter">B</span><span class="opt-text">12 points, with veterans higher</span></button>
+<button type="button" class="opt-btn" data-q="qB2" data-letter="C" data-correct="false" data-expl="52 is the new hire score, not the gap."><span class="opt-letter">C</span><span class="opt-text">52 points, with veterans higher</span></button>
+<button type="button" class="opt-btn" data-q="qB2" data-letter="D" data-correct="true" data-expl="Correct: veterans score 86 and new hires 52, so the gap is 34 points in favour of veterans."><span class="opt-letter">D</span><span class="opt-text">34 points, with veterans higher</span></button>
+<div class="feedback" id="fb-qB2" role="status"></div>
+</div>
+<div class="qblock" id="qB3">
+<p class="qtext">8. In which two rows do veterans score LOWER than new hires?</p>
+<button type="button" class="opt-btn" data-q="qB3" data-letter="A" data-correct="true" data-expl="Correct: hands-on has 64 vs 78 and structured has 66 vs 74."><span class="opt-letter">A</span><span class="opt-text">Hands-on and structured</span></button>
+<button type="button" class="opt-btn" data-q="qB3" data-letter="B" data-correct="false" data-expl="In hands-off, veterans score higher; in coaching, they are almost equal."><span class="opt-letter">B</span><span class="opt-text">Coaching and hands-off</span></button>
+<button type="button" class="opt-btn" data-q="qB3" data-letter="C" data-correct="false" data-expl="Hands-off has the reverse pattern: veterans score higher."><span class="opt-letter">C</span><span class="opt-text">Hands-off and hands-on</span></button>
+<button type="button" class="opt-btn" data-q="qB3" data-letter="D" data-correct="false" data-expl="In coaching, veterans score 85, higher than new hires at 83."><span class="opt-letter">D</span><span class="opt-text">Coaching and structured</span></button>
+<div class="feedback" id="fb-qB3" role="status"></div>
+</div>
+<div class="qblock" id="qB4">
+<p class="qtext">9. How far above the company average is the coaching retention rate?</p>
+<button type="button" class="opt-btn" data-q="qB4" data-letter="A" data-correct="false" data-expl="3 is too small; the average is 87."><span class="opt-letter">A</span><span class="opt-text">3 points above average</span></button>
+<button type="button" class="opt-btn" data-q="qB4" data-letter="B" data-correct="false" data-expl="9 is too large for 93 compared with 87."><span class="opt-letter">B</span><span class="opt-text">9 points above average</span></button>
+<button type="button" class="opt-btn" data-q="qB4" data-letter="C" data-correct="true" data-expl="Correct: 93 minus the company average of 87 is 6 points."><span class="opt-letter">C</span><span class="opt-text">6 points above average</span></button>
+<button type="button" class="opt-btn" data-q="qB4" data-letter="D" data-correct="false" data-expl="14 is the gap from the hands-off row to coaching, not from average."><span class="opt-letter">D</span><span class="opt-text">14 points above average</span></button>
+<div class="feedback" id="fb-qB4" role="status"></div>
+</div>
+<div class="qblock" id="qB5">
+<p class="qtext">10. Which conclusion does the heat table clearly support?</p>
+<button type="button" class="opt-btn" data-q="qB5" data-letter="A" data-correct="true" data-expl="Correct: hands-off veterans score 86 while new hires score 52, a clear split."><span class="opt-letter">A</span><span class="opt-text">Hands-off suits veterans but not new hires.</span></button>
+<button type="button" class="opt-btn" data-q="qB5" data-letter="B" data-correct="false" data-expl="Coaching teams have the highest overall engagement, 84."><span class="opt-letter">B</span><span class="opt-text">Coaching teams are the least engaged group overall.</span></button>
+<button type="button" class="opt-btn" data-q="qB5" data-letter="C" data-correct="false" data-expl="Structured is 88 and coaching is 93, so coaching is higher."><span class="opt-letter">C</span><span class="opt-text">Structured leaders have the best retention overall.</span></button>
+<button type="button" class="opt-btn" data-q="qB5" data-letter="D" data-correct="false" data-expl="New hires score 52 in hands-off and 83 in coaching, so the reverse is true."><span class="opt-letter">D</span><span class="opt-text">New hires prefer hands-off leaders to coaching ones.</span></button>
+<div class="feedback" id="fb-qB5" role="status"></div>
+</div>
+  <div id="score-bar"><div id="score-num">0/0</div><div id="score-title"></div><div id="score-msg"></div><button type="button" class="reset-btn" id="reset-btn">Try Again</button></div>
+</section>
+</div>
+
+<script>
+
+(function () {
+  var tabs = document.querySelectorAll(".tabbtn");
+  var panels = document.querySelectorAll(".panel");
+  function showTab(id) {
+    panels.forEach(function (p) { p.classList.toggle("active", p.id === "panel-" + id); });
+    tabs.forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-tab") === id); });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  tabs.forEach(function (b) {
+    b.addEventListener("click", function () { showTab(b.getAttribute("data-tab")); });
+  });
+
+  var tip = document.getElementById("tooltip");
+  function showTip(el) {
+    tip.innerHTML = "";
+    var cat = document.createElement("span");
+    cat.className = "tip-cat";
+    cat.textContent = el.getAttribute("data-cat") + " · " + el.getAttribute("data-term");
+    tip.appendChild(cat);
+    tip.appendChild(document.createTextNode(el.getAttribute("data-def")));
+    tip.style.display = "block";
+    var r = el.getBoundingClientRect();
+    var top = r.top - tip.offsetHeight - 10;
+    if (top < 8) { top = r.bottom + 10; }
+    var left = r.left + r.width / 2 - tip.offsetWidth / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tip.offsetWidth - 8));
+    tip.style.top = top + "px";
+    tip.style.left = left + "px";
+  }
+  function hideTip() { tip.style.display = "none"; }
+  document.querySelectorAll(".hl").forEach(function (el) {
+    el.addEventListener("mouseenter", function () { showTip(el); });
+    el.addEventListener("mouseleave", hideTip);
+    el.addEventListener("focus", function () { showTip(el); });
+    el.addEventListener("blur", hideTip);
+    el.addEventListener("click", function (e) { e.stopPropagation(); showTip(el); });
+  });
+  document.addEventListener("click", hideTip);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { hideTip(); } });
+  window.addEventListener("scroll", hideTip, { passive: true });
+
+  var TIERS = [{"min": 9, "title": "Board Ready", "msg": "Excellent. You can read the table and present it with confidence."}, {"min": 7, "title": "Strong Briefing", "msg": "Strong result. Review the Language Bank for any phrases that tripped you up."}, {"min": 4, "title": "Keep Rehearsing", "msg": "Good start. Reread the briefing pack and the five-beat rhythm, then try again."}, {"min": 0, "title": "Back to the Pack", "msg": "Head back to the Briefing Pack and Language Bank tabs, then try again."}];
+  var TOTAL = document.querySelectorAll(".qblock").length;
+  var answered = {};
+  var correct = {};
+
+  function showScore() {
+    var score = Object.keys(correct).filter(function (k) { return correct[k]; }).length;
+    var tier = TIERS[TIERS.length - 1];
+    for (var i = 0; i < TIERS.length; i++) {
+      if (score >= TIERS[i].min) { tier = TIERS[i]; break; }
+    }
+    document.getElementById("score-num").textContent = score + "/" + TOTAL;
+    document.getElementById("score-title").textContent = tier.title;
+    document.getElementById("score-msg").textContent = tier.msg;
+    document.getElementById("score-bar").classList.add("show");
+  }
+
+  document.querySelectorAll(".opt-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var qId = btn.getAttribute("data-q");
+      if (answered[qId]) { return; }
+      var isCorrect = btn.getAttribute("data-correct") === "true";
+      answered[qId] = true;
+      correct[qId] = isCorrect;
+      var block = document.getElementById(qId);
+      var fb = document.getElementById("fb-" + qId);
+      var right = "";
+      block.querySelectorAll(".opt-btn").forEach(function (b) {
+        b.disabled = true;
+        if (b.getAttribute("data-correct") === "true") {
+          b.classList.add("reveal-correct");
+          right = b.getAttribute("data-letter");
+        }
+      });
+      btn.classList.remove("reveal-correct");
+      btn.classList.add(isCorrect ? "correct" : "wrong");
+      block.classList.add(isCorrect ? "answered-correct" : "answered-wrong");
+      fb.innerHTML = "";
+      var icon = document.createElement("span");
+      icon.className = "fb-icon";
+      icon.textContent = isCorrect ? "✓" : "✗";
+      fb.appendChild(icon);
+      fb.appendChild(document.createTextNode(btn.getAttribute("data-expl") + (isCorrect ? "" : " The correct answer is " + right + ".")));
+      fb.className = "feedback show " + (isCorrect ? "correct" : "wrong");
+      if (Object.keys(answered).length === TOTAL) { showScore(); }
+    });
+  });
+
+  var resetBtn = document.getElementById("reset-btn");
+  resetBtn.addEventListener("click", function () {
+    answered = {};
+    correct = {};
+    document.querySelectorAll(".qblock").forEach(function (b) { b.classList.remove("answered-correct", "answered-wrong"); });
+    document.querySelectorAll(".opt-btn").forEach(function (b) { b.disabled = false; b.classList.remove("correct", "wrong", "reveal-correct"); });
+    document.querySelectorAll(".feedback").forEach(function (f) { f.className = "feedback"; f.innerHTML = ""; });
+    document.getElementById("score-bar").classList.remove("show");
+    showTab("exercises");
+  });
+})();
+
+</script>
+</body>
+</html>

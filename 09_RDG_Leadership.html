@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+LESSON-META
+title: "Reading the Room: What Your Boss's Habits Say About How They Lead"
+sub_topic: "Leadership styles & management"
+genre: "Magazine feature"
+level: B2
+grammar_focus: "Modal verbs of deduction (must be / can't be)"
+theme: "newsstand business magazine: vermilion and deep teal on cream, serif display type, drop cap, issue strip"
+date: 2026-10-19
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reading the Room: What Your Boss's Habits Say About How They Lead</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --ink: #1b1b1f;
+  --paper: #fbf8f3;
+  --cream: #f0e8da;
+  --rule: #cfc3ad;
+  --accent: #c8432a;
+  --accent2: #0f5257;
+  --gold: #e0a526;
+  --highlight-vocab: #f9e4a0;
+  --highlight-idiom: #cde3ef;
+  --highlight-express: #f0cfa6;
+  --correct: #2f7d4f;
+  --wrong: #b84a4a;
+  --light-correct: #e3f3e8;
+  --light-wrong: #f8e3e3;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+}
+
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+  line-height: 1.7;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+::selection { background: var(--accent); color: #fff; }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+.masthead { text-align: center; padding: 2.4rem 0 1.6rem; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.9rem; }
+.headline { font-family: var(--font-display); font-weight: 400; line-height: 1.15; margin-bottom: 0.9rem; padding: 0 0.5rem; }
+.deck { font-size: 1.08rem; max-width: 660px; margin: 0 auto 0.9rem; }
+.byline { font-family: var(--font-mono); font-size: 0.78rem; margin-bottom: 1.3rem; }
+.byline a { color: inherit; }
+.factrow { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem 1.1rem; }
+.fact { font-family: var(--font-mono); font-size: 0.8rem; padding: 0.4rem 1rem; font-weight: 500; }
+
+.tabnav { position: sticky; top: 0; z-index: 50; display: flex; }
+.tabbtn {
+  flex: 1; border: none; background: transparent; cursor: pointer;
+  font-family: var(--font-display); font-size: 0.95rem; padding: 0.95rem 0.4rem;
+  transition: background 0.2s, color 0.2s;
+}
+.tabbtn:focus-visible, .opt-btn:focus-visible, .reset-btn:focus-visible, summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.panel { display: none; padding: 2.2rem 0 1rem; }
+.panel.active { display: block; animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.tag { display: inline-block; font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.25rem 0.7rem; margin-bottom: 0.8rem; }
+.sectitle { font-family: var(--font-display); font-weight: 400; font-size: 1.8rem; line-height: 1.2; margin-bottom: 0.3rem; }
+.subtitle { margin-bottom: 1.5rem; font-size: 0.95rem; opacity: 0.8; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 1rem; padding: 0.9rem 1.2rem; margin-bottom: 1.8rem; font-size: 0.88rem; }
+.legend-item { display: flex; align-items: center; gap: 0.5rem; }
+.swatch { width: 16px; height: 16px; border-radius: 4px; display: inline-block; border: 1px solid rgba(0,0,0,0.2); }
+
+.excerpt { padding: 1.5rem 1.6rem; margin-bottom: 1.6rem; position: relative; }
+.exlabel { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; margin-bottom: 0.6rem; display: block; }
+.excerpt p { margin-bottom: 0.9rem; }
+.excerpt p:last-child { margin-bottom: 0; }
+
+.hl { border-radius: 4px; padding: 0.05em 0.2em; cursor: help; font-weight: 600; border-bottom: 2px dotted currentColor; }
+.hl-v { background: var(--highlight-vocab); color: #6b4f06; }
+.hl-i { background: var(--highlight-idiom); color: #174a7c; }
+.hl-e { background: var(--highlight-express); color: #8a3f0e; }
+.hl:focus { outline: 2px solid var(--accent2); outline-offset: 1px; }
+
+#tooltip {
+  position: fixed; display: none; z-index: 999; max-width: 280px; pointer-events: none;
+  background: var(--ink); color: var(--paper); font-family: var(--font-body); font-size: 0.86rem; line-height: 1.4;
+  padding: 0.65rem 0.85rem; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+#tooltip .tip-cat { display: block; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.25rem; }
+
+.pullquote { font-family: var(--font-display); text-align: center; padding: 1.6rem 1rem; margin: 2rem 0; font-size: 1.5rem; line-height: 1.35; }
+
+.vocab-intro, .exintro { padding: 1rem 1.3rem; margin-bottom: 1.8rem; font-size: 0.95rem; }
+.vgroup-title { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; margin: 1.8rem 0 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+.vgroup-title .dot { width: 14px; height: 14px; border-radius: 3px; display: inline-block; border: 1px solid rgba(0,0,0,0.2); }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.vcard { padding: 1rem 1.2rem; border-top: 5px solid var(--accent); }
+.vcard.idiom { border-top-color: var(--accent2); }
+.vcard.expr { border-top-color: var(--gold); }
+.vterm { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; line-height: 1.3; }
+.vpos { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; margin: 0.15rem 0 0.4rem; opacity: 0.75; }
+.vdef { font-size: 0.94rem; margin-bottom: 0.5rem; }
+.vex { font-size: 0.9rem; font-style: italic; opacity: 0.9; }
+.vsrc { font-family: var(--font-mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.6rem; opacity: 0.7; }
+
+.gwhy { padding: 1rem 1.3rem; margin-bottom: 1.6rem; font-size: 0.97rem; }
+.gsub { font-family: var(--font-display); font-weight: 400; font-size: 1.45rem; margin: 1.9rem 0 0.8rem; }
+.formula { font-family: var(--font-mono); font-size: 0.92rem; padding: 1rem 1.3rem; margin-bottom: 1.2rem; text-align: center; letter-spacing: 0.02em; }
+table.gtable { width: 100%; border-collapse: collapse; margin-bottom: 1.4rem; font-size: 0.92rem; }
+table.gtable th { padding: 0.6rem 0.8rem; text-align: left; font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; }
+table.gtable td { padding: 0.65rem 0.8rem; vertical-align: top; }
+table.gtable details { cursor: pointer; }
+table.gtable summary { font-weight: 600; font-family: var(--font-mono); font-size: 0.82rem; }
+
+.exsection-title { font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; margin: 1.8rem 0 1rem; padding-bottom: 0.3rem; }
+.qblock { padding: 1.2rem 1.3rem; margin-bottom: 1.1rem; }
+.qtext { font-weight: 700; margin-bottom: 0.8rem; }
+.opt-btn {
+  display: flex; gap: 0.7rem; align-items: baseline; width: 100%; text-align: left; cursor: pointer;
+  padding: 0.6rem 0.9rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.98rem; color: inherit;
+  transition: background 0.15s, border-color 0.15s;
+}
+.opt-letter { font-family: var(--font-mono); font-weight: 700; flex: 0 0 auto; }
+.opt-btn:disabled { cursor: default; color: inherit; }
+.feedback { display: none; margin-top: 0.6rem; padding: 0.7rem 0.9rem; font-size: 0.93rem; }
+.feedback.show { display: block; }
+.fb-icon { font-weight: 800; margin-right: 0.3rem; }
+
+#score-bar { display: none; text-align: center; padding: 1.8rem; margin-top: 2rem; }
+#score-bar.show { display: block; }
+#score-num { font-family: var(--font-display); font-size: 3rem; line-height: 1.1; }
+#score-title { font-family: var(--font-display); font-size: 1.5rem; margin: 0.4rem 0; }
+#score-msg { font-size: 0.96rem; margin-bottom: 1rem; }
+.reset-btn { border: none; cursor: pointer; font-family: var(--font-mono); font-weight: 700; padding: 0.7rem 1.6rem; font-size: 0.9rem; }
+
+@media (max-width: 600px) {
+  body { font-size: 1rem; }
+  .tabbtn { font-size: 0.72rem; padding: 0.75rem 0.15rem; }
+  .vgrid { grid-template-columns: 1fr; }
+  table.gtable { font-size: 0.78rem; }
+  table.gtable th, table.gtable td { padding: 0.5rem 0.5rem; }
+  .excerpt { padding: 1.2rem 1rem; }
+  .pullquote { font-size: 1.25rem; }
+}
+
+
+body { background: var(--paper); background-image: linear-gradient(90deg, transparent 0 calc(50% - 440px), rgba(15,82,87,0.04) calc(50% - 440px) calc(50% - 439px), transparent calc(50% - 439px) calc(50% + 439px), rgba(15,82,87,0.04) calc(50% + 439px) calc(50% + 440px), transparent calc(50% + 440px)); }
+.issuebar { background: var(--ink); color: var(--paper); font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; display: flex; justify-content: space-between; padding: 0.55rem 1.2rem; gap: 1rem; flex-wrap: wrap; }
+.issuebar span:nth-child(2) { color: var(--gold); }
+.masthead { border-bottom: 4px double var(--ink); background: var(--paper); }
+.eyebrow { color: var(--accent); font-weight: 500; }
+.headline { font-weight: 800; font-size: clamp(1.9rem, 5vw, 3rem); color: var(--ink); max-width: 780px; margin-left: auto; margin-right: auto; }
+.deck { font-style: italic; color: #46464d; }
+.byline { color: var(--accent2); text-transform: uppercase; letter-spacing: 0.1em; }
+.fact { border: 1px solid var(--ink); background: transparent; border-radius: 0; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; }
+.tabnav { background: var(--ink); box-shadow: 0 3px 0 var(--accent); }
+.tabbtn { color: #d8d2c4; font-weight: 700; border-bottom: 4px solid transparent; }
+.tabbtn:hover { background: rgba(255,255,255,0.07); }
+.tabbtn.active { color: #fff; background: var(--accent2); border-bottom-color: var(--gold); }
+.tag { background: var(--accent); color: #fff; border-radius: 0; }
+.sectitle { color: var(--accent2); font-weight: 800; border-bottom: 3px solid var(--ink); padding-bottom: 0.3rem; }
+.subtitle { color: #55555c; margin-top: 0.6rem; }
+.legend { background: var(--cream); border: 1px solid var(--rule); border-left: 5px solid var(--accent2); border-radius: 0; }
+.excerpt { background: transparent; border: none; border-top: 1px solid var(--ink); border-radius: 0; padding: 1.2rem 0 0.4rem; margin-bottom: 1.6rem; }
+.exlabel { color: var(--accent); }
+.excerpt p { text-align: left; }
+.pullquote { border-top: 4px solid var(--accent); border-bottom: 1px solid var(--ink); color: var(--accent2); font-style: italic; font-weight: 700; background: transparent; }
+.pullquote small { display: block; font-family: var(--font-mono); font-style: normal; font-weight: 400; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); margin-top: 0.6rem; }
+.vocab-intro, .exintro { background: var(--cream); border-left: 5px solid var(--accent); border-radius: 0; }
+.vgroup-title { color: var(--ink); border-bottom: 1px solid var(--rule); padding-bottom: 0.3rem; }
+.vcard { background: #fff; border: 1px solid var(--rule); border-radius: 0; box-shadow: 4px 4px 0 var(--cream); }
+.vcard.idiom { border-top-color: var(--accent2); }
+.vcard.expr { border-top-color: var(--gold); }
+.gwhy { background: var(--cream); border-left: 5px solid var(--accent2); border-radius: 0; }
+.gsub { color: var(--accent); }
+.formula { background: var(--ink); color: var(--gold); border-radius: 0; }
+table.gtable th { background: var(--accent2); color: #fff; }
+table.gtable td { border-bottom: 1px solid var(--rule); }
+table.gtable tr:nth-child(even) td { background: var(--cream); }
+table.gtable summary { color: var(--accent); }
+.exsection-title { color: var(--accent2); border-bottom: 3px solid var(--gold); }
+.qblock { background: #fff; border: 1px solid var(--rule); border-left: 5px solid var(--accent2); border-radius: 0; }
+.qblock.answered-correct { border-left-color: var(--correct); }
+.qblock.answered-wrong { border-left-color: var(--wrong); }
+.opt-btn { background: var(--paper); border: 1px solid var(--rule); border-radius: 0; }
+.opt-btn:hover:not(:disabled) { border-color: var(--accent2); background: var(--cream); }
+.opt-btn.correct { background: var(--light-correct); border-color: var(--correct); color: #1d4a30; font-weight: 600; }
+.opt-btn.wrong { background: var(--light-wrong); border-color: var(--wrong); color: #7a2e2e; font-weight: 600; }
+.opt-btn.reveal-correct { background: var(--light-correct); border-color: var(--correct); font-weight: 600; }
+.feedback { border-radius: 0; }
+.feedback.correct { background: var(--light-correct); color: #1d4a30; }
+.feedback.wrong { background: var(--light-wrong); color: #7a2e2e; }
+#score-bar { background: var(--ink); color: #fff; border-radius: 0; border-top: 5px solid var(--accent); }
+#score-num { color: var(--gold); }
+#score-msg { color: #d8d2c4; }
+.reset-btn { background: var(--accent); color: #fff; border-radius: 0; }
+.reset-btn:hover { background: var(--gold); color: var(--ink); }
+
+</style>
+</head>
+<body>
+<div id="tooltip" role="tooltip"></div>
+
+<div class="issuebar"><span>Floor &amp; Boardroom Quarterly</span><span>Management Feature</span><span>Level B2</span></div>
+<header class="masthead"><div class="wrap">
+  <p class="eyebrow">English Language Class &middot; Magazine Feature &middot; B2</p>
+  <h1 class="headline">Reading the Room: What Your Boss's Habits Say About How They Lead</h1>
+  <p class="deck">A closed door, a late reply, a manager who never seems to be at their desk. We read clues like these every day. A visit to one freight company shows how far they can be trusted.</p>
+  <p class="byline">By the Work &amp; Life desk</p>
+  <div class="factrow"><span class="fact">&#128214; Magazine Feature</span><span class="fact">&#127919; Level: B2</span><span class="fact">&#129513; Grammar: Deduction Modals</span></div>
+</div></header>
+<nav class="tabnav" aria-label="Lesson sections">
+  <button type="button" class="tabbtn active" data-tab="reading">&#128240; Reading</button>
+  <button type="button" class="tabbtn" data-tab="vocabulary">&#128292; Vocabulary</button>
+  <button type="button" class="tabbtn" data-tab="grammar">&#129513; Grammar</button>
+  <button type="button" class="tabbtn" data-tab="exercises">&#9989; Exercises</button>
+</nav>
+<div class="wrap">
+<section id="panel-reading" class="panel active">
+  <span class="tag">Reading</span>
+  <h2 class="sectitle">Reading the Room: What Your Boss's Habits Say About How They Lead</h2>
+  <p class="subtitle">Read the feature. Hover over, tap, or tab to any highlighted term for its meaning.</p>
+  <div class="legend"><div class="legend-item"><span class="swatch" style="background:var(--highlight-vocab)"></span>Vocabulary</div><div class="legend-item"><span class="swatch" style="background:var(--highlight-idiom)"></span>Idiom / Set Phrase</div><div class="legend-item"><span class="swatch" style="background:var(--highlight-express)"></span>Useful Expression</div></div>
+  <div class="excerpt"><span class="exlabel">Excerpt 1 · The Door That Stays Closed</span>
+<p>On my first morning at Halden &amp; Rowe, a freight company with four hundred employees and a reputation for keeping its people, I was told to find the operations director. The door to her office was closed. A sticky note on it read, in neat capitals, "Back at 11." Her coat was on the hook inside the glass wall, and her laptop was glowing on the desk. She must be somewhere in the building, I thought, since nobody leaves a laptop open and goes home.</p>
+<p>An assistant passed with a coffee and read my face. "Priya? She'll be on the warehouse floor. She can't be in her office at this hour, she hates paperwork before lunch." It sounded like a guess, but it was right: ten minutes later I found Priya Nair in a hi-vis jacket, listening to a forklift driver explain why the loading bay kept jamming. She did not take notes and she did not interrupt. When he finished, she asked him a single question: "What would you change first?"</p>
+<p>That small scene stayed with me, because it is how most of us learn about our managers. We rarely read a leadership manual. Instead we collect clues: who answers emails at midnight, who <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="walk the floor" data-def="To spend time among the staff where the work happens, instead of staying in an office.">walks the floor</span>, who goes quiet when a number looks bad. From those clues we reach conclusions about how a person leads, and we do it constantly, usually without noticing. Organisational psychologists call this sense-making, and the label matters, because the conclusions we reach shape how much effort we are willing to give.</p>
+</div>
+<div class="excerpt"><span class="exlabel">Excerpt 2 · Three Offices, Three Styles</span>
+<p>Halden &amp; Rowe turned out to be a useful place to test the habit, because its three regional directors run their teams in very different ways, and each has a record to show for it.</p>
+<p>Priya Nair, in the north, leads from the floor. Her approach is <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="hands-on" data-def="Personally involved in the practical details of a job rather than only supervising from a distance.">hands-on</span> in the literal sense: she knows the drivers by name, she visits every depot each week, and she <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="keep tabs on" data-def="To watch something closely so that you always know what is happening.">keeps tabs on</span> delays before the dashboard does. Her team described her as <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="demanding" data-def="Expecting a lot of effort or high standards from other people.">demanding</span> but fair. One planner told me, "You can't hide a problem from Priya. She'll have spotted it by Tuesday." If a shift supervisor has a bad week, Priya must have noticed before anyone said a word. That attention builds trust, but it has a cost: three of her managers admitted that they sometimes wait to be told what to do instead of acting.</p>
+<p>In the south, Tomasz Wieland could hardly be more different. He prefers a <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="a hands-off approach" data-def="A style of management in which you leave people to work without close supervision.">hands-off approach</span> and talks about <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="autonomy" data-def="The freedom to make your own decisions about how you do your work.">autonomy</span> more than almost anyone I have met. His managers set their own targets, choose their own suppliers and present results once a quarter. When I asked how he knew things were <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="on track" data-def="Progressing as planned and likely to reach the goal on time.">on track</span>, he shrugged. "If something were wrong, they would tell me. The silence can't be a bad sign." I was not convinced. Silence might be trust, but it could also be a team that has stopped asking for help. In his region, two senior planners left within a month, and neither had complained beforehand.</p>
+<p>The third director, Amara Sandoval in the east, is harder to place. She runs long, structured meetings, publishes a weekly priorities list and insists that every decision has a named owner. Her people call her <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="rigid" data-def="Strict and unwilling to change plans or rules, even when the situation has changed.">rigid</span>; they also call her <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="predictable" data-def="Behaving in a way that others can easily expect, because it is always the same.">predictable</span>, and in a business where a late truck can cost thousands, predictable is a compliment. "She must be exhausted," a colleague said, "because she answers every message the same night." Perhaps. But when I asked Amara about it, she laughed. "It can't be true that I never <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="switch off" data-def="To stop thinking about work and relax.">switch off</span>. I write at night, but I schedule the emails to arrive at eight, so nobody feels pressure to reply at midnight."</p>
+</div>
+<div class="excerpt"><span class="exlabel">Excerpt 3 · What the Evidence Suggests</span>
+<p><span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="it is tempting to..." data-def="Introduces an easy or obvious idea that the writer is about to question.">It is tempting to</span> rank the three styles, but the evidence refuses to cooperate. In the north, staff turnover last year was low and <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="engagement" data-def="The level of interest and commitment that employees feel towards their work.">engagement</span> was high, although the managers' need for approval slowed some decisions. In the south, engagement was strong among experienced staff and poor among newcomers, who said they felt left alone. In the east, <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="retention" data-def="The ability of an organisation to keep its employees rather than lose them.">retention</span> was steady, yet several employees told me that the weekly priorities list left little room for their own ideas.</p>
+<p>Studies of workplace behaviour tend to agree on one point: no style works everywhere. Leaders who give a lot of direction help new or anxious employees, but the same direction can feel like <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="micromanage" data-def="To control every small detail of other people&#x27;s work instead of trusting them.">micromanaging</span> to an expert. Leaders who step back can <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="empower" data-def="To give someone the confidence, authority or tools to act on their own.">empower</span> confident people, but they can leave others without support. <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="what matters is..." data-def="Puts emphasis on the single most important point.">What matters is</span> fit. A manager has to read the person in front of them, not only the organisation chart, and the best ones <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="change gear" data-def="To change your speed or style of working to suit a new situation.">change gear</span> without announcing it. Priya, <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="for instance" data-def="Introduces a specific example of something you have just said.">for instance</span>, is far less present with her two most experienced planners than with the new drivers, and neither planner had needed her help in months.</p>
+</div>
+<blockquote class="pullquote">&ldquo;Deduction is a useful habit, as long as we treat it as a first guess rather than a verdict.&rdquo;<small>Deduction as a first guess</small></blockquote>
+<div class="excerpt"><span class="exlabel">Excerpt 4 · A Style Is Not a Personality</span>
+<p>There is a trap in all of this. Once we label a boss, we stop looking. A manager who is quiet in meetings must be <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="indifferent" data-def="Showing no interest in, or concern about, something or someone.">indifferent</span>, we say; one who sends detailed instructions must not trust us. Sometimes we are right. Often we are not. When Tomasz did not reply to a proposal for nine days, his team assumed he must have disliked it. <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="in fact" data-def="Introduces a surprising or more accurate detail that corrects what was just said.">In fact</span>, he had been at his father's bedside in hospital and had told nobody. The proposal was approved the day he returned, with a one-line note: "Sorry. Yes. Go."</p>
+<p>Deduction is a useful habit, then, <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="as long as" data-def="Introduces a condition: the first idea is true only if the second is also true.">as long as</span> we treat it as a first guess rather than a <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="verdict" data-def="A final judgement or decision about something, often given with great confidence.">verdict</span>. A closed door might mean secrecy, but it could equally mean a private phone call. A late reply can't prove <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="carelessness" data-def="A lack of attention that leads to mistakes.">carelessness</span>. And a sudden change in a manager's behaviour may be a sign of pressure from above, which employees rarely see. Before we decide what kind of leader someone is, it is worth asking what we do not know.</p>
+</div>
+<div class="excerpt"><span class="exlabel">Excerpt 5 · Reading Your Own Boss</span>
+<p>Back at the depot, Priya finished her conversation with the forklift driver and walked me to the loading bay. "People always think I must have a system," she said. "I don't. I just try to notice who needs me today." She paused. "And I try to notice who doesn't."</p>
+<p>That may be the whole of the job. The best leaders are not those with the most impressive style but those who can tell, <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="at any given moment" data-def="At whatever time you choose to look; at any single point in time.">at any given moment</span>, what the person in front of them needs, and who are willing to be wrong about it. The rest of us can practise the same habit in reverse. The next time your manager seems distant, strict or oddly cheerful, resist the easy label. Ask a question. The answer might surprise you, and it is rarely as bad as the story you were about to invent.</p>
+</div>
+</section>
+<section id="panel-vocabulary" class="panel">
+  <span class="tag">Vocabulary</span>
+  <h2 class="sectitle">Words and Phrases from the Feature</h2>
+  <div class="vocab-intro">Every highlighted term from the reading appears below with a meaning and a fresh example. Notice how each one helps the writer describe how people lead and are led.</div>
+  <h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-vocab)"></span>Vocabulary</h3><div class="vgrid">
+<div class="vcard"><div class="vterm">hands-on</div><div class="vpos">adjective</div><div class="vdef">Personally involved in the practical details of a job rather than only supervising from a distance.</div><div class="vex">A <strong>hands-on</strong> manager joins the team in the warehouse during the busiest week.</div></div>
+<div class="vcard"><div class="vterm">demanding</div><div class="vpos">adjective</div><div class="vdef">Expecting a lot of effort or high standards from other people.</div><div class="vex">She is a <strong>demanding</strong> boss, but her feedback is always specific and fair.</div></div>
+<div class="vcard"><div class="vterm">autonomy</div><div class="vpos">noun</div><div class="vdef">The freedom to make your own decisions about how you do your work.</div><div class="vex">Experienced designers usually do their best work when they have real <strong>autonomy</strong>.</div></div>
+<div class="vcard"><div class="vterm">rigid</div><div class="vpos">adjective</div><div class="vdef">Strict and unwilling to change plans or rules, even when the situation has changed.</div><div class="vex">A <strong>rigid</strong> schedule leaves no room for the unexpected delay.</div></div>
+<div class="vcard"><div class="vterm">predictable</div><div class="vpos">adjective</div><div class="vdef">Behaving in a way that others can easily expect, because it is always the same.</div><div class="vex">Her <strong>predictable</strong> routine meant the team always knew when decisions would be made.</div></div>
+<div class="vcard"><div class="vterm">empower</div><div class="vpos">verb</div><div class="vdef">To give someone the confidence, authority or tools to act on their own.</div><div class="vex">Good managers <strong>empower</strong> new staff by letting them lead a small project early.</div></div>
+<div class="vcard"><div class="vterm">micromanage</div><div class="vpos">verb</div><div class="vdef">To control every small detail of other people's work instead of trusting them.</div><div class="vex">Checking every email before it is sent is <strong>micromanaging</strong>, not leadership.</div></div>
+<div class="vcard"><div class="vterm">engagement</div><div class="vpos">noun</div><div class="vdef">The level of interest and commitment that employees feel towards their work.</div><div class="vex">Low <strong>engagement</strong> often shows up as late reports and silent meetings.</div></div>
+<div class="vcard"><div class="vterm">retention</div><div class="vpos">noun</div><div class="vdef">The ability of an organisation to keep its employees rather than lose them.</div><div class="vex">The company improved <strong>retention</strong> by offering clearer routes to promotion.</div></div>
+<div class="vcard"><div class="vterm">indifferent</div><div class="vpos">adjective</div><div class="vdef">Showing no interest in, or concern about, something or someone.</div><div class="vex">He seemed <strong>indifferent</strong> to the results, but he was simply tired.</div></div>
+<div class="vcard"><div class="vterm">verdict</div><div class="vpos">noun</div><div class="vdef">A final judgement or decision about something, often given with great confidence.</div><div class="vex">One awkward meeting should not become your <strong>verdict</strong> on a colleague.</div></div>
+<div class="vcard"><div class="vterm">carelessness</div><div class="vpos">noun</div><div class="vdef">A lack of attention that leads to mistakes.</div><div class="vex">The error was caused by <strong>carelessness</strong>, not by a lack of skill.</div></div>
+</div><h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-idiom)"></span>Idioms &amp; Set Phrases</h3><div class="vgrid">
+<div class="vcard idiom"><div class="vterm">walk the floor</div><div class="vpos">idiom</div><div class="vdef">To spend time among the staff where the work happens, instead of staying in an office.</div><div class="vex">The new director <strong>walks the floor</strong> every morning before opening her laptop.</div></div>
+<div class="vcard idiom"><div class="vterm">keep tabs on</div><div class="vpos">idiom</div><div class="vdef">To watch something closely so that you always know what is happening.</div><div class="vex">He <strong>keeps tabs on</strong> every delivery from the moment it leaves the depot.</div></div>
+<div class="vcard idiom"><div class="vterm">a hands-off approach</div><div class="vpos">set phrase</div><div class="vdef">A style of management in which you leave people to work without close supervision.</div><div class="vex">A <strong>hands-off approach</strong> suits teams that already know exactly what to do.</div></div>
+<div class="vcard idiom"><div class="vterm">on track</div><div class="vpos">idiom</div><div class="vdef">Progressing as planned and likely to reach the goal on time.</div><div class="vex">We reviewed the figures to check that the project was still <strong>on track</strong>.</div></div>
+<div class="vcard idiom"><div class="vterm">change gear</div><div class="vpos">idiom</div><div class="vdef">To change your speed or style of working to suit a new situation.</div><div class="vex">After the merger, she had to <strong>change gear</strong> and manage people more directly.</div></div>
+<div class="vcard idiom"><div class="vterm">switch off</div><div class="vpos">phrasal verb</div><div class="vdef">To stop thinking about work and relax.</div><div class="vex">It is hard to <strong>switch off</strong> when messages keep arriving in the evening.</div></div>
+</div><h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-express)"></span>Useful Expressions</h3><div class="vgrid">
+<div class="vcard expr"><div class="vterm">it is tempting to...</div><div class="vpos">discourse marker</div><div class="vdef">Introduces an easy or obvious idea that the writer is about to question.</div><div class="vex"><strong>It is tempting to</strong> blame the manager, but the problem is more complicated.</div></div>
+<div class="vcard expr"><div class="vterm">in fact</div><div class="vpos">discourse marker</div><div class="vdef">Introduces a surprising or more accurate detail that corrects what was just said.</div><div class="vex">People thought he was ignoring them. <strong>In fact</strong>, he was away on family business.</div></div>
+<div class="vcard expr"><div class="vterm">as long as</div><div class="vpos">set phrase</div><div class="vdef">Introduces a condition: the first idea is true only if the second is also true.</div><div class="vex">Guessing is fine <strong>as long as</strong> you check your guess later.</div></div>
+<div class="vcard expr"><div class="vterm">what matters is...</div><div class="vpos">discourse marker</div><div class="vdef">Puts emphasis on the single most important point.</div><div class="vex"><strong>What matters is</strong> whether people feel trusted, not what the manager is called.</div></div>
+<div class="vcard expr"><div class="vterm">for instance</div><div class="vpos">discourse marker</div><div class="vdef">Introduces a specific example of something you have just said.</div><div class="vex">Some leaders change style quickly. Priya, <strong>for instance</strong>, adapts to each person.</div></div>
+<div class="vcard expr"><div class="vterm">at any given moment</div><div class="vpos">set phrase</div><div class="vdef">At whatever time you choose to look; at any single point in time.</div><div class="vex"><strong>At any given moment</strong>, a good manager knows who needs help.</div></div>
+</div>
+</section>
+<section id="panel-grammar" class="panel">
+  
+<span class="tag">Grammar Focus</span>
+<h2 class="sectitle">Modal Verbs of Deduction</h2>
+<p class="subtitle">must be, can&rsquo;t be, might be: how to show how sure you are about something you cannot see.</p>
+
+<h3 class="gsub">01 &middot; Why It Matters</h3>
+<div class="gwhy">At work you often have to judge a situation from clues: a closed door, a late reply, a silent meeting. Modal verbs of deduction let you say what you <em>think</em> is true and how <em>sure</em> you are. Using <strong>must</strong> where you should use <strong>might</strong> makes you sound too certain; using <strong>might</strong> where you should use <strong>must</strong> makes you sound unsure of your own logic.</div>
+
+<h3 class="gsub">02 &middot; The Certainty Scale</h3>
+<table class="gtable"><tr><th>Modal</th><th>How sure?</th><th>Example from the feature</th></tr><tr><td><strong>must be / must have + past participle</strong></td><td>About 95% sure it is true</td><td><em>She must be somewhere in the building.</em></td></tr><tr><td><strong>should / ought to + verb</strong></td><td>About 80% sure (it is expected)</td><td><em>The depot should be open by now.</em></td></tr><tr><td><strong>may / might / could + verb</strong></td><td>About 30 to 50% sure (it is possible)</td><td><em>Silence might be trust.</em></td></tr><tr><td><strong>can't / couldn't + verb</strong></td><td>About 95% sure it is NOT true</td><td><em>The silence can't be a bad sign.</em></td></tr></table>
+<div class="gwhy"><strong>Watch out:</strong> the negative of <em>must</em> in deduction is <strong>can&rsquo;t</strong> (or <em>couldn&rsquo;t</em>), not <em>mustn&rsquo;t</em>. <em>Mustn&rsquo;t</em> means &ldquo;it is forbidden&rdquo;.</div>
+
+<h3 class="gsub">03 &middot; Formula and Forms</h3>
+<div class="formula">modal (must / can&rsquo;t / might / could) + <strong>infinitive</strong> &nbsp;&nbsp;|&nbsp;&nbsp; modal + <strong>have + past participle</strong></div>
+<table class="gtable"><tr><th>Use</th><th>Form</th><th>Example</th></tr><tr><td>Present state</td><td>must / can't / might / could + be + adjective or noun</td><td><em>She must be exhausted.<br>It can't be true that I never switch off.</em></td></tr><tr><td>Present action in progress</td><td>must / can't / might + be + verb-ing</td><td><em>She must be listening to a driver on the floor.</em></td></tr><tr><td>Past situation</td><td>must have / can't have / might have + past participle</td><td><em>Priya must have noticed before anyone said a word.</em></td></tr><tr><td>Negative past</td><td>can't have / couldn't have + past participle</td><td><em>He can't have ignored the proposal on purpose.</em></td></tr><tr><td>Possibility (not sure)</td><td>may / might / could (have) + verb</td><td><em>A closed door might mean secrecy.</em></td></tr></table>
+
+<h3 class="gsub">04 &middot; Why Magazine Features Use It</h3>
+<div class="gwhy">Magazine features rarely state facts about people's minds, because a writer cannot know them. Modal verbs of deduction let the writer share a reasonable conclusion while showing how sure it is. In this article they do three jobs: they show the writer reading clues (<em>she must be somewhere in the building</em>), they quote how colleagues judge each other (<em>she must be exhausted</em>), and they warn the reader that a confident guess can be wrong (<em>might</em> and <em>could</em>, near the end). This gives the feature its main idea: deduction is useful, but only as a first guess.</div>
+
+<h3 class="gsub">05 &middot; Spotted in the Reading</h3>
+<table class="gtable"><tr><th>Sentence</th><th>Modal</th><th>Meaning</th></tr><tr><td>&ldquo;She must be somewhere in the building.&rdquo;</td><td><strong>must be</strong></td><td>Very sure (present)</td></tr><tr><td>&ldquo;She can't be in her office at this hour.&rdquo;</td><td><strong>can't be</strong></td><td>Very sure it is not true</td></tr><tr><td>&ldquo;Priya must have noticed before anyone said a word.&rdquo;</td><td><strong>must have noticed</strong></td><td>Very sure (past)</td></tr><tr><td>&ldquo;The silence can't be a bad sign.&rdquo;</td><td><strong>can't be</strong></td><td>Very sure it is not true</td></tr><tr><td>&ldquo;Silence might be trust, but it could also be a team that has stopped asking for help.&rdquo;</td><td><strong>might be, could be</strong></td><td>Possible, not sure</td></tr><tr><td>&ldquo;A manager who is quiet in meetings must be indifferent.&rdquo;</td><td><strong>must be</strong></td><td>Very sure (present)</td></tr><tr><td>&ldquo;His team assumed he must have disliked it.&rdquo;</td><td><strong>must have disliked</strong></td><td>Very sure (past)</td></tr><tr><td>&ldquo;A closed door might mean secrecy.&rdquo;</td><td><strong>might mean</strong></td><td>Possible, not sure</td></tr></table>
+
+<h3 class="gsub">06 &middot; Your Turn</h3>
+<p class="subtitle">Complete each sentence with the best modal form of the verb in brackets. Try it first, then reveal the answer.</p>
+<table class="gtable"><tr><th>Complete the sentence</th><th>Answer</th></tr>
+<tr><td>The lights are on in the planning room, so the team ___ (be) working late.</td><td><details><summary>Show answer</summary><strong>must be</strong> working late (a confident deduction about now).</details></td></tr>
+<tr><td>Nobody has seen Tomasz since Monday. He ___ (be) away, or he ___ (be) very busy.</td><td><details><summary>Show answer</summary><strong>might / could be</strong> away, or he <strong>might / could be</strong> very busy (both are only possibilities).</details></td></tr>
+<tr><td>The report has no mistakes. Amara ___ (check) it carefully.</td><td><details><summary>Show answer</summary><strong>must have checked</strong> it carefully (a confident deduction about the past).</details></td></tr>
+<tr><td>That ___ (be) the reason he left. He was promoted just a month ago!</td><td><details><summary>Show answer</summary><strong>can't be</strong> the reason (you are sure it is not true).</details></td></tr>
+<tr><td>The meeting room is empty and the screens are off. Everyone ___ (go) home.</td><td><details><summary>Show answer</summary><strong>must have gone</strong> home (a confident deduction about the past).</details></td></tr>
+</table>
+
+</section>
+<section id="panel-exercises" class="panel">
+  <span class="tag">Exercises</span>
+  <h2 class="sectitle">Test Yourself</h2>
+  <div class="exintro">15 questions in three sections. Click an answer for instant feedback: every option, right or wrong, comes with an explanation.</div>
+  <h3 class="exsection-title">A · Reading Comprehension</h3>
+<div class="qblock" id="qA1">
+<p class="qtext">1. Why was Priya not in her office when the writer arrived?</p>
+<button type="button" class="opt-btn" data-q="qA1" data-letter="A" data-correct="false" data-expl="It was a guess that she hated paperwork, not a sign she was doing a report."><span class="opt-letter">A</span><span class="opt-text">She was upstairs, preparing a board report.</span></button>
+<button type="button" class="opt-btn" data-q="qA1" data-letter="B" data-correct="true" data-expl="Correct: she was in the warehouse, hearing a forklift driver explain a problem."><span class="opt-letter">B</span><span class="opt-text">She was on the floor, listening to a driver.</span></button>
+<button type="button" class="opt-btn" data-q="qA1" data-letter="C" data-correct="false" data-expl="The writer finds her at work that same morning, so she was not off sick."><span class="opt-letter">C</span><span class="opt-text">She was off sick and had told nobody at all.</span></button>
+<button type="button" class="opt-btn" data-q="qA1" data-letter="D" data-correct="false" data-expl="It was only mid-morning, and the note said she would be back at 11."><span class="opt-letter">D</span><span class="opt-text">She was at lunch with a visiting customer.</span></button>
+<div class="feedback" id="fb-qA1" role="status"></div>
+</div>
+<div class="qblock" id="qA2">
+<p class="qtext">2. What cost does the article link to Priya's close attention?</p>
+<button type="button" class="opt-btn" data-q="qA2" data-letter="A" data-correct="false" data-expl="The drivers are never said to resent her visits."><span class="opt-letter">A</span><span class="opt-text">Her drivers resent the weekly depot visits.</span></button>
+<button type="button" class="opt-btn" data-q="qA2" data-letter="B" data-correct="false" data-expl="She spots delays before the dashboard, so the reverse is true."><span class="opt-letter">B</span><span class="opt-text">Her reports arrive later than the dashboard does.</span></button>
+<button type="button" class="opt-btn" data-q="qA2" data-letter="C" data-correct="false" data-expl="No planner asks to move; the planners who left worked in the south."><span class="opt-letter">C</span><span class="opt-text">Her planners often ask to move to another region.</span></button>
+<button type="button" class="opt-btn" data-q="qA2" data-letter="D" data-correct="true" data-expl="Correct: three managers admitted they wait for instructions instead of acting."><span class="opt-letter">D</span><span class="opt-text">Her managers often wait to be told what to do.</span></button>
+<div class="feedback" id="fb-qA2" role="status"></div>
+</div>
+<div class="qblock" id="qA3">
+<p class="qtext">3. What does the writer suggest about the silence in Tomasz's region?</p>
+<button type="button" class="opt-btn" data-q="qA3" data-letter="A" data-correct="true" data-expl="Correct: the writer says silence might be trust, but it could also mean the team has stopped asking for help."><span class="opt-letter">A</span><span class="opt-text">It might mean the team stopped asking for help.</span></button>
+<button type="button" class="opt-btn" data-q="qA3" data-letter="B" data-correct="false" data-expl="The writer says he was not convinced, so silence does not prove satisfaction."><span class="opt-letter">B</span><span class="opt-text">It proves that the team is completely satisfied.</span></button>
+<button type="button" class="opt-btn" data-q="qA3" data-letter="C" data-correct="false" data-expl="Targets are never described as too low in the article."><span class="opt-letter">C</span><span class="opt-text">It shows that the yearly targets were too low.</span></button>
+<button type="button" class="opt-btn" data-q="qA3" data-letter="D" data-correct="false" data-expl="No email fault is mentioned anywhere in the article."><span class="opt-letter">D</span><span class="opt-text">It was caused by a fault in the email system.</span></button>
+<div class="feedback" id="fb-qA3" role="status"></div>
+</div>
+<div class="qblock" id="qA4">
+<p class="qtext">4. Why does Amara say she does not 'never switch off'?</p>
+<button type="button" class="opt-btn" data-q="qA4" data-letter="A" data-correct="false" data-expl="She does not mention turning her phone off at a fixed time."><span class="opt-letter">A</span><span class="opt-text">She turns her phone off after seven each night.</span></button>
+<button type="button" class="opt-btn" data-q="qA4" data-letter="B" data-correct="false" data-expl="No assistant answers her messages for her in the article."><span class="opt-letter">B</span><span class="opt-text">She asks her assistant to answer every message.</span></button>
+<button type="button" class="opt-btn" data-q="qA4" data-letter="C" data-correct="true" data-expl="Correct: she writes at night but schedules the emails so nobody feels pressure to reply at midnight."><span class="opt-letter">C</span><span class="opt-text">She schedules night emails to arrive at eight.</span></button>
+<button type="button" class="opt-btn" data-q="qA4" data-letter="D" data-correct="false" data-expl="Her colleague says she answers every message the same night, so she reads often."><span class="opt-letter">D</span><span class="opt-text">She only reads messages once a week at work.</span></button>
+<div class="feedback" id="fb-qA4" role="status"></div>
+</div>
+<div class="qblock" id="qA5">
+<p class="qtext">5. Why did Tomasz's team think he disliked their proposal?</p>
+<button type="button" class="opt-btn" data-q="qA5" data-letter="A" data-correct="false" data-expl="He sent no rejection; the note he finally sent said yes."><span class="opt-letter">A</span><span class="opt-text">He sent a short email that rejected the idea.</span></button>
+<button type="button" class="opt-btn" data-q="qA5" data-letter="B" data-correct="true" data-expl="Correct: he did not reply for nine days because he was at his father&#x27;s bedside in hospital."><span class="opt-letter">B</span><span class="opt-text">He was silent for nine days, but he was away.</span></button>
+<button type="button" class="opt-btn" data-q="qA5" data-letter="C" data-correct="false" data-expl="He never asked for a rewrite; he approved it on his return."><span class="opt-letter">C</span><span class="opt-text">He asked for a long and very detailed rewrite.</span></button>
+<button type="button" class="opt-btn" data-q="qA5" data-letter="D" data-correct="false" data-expl="No cancelled meeting is mentioned in the story."><span class="opt-letter">D</span><span class="opt-text">He cancelled the weekly meeting with the team.</span></button>
+<div class="feedback" id="fb-qA5" role="status"></div>
+</div>
+<h3 class="exsection-title">B · Vocabulary in Context</h3>
+<div class="qblock" id="qB1">
+<p class="qtext">6. In the article, 'autonomy' is closest in meaning to:</p>
+<button type="button" class="opt-btn" data-q="qB1" data-letter="A" data-correct="false" data-expl="Rules for everyone would be the opposite of freedom."><span class="opt-letter">A</span><span class="opt-text">a fixed list of rules for every employee.</span></button>
+<button type="button" class="opt-btn" data-q="qB1" data-letter="B" data-correct="false" data-expl="Autonomy is about freedom, not about a job title."><span class="opt-letter">B</span><span class="opt-text">a formal title given to a senior manager.</span></button>
+<button type="button" class="opt-btn" data-q="qB1" data-letter="C" data-correct="true" data-expl="Correct: Tomasz lets his managers set their own targets and choose their own suppliers."><span class="opt-letter">C</span><span class="opt-text">freedom to make your own choices at work.</span></button>
+<button type="button" class="opt-btn" data-q="qB1" data-letter="D" data-correct="false" data-expl="Measuring performance is a different idea from independence."><span class="opt-letter">D</span><span class="opt-text">a system for measuring weekly performance.</span></button>
+<div class="feedback" id="fb-qB1" role="status"></div>
+</div>
+<div class="qblock" id="qB2">
+<p class="qtext">7. A 'demanding' manager is most likely someone who:</p>
+<button type="button" class="opt-btn" data-q="qB2" data-letter="A" data-correct="true" data-expl="Correct: Priya is described as demanding but fair, so she expects a lot."><span class="opt-letter">A</span><span class="opt-text">expects a lot from the people on the team.</span></button>
+<button type="button" class="opt-btn" data-q="qB2" data-letter="B" data-correct="false" data-expl="A manager who asks nothing is the opposite of demanding."><span class="opt-letter">B</span><span class="opt-text">asks nothing of the people on the team.</span></button>
+<button type="button" class="opt-btn" data-q="qB2" data-letter="C" data-correct="false" data-expl="Priya knows every driver by name, and demanding is not about names."><span class="opt-letter">C</span><span class="opt-text">forgets the names of the people on the team.</span></button>
+<button type="button" class="opt-btn" data-q="qB2" data-letter="D" data-correct="false" data-expl="Priya visits depots every week; demanding does not mean avoiding people."><span class="opt-letter">D</span><span class="opt-text">avoids meeting the people on the team.</span></button>
+<div class="feedback" id="fb-qB2" role="status"></div>
+</div>
+<div class="qblock" id="qB3">
+<p class="qtext">8. To 'keep tabs on' delays means to:</p>
+<button type="button" class="opt-btn" data-q="qB3" data-letter="A" data-correct="false" data-expl="A monthly report is slow, the opposite of knowing before the dashboard."><span class="opt-letter">A</span><span class="opt-text">write a long report about them every month.</span></button>
+<button type="button" class="opt-btn" data-q="qB3" data-letter="B" data-correct="false" data-expl="Ignoring delays is the opposite of keeping tabs on them."><span class="opt-letter">B</span><span class="opt-text">ignore them until some customer complains.</span></button>
+<button type="button" class="opt-btn" data-q="qB3" data-letter="C" data-correct="false" data-expl="Blaming someone is not part of the meaning of the phrase."><span class="opt-letter">C</span><span class="opt-text">blame the person who caused them in public.</span></button>
+<button type="button" class="opt-btn" data-q="qB3" data-letter="D" data-correct="true" data-expl="Correct: Priya knows about delays before the dashboard does because she watches them closely."><span class="opt-letter">D</span><span class="opt-text">watch them closely to know what happens.</span></button>
+<div class="feedback" id="fb-qB3" role="status"></div>
+</div>
+<div class="qblock" id="qB4">
+<p class="qtext">9. When the best managers 'change gear', they:</p>
+<button type="button" class="opt-btn" data-q="qB4" data-letter="A" data-correct="false" data-expl="Changing gear is about style, not about changing jobs."><span class="opt-letter">A</span><span class="opt-text">move to a different department each year.</span></button>
+<button type="button" class="opt-btn" data-q="qB4" data-letter="B" data-correct="true" data-expl="Correct: Priya is far less present with experienced planners than with new drivers."><span class="opt-letter">B</span><span class="opt-text">adjust their style to suit each person.</span></button>
+<button type="button" class="opt-btn" data-q="qB4" data-letter="C" data-correct="false" data-expl="No new tools are bought in the article."><span class="opt-letter">C</span><span class="opt-text">buy new tools for their whole team.</span></button>
+<button type="button" class="opt-btn" data-q="qB4" data-letter="D" data-correct="false" data-expl="Speed of speaking is not what the phrase refers to here."><span class="opt-letter">D</span><span class="opt-text">speak faster so that meetings finish early.</span></button>
+<div class="feedback" id="fb-qB4" role="status"></div>
+</div>
+<div class="qblock" id="qB5">
+<p class="qtext">10. Because her routine never changes, Amara's team finds her very:</p>
+<button type="button" class="opt-btn" data-q="qB5" data-letter="A" data-correct="true" data-expl="Correct: they call her rigid and predictable, and predictable is a compliment in logistics."><span class="opt-letter">A</span><span class="opt-text">predictable.</span></button>
+<button type="button" class="opt-btn" data-q="qB5" data-letter="B" data-correct="false" data-expl="Indifferent means not interested; her team sees her as organised."><span class="opt-letter">B</span><span class="opt-text">indifferent.</span></button>
+<button type="button" class="opt-btn" data-q="qB5" data-letter="C" data-correct="false" data-expl="Demanding describes expecting a lot, not an unchanging routine."><span class="opt-letter">C</span><span class="opt-text">demanding.</span></button>
+<button type="button" class="opt-btn" data-q="qB5" data-letter="D" data-correct="false" data-expl="Empowered is not a word for a person who sets the rules for others."><span class="opt-letter">D</span><span class="opt-text">empowered.</span></button>
+<div class="feedback" id="fb-qB5" role="status"></div>
+</div>
+<h3 class="exsection-title">C · Grammar: Deduction</h3>
+<div class="qblock" id="qC1">
+<p class="qtext">11. The lights are on and her coat is on the chair, so she ___ be in the building.</p>
+<button type="button" class="opt-btn" data-q="qC1" data-letter="A" data-correct="false" data-expl="Can&#x27;t would mean you are sure she is NOT there, which the clues contradict."><span class="opt-letter">A</span><span class="opt-text">can't</span></button>
+<button type="button" class="opt-btn" data-q="qC1" data-letter="B" data-correct="false" data-expl="Needn&#x27;t talks about necessity, not about deduction."><span class="opt-letter">B</span><span class="opt-text">needn't</span></button>
+<button type="button" class="opt-btn" data-q="qC1" data-letter="C" data-correct="true" data-expl="Correct: the clues make you very sure, so use must."><span class="opt-letter">C</span><span class="opt-text">must</span></button>
+<button type="button" class="opt-btn" data-q="qC1" data-letter="D" data-correct="false" data-expl="Mustn&#x27;t is used for prohibition, not for deduction."><span class="opt-letter">D</span><span class="opt-text">mustn't</span></button>
+<div class="feedback" id="fb-qC1" role="status"></div>
+</div>
+<div class="qblock" id="qC2">
+<p class="qtext">12. Amara checks every figure twice, so she ___ that error.</p>
+<button type="button" class="opt-btn" data-q="qC2" data-letter="A" data-correct="true" data-expl="Correct: you are sure it is not true, and it is about the past, so use can&#x27;t have + past participle."><span class="opt-letter">A</span><span class="opt-text">can't have missed</span></button>
+<button type="button" class="opt-btn" data-q="qC2" data-letter="B" data-correct="false" data-expl="Must have missed says you are sure she did, which the clue contradicts."><span class="opt-letter">B</span><span class="opt-text">must have missed</span></button>
+<button type="button" class="opt-btn" data-q="qC2" data-letter="C" data-correct="false" data-expl="After have, use the past participle: missed, not miss."><span class="opt-letter">C</span><span class="opt-text">can't have miss</span></button>
+<button type="button" class="opt-btn" data-q="qC2" data-letter="D" data-correct="false" data-expl="Do not use to after a modal verb."><span class="opt-letter">D</span><span class="opt-text">must to have missed</span></button>
+<div class="feedback" id="fb-qC2" role="status"></div>
+</div>
+<div class="qblock" id="qC3">
+<p class="qtext">13. Priya looks worried. She ___ be thinking about the delay, but I am not certain.</p>
+<button type="button" class="opt-btn" data-q="qC3" data-letter="A" data-correct="false" data-expl="Must expresses strong certainty, but you say you are not sure."><span class="opt-letter">A</span><span class="opt-text">must</span></button>
+<button type="button" class="opt-btn" data-q="qC3" data-letter="B" data-correct="true" data-expl="Correct: &#x27;not certain&#x27; means a possibility, so use might (or could, or may)."><span class="opt-letter">B</span><span class="opt-text">might</span></button>
+<button type="button" class="opt-btn" data-q="qC3" data-letter="C" data-correct="false" data-expl="Can&#x27;t means you are sure it is not true, which does not fit."><span class="opt-letter">C</span><span class="opt-text">can't</span></button>
+<button type="button" class="opt-btn" data-q="qC3" data-letter="D" data-correct="false" data-expl="Mustn&#x27;t is not used for deduction, and it does not show uncertainty."><span class="opt-letter">D</span><span class="opt-text">mustn't</span></button>
+<div class="feedback" id="fb-qC3" role="status"></div>
+</div>
+<div class="qblock" id="qC4">
+<p class="qtext">14. The loading bay is empty and the lights are off. Everyone ___ home an hour ago.</p>
+<button type="button" class="opt-btn" data-q="qC4" data-letter="A" data-correct="false" data-expl="The past participle of go is gone, not went."><span class="opt-letter">A</span><span class="opt-text">must have went</span></button>
+<button type="button" class="opt-btn" data-q="qC4" data-letter="B" data-correct="false" data-expl="Can&#x27;t have gone says you are sure they stayed, the opposite of the clues."><span class="opt-letter">B</span><span class="opt-text">can't have gone</span></button>
+<button type="button" class="opt-btn" data-q="qC4" data-letter="C" data-correct="false" data-expl="After must, use have, not had."><span class="opt-letter">C</span><span class="opt-text">must had gone</span></button>
+<button type="button" class="opt-btn" data-q="qC4" data-letter="D" data-correct="true" data-expl="Correct: you are very sure about a past event, so use must have + past participle."><span class="opt-letter">D</span><span class="opt-text">must have gone</span></button>
+<div class="feedback" id="fb-qC4" role="status"></div>
+</div>
+<div class="qblock" id="qC5">
+<p class="qtext">15. Which sentence says you are sure the reason is NOT true?</p>
+<button type="button" class="opt-btn" data-q="qC5" data-letter="A" data-correct="true" data-expl="Correct: can&#x27;t + be is the normal way to say you are sure something is not true."><span class="opt-letter">A</span><span class="opt-text">That can't be the reason she left.</span></button>
+<button type="button" class="opt-btn" data-q="qC5" data-letter="B" data-correct="false" data-expl="Mustn&#x27;t is used for prohibition, not for this kind of deduction."><span class="opt-letter">B</span><span class="opt-text">That mustn't be the reason she left.</span></button>
+<button type="button" class="opt-btn" data-q="qC5" data-letter="C" data-correct="false" data-expl="Do not combine don&#x27;t with can: this form is ungrammatical."><span class="opt-letter">C</span><span class="opt-text">That don't can be the reason she left.</span></button>
+<button type="button" class="opt-btn" data-q="qC5" data-letter="D" data-correct="false" data-expl="The negative goes after the modal: could not, not not could."><span class="opt-letter">D</span><span class="opt-text">That not could be the reason she left.</span></button>
+<div class="feedback" id="fb-qC5" role="status"></div>
+</div>
+  <div id="score-bar"><div id="score-num">0/0</div><div id="score-title"></div><div id="score-msg"></div><button type="button" class="reset-btn" id="reset-btn">Try Again</button></div>
+</section>
+</div>
+
+<script>
+
+(function () {
+  var tabs = document.querySelectorAll(".tabbtn");
+  var panels = document.querySelectorAll(".panel");
+  function showTab(id) {
+    panels.forEach(function (p) { p.classList.toggle("active", p.id === "panel-" + id); });
+    tabs.forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-tab") === id); });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  tabs.forEach(function (b) {
+    b.addEventListener("click", function () { showTab(b.getAttribute("data-tab")); });
+  });
+
+  var tip = document.getElementById("tooltip");
+  function showTip(el) {
+    tip.innerHTML = "";
+    var cat = document.createElement("span");
+    cat.className = "tip-cat";
+    cat.textContent = el.getAttribute("data-cat") + " · " + el.getAttribute("data-term");
+    tip.appendChild(cat);
+    tip.appendChild(document.createTextNode(el.getAttribute("data-def")));
+    tip.style.display = "block";
+    var r = el.getBoundingClientRect();
+    var top = r.top - tip.offsetHeight - 10;
+    if (top < 8) { top = r.bottom + 10; }
+    var left = r.left + r.width / 2 - tip.offsetWidth / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tip.offsetWidth - 8));
+    tip.style.top = top + "px";
+    tip.style.left = left + "px";
+  }
+  function hideTip() { tip.style.display = "none"; }
+  document.querySelectorAll(".hl").forEach(function (el) {
+    el.addEventListener("mouseenter", function () { showTip(el); });
+    el.addEventListener("mouseleave", hideTip);
+    el.addEventListener("focus", function () { showTip(el); });
+    el.addEventListener("blur", hideTip);
+    el.addEventListener("click", function (e) { e.stopPropagation(); showTip(el); });
+  });
+  document.addEventListener("click", hideTip);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { hideTip(); } });
+  window.addEventListener("scroll", hideTip, { passive: true });
+
+  var TIERS = [{"min": 14, "title": "Reading Between the Lines", "msg": "Outstanding. You can read the clues and the grammar with confidence."}, {"min": 11, "title": "Sharp Observer", "msg": "Strong result. Review any modal forms that tripped you up in the Grammar tab."}, {"min": 7, "title": "Gathering Clues", "msg": "Good start. Reread the feature and the comparison table, then try again."}, {"min": 0, "title": "Back to the Newsroom", "msg": "Head back to the Reading and Grammar tabs, then give it another go."}];
+  var TOTAL = document.querySelectorAll(".qblock").length;
+  var answered = {};
+  var correct = {};
+
+  function showScore() {
+    var score = Object.keys(correct).filter(function (k) { return correct[k]; }).length;
+    var tier = TIERS[TIERS.length - 1];
+    for (var i = 0; i < TIERS.length; i++) {
+      if (score >= TIERS[i].min) { tier = TIERS[i]; break; }
+    }
+    document.getElementById("score-num").textContent = score + "/" + TOTAL;
+    document.getElementById("score-title").textContent = tier.title;
+    document.getElementById("score-msg").textContent = tier.msg;
+    document.getElementById("score-bar").classList.add("show");
+  }
+
+  document.querySelectorAll(".opt-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var qId = btn.getAttribute("data-q");
+      if (answered[qId]) { return; }
+      var isCorrect = btn.getAttribute("data-correct") === "true";
+      answered[qId] = true;
+      correct[qId] = isCorrect;
+      var block = document.getElementById(qId);
+      var fb = document.getElementById("fb-" + qId);
+      var right = "";
+      block.querySelectorAll(".opt-btn").forEach(function (b) {
+        b.disabled = true;
+        if (b.getAttribute("data-correct") === "true") {
+          b.classList.add("reveal-correct");
+          right = b.getAttribute("data-letter");
+        }
+      });
+      btn.classList.remove("reveal-correct");
+      btn.classList.add(isCorrect ? "correct" : "wrong");
+      block.classList.add(isCorrect ? "answered-correct" : "answered-wrong");
+      fb.innerHTML = "";
+      var icon = document.createElement("span");
+      icon.className = "fb-icon";
+      icon.textContent = isCorrect ? "✓" : "✗";
+      fb.appendChild(icon);
+      fb.appendChild(document.createTextNode(btn.getAttribute("data-expl") + (isCorrect ? "" : " The correct answer is " + right + ".")));
+      fb.className = "feedback show " + (isCorrect ? "correct" : "wrong");
+      if (Object.keys(answered).length === TOTAL) { showScore(); }
+    });
+  });
+
+  var resetBtn = document.getElementById("reset-btn");
+  resetBtn.addEventListener("click", function () {
+    answered = {};
+    correct = {};
+    document.querySelectorAll(".qblock").forEach(function (b) { b.classList.remove("answered-correct", "answered-wrong"); });
+    document.querySelectorAll(".opt-btn").forEach(function (b) { b.disabled = false; b.classList.remove("correct", "wrong", "reveal-correct"); });
+    document.querySelectorAll(".feedback").forEach(function (f) { f.className = "feedback"; f.innerHTML = ""; });
+    document.getElementById("score-bar").classList.remove("show");
+    showTab("exercises");
+  });
+})();
+
+</script>
+</body>
+</html>

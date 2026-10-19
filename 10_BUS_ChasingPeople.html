@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+LESSON-META
+track: podcast_business
+title: "Chasing People"
+series: "BBC Learning English: Office English"
+level: A2
+vocabulary_focus: "Polite and firm email reminders; escalation language (chase up, follow up, copy in, deadline, urgency)"
+theme: "inbox and sticky notes: navy and coral on cool white, reminder-ladder strip, speaker chips"
+date: 2026-10-19
+source_url: https://www.bbc.co.uk/learningenglish/english/features/office-english/240205
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chasing People | Office English</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Red+Hat+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --ink: #14213d;
+  --paper: #f5f7fb;
+  --cream: #e6ebf5;
+  --rule: #b9c3d9;
+  --accent: #3a6ea5;
+  --accent2: #e76f51;
+  --gold: #f4b400;
+  --highlight-vocab: #fbe7a1;
+  --highlight-idiom: #c9def2;
+  --highlight-express: #f3cfa9;
+  --correct: #2a8a5c;
+  --wrong: #c0453f;
+  --light-correct: #e0f4ea;
+  --light-wrong: #fbe3e1;
+  --font-display: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Red Hat Mono', 'Courier New', monospace;
+}
+
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+  line-height: 1.7;
+  min-height: 100vh;
+  padding-bottom: 60px;
+}
+::selection { background: var(--accent); color: #fff; }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
+
+.masthead { text-align: center; padding: 2.4rem 0 1.6rem; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.9rem; }
+.headline { font-family: var(--font-display); font-weight: 400; line-height: 1.15; margin-bottom: 0.9rem; padding: 0 0.5rem; }
+.deck { font-size: 1.08rem; max-width: 660px; margin: 0 auto 0.9rem; }
+.byline { font-family: var(--font-mono); font-size: 0.78rem; margin-bottom: 1.3rem; }
+.byline a { color: inherit; }
+.factrow { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.6rem 1.1rem; }
+.fact { font-family: var(--font-mono); font-size: 0.8rem; padding: 0.4rem 1rem; font-weight: 500; }
+
+.tabnav { position: sticky; top: 0; z-index: 50; display: flex; }
+.tabbtn {
+  flex: 1; border: none; background: transparent; cursor: pointer;
+  font-family: var(--font-display); font-size: 0.95rem; padding: 0.95rem 0.4rem;
+  transition: background 0.2s, color 0.2s;
+}
+.tabbtn:focus-visible, .opt-btn:focus-visible, .reset-btn:focus-visible, summary:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.panel { display: none; padding: 2.2rem 0 1rem; }
+.panel.active { display: block; animation: fadeIn 0.25s ease; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+.tag { display: inline-block; font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 0.25rem 0.7rem; margin-bottom: 0.8rem; }
+.sectitle { font-family: var(--font-display); font-weight: 400; font-size: 1.8rem; line-height: 1.2; margin-bottom: 0.3rem; }
+.subtitle { margin-bottom: 1.5rem; font-size: 0.95rem; opacity: 0.8; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 1rem; padding: 0.9rem 1.2rem; margin-bottom: 1.8rem; font-size: 0.88rem; }
+.legend-item { display: flex; align-items: center; gap: 0.5rem; }
+.swatch { width: 16px; height: 16px; border-radius: 4px; display: inline-block; border: 1px solid rgba(0,0,0,0.2); }
+
+.excerpt { padding: 1.5rem 1.6rem; margin-bottom: 1.6rem; position: relative; }
+.exlabel { font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; margin-bottom: 0.6rem; display: block; }
+.excerpt p { margin-bottom: 0.9rem; }
+.excerpt p:last-child { margin-bottom: 0; }
+
+.hl { border-radius: 4px; padding: 0.05em 0.2em; cursor: help; font-weight: 600; border-bottom: 2px dotted currentColor; }
+.hl-v { background: var(--highlight-vocab); color: #6b4f06; }
+.hl-i { background: var(--highlight-idiom); color: #174a7c; }
+.hl-e { background: var(--highlight-express); color: #8a3f0e; }
+.hl:focus { outline: 2px solid var(--accent2); outline-offset: 1px; }
+
+#tooltip {
+  position: fixed; display: none; z-index: 999; max-width: 280px; pointer-events: none;
+  background: var(--ink); color: var(--paper); font-family: var(--font-body); font-size: 0.86rem; line-height: 1.4;
+  padding: 0.65rem 0.85rem; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+#tooltip .tip-cat { display: block; font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.25rem; }
+
+.pullquote { font-family: var(--font-display); text-align: center; padding: 1.6rem 1rem; margin: 2rem 0; font-size: 1.5rem; line-height: 1.35; }
+
+.vocab-intro, .exintro { padding: 1rem 1.3rem; margin-bottom: 1.8rem; font-size: 0.95rem; }
+.vgroup-title { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; margin: 1.8rem 0 0.9rem; display: flex; align-items: center; gap: 0.5rem; }
+.vgroup-title .dot { width: 14px; height: 14px; border-radius: 3px; display: inline-block; border: 1px solid rgba(0,0,0,0.2); }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.vcard { padding: 1rem 1.2rem; border-top: 5px solid var(--accent); }
+.vcard.idiom { border-top-color: var(--accent2); }
+.vcard.expr { border-top-color: var(--gold); }
+.vterm { font-family: var(--font-display); font-weight: 700; font-size: 1.1rem; line-height: 1.3; }
+.vpos { font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; margin: 0.15rem 0 0.4rem; opacity: 0.75; }
+.vdef { font-size: 0.94rem; margin-bottom: 0.5rem; }
+.vex { font-size: 0.9rem; font-style: italic; opacity: 0.9; }
+.vsrc { font-family: var(--font-mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.05em; margin-top: 0.6rem; opacity: 0.7; }
+
+.gwhy { padding: 1rem 1.3rem; margin-bottom: 1.6rem; font-size: 0.97rem; }
+.gsub { font-family: var(--font-display); font-weight: 400; font-size: 1.45rem; margin: 1.9rem 0 0.8rem; }
+.formula { font-family: var(--font-mono); font-size: 0.92rem; padding: 1rem 1.3rem; margin-bottom: 1.2rem; text-align: center; letter-spacing: 0.02em; }
+table.gtable { width: 100%; border-collapse: collapse; margin-bottom: 1.4rem; font-size: 0.92rem; }
+table.gtable th { padding: 0.6rem 0.8rem; text-align: left; font-family: var(--font-mono); font-size: 0.74rem; text-transform: uppercase; }
+table.gtable td { padding: 0.65rem 0.8rem; vertical-align: top; }
+table.gtable details { cursor: pointer; }
+table.gtable summary { font-weight: 600; font-family: var(--font-mono); font-size: 0.82rem; }
+
+.exsection-title { font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; margin: 1.8rem 0 1rem; padding-bottom: 0.3rem; }
+.qblock { padding: 1.2rem 1.3rem; margin-bottom: 1.1rem; }
+.qtext { font-weight: 700; margin-bottom: 0.8rem; }
+.opt-btn {
+  display: flex; gap: 0.7rem; align-items: baseline; width: 100%; text-align: left; cursor: pointer;
+  padding: 0.6rem 0.9rem; margin-bottom: 0.5rem; font-family: var(--font-body); font-size: 0.98rem; color: inherit;
+  transition: background 0.15s, border-color 0.15s;
+}
+.opt-letter { font-family: var(--font-mono); font-weight: 700; flex: 0 0 auto; }
+.opt-btn:disabled { cursor: default; color: inherit; }
+.feedback { display: none; margin-top: 0.6rem; padding: 0.7rem 0.9rem; font-size: 0.93rem; }
+.feedback.show { display: block; }
+.fb-icon { font-weight: 800; margin-right: 0.3rem; }
+
+#score-bar { display: none; text-align: center; padding: 1.8rem; margin-top: 2rem; }
+#score-bar.show { display: block; }
+#score-num { font-family: var(--font-display); font-size: 3rem; line-height: 1.1; }
+#score-title { font-family: var(--font-display); font-size: 1.5rem; margin: 0.4rem 0; }
+#score-msg { font-size: 0.96rem; margin-bottom: 1rem; }
+.reset-btn { border: none; cursor: pointer; font-family: var(--font-mono); font-weight: 700; padding: 0.7rem 1.6rem; font-size: 0.9rem; }
+
+@media (max-width: 600px) {
+  body { font-size: 1rem; }
+  .tabbtn { font-size: 0.72rem; padding: 0.75rem 0.15rem; }
+  .vgrid { grid-template-columns: 1fr; }
+  table.gtable { font-size: 0.78rem; }
+  table.gtable th, table.gtable td { padding: 0.5rem 0.5rem; }
+  .excerpt { padding: 1.2rem 1rem; }
+  .pullquote { font-size: 1.25rem; }
+}
+
+
+body { background: var(--paper); background-image: radial-gradient(rgba(58,110,165,0.09) 1px, transparent 1px); background-size: 22px 22px; }
+.mailbar { background: var(--ink); color: #dbe4f7; font-family: var(--font-mono); font-size: 0.72rem; padding: 0.55rem 1.2rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.badge { background: var(--accent2); color: #fff; font-weight: 700; border-radius: 999px; padding: 0.12rem 0.65rem; }
+.masthead { background: linear-gradient(180deg, #fff, var(--paper)); border-bottom: 1px solid var(--rule); }
+.eyebrow { color: var(--accent); font-weight: 500; }
+.headline { font-weight: 800; font-size: clamp(2.2rem, 6vw, 3.6rem); color: var(--ink); letter-spacing: -0.01em; }
+.deck { color: #3b4a68; }
+.byline { color: var(--accent); }
+.fact { background: #fff; border: 2px solid var(--ink); border-radius: 8px; box-shadow: 3px 3px 0 var(--ink); }
+.ladder { list-style: none; display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap; margin: 1.4rem auto 0; padding: 0 1rem; max-width: 820px; }
+.rung { display: flex; align-items: center; gap: 0.45rem; font-size: 0.78rem; font-family: var(--font-mono); padding: 0.35rem 0.8rem; border-radius: 999px; color: #fff; }
+.rung b { background: rgba(255,255,255,0.28); border-radius: 50%; width: 1.4rem; height: 1.4rem; display: inline-flex; align-items: center; justify-content: center; }
+.r1 { background: #2a9d6f; } .r2 { background: #5aa05a; } .r3 { background: #c9971a; } .r4 { background: #dc7a2b; } .r5 { background: #c0453f; }
+.tabnav { background: var(--ink); }
+.tabbtn { color: #b9c6e4; font-weight: 600; border-bottom: 4px solid transparent; }
+.tabbtn:hover { background: rgba(255,255,255,0.08); }
+.tabbtn.active { color: #fff; background: var(--accent); border-bottom-color: var(--gold); }
+.tag { background: var(--accent2); color: #fff; border-radius: 6px; }
+.sectitle { color: var(--ink); font-weight: 800; }
+.legend { background: #fff; border: 2px dashed var(--rule); border-radius: 12px; }
+.excerpt { background: #fff; border: 2px solid var(--ink); border-radius: 14px; box-shadow: 5px 5px 0 var(--cream); }
+.exlabel { color: var(--accent); }
+p.turn { display: flex; gap: 0.8rem; align-items: baseline; }
+.spk { flex: 0 0 5.4rem; text-align: center; font-family: var(--font-mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 700; padding: 0.15rem 0.3rem; border-radius: 6px; color: #fff; align-self: flex-start; margin-top: 0.3rem; }
+.spk-a { background: var(--accent2); } .spk-b { background: var(--accent); } .spk-v { background: var(--gold); color: var(--ink); } .spk-cont { background: transparent; }
+.said { flex: 1; }
+.hl-v { color: #6b4f06; } .hl-i { color: #174a7c; } .hl-e { color: #8a3f0e; }
+.pullquote { background: #fff3b0; color: var(--ink); border: 2px solid var(--ink); border-radius: 4px; transform: rotate(-1deg); box-shadow: 4px 4px 0 var(--ink); font-weight: 600; max-width: 640px; margin-left: auto; margin-right: auto; }
+.pullquote small { display: block; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 400; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.vocab-intro, .exintro { background: #fff; border: 2px solid var(--rule); border-radius: 12px; }
+.vgroup-title { color: var(--ink); font-weight: 700; }
+.vcard { background: #fff; border: 2px solid var(--ink); border-radius: 12px; }
+.vcard.idiom { border-top-color: var(--accent); }
+.vcard.expr { border-top-color: var(--gold); }
+.gsub { color: var(--accent); font-weight: 700; }
+.usegrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+.usecard { background: #fff7c2; border: 2px solid var(--ink); border-radius: 4px; padding: 0.9rem 1.1rem; box-shadow: 4px 4px 0 var(--ink); }
+.usecard:nth-child(even) { background: #ffe0d3; }
+.usecard:nth-child(3n) { background: #d9ecfb; }
+.usehead { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; margin-bottom: 0.4rem; }
+.usecard ul { padding-left: 1.1rem; font-size: 0.93rem; }
+.usecard li { margin-bottom: 0.3rem; }
+table.gtable { border: 2px solid var(--ink); }
+table.gtable th { background: var(--ink); color: #fff; }
+table.gtable td { border-bottom: 1px solid var(--rule); background: #fff; }
+table.gtable tr:nth-child(even) td { background: var(--paper); }
+table.gtable summary { color: var(--accent2); }
+.exsection-title { color: var(--accent); border-bottom: 3px solid var(--accent2); }
+.qblock { background: #fff; border: 2px solid var(--ink); border-radius: 12px; }
+.qblock.answered-correct { border-color: var(--correct); }
+.qblock.answered-wrong { border-color: var(--wrong); }
+.opt-btn { background: var(--paper); border: 2px solid var(--rule); border-radius: 8px; }
+.opt-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--cream); }
+.opt-btn.correct { background: var(--light-correct); border-color: var(--correct); color: #1b4d36; font-weight: 700; }
+.opt-btn.wrong { background: var(--light-wrong); border-color: var(--wrong); color: #7a2b27; font-weight: 700; }
+.opt-btn.reveal-correct { background: var(--light-correct); border-color: var(--correct); font-weight: 700; }
+.feedback { border-radius: 8px; }
+.feedback.correct { background: var(--light-correct); color: #1b4d36; }
+.feedback.wrong { background: var(--light-wrong); color: #7a2b27; }
+#score-bar { background: var(--ink); color: #fff; border-radius: 14px; }
+#score-num { color: var(--gold); }
+#score-msg { color: #b9c6e4; }
+.reset-btn { background: var(--accent2); color: #fff; border-radius: 999px; }
+.reset-btn:hover { background: var(--gold); color: var(--ink); }
+@media (max-width: 600px) { p.turn { flex-direction: column; gap: 0.2rem; } .spk { flex: 0 0 auto; align-self: flex-start; } .spk-cont { display: none; } .rung { font-size: 0.68rem; } }
+
+</style>
+</head>
+<body>
+<div id="tooltip" role="tooltip"></div>
+
+<div class="mailbar"><span>&#9993; Inbox &middot; Office English</span><span>Re: Re: Re: Reminder</span><span>Unread <span class="badge">3</span></span></div>
+<header class="masthead"><div class="wrap">
+  <p class="eyebrow">English Language Class &middot; Business &amp; Work Podcast &middot; A2</p>
+  <h1 class="headline">Chasing People</h1>
+  <p class="deck">What happens when you ask someone to do something at work, and they don’t do it? It can be really frustrating at work when you are waiting for a reply to get the job done. In this episode of Office English, Pippa and Phil talk about how to chase people up, or remind them about a task.</p>
+  <p class="byline">BBC Learning English: Office English</p>
+  <div class="factrow"><span class="fact">&#127911; Podcast</span><span class="fact">&#127919; Level: A2</span><span class="fact">&#128221; Focus: Vocabulary in Use</span></div>
+  <ol class="ladder" aria-label="The reminder ladder from friendly to final"><li class="rung r1"><b>1</b><span>Just wondering</span></li><li class="rung r2"><b>2</b><span>I wanted to remind you</span></li><li class="rung r3"><b>3</b><span>Please could you</span></li><li class="rung r4"><b>4</b><span>Otherwise...</span></li><li class="rung r5"><b>5</b><span>Final reminder</span></li></ol>
+</div></header>
+<nav class="tabnav" aria-label="Lesson sections">
+  <button type="button" class="tabbtn active" data-tab="reading">&#127911; Reading</button>
+  <button type="button" class="tabbtn" data-tab="vocabulary">&#128292; Vocabulary</button>
+  <button type="button" class="tabbtn" data-tab="inuse">&#128161; In Use</button>
+  <button type="button" class="tabbtn" data-tab="exercises">&#9989; Exercises</button>
+</nav>
+<div class="wrap">
+<section id="panel-reading" class="panel active">
+  <span class="tag">Reading</span>
+  <h2 class="sectitle">Chasing People: the Full Transcript</h2>
+  <p class="subtitle">Read the conversation between Pippa and Phil. Hover over, tap, or tab to any highlighted term for its meaning. Look at the ladder above: each rung is a firmer reminder.</p>
+  <div class="legend"><div class="legend-item"><span class="swatch" style="background:var(--highlight-vocab)"></span>Vocabulary</div><div class="legend-item"><span class="swatch" style="background:var(--highlight-idiom)"></span>Idiom / Set Phrase</div><div class="legend-item"><span class="swatch" style="background:var(--highlight-express)"></span>Useful Expression</div></div>
+  <div class="excerpt"><span class="exlabel">Excerpt 1 · Why Do We Chase?</span>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">What happens when you ask someone to do something at work and they haven't done it?</span></p>
+<p class="turn"><span class="spk spk-v">Voicenote clips</span><span class="said">I feel OK about it. And I always start really <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="polite" data-def="Showing good manners and respect for other people.">polite</span>. But, obviously, if someone doesn't reply and then you need it and you have to chase them again and again.</span></p>
+<p class="turn"><span class="spk spk-cont">&nbsp;</span><span class="said">So when I have to <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="chase people up" data-def="To remind people to do something that they have not done yet.">chase people up</span> at work I don't mind because generally it's just something they've forgotten about or they've missed the email. But yeah it can get a bit <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="awkward" data-def="Uncomfortable and a little embarrassing, so you do not know what to say.">awkward</span> if you have to do it <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="over and over again" data-def="Many times, one time after another.">over and over again</span> and you're not sure why.</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">Today on Office English we're talking about how to remind people to do something in a polite and <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="professional" data-def="Serious, correct and respectful in the way you behave at work.">professional</span> way.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Hello. Welcome to Office English from BBC Learning English. I'm Pippa.</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">And I'm Phil. And this is your podcast guide to the language of the world of work.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Today we're talking about how to remind somebody to do something if they haven't <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="respond" data-def="To answer or reply to something that someone has said or sent.">responded</span> to you, or how to chase people up at work.</span></p>
+</div>
+<div class="excerpt"><span class="exlabel">Excerpt 2 · What Does “Chase Up” Mean?</span>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">Yep, as we heard at the start of the programme, we spend a lot of time and energy at work reminding other people to do things. So, Pippa, what do we mean, when we say we need to chase people up at work.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Yeah, so we don't literally mean to chase people. We just mean to go back to them on email or speak to them again to ask them one more time 'can you please do this thing' or 'can you reply to me?' or send whatever you've asked them to do. So it's basically reminding somebody to do something. We use the phrase chase people up.</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">Actually, when you're chasing people up it can be quite important to think about who you're chasing up because we'd probably chase different people in different ways.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Yes, in the UK, where we work, people tend to be very polite and friendly when they first chase someone up. Of course, you've then got the problem that they might not respond again. So you might have to send another reminder and then another reminder. So you might change your language each time. And today we're going to talk about each time you have to remind someone about a task and how you can change your language to convince them to <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="get the job done" data-def="To finish a task that needs to be done.">get the job done</span>.</span></p>
+</div>
+<div class="excerpt"><span class="exlabel">Excerpt 3 · The First Reminder: Polite and Friendly</span>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">So we'll start by talking about the first time we need to remind someone of something. What phrases can we use, Pippa?</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Yes. So if I was sending an email to someone to chase them up or remind them about a task I would probably start by saying <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="just wondering if you saw my last email" data-def="A friendly first reminder that does not sound angry. (Wondering = thinking about it.)">just wondering if you saw my last email</span>. What do you think about that, Phil?</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">Oh, yeah. This is one that I would definitely use a lot. We talked about how in the UK, people aren't always direct and this is perhaps an example of this. It might be I know you've seen the email, I know I sent the email. But just wondering if you'd seen my last email. Cos you're allowing for the possibility that they might not have seen it. Yeah it... It's less direct and it's quite friendly. It's quite a nice way just to remind people that is very clear what you want them to do.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">And then I might continue by saying, <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="have you had a chance to..." data-def="A polite question that shows you understand the person is busy.">have you had a chance to</span>... and then talk about the task I've asked them to do. So that's asking them quite directly, you know, have you had a chance to... look at the report, but I'm asking it politely. I'm showing I understand that they're busy and I might not be the most important person in their day. But have you had a chance to... is a good way to remind somebody about a task that you've asked them to do.</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">And you're accepting the possibility that it might have been difficult for them to do it or difficult to find time. So, yeah in that way you're I guess showing more respect to the person that you're emailing.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Yeah. And a final kind of polite, friendly first reminder thing you can do is you can say something like <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="if you are able to... that would be great" data-def="A soft way to give a deadline. It sounds like a question, not an order.">if you are able to send it by next week that would be great</span>. So there you are giving them a <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="deadline" data-def="The day or time by which something must be finished.">deadline</span>, a clear deadline, of when you would like the task completed by. But it's polite still so you're still giving that impression that you understand their time and you're almost asking them rather than telling them.</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">Of course it can be difficult if someone is chasing you up, depending who they are. If they send something like that which seems quite friendly and quite <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="vague" data-def="Not clear or exact; without details.">vague</span>. If they're an important person, if it's a really important task, they might be using if you're able to... that would be great but they actually mean 'do it by then, <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="or else" data-def="Used to say that something bad will happen if people do not do what you ask.">or else</span>'.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Yes, that's the problem with this friendly, polite way of working that we have in the UK. Sometimes it's difficult to know.</span></p>
+<p class="turn"><span class="spk spk-cont">&nbsp;</span><span class="said">OK, so let's imagine that we've sent that first reminder. We've sent an email off politely reminding somebody to do something, but we still haven't had a response. What do we do next, Phil? How could we change our language slightly?</span></p>
+</div>
+<div class="excerpt"><span class="exlabel">Excerpt 4 · The Second Reminder: Firmer</span>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">OK, well, here's one. You could say <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="I wanted to remind you about..." data-def="A firmer second reminder. It is a statement, not a question.">I wanted to remind you about</span>... and then you'd explain the thing that you're chasing about underneath.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Yeah, I like that. So that's a bit <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="firm" data-def="Strong and clear, with less room to say no. (Firmer = more firm.)">firmer</span>. It's more direct. This time we're not asking somebody, you know, have you had a chance to..., we're saying I wanted to remind you about... so it's a statement rather than a question. We're not asking, we're telling somebody to do something this time.</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">But it's interesting because we still have wanted. We've got it in the past there, which kind of makes it a bit more distant. There's still a little bit of politeness there, but it's a lot firmer than the ones we looked at before.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Yeah, it's definitely politer than saying, 'do this or else' as we said. What's the next phrase, Phil?</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">So: <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="please could you finish this by..." data-def="A polite request with a clear deadline.">please could you finish this by</span>... the end of tomorrow or whatever time.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Yes, that's nice. So it's still a request. We're still not telling them rudely to do something, but we are being very clear now about the deadline: please could you do this by... this time tomorrow then you clearly say that's what needs to happen.</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">Yeah, there's not really any space there for us for something different to happen is there? It's very clear what needs to be done and when. And the next one is <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="otherwise" data-def="Used to say what will happen if the first thing does not happen.">Otherwise</span>... and of course you would use that to introduce the <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="consequences" data-def="The things that happen as a result of an action or a decision.">consequences</span> of something not happening. This is where it starts to get quite serious I think at this point, isn't it?</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Yeah. It might sometimes be right to explain what's going to happen if they don't do the thing. We don't really want to <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="threaten" data-def="To say that you will cause trouble for someone if they do not do something.">threaten</span> somebody at this point, depending on how serious it is that they haven't responded but it might be good to explain the <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="urgency" data-def="The need to act very quickly because something is important.">urgency</span>. So we could say otherwise... we might lose this client. So we are reminding somebody of what might happen if they don't do what we've asked them to do. That's just another way to kind of make it seem more serious and more direct rather than our language we had in our first email that was very friendly, really just asking 'Oh would you mind if you..., if you have the time, please could you help me with this important thing?'</span></p>
+</div>
+<blockquote class="pullquote">&ldquo;You always want to be friendly and polite, but you also want to stay professional at work.&rdquo;<small>Pippa, on tone</small></blockquote>
+<div class="excerpt"><span class="exlabel">Excerpt 5 · Still No Reply? Change the Way You Chase</span>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">Right, Pippa. We've tried all those options and we still haven't heard back. Are there any other phrases we could try?</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Well, this is where it starts to get difficult. So we could just try a different way of communicating with them. So we could <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="pick up the phone" data-def="To call someone instead of writing to them.">pick up the phone</span>. We don't do that very often these days at work, or we certainly don't do that much in our day to day work. But phoning someone or mentioning it at a meeting, going to their desk in the office to say I don't know if you've seen my emails, but I would really like your report by tomorrow.</span></p>
+<p class="turn"><span class="spk spk-cont">&nbsp;</span><span class="said">You can then <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="follow up" data-def="To contact someone again about something you said or sent earlier.">follow up</span> with them on an email, that means just send an email to say I just spoke to you about this.</span></p>
+<p class="turn"><span class="spk spk-cont">&nbsp;</span><span class="said">And then another thing we could do is we could consider <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="escalate" data-def="To pass a problem to a more senior person because you cannot solve it alone.">escalating</span> the problem. Now, escalating is sort of a business term we use to say we are going to involve someone more <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="senior" data-def="Higher in rank or position than other people in an organisation.">senior</span>, so you might <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="copy in" data-def="To send an email to another person at the same time, so that they can read it too.">copy in</span> on an email a manager. That means you send the email also to your manager or their manager. That will really depend on your workplace, what the request is, what the consequences are of them not having done the thing. But it could be useful. If they're not responding to you, maybe they'll respond to your boss.</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">Yeah, it very much depends on the culture of the place you're working, doesn't it? And also how it's done. It might be done in a helpful way to make sure that a problem doesn't get <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="overlook" data-def="To not notice something, or to forget to deal with it.">overlooked</span>. Or sometimes you see people doing it in very <span class="hl hl-v" tabindex="0" data-cat="Vocabulary" data-term="cynical" data-def="Believing that people act only for selfish reasons, and not trusting them.">cynical</span> ways of just adding lots of names into an email which is perhaps slightly different.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">And then the final thing we can do is be clear about when our final email is. OK? When our final reminder is. So I might send an email saying something like <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="this is a final reminder about..." data-def="A clear message that this is the last time you will ask.">this is a final reminder about</span>... or I might use the phrase <span class="hl hl-e" tabindex="0" data-cat="Useful Expression" data-term="this is your last chance..." data-def="A strong phrase for the last email; use it only when it is really true.">this is your last chance</span>... to contribute to the report. What do you think about that, Phil?</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">Yeah. Again, it's very good, cos it's very clear. So it's just a way to make sure everyone knows they know the urgency of the situation, they perhaps know possible consequences.</span></p>
+</div>
+<div class="excerpt"><span class="exlabel">Excerpt 6 · Friendly but Professional</span>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Yeah. And we should say that in some workplace cultures you would probably be that direct in your first reminder. So some places, don't have this strange situation where we have to pretend that we didn't send an email and remind someone did you see my email and all these questions. But certainly in the UK and probably also in the US there is this kind of culture of politeness and informality that means we don't send someone the final reminder straight away if they haven't done something.</span></p>
+<p class="turn"><span class="spk spk-cont">&nbsp;</span><span class="said">So we've learned some phrases to try and persuade people to reply and get the job done. So let's hear again from our BBC Learning English colleagues.</span></p>
+<p class="turn"><span class="spk spk-v">Voicenote clips</span><span class="said">OK, so when I have to chase people up at work. I don't mind because generally it's just something they've forgotten about all they've missed the email. But it can get a bit awkward if you have to do it over and over again and you're not sure why.</span></p>
+<p class="turn"><span class="spk spk-cont">&nbsp;</span><span class="said">Sometimes it's more difficult to chase somebody up that you work with on a regular basis. It's a bit difficult with that difference between being friendly and being business-y because you actually need something.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">So, Phil, Beth was talking there about the balance between being friendly and being businessy, or professional. What do you think about that when it comes to chasing people up?</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">It does make it harder, doesn't it? It means you can't... it's a lot harder to break out the final reminder language, or to use that.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">But, yeah that's why I think, in general, we've talked a lot in this series about having the balance between being friendly and polite and professional. So you always want to be friendly and polite, but you also want to stay professional at work.</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">It's certainly very frustrating when people don't <span class="hl hl-i" tabindex="0" data-cat="Idiom / Set Phrase" data-term="get back to someone" data-def="To reply to someone, usually after you have checked something.">get back to you</span>. Especially when you need their response to get on with your work. But hopefully the phrases we've discussed today will help you remain professional when you chase your colleagues or clients.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">That's it for this episode of Office English. Remember, you can find courses and activities to help with your English at work on our website bbclearningenglish.com.</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">Next time, we're talking about phone calls, instant messages and video calls, and the language we need to communicate well at work.</span></p>
+<p class="turn"><span class="spk spk-a">Pippa</span><span class="said">Until then, Bye!</span></p>
+<p class="turn"><span class="spk spk-b">Phil</span><span class="said">Bye!</span></p>
+</div>
+</section>
+<section id="panel-vocabulary" class="panel">
+  <span class="tag">Vocabulary</span>
+  <h2 class="sectitle">Words and Phrases from the Episode</h2>
+  <div class="vocab-intro">Every highlighted term from the transcript is here, with a simple meaning and a new example.</div>
+  <h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-vocab)"></span>Vocabulary</h3><div class="vgrid">
+<div class="vcard"><div class="vterm">respond</div><div class="vpos">verb</div><div class="vdef">To answer or reply to something that someone has said or sent.</div><div class="vex">I sent two emails, but nobody <strong>responded</strong>.</div></div>
+<div class="vcard"><div class="vterm">awkward</div><div class="vpos">adjective</div><div class="vdef">Uncomfortable and a little embarrassing, so you do not know what to say.</div><div class="vex">It feels <strong>awkward</strong> to ask the same person again and again.</div></div>
+<div class="vcard"><div class="vterm">polite</div><div class="vpos">adjective</div><div class="vdef">Showing good manners and respect for other people.</div><div class="vex">A <strong>polite</strong> email starts with a friendly greeting.</div></div>
+<div class="vcard"><div class="vterm">professional</div><div class="vpos">adjective</div><div class="vdef">Serious, correct and respectful in the way you behave at work.</div><div class="vex">Keep your tone <strong>professional</strong>, even when you feel angry.</div></div>
+<div class="vcard"><div class="vterm">deadline</div><div class="vpos">noun</div><div class="vdef">The day or time by which something must be finished.</div><div class="vex">The <strong>deadline</strong> for the report is Friday at five.</div></div>
+<div class="vcard"><div class="vterm">vague</div><div class="vpos">adjective</div><div class="vdef">Not clear or exact; without details.</div><div class="vex">His message was <strong>vague</strong>, so I did not know what to do.</div></div>
+<div class="vcard"><div class="vterm">firm</div><div class="vpos">adjective</div><div class="vdef">Strong and clear, with less room to say no. (Firmer = more firm.)</div><div class="vex">My second email was <strong>firmer</strong> than my first one.</div></div>
+<div class="vcard"><div class="vterm">urgency</div><div class="vpos">noun</div><div class="vdef">The need to act very quickly because something is important.</div><div class="vex">The red subject line shows the <strong>urgency</strong> of the problem.</div></div>
+<div class="vcard"><div class="vterm">consequences</div><div class="vpos">noun</div><div class="vdef">The things that happen as a result of an action or a decision.</div><div class="vex">There will be serious <strong>consequences</strong> if we miss the date.</div></div>
+<div class="vcard"><div class="vterm">threaten</div><div class="vpos">verb</div><div class="vdef">To say that you will cause trouble for someone if they do not do something.</div><div class="vex">Never <strong>threaten</strong> a colleague in an email.</div></div>
+<div class="vcard"><div class="vterm">senior</div><div class="vpos">adjective</div><div class="vdef">Higher in rank or position than other people in an organisation.</div><div class="vex">A <strong>senior</strong> manager must agree before we can start.</div></div>
+<div class="vcard"><div class="vterm">escalate</div><div class="vpos">verb</div><div class="vdef">To pass a problem to a more senior person because you cannot solve it alone.</div><div class="vex">If nobody answers, we will <strong>escalate</strong> the problem.</div></div>
+<div class="vcard"><div class="vterm">overlook</div><div class="vpos">verb</div><div class="vdef">To not notice something, or to forget to deal with it.</div><div class="vex">A small mistake can easily be <strong>overlooked</strong>.</div></div>
+<div class="vcard"><div class="vterm">cynical</div><div class="vpos">adjective</div><div class="vdef">Believing that people act only for selfish reasons, and not trusting them.</div><div class="vex">Adding ten names to an email can look <strong>cynical</strong>.</div></div>
+</div><h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-idiom)"></span>Idioms &amp; Set Phrases</h3><div class="vgrid">
+<div class="vcard idiom"><div class="vterm">chase people up</div><div class="vpos">phrasal verb</div><div class="vdef">To remind people to do something that they have not done yet.</div><div class="vex">I have to <strong>chase people up</strong> when the forms are late.</div></div>
+<div class="vcard idiom"><div class="vterm">over and over again</div><div class="vpos">set phrase</div><div class="vdef">Many times, one time after another.</div><div class="vex">I had to ask <strong>over and over again</strong> before he answered.</div></div>
+<div class="vcard idiom"><div class="vterm">get the job done</div><div class="vpos">set phrase</div><div class="vdef">To finish a task that needs to be done.</div><div class="vex">We need everyone’s help to <strong>get the job done</strong> on time.</div></div>
+<div class="vcard idiom"><div class="vterm">pick up the phone</div><div class="vpos">idiom</div><div class="vdef">To call someone instead of writing to them.</div><div class="vex">When emails fail, <strong>pick up the phone</strong> and talk.</div></div>
+<div class="vcard idiom"><div class="vterm">follow up</div><div class="vpos">phrasal verb</div><div class="vdef">To contact someone again about something you said or sent earlier.</div><div class="vex">I will <strong>follow up</strong> with a short email after the call.</div></div>
+<div class="vcard idiom"><div class="vterm">copy in</div><div class="vpos">phrasal verb</div><div class="vdef">To send an email to another person at the same time, so that they can read it too.</div><div class="vex">Please <strong>copy in</strong> my manager on your answer.</div></div>
+<div class="vcard idiom"><div class="vterm">or else</div><div class="vpos">set phrase</div><div class="vdef">Used to say that something bad will happen if people do not do what you ask.</div><div class="vex">Finish it by noon, <strong>or else</strong> we lose the client.</div></div>
+<div class="vcard idiom"><div class="vterm">get back to someone</div><div class="vpos">phrasal verb</div><div class="vdef">To reply to someone, usually after you have checked something.</div><div class="vex">Thanks for your message. I will <strong>get back to you</strong> tomorrow.</div></div>
+</div><h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-express)"></span>Useful Expressions</h3><div class="vgrid">
+<div class="vcard expr"><div class="vterm">just wondering if you saw my last email</div><div class="vpos">email phrase</div><div class="vdef">A friendly first reminder that does not sound angry. (Wondering = thinking about it.)</div><div class="vex"><strong>Just wondering if you saw my last email</strong> about Monday’s meeting.</div></div>
+<div class="vcard expr"><div class="vterm">have you had a chance to...</div><div class="vpos">email phrase</div><div class="vdef">A polite question that shows you understand the person is busy.</div><div class="vex"><strong>Have you had a chance to</strong> look at the report yet?</div></div>
+<div class="vcard expr"><div class="vterm">if you are able to... that would be great</div><div class="vpos">email phrase</div><div class="vdef">A soft way to give a deadline. It sounds like a question, not an order.</div><div class="vex"><strong>If you are able to</strong> send the photos by Friday, <strong>that would be great</strong>.</div></div>
+<div class="vcard expr"><div class="vterm">I wanted to remind you about...</div><div class="vpos">email phrase</div><div class="vdef">A firmer second reminder. It is a statement, not a question.</div><div class="vex"><strong>I wanted to remind you about</strong> the form for the new project.</div></div>
+<div class="vcard expr"><div class="vterm">please could you finish this by...</div><div class="vpos">email phrase</div><div class="vdef">A polite request with a clear deadline.</div><div class="vex"><strong>Please could you finish this by</strong> four o’clock today?</div></div>
+<div class="vcard expr"><div class="vterm">otherwise</div><div class="vpos">linking word</div><div class="vdef">Used to say what will happen if the first thing does not happen.</div><div class="vex">Please sign today. <strong>Otherwise</strong>, we cannot start on Monday.</div></div>
+<div class="vcard expr"><div class="vterm">this is a final reminder about...</div><div class="vpos">email phrase</div><div class="vdef">A clear message that this is the last time you will ask.</div><div class="vex"><strong>This is a final reminder about</strong> the invoice for March.</div></div>
+<div class="vcard expr"><div class="vterm">this is your last chance...</div><div class="vpos">email phrase</div><div class="vdef">A strong phrase for the last email; use it only when it is really true.</div><div class="vex"><strong>This is your last chance</strong> to send us your ideas.</div></div>
+</div>
+</section>
+<section id="panel-inuse" class="panel">
+  
+<span class="tag">Vocabulary in Use</span>
+<h2 class="sectitle">See the Language in New Situations</h2>
+<p class="subtitle">Here are ten key terms from the episode in new sentences. None of these sentences are in the transcript.</p>
+<h3 class="gsub">01 &middot; New Examples</h3>
+<div class="usegrid"><div class="usecard"><div class="usehead">chase people up</div><ul><li>I chase people up when a report is late.</li><li>Ana chased up the supplier on Monday morning.</li><li>Do not chase people up too fast. Give them two days.</li></ul></div><div class="usecard"><div class="usehead">deadline</div><ul><li>The deadline for the form is Friday at five.</li><li>We missed the deadline because the file was late.</li><li>Can you give me a clear deadline?</li></ul></div><div class="usecard"><div class="usehead">vague</div><ul><li>His answer was vague, so I asked again.</li><li>A vague email does not tell me what to do.</li><li>Please do not be vague. Say the day and the time.</li></ul></div><div class="usecard"><div class="usehead">urgency</div><ul><li>The red subject line shows the urgency.</li><li>I did not understand the urgency until the client called.</li></ul></div><div class="usecard"><div class="usehead">consequences</div><ul><li>There may be serious consequences if we miss the date.</li><li>He explained the consequences of a late payment.</li></ul></div><div class="usecard"><div class="usehead">escalate</div><ul><li>If nobody answers, we will escalate the problem to the director.</li><li>Do not escalate too early. Try a friendly email first.</li></ul></div><div class="usecard"><div class="usehead">follow up</div><ul><li>I will follow up with a phone call tomorrow.</li><li>Please follow up with the client this week.</li><li>She sent a follow-up email after the meeting.</li></ul></div><div class="usecard"><div class="usehead">copy in</div><ul><li>I copied in my manager on the email.</li><li>Please copy in Sam so that he can see this.</li></ul></div><div class="usecard"><div class="usehead">otherwise</div><ul><li>Please sign today. Otherwise, we cannot start.</li><li>Send the photos now. Otherwise, the poster will be late.</li></ul></div><div class="usecard"><div class="usehead">have you had a chance to</div><ul><li>Have you had a chance to read the contract?</li><li>Have you had a chance to check the numbers yet?</li></ul></div></div>
+<h3 class="gsub">02 &middot; Practice</h3>
+<p class="subtitle">Read each task and try to answer it. Then press &ldquo;Show answer&rdquo; to check.</p>
+<table class="gtable"><tr><th>Task</th><th>Answer</th></tr>
+<tr><td>Choose the better word: “Please send the file by Friday at 5 p.m. This is a clear (deadline / urgency).”</td><td><details><summary>Show answer</summary><strong>deadline</strong> (it is the time by which the file must be sent).</details></td></tr>
+<tr><td>Make this firmer. Start with “I wanted to...”: “Have you had a chance to send the form?”</td><td><details><summary>Show answer</summary>“<strong>I wanted to remind you about</strong> the form.” (A statement is firmer than a question.)</details></td></tr>
+<tr><td>Complete the sentence: “Please call the client today. ______, we may lose the order.”</td><td><details><summary>Show answer</summary><strong>Otherwise</strong>, we may lose the order.</details></td></tr>
+<tr><td>You send a short email after a meeting to say what you talked about. What kind of email is this?</td><td><details><summary>Show answer</summary>A <strong>follow-up</strong> email (you follow up on the meeting).</details></td></tr>
+<tr><td>Your email says “Send it soon, if you can.” Why is this vague, and how can you fix it?</td><td><details><summary>Show answer</summary>“Soon” is not a clear time. Fix it: “<strong>Please could you send it by Thursday at noon?</strong>”</details></td></tr>
+</table>
+<h3 class="gsub">03 &middot; Quick Reference</h3>
+<table class="gtable"><tr><th>Term</th><th>Meaning</th><th>Use it when...</th></tr><tr><td><strong>chase people up</strong></td><td>remind people to do something</td><td>Nobody has answered your email.</td></tr><tr><td><strong>deadline</strong></td><td>the time something must be finished</td><td>You ask for a file.</td></tr><tr><td><strong>vague</strong></td><td>not clear or exact</td><td>You check an unclear message.</td></tr><tr><td><strong>urgency</strong></td><td>the need to act very fast</td><td>A problem is important today.</td></tr><tr><td><strong>consequences</strong></td><td>results of an action</td><td>You explain what happens if no one acts.</td></tr><tr><td><strong>escalate</strong></td><td>pass a problem to someone more senior</td><td>You have tried everything.</td></tr><tr><td><strong>follow up</strong></td><td>contact someone again</td><td>After a call or a meeting.</td></tr><tr><td><strong>copy in</strong></td><td>send an email to another person too</td><td>A manager should see the message.</td></tr><tr><td><strong>otherwise</strong></td><td>if not, then...</td><td>You explain what will happen.</td></tr><tr><td><strong>have you had a chance to...</strong></td><td>a polite first reminder</td><td>You do not want to sound angry.</td></tr></table>
+
+</section>
+<section id="panel-exercises" class="panel">
+  <span class="tag">Exercises</span>
+  <h2 class="sectitle">Test Yourself</h2>
+  <div class="exintro">15 questions in two sections. Click an answer for instant feedback: every option, right or wrong, comes with an explanation.</div>
+  <h3 class="exsection-title">A · Reading Comprehension</h3>
+<div class="qblock" id="qA1">
+<p class="qtext">1. What do Pippa and Phil talk about in this episode?</p>
+<button type="button" class="opt-btn" data-q="qA1" data-letter="A" data-correct="false" data-expl="Report writing is not the topic of the episode."><span class="opt-letter">A</span><span class="opt-text">How to write a report for a manager</span></button>
+<button type="button" class="opt-btn" data-q="qA1" data-letter="B" data-correct="false" data-expl="Starting a new job is not the topic of the episode."><span class="opt-letter">B</span><span class="opt-text">How to start a new job at a company</span></button>
+<button type="button" class="opt-btn" data-q="qA1" data-letter="C" data-correct="true" data-expl="Correct: they talk about how to chase people up politely at work."><span class="opt-letter">C</span><span class="opt-text">How to remind people to do a task</span></button>
+<button type="button" class="opt-btn" data-q="qA1" data-letter="D" data-correct="false" data-expl="Meetings are only mentioned as one way to chase someone."><span class="opt-letter">D</span><span class="opt-text">How to run a team meeting well</span></button>
+<div class="feedback" id="fb-qA1" role="status"></div>
+</div>
+<div class="qblock" id="qA2">
+<p class="qtext">2. What does “chase people up” mean?</p>
+<button type="button" class="opt-btn" data-q="qA2" data-letter="A" data-correct="true" data-expl="Correct: Pippa says it means to remind somebody to do something."><span class="opt-letter">A</span><span class="opt-text">Remind people about an unfinished task</span></button>
+<button type="button" class="opt-btn" data-q="qA2" data-letter="B" data-correct="false" data-expl="Pippa says that we do not literally chase people."><span class="opt-letter">B</span><span class="opt-text">Run after people in the office building</span></button>
+<button type="button" class="opt-btn" data-q="qA2" data-letter="C" data-correct="false" data-expl="The phrase is not about meetings or leaving early."><span class="opt-letter">C</span><span class="opt-text">Ask people to leave a meeting early</span></button>
+<button type="button" class="opt-btn" data-q="qA2" data-letter="D" data-correct="false" data-expl="Chasing is about tasks that are not finished, not thanking people."><span class="opt-letter">D</span><span class="opt-text">Thank people for finishing their work</span></button>
+<div class="feedback" id="fb-qA2" role="status"></div>
+</div>
+<div class="qblock" id="qA3">
+<p class="qtext">3. In the UK, how do people usually write a first reminder?</p>
+<button type="button" class="opt-btn" data-q="qA3" data-letter="A" data-correct="false" data-expl="The first reminder is friendly, not angry."><span class="opt-letter">A</span><span class="opt-text">In a very short and angry way</span></button>
+<button type="button" class="opt-btn" data-q="qA3" data-letter="B" data-correct="false" data-expl="A final warning comes much later, not first."><span class="opt-letter">B</span><span class="opt-text">With a clear final warning</span></button>
+<button type="button" class="opt-btn" data-q="qA3" data-letter="C" data-correct="false" data-expl="Email is the first way they use; phone calls come later."><span class="opt-letter">C</span><span class="opt-text">By phone, never by email</span></button>
+<button type="button" class="opt-btn" data-q="qA3" data-letter="D" data-correct="true" data-expl="Correct: Pippa says people in the UK tend to be very polite and friendly at first."><span class="opt-letter">D</span><span class="opt-text">In a polite and friendly way</span></button>
+<div class="feedback" id="fb-qA3" role="status"></div>
+</div>
+<div class="qblock" id="qA4">
+<p class="qtext">4. Why can “if you are able to... that would be great” be difficult?</p>
+<button type="button" class="opt-btn" data-q="qA4" data-letter="A" data-correct="false" data-expl="Length is not the problem Phil describes."><span class="opt-letter">A</span><span class="opt-text">The words are too long to read quickly</span></button>
+<button type="button" class="opt-btn" data-q="qA4" data-letter="B" data-correct="true" data-expl="Correct: Phil says that an important person may use this friendly phrase but really mean “do it by then, or else”."><span class="opt-letter">B</span><span class="opt-text">The writer may mean “do it, or else”</span></button>
+<button type="button" class="opt-btn" data-q="qA4" data-letter="C" data-correct="false" data-expl="Anyone can use this phrase; it is not only for managers."><span class="opt-letter">C</span><span class="opt-text">The phrase is only used with managers</span></button>
+<button type="button" class="opt-btn" data-q="qA4" data-letter="D" data-correct="false" data-expl="The phrase does give a deadline: by next week."><span class="opt-letter">D</span><span class="opt-text">It gives no day or time for the task</span></button>
+<div class="feedback" id="fb-qA4" role="status"></div>
+</div>
+<div class="qblock" id="qA5">
+<p class="qtext">5. How is “I wanted to remind you about...” different from “have you had a chance to...”?</p>
+<button type="button" class="opt-btn" data-q="qA5" data-letter="A" data-correct="false" data-expl="The firmer phrase is the statement, not the question."><span class="opt-letter">A</span><span class="opt-text">It is a question, so it is softer</span></button>
+<button type="button" class="opt-btn" data-q="qA5" data-letter="B" data-correct="false" data-expl="Length does not make a phrase more polite."><span class="opt-letter">B</span><span class="opt-text">It is longer, so it is more polite</span></button>
+<button type="button" class="opt-btn" data-q="qA5" data-letter="C" data-correct="true" data-expl="Correct: Pippa says it is a statement, not a question, so it is firmer and more direct."><span class="opt-letter">C</span><span class="opt-text">It is a statement, so it is firmer</span></button>
+<button type="button" class="opt-btn" data-q="qA5" data-letter="D" data-correct="false" data-expl="Both phrases are used in emails, not only in meetings."><span class="opt-letter">D</span><span class="opt-text">It is only for use in meetings</span></button>
+<div class="feedback" id="fb-qA5" role="status"></div>
+</div>
+<div class="qblock" id="qA6">
+<p class="qtext">6. What can you do if emails do not get an answer?</p>
+<button type="button" class="opt-btn" data-q="qA6" data-letter="A" data-correct="true" data-expl="Correct: Pippa says you can pick up the phone or go to their desk and then follow up by email."><span class="opt-letter">A</span><span class="opt-text">Phone them or go to their desk</span></button>
+<button type="button" class="opt-btn" data-q="qA6" data-letter="B" data-correct="false" data-expl="Deleting emails does not solve the problem."><span class="opt-letter">B</span><span class="opt-text">Delete the old emails from the list</span></button>
+<button type="button" class="opt-btn" data-q="qA6" data-letter="C" data-correct="false" data-expl="Waiting a year is not suggested in the episode."><span class="opt-letter">C</span><span class="opt-text">Wait for one more year to pass</span></button>
+<button type="button" class="opt-btn" data-q="qA6" data-letter="D" data-correct="false" data-expl="A client is not the person who should reply for them."><span class="opt-letter">D</span><span class="opt-text">Ask a client to write the reply</span></button>
+<div class="feedback" id="fb-qA6" role="status"></div>
+</div>
+<div class="qblock" id="qA7">
+<p class="qtext">7. Why is a final reminder useful?</p>
+<button type="button" class="opt-btn" data-q="qA7" data-letter="A" data-correct="false" data-expl="A final reminder should help people remember, not forget."><span class="opt-letter">A</span><span class="opt-text">It helps people forget the task</span></button>
+<button type="button" class="opt-btn" data-q="qA7" data-letter="B" data-correct="true" data-expl="Correct: Phil says it makes the urgency and the consequences very clear."><span class="opt-letter">B</span><span class="opt-text">It shows the task is urgent</span></button>
+<button type="button" class="opt-btn" data-q="qA7" data-letter="C" data-correct="false" data-expl="A day off for the manager is not mentioned."><span class="opt-letter">C</span><span class="opt-text">It gives the manager a day off</span></button>
+<button type="button" class="opt-btn" data-q="qA7" data-letter="D" data-correct="false" data-expl="It is a new email, not a change to the first one."><span class="opt-letter">D</span><span class="opt-text">It makes the first email longer</span></button>
+<div class="feedback" id="fb-qA7" role="status"></div>
+</div>
+<h3 class="exsection-title">B · Vocabulary in Context</h3>
+<div class="qblock" id="qB1">
+<p class="qtext">8. A “deadline” is:</p>
+<button type="button" class="opt-btn" data-q="qB1" data-letter="A" data-correct="false" data-expl="A meeting is not a deadline."><span class="opt-letter">A</span><span class="opt-text">a long meeting about a project.</span></button>
+<button type="button" class="opt-btn" data-q="qB1" data-letter="B" data-correct="false" data-expl="A deadline is a time, not a person."><span class="opt-letter">B</span><span class="opt-text">a person who answers late emails.</span></button>
+<button type="button" class="opt-btn" data-q="qB1" data-letter="C" data-correct="false" data-expl="A list of tasks is not the same as a time limit."><span class="opt-letter">C</span><span class="opt-text">a list of tasks for next year.</span></button>
+<button type="button" class="opt-btn" data-q="qB1" data-letter="D" data-correct="true" data-expl="Correct: a deadline is the day or time something must be finished."><span class="opt-letter">D</span><span class="opt-text">the last time to finish a task.</span></button>
+<div class="feedback" id="fb-qB1" role="status"></div>
+</div>
+<div class="qblock" id="qB2">
+<p class="qtext">9. If a message is “vague”, it is:</p>
+<button type="button" class="opt-btn" data-q="qB2" data-letter="A" data-correct="false" data-expl="Vague is about clarity, not length."><span class="opt-letter">A</span><span class="opt-text">very long and has many pages.</span></button>
+<button type="button" class="opt-btn" data-q="qB2" data-letter="B" data-correct="false" data-expl="Vague is about clarity, not about the mood."><span class="opt-letter">B</span><span class="opt-text">friendly and full of good news.</span></button>
+<button type="button" class="opt-btn" data-q="qB2" data-letter="C" data-correct="true" data-expl="Correct: vague means not clear or exact."><span class="opt-letter">C</span><span class="opt-text">not clear and has few details.</span></button>
+<button type="button" class="opt-btn" data-q="qB2" data-letter="D" data-correct="false" data-expl="Vague does not mean angry."><span class="opt-letter">D</span><span class="opt-text">angry and written in capital letters.</span></button>
+<div class="feedback" id="fb-qB2" role="status"></div>
+</div>
+<div class="qblock" id="qB3">
+<p class="qtext">10. “Urgency” means:</p>
+<button type="button" class="opt-btn" data-q="qB3" data-letter="A" data-correct="true" data-expl="Correct: urgency is the need to act quickly because something is important."><span class="opt-letter">A</span><span class="opt-text">the need to act very fast.</span></button>
+<button type="button" class="opt-btn" data-q="qB3" data-letter="B" data-correct="false" data-expl="A holiday has nothing to do with urgency."><span class="opt-letter">B</span><span class="opt-text">the wish to take a long holiday.</span></button>
+<button type="button" class="opt-btn" data-q="qB3" data-letter="C" data-correct="false" data-expl="Arriving late is a habit, not urgency."><span class="opt-letter">C</span><span class="opt-text">the habit of arriving late.</span></button>
+<button type="button" class="opt-btn" data-q="qB3" data-letter="D" data-correct="false" data-expl="Cost is a different idea from speed."><span class="opt-letter">D</span><span class="opt-text">the cost of a new project.</span></button>
+<div class="feedback" id="fb-qB3" role="status"></div>
+</div>
+<div class="qblock" id="qB4">
+<p class="qtext">11. “If you miss the deadline, there will be consequences.” Here, “consequences” means:</p>
+<button type="button" class="opt-btn" data-q="qB4" data-letter="A" data-correct="false" data-expl="Rewards are good results; the sentence warns about bad results."><span class="opt-letter">A</span><span class="opt-text">rewards for good work.</span></button>
+<button type="button" class="opt-btn" data-q="qB4" data-letter="B" data-correct="true" data-expl="Correct: consequences are the results of an action, often bad ones."><span class="opt-letter">B</span><span class="opt-text">results of what you did.</span></button>
+<button type="button" class="opt-btn" data-q="qB4" data-letter="C" data-correct="false" data-expl="Reasons for a meeting are not results of missing a deadline."><span class="opt-letter">C</span><span class="opt-text">reasons for a meeting.</span></button>
+<button type="button" class="opt-btn" data-q="qB4" data-letter="D" data-correct="false" data-expl="Rules are not results of missing a deadline."><span class="opt-letter">D</span><span class="opt-text">rules for a new office.</span></button>
+<div class="feedback" id="fb-qB4" role="status"></div>
+</div>
+<div class="qblock" id="qB5">
+<p class="qtext">12. What does “copy in a manager” mean?</p>
+<button type="button" class="opt-btn" data-q="qB5" data-letter="A" data-correct="false" data-expl="Printing for the manager only is not copying in."><span class="opt-letter">A</span><span class="opt-text">Print the email for the manager only.</span></button>
+<button type="button" class="opt-btn" data-q="qB5" data-letter="B" data-correct="false" data-expl="You never write in another person’s name."><span class="opt-letter">B</span><span class="opt-text">Write a new email in the manager’s name.</span></button>
+<button type="button" class="opt-btn" data-q="qB5" data-letter="C" data-correct="false" data-expl="Copying in means the manager reads it, not writes the reply."><span class="opt-letter">C</span><span class="opt-text">Ask the manager to write the reply.</span></button>
+<button type="button" class="opt-btn" data-q="qB5" data-letter="D" data-correct="true" data-expl="Correct: you send the same email to the manager as well."><span class="opt-letter">D</span><span class="opt-text">Send the email to the manager too.</span></button>
+<div class="feedback" id="fb-qB5" role="status"></div>
+</div>
+<div class="qblock" id="qB6">
+<p class="qtext">13. “Pick up the phone” means:</p>
+<button type="button" class="opt-btn" data-q="qB6" data-letter="A" data-correct="true" data-expl="Correct: in the episode it means to call the person instead of writing an email."><span class="opt-letter">A</span><span class="opt-text">call someone instead of writing.</span></button>
+<button type="button" class="opt-btn" data-q="qB6" data-letter="B" data-correct="false" data-expl="The idiom is not about the floor."><span class="opt-letter">B</span><span class="opt-text">lift a ringing phone off the floor.</span></button>
+<button type="button" class="opt-btn" data-q="qB6" data-letter="C" data-correct="false" data-expl="The idiom is not about buying a phone."><span class="opt-letter">C</span><span class="opt-text">buy a new phone for work.</span></button>
+<button type="button" class="opt-btn" data-q="qB6" data-letter="D" data-correct="false" data-expl="The idiom is not about turning the phone off."><span class="opt-letter">D</span><span class="opt-text">turn off the phone at night.</span></button>
+<div class="feedback" id="fb-qB6" role="status"></div>
+</div>
+<div class="qblock" id="qB7">
+<p class="qtext">14. Which sentence uses “otherwise” correctly?</p>
+<button type="button" class="opt-btn" data-q="qB7" data-letter="A" data-correct="false" data-expl="The second part does not say what happens if you do not send it."><span class="opt-letter">A</span><span class="opt-text">Send the file today otherwise we were happy.</span></button>
+<button type="button" class="opt-btn" data-q="qB7" data-letter="B" data-correct="false" data-expl="The word order is wrong in this sentence."><span class="opt-letter">B</span><span class="opt-text">Otherwise the file, please send it today.</span></button>
+<button type="button" class="opt-btn" data-q="qB7" data-letter="C" data-correct="true" data-expl="Correct: otherwise introduces what will happen if the first thing does not happen."><span class="opt-letter">C</span><span class="opt-text">Send it today. Otherwise, we will be late.</span></button>
+<button type="button" class="opt-btn" data-q="qB7" data-letter="D" data-correct="false" data-expl="Otherwise must link two ideas that make sense together."><span class="opt-letter">D</span><span class="opt-text">I like the file. Otherwise, send it the day.</span></button>
+<div class="feedback" id="fb-qB7" role="status"></div>
+</div>
+<div class="qblock" id="qB8">
+<p class="qtext">15. You send an email after a call to remind a client of the plan. You:</p>
+<button type="button" class="opt-btn" data-q="qB8" data-letter="A" data-correct="false" data-expl="The phrase is follow up, not follow down."><span class="opt-letter">A</span><span class="opt-text">follow down the client.</span></button>
+<button type="button" class="opt-btn" data-q="qB8" data-letter="B" data-correct="true" data-expl="Correct: to follow up means to contact someone again about something earlier."><span class="opt-letter">B</span><span class="opt-text">follow up with the client.</span></button>
+<button type="button" class="opt-btn" data-q="qB8" data-letter="C" data-correct="false" data-expl="Escalate means to pass a problem to a senior person."><span class="opt-letter">C</span><span class="opt-text">escalate the client’s lunch.</span></button>
+<button type="button" class="opt-btn" data-q="qB8" data-letter="D" data-correct="false" data-expl="The phrase is copy in, not copy out."><span class="opt-letter">D</span><span class="opt-text">copy out the client.</span></button>
+<div class="feedback" id="fb-qB8" role="status"></div>
+</div>
+  <div id="score-bar"><div id="score-num">0/0</div><div id="score-title"></div><div id="score-msg"></div><button type="button" class="reset-btn" id="reset-btn">Try Again</button></div>
+</section>
+</div>
+
+<script>
+
+(function () {
+  var tabs = document.querySelectorAll(".tabbtn");
+  var panels = document.querySelectorAll(".panel");
+  function showTab(id) {
+    panels.forEach(function (p) { p.classList.toggle("active", p.id === "panel-" + id); });
+    tabs.forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-tab") === id); });
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  tabs.forEach(function (b) {
+    b.addEventListener("click", function () { showTab(b.getAttribute("data-tab")); });
+  });
+
+  var tip = document.getElementById("tooltip");
+  function showTip(el) {
+    tip.innerHTML = "";
+    var cat = document.createElement("span");
+    cat.className = "tip-cat";
+    cat.textContent = el.getAttribute("data-cat") + " · " + el.getAttribute("data-term");
+    tip.appendChild(cat);
+    tip.appendChild(document.createTextNode(el.getAttribute("data-def")));
+    tip.style.display = "block";
+    var r = el.getBoundingClientRect();
+    var top = r.top - tip.offsetHeight - 10;
+    if (top < 8) { top = r.bottom + 10; }
+    var left = r.left + r.width / 2 - tip.offsetWidth / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tip.offsetWidth - 8));
+    tip.style.top = top + "px";
+    tip.style.left = left + "px";
+  }
+  function hideTip() { tip.style.display = "none"; }
+  document.querySelectorAll(".hl").forEach(function (el) {
+    el.addEventListener("mouseenter", function () { showTip(el); });
+    el.addEventListener("mouseleave", hideTip);
+    el.addEventListener("focus", function () { showTip(el); });
+    el.addEventListener("blur", hideTip);
+    el.addEventListener("click", function (e) { e.stopPropagation(); showTip(el); });
+  });
+  document.addEventListener("click", hideTip);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { hideTip(); } });
+  window.addEventListener("scroll", hideTip, { passive: true });
+
+  var TIERS = [{"min": 14, "title": "Polite and Professional", "msg": "Excellent. You can chase people up with confidence."}, {"min": 11, "title": "Nearly There", "msg": "Strong result. Check the Vocabulary in Use tab for the ones you missed."}, {"min": 7, "title": "Getting a Reply", "msg": "Good start. Read the transcript again and try once more."}, {"min": 0, "title": "Back to the Inbox", "msg": "Go back to the Reading and Vocabulary tabs, then try again."}];
+  var TOTAL = document.querySelectorAll(".qblock").length;
+  var answered = {};
+  var correct = {};
+
+  function showScore() {
+    var score = Object.keys(correct).filter(function (k) { return correct[k]; }).length;
+    var tier = TIERS[TIERS.length - 1];
+    for (var i = 0; i < TIERS.length; i++) {
+      if (score >= TIERS[i].min) { tier = TIERS[i]; break; }
+    }
+    document.getElementById("score-num").textContent = score + "/" + TOTAL;
+    document.getElementById("score-title").textContent = tier.title;
+    document.getElementById("score-msg").textContent = tier.msg;
+    document.getElementById("score-bar").classList.add("show");
+  }
+
+  document.querySelectorAll(".opt-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var qId = btn.getAttribute("data-q");
+      if (answered[qId]) { return; }
+      var isCorrect = btn.getAttribute("data-correct") === "true";
+      answered[qId] = true;
+      correct[qId] = isCorrect;
+      var block = document.getElementById(qId);
+      var fb = document.getElementById("fb-" + qId);
+      var right = "";
+      block.querySelectorAll(".opt-btn").forEach(function (b) {
+        b.disabled = true;
+        if (b.getAttribute("data-correct") === "true") {
+          b.classList.add("reveal-correct");
+          right = b.getAttribute("data-letter");
+        }
+      });
+      btn.classList.remove("reveal-correct");
+      btn.classList.add(isCorrect ? "correct" : "wrong");
+      block.classList.add(isCorrect ? "answered-correct" : "answered-wrong");
+      fb.innerHTML = "";
+      var icon = document.createElement("span");
+      icon.className = "fb-icon";
+      icon.textContent = isCorrect ? "✓" : "✗";
+      fb.appendChild(icon);
+      fb.appendChild(document.createTextNode(btn.getAttribute("data-expl") + (isCorrect ? "" : " The correct answer is " + right + ".")));
+      fb.className = "feedback show " + (isCorrect ? "correct" : "wrong");
+      if (Object.keys(answered).length === TOTAL) { showScore(); }
+    });
+  });
+
+  var resetBtn = document.getElementById("reset-btn");
+  resetBtn.addEventListener("click", function () {
+    answered = {};
+    correct = {};
+    document.querySelectorAll(".qblock").forEach(function (b) { b.classList.remove("answered-correct", "answered-wrong"); });
+    document.querySelectorAll(".opt-btn").forEach(function (b) { b.disabled = false; b.classList.remove("correct", "wrong", "reveal-correct"); });
+    document.querySelectorAll(".feedback").forEach(function (f) { f.className = "feedback"; f.innerHTML = ""; });
+    document.getElementById("score-bar").classList.remove("show");
+    showTab("exercises");
+  });
+})();
+
+</script>
+</body>
+</html>
