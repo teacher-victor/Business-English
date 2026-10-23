@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+LESSON-META
+course_unit: 2 (Negotiation & Delegation)
+lesson: 8
+track: Video
+level: B2–C1
+title: "Why Are Some People Left-Handed?"
+questions: 15
+built: 2026-10-23 (shared lesson system: one stylesheet, one script, per-lesson theme tokens)
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Are Some People Left-Handed? · Lesson 8 · English Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Literata:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #ffffff;
+  --ink-soft: #3d4f60;
+  --ink-muted: #56697a;
+  --radius: 6px;
+  --radius-sm: 5px;
+  --radius-pill: 999px;
+  --bw: 1.5px;
+  --shadow: none;
+  --correct: #2c7d4f;
+  --wrong: #b8443f;
+  --light-correct: #e2f4e8;
+  --light-wrong: #fae3e1;
+  --highlight-vocab: #fbe6a2;
+  --highlight-idiom: #cfe3f1;
+  --highlight-express: #f6d3ad;
+  --highlight-vocab-strong: #d9a520;
+  --highlight-idiom-strong: #3d7fb5;
+  --highlight-express-strong: #d07a2c;
+  --ink: #22303f;
+  --paper: #fbf8f1;
+  --cream: #eef1e6;
+  --rule: #b8c5d3;
+  --accent: #c0392b;
+  --accent2: #1b7a8c;
+  --gold: #d69e2e;
+  --font-display: 'Kalam', cursive;
+  --font-body: 'Literata', Georgia, serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-tab: 'Space Mono', monospace;
+  --mast-border: 5px solid #22303f;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SHARED LESSON SYSTEM · one stylesheet for every lesson in the course
+   Each lesson only sets tokens (colours, fonts, shape) and its own
+   masthead ornament. Every component below is identical everywhere.
+   ═══════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--page-bg, var(--paper));
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+  line-height: 1.72;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent); color: #fff; }
+a { color: var(--accent2); }
+img, svg { max-width: 100%; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 22px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ── MASTHEAD ─────────────────────────────────────────────────────── */
+.masthead {
+  background: var(--mast-bg, linear-gradient(180deg, var(--cream), var(--paper)));
+  color: var(--mast-fg, var(--ink));
+  text-align: center;
+  padding: 2.6rem 0 1.9rem;
+  border-bottom: var(--mast-border, 5px solid var(--accent));
+  position: relative;
+  overflow: hidden;
+}
+.masthead .wrap { position: relative; z-index: 1; }
+.eyebrow {
+  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--eyebrow, var(--accent2));
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 0.35rem 0.6rem;
+  margin-bottom: 1rem;
+}
+.eyebrow span + span::before { content: "·"; margin-right: 0.6rem; opacity: 0.6; }
+.headline {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  font-size: clamp(1.85rem, 4.8vw, 2.95rem); line-height: 1.12;
+  letter-spacing: var(--display-tracking, -0.01em);
+  text-transform: var(--display-case, none);
+  color: var(--mast-title, var(--ink));
+  max-width: 780px; margin: 0 auto 0.95rem; text-wrap: balance;
+}
+.deck {
+  font-size: 1.1rem; line-height: 1.6; max-width: 640px; margin: 0 auto 1rem;
+  color: var(--mast-sub, var(--ink-soft)); font-style: var(--deck-style, italic); text-wrap: pretty;
+}
+.byline { font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.02em; color: var(--mast-muted, var(--ink-muted)); margin-bottom: 1.3rem; }
+.byline a { color: inherit; text-underline-offset: 3px; }
+.factrow { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.55rem 0.7rem; }
+.fact {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 500;
+  padding: 0.38rem 0.9rem;
+  background: var(--chip-bg, var(--surface));
+  color: var(--chip-fg, var(--ink));
+  border: var(--chip-border, 1.5px solid var(--rule));
+  border-radius: var(--radius-pill, 999px);
+}
+.fact b { font-weight: 700; }
+.fact a { color: inherit; font-weight: 700; }
+.ornament { margin-top: 1.4rem; }
+
+/* ── TABS ─────────────────────────────────────────────────────────── */
+.tabnav {
+  position: sticky; top: 0; z-index: 60;
+  background: var(--tab-bg, var(--ink));
+  box-shadow: 0 2px 12px rgba(0,0,0,0.14);
+}
+.tabnav .tabs { display: flex; max-width: 900px; margin: 0 auto; }
+.tabbtn {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.45rem;
+  border: none; background: transparent; cursor: pointer;
+  color: var(--tab-fg, rgba(255,255,255,0.78));
+  font-family: var(--font-tab, var(--font-display)); font-weight: 600; font-size: 0.93rem;
+  padding: 0.95rem 0.4rem 0.8rem;
+  border-bottom: 4px solid transparent;
+  transition: background 0.18s, color 0.18s;
+}
+.tabbtn .ti { font-size: 1.05em; line-height: 1; }
+.tabbtn:hover { background: var(--tab-hover, rgba(255,255,255,0.09)); }
+.tabbtn[aria-selected="true"] {
+  background: var(--tab-active-bg, var(--accent));
+  color: var(--tab-active-fg, #fff);
+  border-bottom-color: var(--tab-active-line, var(--gold));
+}
+:focus-visible { outline: 3px solid var(--focus, var(--gold)); outline-offset: 2px; }
+
+/* ── PANELS + SECTION HEADINGS ────────────────────────────────────── */
+.stage { padding-bottom: 3rem; }
+.panel { display: none; padding: 2.4rem 0 1rem; }
+.panel.active { display: block; animation: fadeIn 0.22s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.tag {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--tag-bg, var(--accent2)); color: var(--tag-fg, #fff);
+  padding: 0.26rem 0.72rem; border-radius: var(--radius-pill, 999px); margin-bottom: 0.75rem;
+}
+.sectitle {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  text-transform: var(--display-case, none); letter-spacing: var(--display-tracking, -0.01em);
+  font-size: clamp(1.45rem, 3.4vw, 1.85rem); line-height: 1.2; color: var(--sect, var(--accent));
+  margin-bottom: 0.4rem; text-wrap: balance;
+}
+.subtitle { color: var(--ink-muted); margin-bottom: 1.5rem; font-size: 0.96rem; max-width: 70ch; }
+.gsub {
+  display: flex; align-items: baseline; gap: 0.6rem;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  text-transform: var(--display-case, none);
+  font-size: 1.28rem; color: var(--sub, var(--accent2)); margin: 2.2rem 0 0.9rem;
+}
+.gsub .num { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; color: var(--accent); letter-spacing: 0.05em; }
+
+/* ── LEGEND + NOTES ───────────────────────────────────────────────── */
+.legend {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.2rem;
+  background: var(--cream); border: 1.5px dashed var(--rule);
+  border-radius: var(--radius, 12px); padding: 0.8rem 1.1rem; margin-bottom: 1.8rem; font-size: 0.87rem;
+}
+.legend-title { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.legend-item { display: flex; align-items: center; gap: 0.45rem; }
+.swatch, .dot { width: 15px; height: 15px; border-radius: 4px; display: inline-block; flex: 0 0 auto; border: 1px solid rgba(0,0,0,0.14); }
+.sw-v, .dot-v { background: var(--highlight-vocab); }
+.sw-i, .dot-i { background: var(--highlight-idiom); }
+.sw-e, .dot-e { background: var(--highlight-express); }
+.dot-t { background: var(--accent2); }
+.note {
+  background: var(--cream); border-left: 5px solid var(--accent2);
+  border-radius: var(--radius-sm, 8px); padding: 1rem 1.25rem; margin-bottom: 1.6rem; font-size: 0.97rem;
+}
+.note p + p { margin-top: 0.6rem; }
+.note-task { background: var(--surface); border: var(--bw, 1.5px) solid var(--ink); border-left: 7px solid var(--accent); }
+.note-tip { border-left-color: var(--gold); }
+.note .label {
+  display: block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem;
+}
+.note ul, .note ol { margin: 0.4rem 0 0 1.2rem; }
+.note li { margin-bottom: 0.25rem; }
+
+/* ── READING TEXT ─────────────────────────────────────────────────── */
+.excerpt {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.5rem 1.65rem; margin-bottom: 1.5rem;
+  box-shadow: var(--shadow, none); position: relative;
+}
+.exlabel {
+  display: flex; align-items: center; gap: 0.55rem;
+  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.07em; color: var(--exlabel, var(--accent));
+  margin-bottom: 0.7rem;
+}
+.exlabel .n {
+  display: inline-grid; place-items: center; min-width: 1.6rem; height: 1.6rem; padding: 0 0.35rem;
+  background: var(--accent); color: #fff; border-radius: var(--radius-pill, 999px); font-size: 0.72rem;
+}
+.excerpt p { margin-bottom: 0.95rem; text-wrap: pretty; }
+.excerpt p:last-child { margin-bottom: 0; }
+.dropcap > p:first-of-type::first-letter {
+  float: left; font-family: var(--font-display); font-weight: 700; font-size: 3.4em; line-height: 0.82;
+  padding: 0.08em 0.1em 0 0; color: var(--accent);
+}
+.sidebar {
+  background: var(--cream); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.3rem 1.4rem; margin: 0 0 1.5rem;
+}
+.sidebar h3 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.3rem; color: var(--accent2); }
+.sidebar > p { font-size: 0.93rem; color: var(--ink-soft); margin-bottom: 0.9rem; }
+
+/* transcript turns */
+.transcript { padding: 0; overflow: hidden; }
+.transcript > .exlabel { padding: 0.75rem 1.2rem; margin: 0; background: var(--ink); color: var(--paper); }
+.transcript > .exlabel .n { background: var(--accent); }
+.turn { display: grid; grid-template-columns: 6.4rem 1fr; gap: 0.9rem; padding: 0.95rem 1.2rem; border-top: 1px solid var(--line, rgba(0,0,0,0.07)); }
+.transcript > .turn:first-of-type { border-top: none; }
+.spk {
+  align-self: start; margin-top: 0.2rem;
+  font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  text-align: center; padding: 0.25rem 0.35rem; border-radius: var(--radius-sm, 6px);
+  background: var(--spk-bg, var(--ink-muted)); color: #fff;
+}
+.turn[data-speaker="pippa"] { --spk-bg: var(--accent); }
+.turn[data-speaker="phil"] { --spk-bg: var(--accent2); }
+.turn[data-speaker="voice"], .turn[data-speaker="neil"], .turn[data-speaker="beth"] { background: var(--voice-bg, var(--cream)); }
+.turn[data-speaker="voice"] { --spk-bg: #6b6257; }
+.turn[data-speaker="neil"] { --spk-bg: #7a5c2e; }
+.turn[data-speaker="beth"] { --spk-bg: #4d5a66; }
+.said p { margin-bottom: 0.6rem; }
+.said p:last-child { margin-bottom: 0; }
+
+/* highlights + tooltip */
+.hl {
+  border-radius: 4px; padding: 0.04em 0.18em; cursor: help; font-weight: 600;
+  border-bottom: 2px dotted currentColor; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+.hl-v { background: var(--highlight-vocab); color: var(--hl-v-fg, #6b4e06); }
+.hl-i { background: var(--highlight-idiom); color: var(--hl-i-fg, #174a7c); }
+.hl-e { background: var(--highlight-express); color: var(--hl-e-fg, #8a3f0e); }
+.hl:focus-visible { outline: 2px solid var(--accent2); outline-offset: 1px; }
+#tooltip {
+  position: fixed; display: none; z-index: 999; max-width: 290px; pointer-events: none;
+  background: #1b1a1f; color: #f7f3ea; font-family: var(--font-body); font-size: 0.87rem; line-height: 1.45;
+  padding: 0.7rem 0.9rem; border-radius: 9px; box-shadow: 0 10px 28px rgba(0,0,0,0.32);
+}
+#tooltip .tip-cat { display: block; font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.07em; text-transform: uppercase; color: #f2c55c; margin-bottom: 0.15rem; }
+#tooltip .tip-term { display: block; font-weight: 700; font-size: 0.98rem; margin-bottom: 0.2rem; }
+
+.pullquote {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: clamp(1.2rem, 3vw, 1.55rem); line-height: 1.35; text-align: center; color: var(--accent2);
+  padding: 1.6rem 1.2rem; margin: 2.2rem auto; max-width: 680px;
+  border-top: 3px solid var(--accent); border-bottom: 1px solid var(--rule);
+}
+.pullquote small { display: block; margin-top: 0.6rem; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); font-weight: 500; }
+
+/* ── VOCABULARY CARDS ─────────────────────────────────────────────── */
+.vgroup-title {
+  display: flex; align-items: center; gap: 0.55rem;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: 1.2rem; color: var(--ink); margin: 2rem 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--rule);
+}
+.vgroup-title .count { margin-left: auto; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; color: var(--ink-muted); text-transform: none; }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(245px, 1fr)); gap: 0.9rem; }
+.vcard {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-top: 5px solid var(--card-top, var(--highlight-vocab-strong, #d9a520));
+  border-radius: var(--radius, 12px); padding: 0.95rem 1.15rem 1.05rem; box-shadow: var(--shadow, none);
+  display: flex; flex-direction: column;
+}
+.vcard.idiom { --card-top: var(--highlight-idiom-strong, #3d7fb5); }
+.vcard.expr { --card-top: var(--highlight-express-strong, #d07a2c); }
+.vcard.toolkit { --card-top: var(--accent2); }
+.vterm { font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; line-height: 1.3; text-transform: none; }
+.vpos { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); margin: 0.15rem 0 0.45rem; }
+.vdef { font-size: 0.93rem; margin-bottom: 0.55rem; }
+.vex { font-size: 0.89rem; font-style: italic; color: var(--ink-soft); padding-left: 0.7rem; border-left: 2px solid var(--rule); }
+.vex strong { font-style: normal; }
+.vsrc { margin-top: auto; padding-top: 0.6rem; font-family: var(--font-mono); font-size: 0.63rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+
+/* use-in-context cards (Vocabulary in Use) */
+.usegrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.9rem; margin-bottom: 1rem; }
+.usecard {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-left: 5px solid var(--accent); border-radius: var(--radius, 12px); padding: 0.9rem 1.1rem;
+}
+.usehead { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--accent); margin-bottom: 0.15rem; text-transform: none; }
+.usemeta { font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 0.45rem; }
+.usecard ul { padding-left: 1.1rem; font-size: 0.93rem; }
+.usecard li { margin-bottom: 0.3rem; }
+
+/* ── GRAMMAR / GENERIC TABLES ─────────────────────────────────────── */
+.formula {
+  font-family: var(--font-mono); font-size: 0.92rem; text-align: center; letter-spacing: 0.01em;
+  background: var(--ink); color: var(--paper); border-radius: var(--radius-sm, 8px);
+  padding: 0.95rem 1.2rem; margin-bottom: 0.8rem;
+}
+.formula b { color: var(--gold); font-weight: 600; }
+.tablewrap { overflow-x: auto; margin-bottom: 1.4rem; border-radius: var(--radius-sm, 8px); border: 1px solid var(--rule); }
+table.gtable { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: var(--surface); }
+table.gtable th {
+  background: var(--th-bg, var(--ink)); color: var(--th-fg, #fff); text-align: left; vertical-align: bottom;
+  font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.65rem 0.85rem;
+}
+table.gtable td { padding: 0.68rem 0.85rem; border-top: 1px solid var(--rule); vertical-align: top; }
+table.gtable tr:nth-child(even) td { background: var(--zebra, var(--cream)); }
+details summary {
+  cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 0.35rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600; color: var(--accent2);
+  padding: 0.2rem 0.55rem; border: 1px solid currentColor; border-radius: var(--radius-pill, 999px);
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: "▸"; transition: transform 0.15s; }
+details[open] summary::before { transform: rotate(90deg); }
+details[open] summary { margin-bottom: 0.45rem; }
+details .ans { display: block; }
+
+/* ── SPEAKING: SCRIPT LINES + RUBRIC ──────────────────────────────── */
+.script-line {
+  background: var(--surface); border: 1px solid var(--rule); border-left: 6px solid var(--accent);
+  border-radius: var(--radius-sm, 8px); padding: 0.9rem 1.1rem; margin-bottom: 0.7rem;
+}
+.script-line .beat { display: inline-block; font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: var(--accent2); padding: 0.12rem 0.5rem; border-radius: var(--radius-pill, 999px); margin-bottom: 0.4rem; }
+.script-note { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-muted); margin-top: 0.4rem; }
+.figure {
+  background: var(--fig-bg, var(--surface)); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.3rem 1.4rem 1rem; margin-bottom: 1.6rem; box-shadow: var(--shadow, none);
+}
+.figure-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 0.4rem 1rem; margin-bottom: 0.9rem; }
+.figure-kicker { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.figure-title { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; line-height: 1.25; color: var(--ink); text-transform: none; }
+.figure-meta { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); }
+.figure-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.3rem 1rem; margin-top: 0.8rem; padding-top: 0.6rem; border-top: 1px solid var(--rule); font-family: var(--font-mono); font-size: 0.66rem; color: var(--ink-muted); }
+.figure svg text { font-family: var(--font-mono); }
+
+/* ── EXERCISES ────────────────────────────────────────────────────── */
+.quizbar {
+  position: sticky; top: calc(var(--tabh, 3.4rem) + 0.5rem); z-index: 40;
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  background: var(--ink); color: var(--paper); border-radius: var(--radius-sm, 8px);
+  padding: 0.55rem 0.9rem; margin-bottom: 1.4rem; font-family: var(--font-mono); font-size: 0.8rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+.quizbar .meter { flex: 1; min-width: 120px; height: 7px; background: rgba(255,255,255,0.18); border-radius: 999px; overflow: hidden; }
+.quizbar .meter i { display: block; height: 100%; width: 0; background: var(--gold); transition: width 0.25s; }
+.quizbar button { background: var(--accent); color: #fff; border: none; border-radius: var(--radius-pill, 999px); padding: 0.3rem 0.85rem; font: inherit; font-weight: 700; cursor: pointer; }
+.quizbar button:hover { filter: brightness(1.1); }
+.exsection-title {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: 1.32rem; color: var(--sect, var(--accent)); margin: 2rem 0 1rem; padding-bottom: 0.35rem;
+  border-bottom: 3px solid var(--gold);
+}
+.qblock {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.15rem 1.25rem; margin-bottom: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.qblock.answered-correct { border-color: var(--correct); box-shadow: inset 4px 0 0 var(--correct); }
+.qblock.answered-wrong { border-color: var(--wrong); box-shadow: inset 4px 0 0 var(--wrong); }
+.qtext { font-weight: 700; margin-bottom: 0.8rem; text-wrap: pretty; }
+.opt-btn {
+  display: flex; align-items: baseline; gap: 0.75rem; width: 100%; text-align: left;
+  background: var(--paper); color: var(--ink); cursor: pointer;
+  border: 1.5px solid var(--rule); border-radius: var(--radius-sm, 8px);
+  padding: 0.6rem 0.85rem; margin-bottom: 0.45rem;
+  font-family: var(--font-body); font-size: 0.97rem; line-height: 1.5;
+  transition: background 0.15s, border-color 0.15s;
+}
+.opt-letter {
+  flex: 0 0 auto; display: inline-grid; place-items: center; width: 1.55rem; height: 1.55rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 700;
+  border: 1.5px solid var(--rule); border-radius: 50%; background: var(--surface);
+}
+.opt-btn:hover:not(:disabled) { border-color: var(--accent2); background: var(--cream); }
+.opt-btn:disabled { cursor: default; }
+.opt-btn.correct, .opt-btn.reveal-correct { background: var(--light-correct); border-color: var(--correct); }
+.opt-btn.correct { font-weight: 700; color: #1d4a30; }
+.opt-btn.wrong { background: var(--light-wrong); border-color: var(--wrong); color: #7a2e2e; font-weight: 700; }
+.opt-btn.correct .opt-letter, .opt-btn.reveal-correct .opt-letter { background: var(--correct); border-color: var(--correct); color: #fff; }
+.opt-btn.wrong .opt-letter { background: var(--wrong); border-color: var(--wrong); color: #fff; }
+.feedback { display: none; margin-top: 0.55rem; padding: 0.7rem 0.9rem; border-radius: var(--radius-sm, 8px); font-size: 0.93rem; }
+.feedback.show { display: block; }
+.feedback.correct { background: var(--light-correct); color: #1d4a30; }
+.feedback.wrong { background: var(--light-wrong); color: #7a2e2e; }
+.fb-icon { font-weight: 800; margin-right: 0.35rem; }
+#score-bar {
+  display: none; text-align: center; background: var(--ink); color: var(--paper);
+  border-radius: var(--radius, 12px); padding: 1.9rem 1.4rem; margin-top: 2rem;
+}
+#score-bar.show { display: block; }
+#score-num { font-family: var(--font-display); font-size: 3rem; line-height: 1.1; color: var(--gold); }
+#score-title { font-family: var(--font-display); font-size: 1.45rem; margin: 0.35rem 0; }
+#score-msg { font-size: 0.95rem; opacity: 0.85; margin-bottom: 1.1rem; }
+.reset-btn {
+  background: var(--accent); color: #fff; border: none; cursor: pointer;
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.86rem;
+  padding: 0.7rem 1.6rem; border-radius: var(--radius-pill, 999px);
+}
+.reset-btn:hover { filter: brightness(1.1); }
+
+/* ── FOOTER: COURSE NAVIGATION ────────────────────────────────────── */
+.coursefoot { border-top: 1px solid var(--rule); background: var(--cream); padding: 1.4rem 0 2.2rem; margin-top: 1rem; }
+.coursefoot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.8rem; }
+.coursefoot > .wrap > a {
+  display: inline-flex; flex-direction: column; text-decoration: none; color: var(--ink);
+  border: 1.5px solid var(--rule); border-radius: var(--radius-sm, 8px); background: var(--surface);
+  padding: 0.55rem 0.9rem; min-width: 210px; max-width: 48%;
+}
+.coursefoot > .wrap > a:hover { border-color: var(--accent); }
+.coursefoot > .wrap > a.next { text-align: right; margin-left: auto; }
+.coursefoot small { font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.coursefoot strong { font-family: var(--font-display); font-size: 0.98rem; text-transform: none; }
+.coursefoot .unitmap { width: 100%; font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); text-align: center; margin-top: 0.4rem; }
+.coursefoot .unitmap a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
+.coursefoot .unitmap a:hover { color: var(--accent); }
+
+/* ── RESPONSIVE + PRINT ───────────────────────────────────────────── */
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .wrap { padding: 0 16px; }
+  .masthead { padding: 2rem 0 1.5rem; }
+  .tabbtn { flex-direction: column; gap: 0.15rem; font-size: 0.7rem; padding: 0.65rem 0.15rem 0.55rem; }
+  .excerpt { padding: 1.2rem 1.05rem; }
+  .turn { grid-template-columns: 1fr; gap: 0.35rem; }
+  .spk { justify-self: start; }
+  table.gtable { font-size: 0.8rem; }
+  table.gtable th, table.gtable td { padding: 0.5rem 0.55rem; }
+  .coursefoot > .wrap > a { max-width: 100%; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media print {
+  .tabnav, .quizbar, #score-bar, .coursefoot, #tooltip { display: none !important; }
+  .panel { display: block !important; page-break-before: always; }
+  .panel:first-of-type { page-break-before: auto; }
+  details > *:not(summary) { display: block !important; }
+  .masthead { background: none !important; color: #000 !important; }
+  body { background: #fff !important; }
+}
+
+/* ── AT-A-GLANCE AIDS: timeline + stat grid ───────────────────────── */
+.glance { margin: 2rem 0 1.5rem; }
+.glance > h3 { font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none); font-size: 1.2rem; color: var(--accent2); margin-bottom: 0.3rem; }
+.glance > p { font-size: 0.92rem; color: var(--ink-muted); margin-bottom: 1rem; }
+.timeline { list-style: none; position: relative; padding-left: 1.6rem; }
+.timeline::before { content: ""; position: absolute; left: 0.45rem; top: 0.4rem; bottom: 0.4rem; width: 3px; background: var(--rule); border-radius: 2px; }
+.timeline li { position: relative; margin-bottom: 0.85rem; }
+.timeline li::before { content: ""; position: absolute; left: -1.38rem; top: 0.42rem; width: 13px; height: 13px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); }
+.timeline .when { display: inline-block; font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--accent); min-width: 7.5rem; }
+.timeline .what { font-size: 0.95rem; }
+.statgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.8rem; }
+.stat { background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule)); border-radius: var(--radius, 12px); padding: 0.85rem 1rem; }
+.stat b { display: block; font-family: var(--font-display); font-size: 1.9rem; line-height: 1.1; color: var(--accent); }
+.stat span { display: block; font-size: 0.88rem; line-height: 1.4; }
+.stat small { display: block; margin-top: 0.3rem; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+.ladder-scale { list-style: none; display: grid; gap: 0.45rem; }
+.ladder-scale li { display: grid; grid-template-columns: 8.5rem 1fr 13rem; gap: 0.8rem; align-items: center; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius-sm, 8px); padding: 0.6rem 0.9rem; border-left: 6px solid var(--lv, var(--accent)); }
+.ladder-scale li:nth-child(1) { --lv: #3f8f6b; } .ladder-scale li:nth-child(2) { --lv: #79a04a; } .ladder-scale li:nth-child(3) { --lv: #d1a32a; } .ladder-scale li:nth-child(4) { --lv: #d9772c; } .ladder-scale li:nth-child(5) { --lv: #b8443f; }
+.ladder-scale .lv { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--lv); }
+.ladder-scale .ph { font-weight: 700; }
+.ladder-scale .use { font-size: 0.85rem; color: var(--ink-muted); }
+@media (max-width: 640px) { .ladder-scale li { grid-template-columns: 1fr; gap: 0.15rem; } }
+
+/* ── LESSON THEME: Why Are Some People Left-Handed? ── */
+body { background-image: repeating-linear-gradient(180deg, transparent 0 34px, rgba(169,184,201,0.32) 34px 35px); }
+body::before { content: ""; position: fixed; top: 0; bottom: 0; left: 46px; width: 2px; background: rgba(192,57,43,0.3); pointer-events: none; }
+.tabbtn { font-size: 0.82rem; }
+.spiral { display: flex; justify-content: center; gap: 10px; margin-bottom: 0.9rem; }
+.spiral span { width: 12px; height: 12px; border-radius: 50%; background: var(--paper); border: 2px solid var(--ink); }
+.hands { font-size: 1.7rem; letter-spacing: 0.3rem; }
+.hands .flip { display: inline-block; transform: scaleX(-1); }
+.excerpt { border-left: 6px solid var(--accent); }
+@media (max-width: 640px) { body::before { left: 8px; } }
+</style>
+</head>
+<body>
+<div id="tooltip" role="tooltip"></div>
+<a class="sr-only" href="#panel-transcript">Skip to lesson</a>
+
+<div class="topband" aria-hidden="true"></div>
+<header class="masthead">
+<div class="spiral" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+<div class="wrap">
+  <p class="eyebrow"><span>Unit 2: Negotiation & Delegation</span><span>Lesson 8</span><span>Video</span><span>B2–C1</span></p>
+  <h1 class="headline">Why Are Some People Left-Handed?</h1>
+  <p class="deck">From classrooms that once forced children to switch hands to a hidden mathematical balance behind baseball’s best hitters and golf’s rarest players: the genetics, evolution and odds behind being a lefty.</p>
+  <p class="byline">TED-Ed · Source video: <a href="https://youtu.be/TGLYcYCm2FM" target="_blank" rel="noopener">youtu.be/TGLYcYCm2FM</a></p>
+  <div class="factrow"><span class="fact">🎬 Format: <b>TED-Ed video</b></span><span class="fact">🎯 Level: <b>B2–C1</b></span><span class="fact">🧬 Topic: <b>genetics &amp; evolution</b></span><span class="fact">🗣 Focus: <b>explaining evidence</b></span></div>
+  <div class="ornament"><div class="hands" aria-hidden="true">✋<span class="flip">✋</span>✋✋✋✋✋✋✋✋</div></div>
+</div>
+</header>
+
+<nav class="tabnav" aria-label="Lesson sections"><div class="tabs" role="tablist">
+<button type="button" role="tab" class="tabbtn" id="tab-transcript" data-tab="transcript" aria-controls="panel-transcript" aria-selected="true"><span class="ti" aria-hidden="true">📓</span><span>Transcript</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-vocabulary" data-tab="vocabulary" aria-controls="panel-vocabulary" aria-selected="false"><span class="ti" aria-hidden="true">✍️</span><span>Vocabulary</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-exercises" data-tab="exercises" aria-controls="panel-exercises" aria-selected="false"><span class="ti" aria-hidden="true">🎯</span><span>Exercises</span></button>
+</div></nav>
+<main class="wrap stage">
+<section id="panel-transcript" class="panel active" role="tabpanel" aria-labelledby="tab-transcript">
+<span class="tag">Video · TED-Ed narration</span>
+<h2 class="sectitle">Why Are Some People Left-Handed?</h2>
+<p class="subtitle">Watch the video, then read the full narration in seven parts, from forced hand-switching in school to a mathematical model of evolution.</p>
+<div class="note"><span class="label">Before you watch</span>
+<ul><li>Are you left- or right-handed? Do you know anyone who was made to change hands as a child?</li>
+<li>Guess: what percentage of people in the world are left-handed? Check your guess in Part 2.</li>
+<li>Listen for the words <em>competition</em> and <em>cooperation</em>. How does each one change the number of lefties?</li></ul></div>
+<div class="legend" aria-label="Highlight key"><span class="legend-title">Highlight key</span><span class="legend-item"><span class="swatch sw-v"></span>Vocabulary</span><span class="legend-item"><span class="swatch sw-i"></span>Idiom / Set Phrase</span><span class="legend-item"><span class="swatch sw-e"></span>Useful Expression</span><span class="legend-item" style="margin-left:auto;color:var(--ink-muted)">Hover, tap or tab to a highlight for its meaning.</span></div>
+
+<div class="excerpt">
+<span class="exlabel"><span class="n">1</span>Forced to Change Hands</span>
+<p>If you know an older left-handed person, <span class="hl hl-e" data-cat="Useful Expression" data-def="A spoken phrase used to introduce a strong likelihood without stating it as absolute fact." data-term="chances are" tabindex="0">chances are</span> they had to learn to write or eat with their right hand. And in many parts of the world, it's still common practice to force children to use their "proper" hand. Even the word for right also means correct or good, not just in English, but many other languages, too. But if being left-handed is so wrong, then why does it happen <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="Originally; from the very beginning." data-term="in the first place" tabindex="0">in the first place</span>?</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">2</span>How Common Is It, Really?</span>
+<p>Today, about 1/10 of the world's population are left-handed. <span class="hl hl-v" data-cat="Vocabulary" data-def="Relating to the study of human history through the excavation of sites and objects." data-term="archeological" tabindex="0">Archeological</span> evidence shows that it's been that way for as long as 500,000 years, with about 10% of human remains showing the associated differences in arm length and bone density, and some ancient tools and <span class="hl hl-v" data-cat="Vocabulary" data-def="Objects made by humans, especially ones of historical or cultural interest." data-term="artifacts" tabindex="0">artifacts</span> showing evidence of left-hand use.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">3</span>Nature, Not Choice</span>
+<p>And <span class="hl hl-e" data-cat="Useful Expression" data-def="Signals that a common assumption is about to be corrected." data-term="despite what many may think" tabindex="0">despite what many may think</span>, handedness is not a choice. It can be predicted even before birth based on the <span class="hl hl-v" data-cat="Vocabulary" data-def="An unborn human in the later stages of development in the womb." data-term="fetus" tabindex="0">fetus'</span> position in the womb. So, if handedness is <span class="hl hl-v" data-cat="Vocabulary" data-def="Present in a person from birth; innate, not learned." data-term="inborn" tabindex="0">inborn</span>, does that mean it's genetic? <span class="hl hl-e" data-cat="Useful Expression" data-def="A spoken discourse marker that introduces a nuanced, partly-true-partly-false answer." data-term="well, yes and no" tabindex="0">Well, yes and no.</span> Identical twins, who have the same genes, can have different dominant hands. In fact, this happens as often as it does with any other <span class="hl hl-v" data-cat="Vocabulary" data-def="A brother or sister." data-term="sibling" tabindex="0">sibling</span> pair. But the chances of being right or left-handed are determined by the handedness of your parents <span class="hl hl-e" data-cat="Useful Expression" data-def="Describes a pattern in data that repeats reliably across cases." data-term="in surprisingly consistent ratios" tabindex="0">in surprisingly consistent ratios</span>. If your father was left-handed but your mother was right-handed, you have a 17% chance of being born left-handed, while two righties will have a left-handed child only 10% of the time. Handedness seems to be determined by <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="Something left entirely to chance; an unpredictable outcome." data-term="a roll of the dice" tabindex="0">a roll of the dice</span>, but the odds are set by your genes.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">4</span>The Advantage of Being Rare</span>
+<p><span class="hl hl-e" data-cat="Useful Expression" data-def="Introduces a logical conclusion drawn from the evidence just given." data-term="all of this implies" tabindex="0">All of this implies</span> there's a reason that evolution has produced this small <span class="hl hl-v" data-cat="Vocabulary" data-def="A part or share of a whole in relation to its size." data-term="proportion" tabindex="0">proportion</span> of lefties, and maintained it over the course of <span class="hl hl-v" data-cat="Vocabulary" data-def="Periods of a thousand years." data-term="millennia" tabindex="0">millennia</span>. And while there have been several theories attempting to explain why handedness exists in the first place, or why most people are right-handed, <span class="hl hl-e" data-cat="Useful Expression" data-def="Introduces a scientific claim as a suggestion from evidence, not an absolute certainty." data-term="a recent mathematical model suggests" tabindex="0">a recent mathematical model suggests</span> that the actual ratio reflects a balance between competitive and cooperative pressures on human evolution.</p>
+<p>The benefits of being left-handed are clearest in activities involving an opponent, like combat or competitive sports. For example, about 50% of top hitters in baseball have been left-handed. Why? Think of it as a surprise advantage. Because lefties are a minority to begin with, both right-handed and left-handed competitors will spend most of their time encountering and practicing against righties. So when the two face each other, the left-hander will be better prepared against this right-handed opponent, while the righty will be <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="Made suddenly confused, unsettled, or unable to perform normally." data-term="thrown off" tabindex="0">thrown off</span>. This fighting hypothesis, where an imbalance in the population results in an advantage for left-handed fighters or athletes, is an example of negative frequency-dependent selection.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">5</span>When Everyone Would Be a Lefty</span>
+<p>But according to the principles of evolution, groups that have a relative advantage tend to grow until that advantage disappears. If people were only fighting and competing throughout human evolution, natural selection would lead to more lefties being the ones that <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="Survived, succeeded, or reached a desired outcome." data-term="made it" tabindex="0">made it</span> until there were so many of them, that it was no longer a rare asset. So in a purely competitive world, 50% of the population would be left-handed.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">6</span>The Cost of Cooperation</span>
+<p>But human evolution has been shaped by cooperation, as well as competition. And cooperative pressure pushes handedness distribution in the opposite direction. In golf, where performance doesn't depend on the opponent, only 4% of top players are left-handed, an example of the wider phenomenon of tool sharing. Just as young potential golfers can more easily find a set of right-handed clubs, many of the important instruments that have shaped society were designed for the right-handed majority. Because lefties are worse at using these tools, and suffer from higher accident rates, they would be less successful in a purely cooperative world, eventually disappearing from the population.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">7</span>An Answer Written in Our Hands</span>
+<p>So by correctly predicting the distribution of left-handed people in the general population, as well as matching data from various sports, the model indicates that the <span class="hl hl-v" data-cat="Vocabulary" data-def="The continued existence of something over a long period of time." data-term="persistence" tabindex="0">persistence</span> of lefties as a small but stable minority reflects an <span class="hl hl-v" data-cat="Vocabulary" data-def="A state of balance between opposing forces." data-term="equilibrium" tabindex="0">equilibrium</span> that comes from competitive and cooperative effects playing out simultaneously over time.</p>
+<p>And the most intriguing thing is what the numbers can tell us about various populations. From the <span class="hl hl-v" data-cat="Vocabulary" data-def="Distorted or unevenly weighted in a particular direction." data-term="skewed" tabindex="0">skewed</span> distribution of pawedness in cooperative animals, to the slightly larger percentage of lefties in competitive hunter-gatherer societies, we may even find that the answers to some puzzles of early human evolution are already in our hands.</p>
+</div>
+<blockquote class="pullquote">“The answers to some puzzles of early human evolution are already in our hands.”<small>The narrator, Part 7</small></blockquote>
+<section class="glance"><h3>Numbers at a glance</h3><p>The video moves quickly through its statistics. Here they are side by side.</p>
+<div class="statgrid">
+<div class="stat"><b>~10%</b><span>of people in the world today are left-handed.</span><small>Part 2 · Population</small></div>
+<div class="stat"><b>500,000</b><span>years: how long the 10% ratio has held, according to archaeological evidence.</span><small>Part 2 · History</small></div>
+<div class="stat"><b>17%</b><span>chance of a left-handed child when one parent (the father) is left-handed.</span><small>Part 3 · Genes</small></div>
+<div class="stat"><b>10%</b><span>chance of a left-handed child when both parents are right-handed.</span><small>Part 3 · Genes</small></div>
+<div class="stat"><b>~50%</b><span>of top baseball hitters have been left-handed: the “surprise advantage”.</span><small>Part 4 · Competition</small></div>
+<div class="stat"><b>4%</b><span>of top golfers are left-handed, because clubs and tools favour righties.</span><small>Part 6 · Cooperation</small></div>
+</div></section>
+<div class="note note-tip"><span class="label">After you watch: discuss</span>
+<ul><li>In your own words, explain why a purely competitive world would end up 50% left-handed, and a purely cooperative one would have almost no lefties.</li>
+<li>Think of everyday objects designed for right-handed people (scissors, can openers, desks). Have you seen any designed for lefties?</li>
+<li>The video says handedness is “a roll of the dice, but the odds are set by your genes.” What does this mean? Use <em>chances are</em> or <em>it seems</em> in your answer.</li></ul></div>
+</section>
+<section id="panel-vocabulary" class="panel" role="tabpanel" aria-labelledby="tab-vocabulary">
+<span class="tag">Vocabulary</span>
+<h2 class="sectitle">Key Words &amp; Phrases</h2>
+<p class="subtitle">Every highlighted term from the narration, with a clear meaning and a new example sentence.</p>
+<div class="note"><strong>Vocabulary</strong>: single words worth learning. <strong>Idioms &amp; Set Phrases</strong>: fixed expressions whose meaning is not always literal. <strong>Useful Expressions</strong>: hedging and linking phrases for explaining science.</div>
+<h3 class="vgroup-title"><span class="dot dot-v"></span>Vocabulary</h3>
+<div class="vgrid">
+<div class="vcard"><div class="vterm">archeological</div><div class="vpos">adjective</div><div class="vdef">Relating to the study of human history through excavated sites and objects.</div><div class="vex">New <strong>archeological</strong> finds pushed the settlement's date back another thousand years.</div></div>
+<div class="vcard"><div class="vterm">artifacts</div><div class="vpos">noun, plural</div><div class="vdef">Objects made by humans, especially of historical or cultural interest.</div><div class="vex">The museum displayed dozens of stone-age <strong>artifacts</strong>.</div></div>
+<div class="vcard"><div class="vterm">inborn</div><div class="vpos">adjective</div><div class="vdef">Present in a person from birth; innate rather than learned.</div><div class="vex">Some musicians seem to have an <strong>inborn</strong> sense of rhythm.</div></div>
+<div class="vcard"><div class="vterm">fetus</div><div class="vpos">noun</div><div class="vdef">An unborn human in the later stages of development in the womb.</div><div class="vex">Doctors can now monitor a <strong>fetus'</strong> heartbeat from early in pregnancy.</div></div>
+<div class="vcard"><div class="vterm">sibling</div><div class="vpos">noun</div><div class="vdef">A brother or sister.</div><div class="vex">She and her <strong>sibling</strong> look almost identical.</div></div>
+<div class="vcard"><div class="vterm">proportion</div><div class="vpos">noun</div><div class="vdef">A part or share of a whole in relation to its size.</div><div class="vex">Only a small <strong>proportion</strong> of applicants were accepted.</div></div>
+<div class="vcard"><div class="vterm">millennia</div><div class="vpos">noun, plural</div><div class="vdef">Periods of a thousand years.</div><div class="vex">The tradition has survived for <strong>millennia</strong>.</div></div>
+<div class="vcard"><div class="vterm">persistence</div><div class="vpos">noun</div><div class="vdef">The continued existence of something over a long period of time.</div><div class="vex">Scientists were surprised by the trait's <strong>persistence</strong> across generations.</div></div>
+<div class="vcard"><div class="vterm">equilibrium</div><div class="vpos">noun</div><div class="vdef">A state of balance between opposing forces.</div><div class="vex">The market eventually reached a stable <strong>equilibrium</strong> between supply and demand.</div></div>
+<div class="vcard"><div class="vterm">skewed</div><div class="vpos">adjective</div><div class="vdef">Distorted or unevenly weighted in a particular direction.</div><div class="vex">The survey results were <strong>skewed</strong> because only young people responded.</div></div>
+</div>
+<h3 class="vgroup-title"><span class="dot dot-i"></span>Idioms &amp; Set Phrases</h3>
+<div class="vgrid">
+<div class="vcard idiom"><div class="vterm">in the first place</div><div class="vpos">idiom</div><div class="vdef">Originally; from the very beginning.</div><div class="vex">Why did you agree to it <strong>in the first place</strong>?</div></div>
+<div class="vcard idiom"><div class="vterm">a roll of the dice</div><div class="vpos">idiom</div><div class="vdef">Something left entirely to chance; an unpredictable outcome.</div><div class="vex">Whether the plan works is honestly <strong>a roll of the dice</strong>.</div></div>
+<div class="vcard idiom"><div class="vterm">thrown off</div><div class="vpos">idiom</div><div class="vdef">Made suddenly confused, unsettled, or unable to perform normally.</div><div class="vex">The unexpected question completely <strong>threw</strong> him <strong>off</strong>.</div></div>
+<div class="vcard idiom"><div class="vterm">made it</div><div class="vpos">idiom</div><div class="vdef">Survived, succeeded, or reached a desired outcome.</div><div class="vex">Only a handful of climbers <strong>made it</strong> to the summit that year.</div></div>
+</div>
+<h3 class="vgroup-title"><span class="dot dot-e"></span>Useful Expressions</h3>
+<div class="vgrid">
+<div class="vcard expr"><div class="vterm">chances are</div><div class="vpos">hedging phrase</div><div class="vdef">Introduces a strong likelihood without stating it as an absolute fact.</div><div class="vex"><strong>Chances are</strong> you've already met someone who's colorblind.</div></div>
+<div class="vcard expr"><div class="vterm">despite what many may think</div><div class="vpos">concessive linker</div><div class="vdef">Signals that a common assumption is about to be corrected.</div><div class="vex"><strong>Despite what many may think</strong>, sharks rarely attack humans.</div></div>
+<div class="vcard expr"><div class="vterm">well, yes and no</div><div class="vpos">hedged answer</div><div class="vdef">Introduces a nuanced answer that is partly true and partly false.</div><div class="vex">Is coffee bad for you? <strong>Well, yes and no</strong>: it depends on the amount.</div></div>
+<div class="vcard expr"><div class="vterm">in surprisingly consistent ratios</div><div class="vpos">collocation</div><div class="vdef">Describes a data pattern that repeats reliably across many cases.</div><div class="vex">The results appeared <strong>in surprisingly consistent ratios</strong> across every country studied.</div></div>
+<div class="vcard expr"><div class="vterm">all of this implies</div><div class="vpos">concluding linker</div><div class="vdef">Introduces a logical conclusion drawn from evidence just given.</div><div class="vex"><strong>All of this implies</strong> the effect is caused by diet, not genetics.</div></div>
+<div class="vcard expr"><div class="vterm">a recent mathematical model suggests</div><div class="vpos">hedged reporting</div><div class="vdef">Introduces a scientific claim as a suggestion from evidence, not a certainty.</div><div class="vex"><strong>A recent mathematical model suggests</strong> the population will stabilize within decades.</div></div>
+</div>
+</section>
+<section id="panel-exercises" class="panel" role="tabpanel" aria-labelledby="tab-exercises">
+<span class="tag">Exercises</span>
+<h2 class="sectitle">Test Yourself</h2>
+<p class="subtitle">15 questions in 2 sections. Choose an answer for instant feedback: every option, right or wrong, comes with an explanation, and the correct answer is always revealed.</p>
+<div class="quizbar" role="status"><span id="quiz-progress">Answered 0/15 · Score 0</span><span class="meter" aria-hidden="true"><i id="quiz-meter"></i></span><button type="button" data-reset>↺ Reset</button></div>
+<h3 class="exsection-title">A · Video Comprehension</h3>
+
+<div class="qblock" id="qA1"><p class="qtext">1. According to the video, roughly what proportion of the world's population is left-handed?</p>
+<button class="opt-btn" data-correct="false" data-expl="This is the figure given for top baseball hitters, not the general population." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">About 50%</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This is the figure for top golfers, an unusually low rate tied to cooperative tool-sharing." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">About 4%</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the video states that about 1/10, or 10%, of the world's population is left-handed." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">About 1/10 (10%)</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This is the chance a child of one left-handed and one right-handed parent has of being left-handed, not the overall population figure." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">About 17%</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA2"><p class="qtext">2. How can handedness reportedly be predicted before a baby is even born?</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the video says handedness can be predicted based on the fetus' position in the womb." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Based on the fetus' position in the womb</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not mentioned in the video as a prediction method." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">By testing the mother's diet during pregnancy</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Genetic testing isn't mentioned as the prediction method here." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">By analyzing the parents' DNA in a lab</span></button>
+<button class="opt-btn" data-correct="false" data-expl="No such measurement is described in the video." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">By measuring the baby's heart rate</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA3"><p class="qtext">3. What chance do two right-handed parents ("two righties") have of having a left-handed child?</p>
+<button class="opt-btn" data-correct="false" data-expl="This is the figure for one left-handed and one right-handed parent, not two right-handed parents." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">About 17%</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the video states two right-handed parents have a left-handed child only 10% of the time." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">About 10%</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This figure describes top baseball hitters, unrelated to parental odds." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">About 50%</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This figure describes top golfers, unrelated to parental odds." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">About 4%</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA4"><p class="qtext">4. Why do left-handed baseball hitters reportedly have an advantage?</p>
+<button class="opt-btn" data-correct="false" data-expl="The video attributes the advantage to unfamiliarity, not physical strength differences." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Left-handed players are physically much stronger</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not mentioned as a factor in the video." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Left-handed players practice for far longer hours</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: because lefties are rare, right-handed opponents mostly practice against righties and are thrown off when facing a lefty." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Right-handed opponents rarely face lefties, get thrown off</span></button>
+<button class="opt-btn" data-correct="false" data-expl="No rule change of this kind is mentioned." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Baseball changed its official rules to favor lefties</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA5"><p class="qtext">5. Why are left-handed golfers so rare, according to the video?</p>
+<button class="opt-btn" data-correct="false" data-expl="Golf is actually described as a cooperative-type activity where performance doesn't depend on an opponent: the opposite of this answer." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Golf directly involves an opponent, like combat sports</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not mentioned as a reason in the video." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Left-handed people are physically unable to golf well</span></button>
+<button class="opt-btn" data-correct="false" data-expl="No such rule is described in the video." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Golf associations historically banned left-handed clubs</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: golf doesn't depend on an opponent, and most tools/clubs are designed for the right-handed majority, disadvantaging lefties through tool sharing." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Golf has no opponent, and equipment favors right-handers</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA6"><p class="qtext">6. According to archeological evidence mentioned in the video, roughly how long has the ~10% left-handed rate persisted?</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the video says this evidence stretches back as far as 500,000 years, with about 10% of remains showing the trait." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">About 500,000 years</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The video gives a much longer timescale than this for the archeological evidence." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">About 50,000 years</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This is far shorter than the timescale the video actually gives." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">About 5,000 years</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This drastically understates the timescale given in the video." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">About 100 years</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA7"><p class="qtext">7. What does the video say happens with identical twins and handedness?</p>
+<button class="opt-btn" data-correct="false" data-expl="The video says the opposite: identical twins' handedness is not guaranteed to match." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">They always share the same dominant hand</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: identical twins can have different dominant hands, just as often as any other sibling pair." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">They often have different dominant hands</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Shared genes don't make this outcome more likely, and the video doesn't claim it." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Both twins are usually left-handed together</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Birth order is not mentioned as a factor in the video." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Their handedness depends on birth order</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA8"><p class="qtext">8. What does the mathematical model in the video suggest the small, stable proportion of lefties actually reflects?</p>
+<button class="opt-btn" data-correct="false" data-expl="The video frames this as a product of evolutionary pressures, not a random mutation." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">A random mutation with no real function</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the model explains the ratio as a balance between competitive and cooperative pressures on evolution." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">A balance between competing and cooperating</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Tool design is mentioned as one example of cooperative pressure, not the whole explanation." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">A side effect of modern tool design only</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The video traces this far back in evolutionary history, not to a recent trend." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">A recent trend with no evolutionary basis</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA9"><p class="qtext">9. The video calls the fighting advantage for lefties "negative frequency-dependent selection." What does this term describe?</p>
+<button class="opt-btn" data-correct="false" data-expl="This describes the opposite pattern: here, rarity creates the advantage, not the reverse." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">A disadvantage that grows as a trait spreads</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The term applies broadly in evolutionary biology, not only to physical traits." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">A process limited only to physical traits</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: this term describes an advantage a trait gains specifically because it's rare in the population." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">An advantage that appears because a trait is rare</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The video applies this idea to combat sports generally, not golf specifically." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">A pattern found only in individual sports</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA10"><p class="qtext">10. Beyond humans, what wider pattern does the video connect to this same competitive-cooperative balance?</p>
+<button class="opt-btn" data-correct="false" data-expl="Bird migration isn't mentioned in the video." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Migration patterns in long-distance birds</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Camouflage isn't part of the comparison the video makes." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Camouflage coloring in predator species</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Sleep cycles aren't mentioned as a related pattern." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Sleep cycles in nocturnal and daytime animals</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the video connects this balance to pawedness in cooperative animals and handedness rates in hunter-gatherer societies." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Pawedness in cooperative animals and societies</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<h3 class="exsection-title">B · Vocabulary in Context</h3>
+
+<div class="qblock" id="qB1"><p class="qtext">11. "Chances are they had to learn to write with their right hand": "chances are" means:</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: 'chances are' introduces something that is very likely, without stating it as an absolute fact." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">it is very likely that</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This overstates the certainty: the phrase signals likelihood, not guaranteed fact." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">it is guaranteed that</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The phrase doesn't express impossibility." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">it is impossible that</span></button>
+<button class="opt-btn" data-correct="false" data-expl="It's about probability, not about someone's personal choice." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">it was their choice that</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB2"><p class="qtext">12. "Handedness is not a choice... it is inborn": inborn most nearly means:</p>
+<button class="opt-btn" data-correct="false" data-expl="Inborn is the opposite of something acquired through practice." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">learned through years of practice</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: inborn means present in a person from birth, not learned." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">present in a person from birth</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Inborn doesn't refer to something that changes over time." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">changing gradually with age</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Inborn is about origin, not rarity." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">extremely rare and unusual</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB3"><p class="qtext">13. "Handedness seems to be determined by a roll of the dice": this idiom suggests handedness is:</p>
+<button class="opt-btn" data-correct="false" data-expl="The idiom is about chance, not deliberate choice." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">carefully chosen by each person</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This contradicts the idiom's meaning of unpredictability." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">completely predictable</span></button>
+<button class="opt-btn" data-correct="false" data-expl="No connection to games or entertainment in this idiomatic use." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">a form of entertainment</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: 'a roll of the dice' describes something left entirely to chance." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">left largely to chance</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB4"><p class="qtext">14. "The righty will be thrown off" when facing an unfamiliar left-handed opponent. "Thrown off" means:</p>
+<button class="opt-btn" data-correct="false" data-expl="This is a literal reading; the phrase is used figuratively here." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">physically pushed down onto the ground</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The phrase describes disruption, not calm confidence." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">made to feel calm and fully confident</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: 'thrown off' means made suddenly confused or unable to perform normally." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">made confused, unable to perform normally</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not related to removal from a team or competition." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">formally removed from the competition</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB5"><p class="qtext">15. "The persistence of lefties as a small but stable minority reflects an equilibrium": equilibrium means:</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: equilibrium is a state of balance between opposing forces, here competitive and cooperative pressures." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">a state of balance between opposing forces</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Equilibrium describes stability, not sudden change." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">a sudden and fairly dramatic change</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Equilibrium doesn't refer to physical location." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">a fixed geographic location nearby</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This is the opposite of the intended meaning." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">a complete lack of any balance</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div id="score-bar" aria-live="polite"><div id="score-num"></div><div id="score-title"></div><div id="score-msg"></div><button type="button" class="reset-btn" data-reset>Try Again</button></div>
+
+</section>
+</main>
+<footer class="coursefoot"><div class="wrap"><a class="prev" href="https://teacher-victor.github.io/Business-English/07_SPK_SupplierRenewal.html"><small>← Previous · Lesson 7 · Speaking</small><strong>Supplier Contract Renewal</strong></a><a class="next" href="https://teacher-victor.github.io/Business-English/09_RDG_Leadership.html"><small>Next · Lesson 9 · Reading →</small><strong>Reading the Room</strong></a><p class="unitmap">Unit 2: Negotiation & Delegation · <a href="https://teacher-victor.github.io/Business-English/05_RDG_Negotiation.html">5 Reading</a> → <a href="https://teacher-victor.github.io/Business-English/06_BUS_Delegating.html">6 Listening</a> → <a href="https://teacher-victor.github.io/Business-English/07_SPK_SupplierRenewal.html">7 Speaking</a> → <b>8 Video</b></p></div></footer>
+<script>window.LESSON = {"tiers": [{"min": 0.9, "title": "✋ Ambidextrous Champion", "msg": "Outstanding. You have mastered the video’s content and vocabulary."}, {"min": 0.7, "title": "🖐 Strong Grip on It", "msg": "Good result. Revisit the Transcript tab if any questions tripped you up."}, {"min": 0.4, "title": "🤚 Getting a Handle on It", "msg": "Good start. Reread the highlighted phrases in the Transcript tab and try again."}, {"min": 0.0, "title": "✊ Keep Practising", "msg": "Head back to the Transcript tab, then give it another go."}]};</script>
+<script>
+/* Shared lesson behaviour: tabs, glossary tooltips, quiz scoring. */
+(function () {
+  "use strict";
+  var LESSON = window.LESSON || {};
+
+  /* ── Tabs (ARIA tablist, arrow keys, #hash deep links) ── */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tabbtn"));
+  var panels = Array.prototype.slice.call(document.querySelectorAll(".panel"));
+  var nav = document.querySelector(".tabnav");
+  function setTabHeight() {
+    if (nav) document.documentElement.style.setProperty("--tabh", nav.offsetHeight + "px");
+  }
+  function showTab(id, opts) {
+    opts = opts || {};
+    var found = false;
+    tabs.forEach(function (b) {
+      var on = b.getAttribute("data-tab") === id;
+      if (on) found = true;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.tabIndex = on ? 0 : -1;
+    });
+    if (!found) return;
+    panels.forEach(function (p) { p.classList.toggle("active", p.id === "panel-" + id); });
+    if (opts.focus) { var t = document.querySelector('.tabbtn[data-tab="' + id + '"]'); if (t) t.focus(); }
+    if (!opts.silent) {
+      // Deep link (#vocabulary etc.). Skipped silently where the page runs in a sandboxed
+      // preview (about:srcdoc), which does not allow changing the URL.
+      try {
+        if (history.replaceState && location.protocol !== "about:") history.replaceState(null, "", "#" + id);
+      } catch (err) { /* ignore: URL updates are optional */ }
+      var top = nav ? nav.getBoundingClientRect().top + window.pageYOffset : 0;
+      if (window.pageYOffset > top) window.scrollTo({ top: top, behavior: "smooth" });
+    }
+  }
+  tabs.forEach(function (b, i) {
+    b.addEventListener("click", function () { showTab(b.getAttribute("data-tab")); });
+    b.addEventListener("keydown", function (e) {
+      var n = null;
+      if (e.key === "ArrowRight") n = (i + 1) % tabs.length;
+      if (e.key === "ArrowLeft") n = (i - 1 + tabs.length) % tabs.length;
+      if (e.key === "Home") n = 0;
+      if (e.key === "End") n = tabs.length - 1;
+      if (n !== null) { e.preventDefault(); showTab(tabs[n].getAttribute("data-tab"), { focus: true }); }
+    });
+  });
+  document.querySelectorAll("[data-goto]").forEach(function (a) {
+    a.addEventListener("click", function (e) { e.preventDefault(); showTab(a.getAttribute("data-goto")); });
+  });
+  var initial = "";
+  try { initial = (location.hash || "").replace("#", ""); } catch (err) { initial = ""; }
+  showTab(initial && document.getElementById("panel-" + initial) ? initial : tabs[0].getAttribute("data-tab"), { silent: true });
+  setTabHeight();
+  window.addEventListener("resize", setTabHeight);
+
+  /* ── Glossary tooltips ── */
+  var tip = document.getElementById("tooltip");
+  function place(el) {
+    var r = el.getBoundingClientRect();
+    var top = r.top - tip.offsetHeight - 10;
+    if (top < 8) top = r.bottom + 10;
+    var left = r.left + r.width / 2 - tip.offsetWidth / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tip.offsetWidth - 8));
+    tip.style.top = top + "px";
+    tip.style.left = left + "px";
+  }
+  function showTip(el) {
+    tip.innerHTML = "";
+    var c = document.createElement("span"); c.className = "tip-cat"; c.textContent = el.getAttribute("data-cat");
+    var t = document.createElement("span"); t.className = "tip-term"; t.textContent = el.getAttribute("data-term");
+    tip.appendChild(c); tip.appendChild(t);
+    tip.appendChild(document.createTextNode(el.getAttribute("data-def")));
+    tip.style.display = "block";
+    place(el);
+  }
+  function hideTip() { tip.style.display = "none"; }
+  document.querySelectorAll(".hl").forEach(function (el) {
+    el.setAttribute("role", "button");
+    el.setAttribute("aria-label", el.textContent + ": " + el.getAttribute("data-def"));
+    el.addEventListener("mouseenter", function () { showTip(el); });
+    el.addEventListener("mouseleave", hideTip);
+    el.addEventListener("focus", function () { showTip(el); });
+    el.addEventListener("blur", hideTip);
+    el.addEventListener("click", function (e) { e.stopPropagation(); showTip(el); });
+  });
+  document.addEventListener("click", hideTip);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+  window.addEventListener("scroll", hideTip, { passive: true });
+
+  /* ── Quiz ── */
+  var blocks = Array.prototype.slice.call(document.querySelectorAll(".qblock"));
+  var TOTAL = blocks.length;
+  if (!TOTAL) return;
+  var answered = {}, correct = {};
+  var tiers = LESSON.tiers || [];
+  var progTxt = document.getElementById("quiz-progress");
+  var meter = document.getElementById("quiz-meter");
+
+  function count(obj) { return Object.keys(obj).filter(function (k) { return obj[k]; }).length; }
+  function update() {
+    var a = Object.keys(answered).length, s = count(correct);
+    if (progTxt) progTxt.textContent = "Answered " + a + "/" + TOTAL + " · Score " + s;
+    if (meter) meter.style.width = (a / TOTAL * 100) + "%";
+    if (a === TOTAL) showScore(s);
+  }
+  function showScore(s) {
+    var pct = s / TOTAL, tier = tiers[tiers.length - 1] || { title: "", msg: "" };
+    for (var i = 0; i < tiers.length; i++) { if (pct >= tiers[i].min) { tier = tiers[i]; break; } }
+    document.getElementById("score-num").textContent = s + "/" + TOTAL;
+    document.getElementById("score-title").textContent = tier.title;
+    document.getElementById("score-msg").textContent = tier.msg;
+    var bar = document.getElementById("score-bar");
+    bar.classList.add("show");
+    bar.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+  blocks.forEach(function (block) {
+    var btns = block.querySelectorAll(".opt-btn");
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var q = block.id;
+        if (answered[q]) return;
+        var ok = btn.getAttribute("data-correct") === "true", right = "";
+        answered[q] = true; correct[q] = ok;
+        btns.forEach(function (b) {
+          b.disabled = true;
+          if (b.getAttribute("data-correct") === "true") { b.classList.add("reveal-correct"); right = b.getAttribute("data-letter"); }
+        });
+        btn.classList.remove("reveal-correct");
+        btn.classList.add(ok ? "correct" : "wrong");
+        block.classList.add(ok ? "answered-correct" : "answered-wrong");
+        var fb = block.querySelector(".feedback");
+        fb.innerHTML = "";
+        var icon = document.createElement("span"); icon.className = "fb-icon"; icon.textContent = ok ? "✓" : "✗";
+        fb.appendChild(icon);
+        fb.appendChild(document.createTextNode(btn.getAttribute("data-expl") + (ok ? "" : " The correct answer is " + right + ".")));
+        fb.className = "feedback show " + (ok ? "correct" : "wrong");
+        update();
+      });
+    });
+  });
+  function reset() {
+    answered = {}; correct = {};
+    blocks.forEach(function (b) { b.classList.remove("answered-correct", "answered-wrong"); });
+    document.querySelectorAll(".opt-btn").forEach(function (b) { b.disabled = false; b.classList.remove("correct", "wrong", "reveal-correct"); });
+    document.querySelectorAll(".feedback").forEach(function (f) { f.className = "feedback"; f.innerHTML = ""; });
+    document.getElementById("score-bar").classList.remove("show");
+    update();
+    var first = document.getElementById("panel-exercises");
+    if (first) first.scrollIntoView({ behavior: "smooth" });
+  }
+  document.querySelectorAll("[data-reset]").forEach(function (b) { b.addEventListener("click", reset); });
+  update();
+})();
+
+</script>
+</body>
+</html>

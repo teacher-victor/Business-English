@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+LESSON-META
+course_unit: 2 (Negotiation & Delegation)
+lesson: 5
+track: Reading
+level: B2
+title: "The Renewal"
+questions: 15
+built: 2026-10-23 (shared lesson system: one stylesheet, one script, per-lesson theme tokens)
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Renewal · Lesson 5 · English Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #fffcf4;
+  --ink-soft: #4a3f34;
+  --ink-muted: #6b5c48;
+  --radius: 6px;
+  --radius-sm: 4px;
+  --radius-pill: 999px;
+  --bw: 1.5px;
+  --shadow: none;
+  --correct: #2c7d4f;
+  --wrong: #b8443f;
+  --light-correct: #e2f4e8;
+  --light-wrong: #fae3e1;
+  --highlight-vocab: #fbe6a2;
+  --highlight-idiom: #cfe3f1;
+  --highlight-express: #f6d3ad;
+  --highlight-vocab-strong: #d9a520;
+  --highlight-idiom-strong: #3d7fb5;
+  --highlight-express-strong: #d07a2c;
+  --ink: #2b2420;
+  --paper: #f7f1e3;
+  --cream: #efe4c9;
+  --rule: #d2c19c;
+  --accent: #8b2e2e;
+  --accent2: #2f4858;
+  --gold: #b8860b;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Karla', 'Segoe UI', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SHARED LESSON SYSTEM · one stylesheet for every lesson in the course
+   Each lesson only sets tokens (colours, fonts, shape) and its own
+   masthead ornament. Every component below is identical everywhere.
+   ═══════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--page-bg, var(--paper));
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+  line-height: 1.72;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent); color: #fff; }
+a { color: var(--accent2); }
+img, svg { max-width: 100%; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 22px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ── MASTHEAD ─────────────────────────────────────────────────────── */
+.masthead {
+  background: var(--mast-bg, linear-gradient(180deg, var(--cream), var(--paper)));
+  color: var(--mast-fg, var(--ink));
+  text-align: center;
+  padding: 2.6rem 0 1.9rem;
+  border-bottom: var(--mast-border, 5px solid var(--accent));
+  position: relative;
+  overflow: hidden;
+}
+.masthead .wrap { position: relative; z-index: 1; }
+.eyebrow {
+  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--eyebrow, var(--accent2));
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 0.35rem 0.6rem;
+  margin-bottom: 1rem;
+}
+.eyebrow span + span::before { content: "·"; margin-right: 0.6rem; opacity: 0.6; }
+.headline {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  font-size: clamp(1.85rem, 4.8vw, 2.95rem); line-height: 1.12;
+  letter-spacing: var(--display-tracking, -0.01em);
+  text-transform: var(--display-case, none);
+  color: var(--mast-title, var(--ink));
+  max-width: 780px; margin: 0 auto 0.95rem; text-wrap: balance;
+}
+.deck {
+  font-size: 1.1rem; line-height: 1.6; max-width: 640px; margin: 0 auto 1rem;
+  color: var(--mast-sub, var(--ink-soft)); font-style: var(--deck-style, italic); text-wrap: pretty;
+}
+.byline { font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.02em; color: var(--mast-muted, var(--ink-muted)); margin-bottom: 1.3rem; }
+.byline a { color: inherit; text-underline-offset: 3px; }
+.factrow { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.55rem 0.7rem; }
+.fact {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 500;
+  padding: 0.38rem 0.9rem;
+  background: var(--chip-bg, var(--surface));
+  color: var(--chip-fg, var(--ink));
+  border: var(--chip-border, 1.5px solid var(--rule));
+  border-radius: var(--radius-pill, 999px);
+}
+.fact b { font-weight: 700; }
+.fact a { color: inherit; font-weight: 700; }
+.ornament { margin-top: 1.4rem; }
+
+/* ── TABS ─────────────────────────────────────────────────────────── */
+.tabnav {
+  position: sticky; top: 0; z-index: 60;
+  background: var(--tab-bg, var(--ink));
+  box-shadow: 0 2px 12px rgba(0,0,0,0.14);
+}
+.tabnav .tabs { display: flex; max-width: 900px; margin: 0 auto; }
+.tabbtn {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.45rem;
+  border: none; background: transparent; cursor: pointer;
+  color: var(--tab-fg, rgba(255,255,255,0.78));
+  font-family: var(--font-tab, var(--font-display)); font-weight: 600; font-size: 0.93rem;
+  padding: 0.95rem 0.4rem 0.8rem;
+  border-bottom: 4px solid transparent;
+  transition: background 0.18s, color 0.18s;
+}
+.tabbtn .ti { font-size: 1.05em; line-height: 1; }
+.tabbtn:hover { background: var(--tab-hover, rgba(255,255,255,0.09)); }
+.tabbtn[aria-selected="true"] {
+  background: var(--tab-active-bg, var(--accent));
+  color: var(--tab-active-fg, #fff);
+  border-bottom-color: var(--tab-active-line, var(--gold));
+}
+:focus-visible { outline: 3px solid var(--focus, var(--gold)); outline-offset: 2px; }
+
+/* ── PANELS + SECTION HEADINGS ────────────────────────────────────── */
+.stage { padding-bottom: 3rem; }
+.panel { display: none; padding: 2.4rem 0 1rem; }
+.panel.active { display: block; animation: fadeIn 0.22s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.tag {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--tag-bg, var(--accent2)); color: var(--tag-fg, #fff);
+  padding: 0.26rem 0.72rem; border-radius: var(--radius-pill, 999px); margin-bottom: 0.75rem;
+}
+.sectitle {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  text-transform: var(--display-case, none); letter-spacing: var(--display-tracking, -0.01em);
+  font-size: clamp(1.45rem, 3.4vw, 1.85rem); line-height: 1.2; color: var(--sect, var(--accent));
+  margin-bottom: 0.4rem; text-wrap: balance;
+}
+.subtitle { color: var(--ink-muted); margin-bottom: 1.5rem; font-size: 0.96rem; max-width: 70ch; }
+.gsub {
+  display: flex; align-items: baseline; gap: 0.6rem;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  text-transform: var(--display-case, none);
+  font-size: 1.28rem; color: var(--sub, var(--accent2)); margin: 2.2rem 0 0.9rem;
+}
+.gsub .num { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; color: var(--accent); letter-spacing: 0.05em; }
+
+/* ── LEGEND + NOTES ───────────────────────────────────────────────── */
+.legend {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.2rem;
+  background: var(--cream); border: 1.5px dashed var(--rule);
+  border-radius: var(--radius, 12px); padding: 0.8rem 1.1rem; margin-bottom: 1.8rem; font-size: 0.87rem;
+}
+.legend-title { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.legend-item { display: flex; align-items: center; gap: 0.45rem; }
+.swatch, .dot { width: 15px; height: 15px; border-radius: 4px; display: inline-block; flex: 0 0 auto; border: 1px solid rgba(0,0,0,0.14); }
+.sw-v, .dot-v { background: var(--highlight-vocab); }
+.sw-i, .dot-i { background: var(--highlight-idiom); }
+.sw-e, .dot-e { background: var(--highlight-express); }
+.dot-t { background: var(--accent2); }
+.note {
+  background: var(--cream); border-left: 5px solid var(--accent2);
+  border-radius: var(--radius-sm, 8px); padding: 1rem 1.25rem; margin-bottom: 1.6rem; font-size: 0.97rem;
+}
+.note p + p { margin-top: 0.6rem; }
+.note-task { background: var(--surface); border: var(--bw, 1.5px) solid var(--ink); border-left: 7px solid var(--accent); }
+.note-tip { border-left-color: var(--gold); }
+.note .label {
+  display: block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem;
+}
+.note ul, .note ol { margin: 0.4rem 0 0 1.2rem; }
+.note li { margin-bottom: 0.25rem; }
+
+/* ── READING TEXT ─────────────────────────────────────────────────── */
+.excerpt {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.5rem 1.65rem; margin-bottom: 1.5rem;
+  box-shadow: var(--shadow, none); position: relative;
+}
+.exlabel {
+  display: flex; align-items: center; gap: 0.55rem;
+  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.07em; color: var(--exlabel, var(--accent));
+  margin-bottom: 0.7rem;
+}
+.exlabel .n {
+  display: inline-grid; place-items: center; min-width: 1.6rem; height: 1.6rem; padding: 0 0.35rem;
+  background: var(--accent); color: #fff; border-radius: var(--radius-pill, 999px); font-size: 0.72rem;
+}
+.excerpt p { margin-bottom: 0.95rem; text-wrap: pretty; }
+.excerpt p:last-child { margin-bottom: 0; }
+.dropcap > p:first-of-type::first-letter {
+  float: left; font-family: var(--font-display); font-weight: 700; font-size: 3.4em; line-height: 0.82;
+  padding: 0.08em 0.1em 0 0; color: var(--accent);
+}
+.sidebar {
+  background: var(--cream); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.3rem 1.4rem; margin: 0 0 1.5rem;
+}
+.sidebar h3 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.3rem; color: var(--accent2); }
+.sidebar > p { font-size: 0.93rem; color: var(--ink-soft); margin-bottom: 0.9rem; }
+
+/* transcript turns */
+.transcript { padding: 0; overflow: hidden; }
+.transcript > .exlabel { padding: 0.75rem 1.2rem; margin: 0; background: var(--ink); color: var(--paper); }
+.transcript > .exlabel .n { background: var(--accent); }
+.turn { display: grid; grid-template-columns: 6.4rem 1fr; gap: 0.9rem; padding: 0.95rem 1.2rem; border-top: 1px solid var(--line, rgba(0,0,0,0.07)); }
+.transcript > .turn:first-of-type { border-top: none; }
+.spk {
+  align-self: start; margin-top: 0.2rem;
+  font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  text-align: center; padding: 0.25rem 0.35rem; border-radius: var(--radius-sm, 6px);
+  background: var(--spk-bg, var(--ink-muted)); color: #fff;
+}
+.turn[data-speaker="pippa"] { --spk-bg: var(--accent); }
+.turn[data-speaker="phil"] { --spk-bg: var(--accent2); }
+.turn[data-speaker="voice"], .turn[data-speaker="neil"], .turn[data-speaker="beth"] { background: var(--voice-bg, var(--cream)); }
+.turn[data-speaker="voice"] { --spk-bg: #6b6257; }
+.turn[data-speaker="neil"] { --spk-bg: #7a5c2e; }
+.turn[data-speaker="beth"] { --spk-bg: #4d5a66; }
+.said p { margin-bottom: 0.6rem; }
+.said p:last-child { margin-bottom: 0; }
+
+/* highlights + tooltip */
+.hl {
+  border-radius: 4px; padding: 0.04em 0.18em; cursor: help; font-weight: 600;
+  border-bottom: 2px dotted currentColor; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+.hl-v { background: var(--highlight-vocab); color: var(--hl-v-fg, #6b4e06); }
+.hl-i { background: var(--highlight-idiom); color: var(--hl-i-fg, #174a7c); }
+.hl-e { background: var(--highlight-express); color: var(--hl-e-fg, #8a3f0e); }
+.hl:focus-visible { outline: 2px solid var(--accent2); outline-offset: 1px; }
+#tooltip {
+  position: fixed; display: none; z-index: 999; max-width: 290px; pointer-events: none;
+  background: #1b1a1f; color: #f7f3ea; font-family: var(--font-body); font-size: 0.87rem; line-height: 1.45;
+  padding: 0.7rem 0.9rem; border-radius: 9px; box-shadow: 0 10px 28px rgba(0,0,0,0.32);
+}
+#tooltip .tip-cat { display: block; font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.07em; text-transform: uppercase; color: #f2c55c; margin-bottom: 0.15rem; }
+#tooltip .tip-term { display: block; font-weight: 700; font-size: 0.98rem; margin-bottom: 0.2rem; }
+
+.pullquote {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: clamp(1.2rem, 3vw, 1.55rem); line-height: 1.35; text-align: center; color: var(--accent2);
+  padding: 1.6rem 1.2rem; margin: 2.2rem auto; max-width: 680px;
+  border-top: 3px solid var(--accent); border-bottom: 1px solid var(--rule);
+}
+.pullquote small { display: block; margin-top: 0.6rem; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); font-weight: 500; }
+
+/* ── VOCABULARY CARDS ─────────────────────────────────────────────── */
+.vgroup-title {
+  display: flex; align-items: center; gap: 0.55rem;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: 1.2rem; color: var(--ink); margin: 2rem 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--rule);
+}
+.vgroup-title .count { margin-left: auto; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; color: var(--ink-muted); text-transform: none; }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(245px, 1fr)); gap: 0.9rem; }
+.vcard {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-top: 5px solid var(--card-top, var(--highlight-vocab-strong, #d9a520));
+  border-radius: var(--radius, 12px); padding: 0.95rem 1.15rem 1.05rem; box-shadow: var(--shadow, none);
+  display: flex; flex-direction: column;
+}
+.vcard.idiom { --card-top: var(--highlight-idiom-strong, #3d7fb5); }
+.vcard.expr { --card-top: var(--highlight-express-strong, #d07a2c); }
+.vcard.toolkit { --card-top: var(--accent2); }
+.vterm { font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; line-height: 1.3; text-transform: none; }
+.vpos { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); margin: 0.15rem 0 0.45rem; }
+.vdef { font-size: 0.93rem; margin-bottom: 0.55rem; }
+.vex { font-size: 0.89rem; font-style: italic; color: var(--ink-soft); padding-left: 0.7rem; border-left: 2px solid var(--rule); }
+.vex strong { font-style: normal; }
+.vsrc { margin-top: auto; padding-top: 0.6rem; font-family: var(--font-mono); font-size: 0.63rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+
+/* use-in-context cards (Vocabulary in Use) */
+.usegrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.9rem; margin-bottom: 1rem; }
+.usecard {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-left: 5px solid var(--accent); border-radius: var(--radius, 12px); padding: 0.9rem 1.1rem;
+}
+.usehead { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--accent); margin-bottom: 0.15rem; text-transform: none; }
+.usemeta { font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 0.45rem; }
+.usecard ul { padding-left: 1.1rem; font-size: 0.93rem; }
+.usecard li { margin-bottom: 0.3rem; }
+
+/* ── GRAMMAR / GENERIC TABLES ─────────────────────────────────────── */
+.formula {
+  font-family: var(--font-mono); font-size: 0.92rem; text-align: center; letter-spacing: 0.01em;
+  background: var(--ink); color: var(--paper); border-radius: var(--radius-sm, 8px);
+  padding: 0.95rem 1.2rem; margin-bottom: 0.8rem;
+}
+.formula b { color: var(--gold); font-weight: 600; }
+.tablewrap { overflow-x: auto; margin-bottom: 1.4rem; border-radius: var(--radius-sm, 8px); border: 1px solid var(--rule); }
+table.gtable { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: var(--surface); }
+table.gtable th {
+  background: var(--th-bg, var(--ink)); color: var(--th-fg, #fff); text-align: left; vertical-align: bottom;
+  font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.65rem 0.85rem;
+}
+table.gtable td { padding: 0.68rem 0.85rem; border-top: 1px solid var(--rule); vertical-align: top; }
+table.gtable tr:nth-child(even) td { background: var(--zebra, var(--cream)); }
+details summary {
+  cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 0.35rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600; color: var(--accent2);
+  padding: 0.2rem 0.55rem; border: 1px solid currentColor; border-radius: var(--radius-pill, 999px);
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: "▸"; transition: transform 0.15s; }
+details[open] summary::before { transform: rotate(90deg); }
+details[open] summary { margin-bottom: 0.45rem; }
+details .ans { display: block; }
+
+/* ── SPEAKING: SCRIPT LINES + RUBRIC ──────────────────────────────── */
+.script-line {
+  background: var(--surface); border: 1px solid var(--rule); border-left: 6px solid var(--accent);
+  border-radius: var(--radius-sm, 8px); padding: 0.9rem 1.1rem; margin-bottom: 0.7rem;
+}
+.script-line .beat { display: inline-block; font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: var(--accent2); padding: 0.12rem 0.5rem; border-radius: var(--radius-pill, 999px); margin-bottom: 0.4rem; }
+.script-note { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-muted); margin-top: 0.4rem; }
+.figure {
+  background: var(--fig-bg, var(--surface)); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.3rem 1.4rem 1rem; margin-bottom: 1.6rem; box-shadow: var(--shadow, none);
+}
+.figure-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 0.4rem 1rem; margin-bottom: 0.9rem; }
+.figure-kicker { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.figure-title { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; line-height: 1.25; color: var(--ink); text-transform: none; }
+.figure-meta { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); }
+.figure-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.3rem 1rem; margin-top: 0.8rem; padding-top: 0.6rem; border-top: 1px solid var(--rule); font-family: var(--font-mono); font-size: 0.66rem; color: var(--ink-muted); }
+.figure svg text { font-family: var(--font-mono); }
+
+/* ── EXERCISES ────────────────────────────────────────────────────── */
+.quizbar {
+  position: sticky; top: calc(var(--tabh, 3.4rem) + 0.5rem); z-index: 40;
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  background: var(--ink); color: var(--paper); border-radius: var(--radius-sm, 8px);
+  padding: 0.55rem 0.9rem; margin-bottom: 1.4rem; font-family: var(--font-mono); font-size: 0.8rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+.quizbar .meter { flex: 1; min-width: 120px; height: 7px; background: rgba(255,255,255,0.18); border-radius: 999px; overflow: hidden; }
+.quizbar .meter i { display: block; height: 100%; width: 0; background: var(--gold); transition: width 0.25s; }
+.quizbar button { background: var(--accent); color: #fff; border: none; border-radius: var(--radius-pill, 999px); padding: 0.3rem 0.85rem; font: inherit; font-weight: 700; cursor: pointer; }
+.quizbar button:hover { filter: brightness(1.1); }
+.exsection-title {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: 1.32rem; color: var(--sect, var(--accent)); margin: 2rem 0 1rem; padding-bottom: 0.35rem;
+  border-bottom: 3px solid var(--gold);
+}
+.qblock {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.15rem 1.25rem; margin-bottom: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.qblock.answered-correct { border-color: var(--correct); box-shadow: inset 4px 0 0 var(--correct); }
+.qblock.answered-wrong { border-color: var(--wrong); box-shadow: inset 4px 0 0 var(--wrong); }
+.qtext { font-weight: 700; margin-bottom: 0.8rem; text-wrap: pretty; }
+.opt-btn {
+  display: flex; align-items: baseline; gap: 0.75rem; width: 100%; text-align: left;
+  background: var(--paper); color: var(--ink); cursor: pointer;
+  border: 1.5px solid var(--rule); border-radius: var(--radius-sm, 8px);
+  padding: 0.6rem 0.85rem; margin-bottom: 0.45rem;
+  font-family: var(--font-body); font-size: 0.97rem; line-height: 1.5;
+  transition: background 0.15s, border-color 0.15s;
+}
+.opt-letter {
+  flex: 0 0 auto; display: inline-grid; place-items: center; width: 1.55rem; height: 1.55rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 700;
+  border: 1.5px solid var(--rule); border-radius: 50%; background: var(--surface);
+}
+.opt-btn:hover:not(:disabled) { border-color: var(--accent2); background: var(--cream); }
+.opt-btn:disabled { cursor: default; }
+.opt-btn.correct, .opt-btn.reveal-correct { background: var(--light-correct); border-color: var(--correct); }
+.opt-btn.correct { font-weight: 700; color: #1d4a30; }
+.opt-btn.wrong { background: var(--light-wrong); border-color: var(--wrong); color: #7a2e2e; font-weight: 700; }
+.opt-btn.correct .opt-letter, .opt-btn.reveal-correct .opt-letter { background: var(--correct); border-color: var(--correct); color: #fff; }
+.opt-btn.wrong .opt-letter { background: var(--wrong); border-color: var(--wrong); color: #fff; }
+.feedback { display: none; margin-top: 0.55rem; padding: 0.7rem 0.9rem; border-radius: var(--radius-sm, 8px); font-size: 0.93rem; }
+.feedback.show { display: block; }
+.feedback.correct { background: var(--light-correct); color: #1d4a30; }
+.feedback.wrong { background: var(--light-wrong); color: #7a2e2e; }
+.fb-icon { font-weight: 800; margin-right: 0.35rem; }
+#score-bar {
+  display: none; text-align: center; background: var(--ink); color: var(--paper);
+  border-radius: var(--radius, 12px); padding: 1.9rem 1.4rem; margin-top: 2rem;
+}
+#score-bar.show { display: block; }
+#score-num { font-family: var(--font-display); font-size: 3rem; line-height: 1.1; color: var(--gold); }
+#score-title { font-family: var(--font-display); font-size: 1.45rem; margin: 0.35rem 0; }
+#score-msg { font-size: 0.95rem; opacity: 0.85; margin-bottom: 1.1rem; }
+.reset-btn {
+  background: var(--accent); color: #fff; border: none; cursor: pointer;
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.86rem;
+  padding: 0.7rem 1.6rem; border-radius: var(--radius-pill, 999px);
+}
+.reset-btn:hover { filter: brightness(1.1); }
+
+/* ── FOOTER: COURSE NAVIGATION ────────────────────────────────────── */
+.coursefoot { border-top: 1px solid var(--rule); background: var(--cream); padding: 1.4rem 0 2.2rem; margin-top: 1rem; }
+.coursefoot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.8rem; }
+.coursefoot > .wrap > a {
+  display: inline-flex; flex-direction: column; text-decoration: none; color: var(--ink);
+  border: 1.5px solid var(--rule); border-radius: var(--radius-sm, 8px); background: var(--surface);
+  padding: 0.55rem 0.9rem; min-width: 210px; max-width: 48%;
+}
+.coursefoot > .wrap > a:hover { border-color: var(--accent); }
+.coursefoot > .wrap > a.next { text-align: right; margin-left: auto; }
+.coursefoot small { font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.coursefoot strong { font-family: var(--font-display); font-size: 0.98rem; text-transform: none; }
+.coursefoot .unitmap { width: 100%; font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); text-align: center; margin-top: 0.4rem; }
+.coursefoot .unitmap a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
+.coursefoot .unitmap a:hover { color: var(--accent); }
+
+/* ── RESPONSIVE + PRINT ───────────────────────────────────────────── */
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .wrap { padding: 0 16px; }
+  .masthead { padding: 2rem 0 1.5rem; }
+  .tabbtn { flex-direction: column; gap: 0.15rem; font-size: 0.7rem; padding: 0.65rem 0.15rem 0.55rem; }
+  .excerpt { padding: 1.2rem 1.05rem; }
+  .turn { grid-template-columns: 1fr; gap: 0.35rem; }
+  .spk { justify-self: start; }
+  table.gtable { font-size: 0.8rem; }
+  table.gtable th, table.gtable td { padding: 0.5rem 0.55rem; }
+  .coursefoot > .wrap > a { max-width: 100%; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media print {
+  .tabnav, .quizbar, #score-bar, .coursefoot, #tooltip { display: none !important; }
+  .panel { display: block !important; page-break-before: always; }
+  .panel:first-of-type { page-break-before: auto; }
+  details > *:not(summary) { display: block !important; }
+  .masthead { background: none !important; color: #000 !important; }
+  body { background: #fff !important; }
+}
+
+/* ── AT-A-GLANCE AIDS: timeline + stat grid ───────────────────────── */
+.glance { margin: 2rem 0 1.5rem; }
+.glance > h3 { font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none); font-size: 1.2rem; color: var(--accent2); margin-bottom: 0.3rem; }
+.glance > p { font-size: 0.92rem; color: var(--ink-muted); margin-bottom: 1rem; }
+.timeline { list-style: none; position: relative; padding-left: 1.6rem; }
+.timeline::before { content: ""; position: absolute; left: 0.45rem; top: 0.4rem; bottom: 0.4rem; width: 3px; background: var(--rule); border-radius: 2px; }
+.timeline li { position: relative; margin-bottom: 0.85rem; }
+.timeline li::before { content: ""; position: absolute; left: -1.38rem; top: 0.42rem; width: 13px; height: 13px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); }
+.timeline .when { display: inline-block; font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--accent); min-width: 7.5rem; }
+.timeline .what { font-size: 0.95rem; }
+.statgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.8rem; }
+.stat { background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule)); border-radius: var(--radius, 12px); padding: 0.85rem 1rem; }
+.stat b { display: block; font-family: var(--font-display); font-size: 1.9rem; line-height: 1.1; color: var(--accent); }
+.stat span { display: block; font-size: 0.88rem; line-height: 1.4; }
+.stat small { display: block; margin-top: 0.3rem; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+.ladder-scale { list-style: none; display: grid; gap: 0.45rem; }
+.ladder-scale li { display: grid; grid-template-columns: 8.5rem 1fr 13rem; gap: 0.8rem; align-items: center; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius-sm, 8px); padding: 0.6rem 0.9rem; border-left: 6px solid var(--lv, var(--accent)); }
+.ladder-scale li:nth-child(1) { --lv: #3f8f6b; } .ladder-scale li:nth-child(2) { --lv: #79a04a; } .ladder-scale li:nth-child(3) { --lv: #d1a32a; } .ladder-scale li:nth-child(4) { --lv: #d9772c; } .ladder-scale li:nth-child(5) { --lv: #b8443f; }
+.ladder-scale .lv { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--lv); }
+.ladder-scale .ph { font-weight: 700; }
+.ladder-scale .use { font-size: 0.85rem; color: var(--ink-muted); }
+@media (max-width: 640px) { .ladder-scale li { grid-template-columns: 1fr; gap: 0.15rem; } }
+
+/* ── LESSON THEME: The Renewal ── */
+body { background-image: repeating-linear-gradient(0deg, rgba(139,46,46,0.03) 0 2px, transparent 2px 38px); }
+.topband { height: 10px; background: repeating-linear-gradient(90deg, var(--accent) 0 26px, var(--gold) 26px 52px); }
+.stamp { position: absolute; top: 18px; right: 22px; z-index: 2; border: 3px solid var(--accent); color: var(--accent); font: 700 0.72rem var(--font-mono); letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.65rem; border-radius: 6px; transform: rotate(6deg); opacity: 0.8; }
+.excerpt { border-top: 6px solid #d9c391; }
+@media (max-width: 640px) { .stamp { position: static; display: inline-block; transform: none; margin-bottom: 0.8rem; } }
+</style>
+</head>
+<body>
+<div id="tooltip" role="tooltip"></div>
+<a class="sr-only" href="#panel-reading">Skip to lesson</a>
+
+<div class="topband" aria-hidden="true"></div>
+<header class="masthead">
+<div class="stamp">Case File</div>
+<div class="wrap">
+  <p class="eyebrow"><span>Unit 2: Negotiation & Delegation</span><span>Lesson 5</span><span>Reading</span><span>B2</span></p>
+  <h1 class="headline">The Renewal: How a Buyer Kept Her Supplier and Her Budget</h1>
+  <p class="deck">A factory needs 40,000 parts a year, and its only supplier wants 12 percent more for them. Follow one negotiation, step by step, from the first offer to the final handshake.</p>
+  <p class="byline">Case File · Calder Appliances · Procurement Training Series</p>
+  <div class="factrow"><span class="fact">📁 Genre: <b>Business case study</b></span><span class="fact">🎯 Level: <b>B2</b></span><span class="fact">💬 Grammar: <b>reported speech</b></span><span class="fact">⏱ About <b>50 minutes</b></span></div>
+  
+</div>
+</header>
+
+<nav class="tabnav" aria-label="Lesson sections"><div class="tabs" role="tablist">
+<button type="button" role="tab" class="tabbtn" id="tab-reading" data-tab="reading" aria-controls="panel-reading" aria-selected="true"><span class="ti" aria-hidden="true">📁</span><span>Reading</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-vocabulary" data-tab="vocabulary" aria-controls="panel-vocabulary" aria-selected="false"><span class="ti" aria-hidden="true">📖</span><span>Vocabulary</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-grammar" data-tab="grammar" aria-controls="panel-grammar" aria-selected="false"><span class="ti" aria-hidden="true">💬</span><span>Grammar</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-exercises" data-tab="exercises" aria-controls="panel-exercises" aria-selected="false"><span class="ti" aria-hidden="true">✅</span><span>Exercises</span></button>
+</div></nav>
+<main class="wrap stage">
+<section id="panel-reading" class="panel active" role="tabpanel" aria-labelledby="tab-reading">
+<span class="tag">Reading · Business case study</span>
+<h2 class="sectitle">The Renewal</h2>
+<p class="subtitle">A factory needs its supplier, but not at any price. Follow one negotiation from the first offer to the final handshake, in five parts.</p>
+<div class="note"><span class="label">Before you read</span>
+<ul><li>When you buy something expensive (a car, a phone contract), do you negotiate the price? Why, or why not?</li>
+<li>If a supplier suddenly raises its price, what can a customer do?</li>
+<li>As you read, notice how the writer reports what people said: <em>He explained that…</em>, <em>She told Marcus that…</em>. The Grammar tab explains how it works.</li></ul></div>
+<div class="sidebar"><h3>Who’s who</h3><p>One buyer, one supplier, one contract.</p>
+<div class="tablewrap" style="margin-bottom:0"><table class="gtable">
+<tr><th>Company</th><th>What it does</th><th>Negotiator</th></tr>
+<tr><td><strong>Calder Appliances</strong></td><td>The <strong>buyer</strong>. It makes ovens and dishwashers, and needs about 40,000 control units a year.</td><td>Lena Marsh, procurement manager</td></tr>
+<tr><td><strong>Orion Supply</strong></td><td>The <strong>supplier</strong>. It makes the small electronic control units inside each machine.</td><td>Marcus Hale, sales director</td></tr>
+</table></div></div>
+<div class="legend" aria-label="Highlight key"><span class="legend-title">Highlight key</span><span class="legend-item"><span class="swatch sw-v"></span>Vocabulary</span><span class="legend-item"><span class="swatch sw-i"></span>Idiom / Set Phrase</span><span class="legend-item"><span class="swatch sw-e"></span>Useful Expression</span><span class="legend-item" style="margin-left:auto;color:var(--ink-muted)">Hover, tap or tab to a highlight for its meaning.</span></div>
+
+<div class="excerpt">
+<span class="exlabel"><span class="n">1</span>A Contract Running Out</span>
+<p>Calder Appliances makes ovens and dishwashers at a factory near Leeds. Every machine it sells needs a small electronic control unit, and for five years Calder has bought all of them, about 40,000 a year, from one supplier: Orion Supply. In late 2024, the contract with Orion was three months from its <span class="hl hl-v" data-cat="Vocabulary" data-def="The act of extending a contract or agreement for a further period." data-term="renewal" tabindex="0">renewal</span> date when Lena Marsh, Calder’s procurement manager, received the email she had been expecting. Orion wanted to raise its price.</p>
+<p>Lena did not wait. She asked Orion’s sales director, Marcus Hale, to <span class="hl hl-e" data-cat="Useful Expression" data-def="To agree to take part in a negotiation or discussion." data-term="come to the table" tabindex="0">come to the table</span> that same week. Her reason was simple. Changing supplier takes about ten weeks, because new parts must be tested before they can go into a product. If she waited until the last month, Calder would have no time to change, and Orion would have all the <span class="hl hl-v" data-cat="Vocabulary" data-def="Power or influence that gives you an advantage in a negotiation." data-term="leverage" tabindex="0">leverage</span>. By starting early, Lena kept <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="To end a negotiation without reaching an agreement." data-term="walk away (from the table)" tabindex="0">walking away</span> as a real option, and both sides knew it.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">2</span>Two Numbers on the Table</span>
+<p>At the first meeting, Marcus put a new price <span class="hl hl-e" data-cat="Useful Expression" data-def="Being offered or discussed at the moment, as part of a negotiation." data-term="on the table" tabindex="0">on the table</span>: $19.60 a unit, up from $17.50. That was an increase of 12 percent. He explained that the cost of computer chips had risen sharply and that Orion could no longer <span class="hl hl-v" data-cat="Vocabulary" data-def="To pay an extra cost yourself instead of passing it on to your customers." data-term="absorb" tabindex="0">absorb</span> it. Lena listened, then made a <span class="hl hl-v" data-cat="Vocabulary" data-def="An offer you make in reply to someone else’s offer." data-term="counteroffer" tabindex="0">counteroffer</span>: no increase at all. She told Marcus that Calder’s finance team had planned for a flat price, and that she had already asked two other suppliers for quotes.</p>
+<p>Neither number was realistic, and both negotiators knew it. Marcus’s $19.60 was an <span class="hl hl-v" data-cat="Vocabulary" data-def="The first number in a negotiation, often set high or low on purpose to influence everything that follows." data-term="anchor" tabindex="0">anchor</span>: a first number set high on purpose, so that every later offer would feel like a step towards Calder. Lena’s “no increase” was an anchor in the other direction. The real negotiation would happen in the space between the two numbers.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">3</span>Give Something, Get Something</span>
+<p>Over the next three weeks, the two sides traded <span class="hl hl-v" data-cat="Vocabulary" data-def="Something you give up or agree to in order to reach an agreement." data-term="concession" tabindex="0">concessions</span>. Lena asked how much chip prices had really gone up, and Marcus admitted that Orion’s costs had risen by about 6 percent, not 12. Orion then lowered its price to $18.90, but only if Calder signed for two years instead of one. Lena accepted the longer contract and added an <span class="hl hl-v" data-cat="Vocabulary" data-def="Something offered to encourage a person or company to do something." data-term="incentive" tabindex="0">incentive</span> of her own: she said that Calder would pay Orion’s invoices in 30 days instead of 60, which would help Orion’s cash flow.</p>
+<p>Lena did not <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="To negotiate in a tough, aggressive way, refusing to give anything." data-term="play hardball" tabindex="0">play hardball</span> on every point. She let several small requests go, so that she could <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="To stay firm and refuse to give any more ground on a point." data-term="hold the line" tabindex="0">hold the line</span> on the one thing that mattered most to her: quality. The year before, 3.6 percent of Orion’s units had arrived faulty, and every faulty unit could stop a production line. She told Marcus that a faulty rate below 3 percent was <span class="hl hl-e" data-cat="Useful Expression" data-def="Not open to discussion or change; a fixed requirement." data-term="non-negotiable" tabindex="0">non-negotiable</span>.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">4</span>Stuck at Forty Cents</span>
+<p>With four weeks left, the talks reached a <span class="hl hl-v" data-cat="Vocabulary" data-def="A situation in which neither side will move, so no agreement can be reached." data-term="deadlock" tabindex="0">deadlock</span>. Calder’s finance director had set a limit of $18.20 a unit. Marcus said that Orion could not go below $18.60 without losing money on the contract. Forty cents sounds small, but on 40,000 units it adds up to $16,000 a year. Lena was ready to <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="To end a negotiation without reaching an agreement." data-term="walk away (from the table)" tabindex="0">walk away from the table</span>, and she started testing parts from another supplier, just in case.</p>
+<p>Instead of giving up, both sides decided to <span class="hl hl-v" data-cat="Vocabulary" data-def="To bring in someone more senior to help solve a problem." data-term="escalate" tabindex="0">escalate</span>. Lena brought in her finance director, and Marcus brought in Orion’s managing director. On a video call, the managing director admitted that Orion’s quality problems had been real. Then he offered to <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="To make an offer more attractive by adding something extra." data-term="sweeten the deal" tabindex="0">sweeten the deal</span>: in any quarter where more than 3 percent of units were faulty, Orion would pay Calder a credit for every extra faulty unit. Calder’s finance director said that this guarantee was worth more to him than a few cents on the price. The two sides agreed to <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="To compromise, with each side moving part of the way towards the other." data-term="meet in the middle" tabindex="0">meet in the middle</span>, at $18.40.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">5</span>The Handshake</span>
+<p>The next morning, Marcus sent the final terms and wrote that they were Orion’s <span class="hl hl-e" data-cat="Useful Expression" data-def="The last offer a side is willing to make; there is no more room to negotiate." data-term="best and final offer" tabindex="0">best and final offer</span>: $18.40 a unit for two years, payment in 30 days, a 3 percent limit on faulty units, and a credit whenever Orion missed that limit. Lena signed eleven days before the old contract ended.</p>
+<p>Neither side got its opening number. Calder now paid 90 cents more per unit than before, much less than Orion first asked, and it won a quality guarantee it had never had. Orion kept its biggest customer for two more years and got paid faster. Both sides called the result <span class="hl hl-e" data-cat="Useful Expression" data-def="A result that is good for both sides." data-term="a win-win" tabindex="0">a win-win</span>, and there were <span class="hl hl-e" data-cat="Useful Expression" data-def="No anger or bad feeling left after a disagreement." data-term="no hard feelings" tabindex="0">no hard feelings</span>.</p>
+<p>Later, Lena wrote three lessons from the renewal in a note for her team. First, start early, because time is leverage. Second, never give a concession without getting one back. Third, find out what you really need. Calder did not need the lowest price. It needed machines that worked.</p>
+</div>
+<blockquote class="pullquote">“Calder did not need the lowest price. It needed machines that worked.”<small>Lena Marsh’s note to her team, Part 5</small></blockquote>
+<section class="glance"><h3>How the price moved</h3><p>Prices are per control unit. Each step forward was traded for something.</p>
+<div class="tablewrap"><table class="gtable">
+<tr><th>Stage</th><th>Orion asks</th><th>Calder offers</th><th>What happened</th></tr>
+<tr><td>Before the talks</td><td colspan="2"><strong>$17.50</strong> (the old price)</td><td>Orion announces that it wants a price rise.</td></tr>
+<tr><td>1. Opening anchors</td><td><strong>$19.60</strong></td><td><strong>$17.50</strong></td><td>Both sides start far apart, on purpose.</td></tr>
+<tr><td>2. Trading</td><td>$18.90</td><td>two years + faster payment</td><td>Orion lowers its price; Calder accepts a two-year contract and offers faster payment.</td></tr>
+<tr><td>3. Deadlock</td><td>$18.60 (lowest)</td><td>$18.20 (highest)</td><td>A 40-cent gap: $16,000 a year. Both sides escalate.</td></tr>
+<tr><td><strong>Final deal</strong></td><td colspan="2"><strong>$18.40</strong></td><td>They meet in the middle; Orion adds a quality guarantee.</td></tr>
+</table></div></section>
+<div class="note note-tip"><span class="label">After you read: discuss</span>
+<ul><li>Who do you think did better in this negotiation, Calder or Orion? Use numbers from the case.</li>
+<li>Lena accepted a higher price in exchange for a quality guarantee. Would you have done the same?</li>
+<li>Retell one moment of the case to a partner using reported speech: “Marcus said that…”, “Lena told him that…”.</li></ul></div>
+</section>
+<section id="panel-vocabulary" class="panel" role="tabpanel" aria-labelledby="tab-vocabulary">
+<span class="tag">Vocabulary</span>
+<h2 class="sectitle">Key Words &amp; Phrases</h2>
+<p class="subtitle">Every highlighted term from the case study, with a clear meaning and a new example sentence.</p>
+<div class="note"><strong>Vocabulary</strong>: single words worth learning. <strong>Idioms &amp; Set Phrases</strong>: fixed expressions whose meaning is not always literal. <strong>Useful Expressions</strong>: the negotiation language the case study uses.</div>
+<h3 class="vgroup-title"><span class="dot dot-v"></span>Vocabulary</h3>
+<div class="vgrid">
+<div class="vcard"><div class="vterm">renewal</div><div class="vpos">noun</div><div class="vdef">The act of extending a contract or agreement for a further period.</div><div class="vex">Our office lease is up for <strong>renewal</strong> in January.</div></div>
+<div class="vcard"><div class="vterm">leverage</div><div class="vpos">noun</div><div class="vdef">Power or influence that gives you an advantage in a negotiation.</div><div class="vex">Two other job offers gave her real <strong>leverage</strong> when she asked for a raise.</div></div>
+<div class="vcard"><div class="vterm">absorb</div><div class="vpos">verb</div><div class="vdef">To pay an extra cost yourself instead of passing it on to your customers.</div><div class="vex">The café <strong>absorbed</strong> the rise in milk prices for six months.</div></div>
+<div class="vcard"><div class="vterm">counteroffer</div><div class="vpos">noun</div><div class="vdef">An offer you make in reply to someone else’s offer.</div><div class="vex">The buyer offered $300,000 for the flat, and the owner made a <strong>counteroffer</strong> of $320,000.</div></div>
+<div class="vcard"><div class="vterm">anchor</div><div class="vpos">noun</div><div class="vdef">The first number in a negotiation, often set high or low on purpose to influence everything that follows.</div><div class="vex">The seller’s high <strong>anchor</strong> made $900 sound like a bargain.</div></div>
+<div class="vcard"><div class="vterm">concession</div><div class="vpos">noun</div><div class="vdef">Something you give up or agree to in order to reach an agreement.</div><div class="vex">As a <strong>concession</strong>, the landlord agreed to repaint the office.</div></div>
+<div class="vcard"><div class="vterm">incentive</div><div class="vpos">noun</div><div class="vdef">Something offered to encourage a person or company to do something.</div><div class="vex">Free delivery is a good <strong>incentive</strong> to order online.</div></div>
+<div class="vcard"><div class="vterm">deadlock</div><div class="vpos">noun</div><div class="vdef">A situation in which neither side will move, so no agreement can be reached.</div><div class="vex">After six hours, the pay talks were still in <strong>deadlock</strong>.</div></div>
+<div class="vcard"><div class="vterm">escalate</div><div class="vpos">verb</div><div class="vdef">To bring in someone more senior to help solve a problem.</div><div class="vex">If the supplier doesn’t reply by Friday, I’ll <strong>escalate</strong> it to my manager.</div></div>
+</div>
+<h3 class="vgroup-title"><span class="dot dot-i"></span>Idioms &amp; Set Phrases</h3>
+<div class="vgrid">
+<div class="vcard idiom"><div class="vterm">play hardball</div><div class="vpos">idiom</div><div class="vdef">To negotiate in a tough, aggressive way, refusing to give anything.</div><div class="vex">The union decided to <strong>play hardball</strong> over working hours.</div></div>
+<div class="vcard idiom"><div class="vterm">hold the line</div><div class="vpos">idiom</div><div class="vdef">To stay firm and refuse to give any more ground on a point.</div><div class="vex">We can be flexible on dates, but we must <strong>hold the line</strong> on price.</div></div>
+<div class="vcard idiom"><div class="vterm">sweeten the deal</div><div class="vpos">idiom</div><div class="vdef">To make an offer more attractive by adding something extra.</div><div class="vex">The dealer <strong>sweetened the deal</strong> with a free year of servicing.</div></div>
+<div class="vcard idiom"><div class="vterm">meet in the middle</div><div class="vpos">idiom</div><div class="vdef">To compromise, with each side moving part of the way towards the other.</div><div class="vex">He wanted €50, I offered €30, so we <strong>met in the middle</strong> at €40.</div></div>
+<div class="vcard idiom"><div class="vterm">walk away (from the table)</div><div class="vpos">idiom</div><div class="vdef">To end a negotiation without reaching an agreement.</div><div class="vex">If they won’t move on price, we’re ready to <strong>walk away</strong>.</div></div>
+</div>
+<h3 class="vgroup-title"><span class="dot dot-e"></span>Useful Expressions</h3>
+<div class="vgrid">
+<div class="vcard expr"><div class="vterm">come to the table</div><div class="vpos">negotiation phrase</div><div class="vdef">To agree to take part in a negotiation or discussion.</div><div class="vex">After weeks of silence, the landlord finally <strong>came to the table</strong>.</div></div>
+<div class="vcard expr"><div class="vterm">on the table</div><div class="vpos">negotiation phrase</div><div class="vdef">Being offered or discussed at the moment, as part of a negotiation.</div><div class="vex">A four-day week is now <strong>on the table</strong>.</div></div>
+<div class="vcard expr"><div class="vterm">non-negotiable</div><div class="vpos">negotiation phrase</div><div class="vdef">Not open to discussion or change; a fixed requirement.</div><div class="vex">For our team, working from home on Fridays is <strong>non-negotiable</strong>.</div></div>
+<div class="vcard expr"><div class="vterm">best and final offer</div><div class="vpos">negotiation phrase</div><div class="vdef">The last offer a side is willing to make; there is no more room to negotiate.</div><div class="vex">This is our <strong>best and final offer</strong>: £2,000 and not a penny more.</div></div>
+<div class="vcard expr"><div class="vterm">a win-win</div><div class="vpos">negotiation phrase</div><div class="vdef">A result that is good for both sides.</div><div class="vex">Flexible hours are <strong>a win-win</strong>: staff are happier and the company keeps them.</div></div>
+<div class="vcard expr"><div class="vterm">no hard feelings</div><div class="vpos">negotiation phrase</div><div class="vdef">No anger or bad feeling left after a disagreement.</div><div class="vex">We chose the other bid this time, but <strong>no hard feelings</strong>, I hope?</div></div>
+</div>
+</section>
+<section id="panel-grammar" class="panel" role="tabpanel" aria-labelledby="tab-grammar">
+<span class="tag">Grammar</span>
+<h2 class="sectitle">Reported Speech: Statements</h2>
+<p class="subtitle">How a writer turns what people said into clear, professional narrative.</p>
+<div class="note"><span class="label">Why it matters</span>At work you constantly report what other people said: in meeting notes, emails and updates to your manager. A case study does the same thing. Instead of quoting every word, it uses a reporting verb (<em>said</em>, <em>told</em>, <em>explained</em>, <em>admitted</em>) plus <em>that</em>, and moves the tense one step back into the past.</div>
+<h3 class="gsub"><span class="num">01</span>What Is It?</h3>
+<div class="tablewrap"><table class="gtable">
+<tr><th>Form</th><th>Used for</th><th>Example</th></tr>
+<tr><td>Direct speech</td><td>The exact words someone said, in quotation marks</td><td>Marcus: “Our costs <strong>have risen</strong> by about 6 percent.”</td></tr>
+<tr><td>Reported speech</td><td>A summary of what someone said, with the tense moved back</td><td>Marcus admitted that Orion’s costs <strong>had risen</strong> by about 6 percent.</td></tr>
+</table></div>
+<h3 class="gsub"><span class="num">02</span>How to Form It</h3>
+<div class="formula">subject + said / told (someone) / explained / admitted + (that) + subject + verb moved one step back</div>
+<div class="tablewrap"><table class="gtable">
+<tr><th>Direct speech</th><th>Reported speech</th><th>Example from the text</th></tr>
+<tr><td>present simple<br><em>“A rate below 3% <strong>is</strong> non-negotiable.”</em></td><td>past simple</td><td>She told Marcus that a faulty rate below 3 percent <strong>was</strong> non-negotiable.</td></tr>
+<tr><td>present perfect<br><em>“Chip costs <strong>have risen</strong> sharply.”</em></td><td>past perfect</td><td>He explained that the cost of computer chips <strong>had risen</strong> sharply.</td></tr>
+<tr><td>past simple<br><em>“Our finance team <strong>planned</strong> for a flat price.”</em></td><td>past perfect</td><td>She told Marcus that Calder’s finance team <strong>had planned</strong> for a flat price.</td></tr>
+<tr><td>will<br><em>“We <strong>will</strong> pay in 30 days.”</em></td><td>would</td><td>She said that Calder <strong>would</strong> pay Orion’s invoices in 30 days.</td></tr>
+<tr><td>can / can’t<br><em>“We <strong>can’t</strong> go below $18.60.”</em></td><td>could / couldn’t</td><td>Marcus said that Orion <strong>could not</strong> go below $18.60.</td></tr>
+</table></div>
+<div class="note note-tip"><span class="label">Watch out: other words change too</span>
+<div class="tablewrap" style="margin:0.4rem 0 0"><table class="gtable">
+<tr><th>Direct speech</th><th>Reported speech</th><th>Example</th></tr>
+<tr><td>I / we / you, my / our</td><td>he, she, they, him, her, his, their</td><td>“<strong>We</strong> can’t go lower” → Marcus said that <strong>Orion</strong> (or <strong>they</strong>) couldn’t go lower.</td></tr>
+<tr><td>this / this week</td><td>that / that week</td><td>“The terms are ready <strong>this week</strong>” → he said that the terms were ready <strong>that week</strong>.</td></tr>
+<tr><td>today / tomorrow</td><td>that day / the next day</td><td>“I’ll send the terms <strong>tomorrow</strong>” → he said he would send the terms <strong>the next day</strong>.</td></tr>
+<tr><td>say vs. tell</td><td><em>say (that)</em>, but <em>tell</em> + person</td><td>She <strong>said</strong> that… / She <strong>told Marcus</strong> that… (not <s>said Marcus</s>, not <s>told that</s>)</td></tr>
+</table></div></div>
+<h3 class="gsub"><span class="num">03</span>Why This Text Uses It</h3>
+<p class="note">The negotiation lasted three months, so the writer cannot quote every conversation. Reported speech lets the writer sum up each position in one sentence and show clearly <em>who</em> said it: Marcus explains, Lena tells, the managing director admits. The reporting verb also adds meaning. <em>Admitted</em>, for example, shows that Marcus was saying something he would prefer not to say.</p>
+<h3 class="gsub"><span class="num">04</span>Spotted in the Reading</h3>
+<div class="tablewrap"><table class="gtable">
+<tr><th>Part</th><th>Reported in the text</th><th>What was probably said</th></tr>
+<tr><td>2</td><td>He explained that the cost of computer chips <strong>had risen</strong> sharply and that Orion <strong>could</strong> no longer absorb it.</td><td>“The cost of chips <strong>has risen</strong> sharply, and we <strong>can</strong> no longer absorb it.”</td></tr>
+<tr><td>2</td><td>She told Marcus that she <strong>had</strong> already <strong>asked</strong> two other suppliers for quotes.</td><td>“I<strong>’ve</strong> already <strong>asked</strong> two other suppliers for quotes.”</td></tr>
+<tr><td>3</td><td>Marcus admitted that Orion’s costs <strong>had risen</strong> by about 6 percent, not 12.</td><td>“Our costs <strong>have risen</strong> by about 6 percent, not 12.”</td></tr>
+<tr><td>3</td><td>She said that Calder <strong>would</strong> pay Orion’s invoices in 30 days.</td><td>“We<strong>’ll</strong> pay your invoices in 30 days.”</td></tr>
+<tr><td>4</td><td>Marcus said that Orion <strong>could not</strong> go below $18.60.</td><td>“We <strong>can’t</strong> go below $18.60.”</td></tr>
+<tr><td>4</td><td>The finance director said that this guarantee <strong>was</strong> worth more to <strong>him</strong> than a few cents.</td><td>“This guarantee <strong>is</strong> worth more to <strong>me</strong> than a few cents.”</td></tr>
+</table></div>
+<h3 class="gsub"><span class="num">05</span>Your Turn: Report the Statement</h3>
+<p class="subtitle">Report each statement first, then reveal the model answer.</p>
+<div class="tablewrap"><table class="gtable">
+<tr><th>Direct speech</th><th>Your turn: report it</th></tr>
+<tr><td>Marcus said: “We can offer a better price if you sign for two years.”</td><td><details><summary>Show answer</summary>Marcus said that they <strong>could</strong> offer a better price if Calder <strong>signed</strong> for two years.</details></td></tr>
+<tr><td>Lena told Marcus: “Quality is more important to us than price.”</td><td><details><summary>Show answer</summary>Lena told Marcus that quality <strong>was</strong> more important to them than price.</details></td></tr>
+<tr><td>The managing director admitted: “We have had quality problems.”</td><td><details><summary>Show answer</summary>The managing director admitted that they <strong>had had</strong> quality problems.</details></td></tr>
+<tr><td>Lena said: “I will check the numbers with my finance director tomorrow.”</td><td><details><summary>Show answer</summary>Lena said that she <strong>would</strong> check the numbers with her finance director <strong>the next day</strong>.</details></td></tr>
+<tr><td>Marcus explained: “Chip prices went up last year.”</td><td><details><summary>Show answer</summary>Marcus explained that chip prices <strong>had gone up</strong> the year before.</details></td></tr>
+</table></div>
+</section>
+<section id="panel-exercises" class="panel" role="tabpanel" aria-labelledby="tab-exercises">
+<span class="tag">Exercises</span>
+<h2 class="sectitle">Test Yourself</h2>
+<p class="subtitle">15 questions in 3 sections. Choose an answer for instant feedback: every option, right or wrong, comes with an explanation, and the correct answer is always revealed.</p>
+<div class="quizbar" role="status"><span id="quiz-progress">Answered 0/15 · Score 0</span><span class="meter" aria-hidden="true"><i id="quiz-meter"></i></span><button type="button" data-reset>↺ Reset</button></div>
+<h3 class="exsection-title">A · Reading Comprehension</h3>
+
+<div class="qblock" id="qA1"><p class="qtext">1. Why did Lena start the talks three months before the contract ended?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not stated: Lena asked Marcus to meet, not the other way round." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Because Orion asked her to meet as soon as possible.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: with time left, Calder could still change supplier, so walking away stayed a real option." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Because changing supplier takes about ten weeks, so starting late would give Orion all the leverage.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not stated: the finance director’s limit comes much later, in Part 4." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Because Calder’s finance director had already approved a higher price.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not stated: holidays are never mentioned." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Because she wanted to sign before the summer holidays.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA2"><p class="qtext">2. What was Lena’s counteroffer to Orion’s first price of $19.60?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not yet: $18.40 is the final deal, reached much later." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">$18.40, the price they finally agreed.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not yet: the $18.20 limit appears in Part 4." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">$18.20, her finance director’s limit.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: she answered with “no increase at all”, an anchor in the other direction." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">No increase at all: the old price of $17.50.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not stated: there is no $19.00 offer in the case." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">A one-year contract at $19.00.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA3"><p class="qtext">3. What did Orion get in exchange for lowering its price to $18.90?</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: Orion lowered the price only if Calder signed for two years." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">A two-year contract instead of a one-year contract.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not stated: the volume stays at about 40,000 units a year." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">A promise that Calder would buy 60,000 units.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not stated: the apology, in Part 4, comes from Orion’s managing director." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">A public apology from Calder’s finance director.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not stated: the final price is fixed for two years." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Permission to raise prices again after one year.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA4"><p class="qtext">4. How was the deadlock in Part 4 finally broken?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not what happened: Lena only started testing another supplier’s parts, just in case." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Lena changed to a new supplier, and Orion lowered its price to keep her.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not what happened: neither side accepted the other’s number." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Calder’s finance director simply raised his limit to $18.60.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not what happened: the final price was $18.40, between the two limits." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Marcus accepted $18.20 to keep his biggest customer.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: both sides escalated, Orion sweetened the deal with credits for faulty units, and they agreed on $18.40." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Senior managers joined, Orion added a quality guarantee, and both sides met in the middle.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA5"><p class="qtext">5. According to Lena’s note, what did Calder really need from the deal?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: her note says Calder did not need the lowest price." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">The lowest possible price per unit.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: “Calder did not need the lowest price. It needed machines that worked.”" data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Reliable parts, so that its machines worked.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not stated: Calder actually accepted a longer, two-year contract." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">A shorter contract, so it could change supplier sooner.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not stated: delivery speed is not part of this negotiation." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Faster delivery of control units.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<h3 class="exsection-title">B · Vocabulary in Context</h3>
+
+<div class="qblock" id="qB1"><p class="qtext">6. “If she waited until the last month, Orion would have all the <strong>leverage</strong>.” Here, <em>leverage</em> means:</p>
+<button class="opt-btn" data-correct="false" data-expl="Leverage is not a document." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">a written list of contract terms</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: with no time to change supplier, Calder would have to accept Orion’s terms." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">power that gives one side an advantage</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Leverage is not about money saved." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">money saved by paying early</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This is a different, physical meaning of the word." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">a tool for testing electronic parts</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB2"><p class="qtext">7. Marcus’s first price of $19.60 is called an <strong>anchor</strong>. Why?</p>
+<button class="opt-btn" data-correct="false" data-expl="No: the old price was $17.50." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Because it was the price written in the old contract.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="No: the final price was $18.40." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Because it was the final price both sides agreed.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: a high anchor makes every later offer feel like a step towards the buyer." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Because it was a first number set high on purpose, to influence everything after it.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="No: Orion changed its price several times." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Because Orion could not legally change it.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB3"><p class="qtext">8. Lena said a faulty rate below 3 percent was <strong>non-negotiable</strong>. This means she:</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: non-negotiable means fixed, not open to discussion." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">would not discuss or change this requirement</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The opposite: it was the most important point for her." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">thought it was a small detail</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Non-negotiable is not about who must approve something." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">needed her finance director to agree to it</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The opposite: she held the line on it." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">was ready to drop it at the end</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB4"><p class="qtext">9. Orion offered to <strong>sweeten the deal</strong> with credits for faulty units. To sweeten a deal is to:</p>
+<button class="opt-btn" data-correct="false" data-expl="This is the opposite of the meaning." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">make an offer worse at the last minute</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The idiom is about the offer, not the timing." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">delay signing the contract</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This takes the idiom too literally." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">send a small gift to a customer</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the quality guarantee made Orion’s offer more attractive without cutting the price further." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">make an offer more attractive by adding something extra</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB5"><p class="qtext">10. Calder could pay no more than $18.20 and Orion could accept no less than $18.60. What does it mean that they agreed to <strong>meet in the middle</strong>?</p>
+<button class="opt-btn" data-correct="false" data-expl="That would be Calder winning the point, not meeting in the middle." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Orion accepted Calder’s price of $18.20.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: $18.40 is exactly halfway between $18.20 and $18.60." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Each side moved part of the way, to $18.40.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This takes the idiom literally." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">They held a meeting halfway between the two companies.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The idiom is about compromise, not a pause." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">They paused the talks for half a day.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<h3 class="exsection-title">C · Grammar: Reported Speech</h3>
+
+<div class="qblock" id="qC1"><p class="qtext">11. Marcus: “Our costs <strong>have risen</strong> by about 6 percent.” Which reported version is correct?</p>
+<button class="opt-btn" data-correct="false" data-expl="The present perfect should move back to the past perfect." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Marcus admitted that Orion’s costs have risen by about 6 percent.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This changes the meaning to the future." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Marcus admitted that Orion’s costs will rise by about 6 percent.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: have risen becomes had risen." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Marcus admitted that Orion’s costs had risen by about 6 percent.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Our must change, because Marcus is no longer the speaker." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Marcus admitted that our costs had risen by about 6 percent.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qC2"><p class="qtext">12. Lena: “We <strong>will</strong> pay your invoices in 30 days.” Which reported version is correct?</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: will becomes would, and we / your become Calder / Orion’s." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">She said that Calder would pay Orion’s invoices in 30 days.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Will should move back to would." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">She said that Calder will pay Orion’s invoices in 30 days.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The pronouns we and your must change in reported speech." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">She said that we would pay your invoices in 30 days.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This changes a promise about the future into a general fact." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">She said Calder pays Orion’s invoices in 30 days.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qC3"><p class="qtext">13. Marcus: “We <strong>can’t</strong> go below $18.60.” Which reported version is correct?</p>
+<button class="opt-btn" data-correct="false" data-expl="Can’t should move back to couldn’t." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Marcus said that Orion can’t go below $18.60.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Tell needs a person: told Lena that…" data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Marcus told that Orion couldn’t go below $18.60.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This changes ability (can’t) into refusal (won’t)." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Marcus said that Orion won’t go below $18.60.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: can’t becomes couldn’t." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Marcus said that Orion couldn’t go below $18.60.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qC4"><p class="qtext">14. Which sentence uses <em>say</em> and <em>tell</em> correctly?</p>
+<button class="opt-btn" data-correct="false" data-expl="Say is not followed directly by a person." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Lena said Marcus that quality was non-negotiable.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: tell + person + that." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Lena told Marcus that quality was non-negotiable.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Tell needs a person after it." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Lena told that quality was non-negotiable.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The tense should move back: was, not is." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Lena said to Marcus quality is non-negotiable.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qC5"><p class="qtext">15. Why does the case study use reporting verbs like <em>admitted</em> and <em>explained</em> instead of always using <em>said</em>?</p>
+<button class="opt-btn" data-correct="false" data-expl="Said is fine in business writing; it is just less precise." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Because <em>said</em> is too informal for business writing.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="They need the same tense change as said." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Because <em>admitted</em> and <em>explained</em> do not need a tense change.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the reporting verb adds meaning about the speaker’s attitude." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Because they show how the person spoke, for example that Marcus was saying something he would prefer to hide.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="There is no such rule." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Because case studies are not allowed to repeat words.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div id="score-bar" aria-live="polite"><div id="score-num"></div><div id="score-title"></div><div id="score-msg"></div><button type="button" class="reset-btn" data-reset>Try Again</button></div>
+
+</section>
+</main>
+<footer class="coursefoot"><div class="wrap"><a class="prev" href="https://teacher-victor.github.io/Business-English/04_TED_IceCream.html"><small>← Previous · Lesson 4 · Video</small><strong>How Did Ancient Civilizations Make Ice Cream?</strong></a><a class="next" href="https://teacher-victor.github.io/Business-English/06_BUS_Delegating.html"><small>Next · Lesson 6 · Listening →</small><strong>Delegating</strong></a><p class="unitmap">Unit 2: Negotiation & Delegation · <b>5 Reading</b> → <a href="https://teacher-victor.github.io/Business-English/06_BUS_Delegating.html">6 Listening</a> → <a href="https://teacher-victor.github.io/Business-English/07_SPK_SupplierRenewal.html">7 Speaking</a> → <a href="https://teacher-victor.github.io/Business-English/08_TED_LeftHanded.html">8 Video</a></p></div></footer>
+<script>window.LESSON = {"tiers": [{"min": 0.9, "title": "🤝 Master Negotiator", "msg": "Outstanding. You have a real feel for the tactics and the grammar that reports them."}, {"min": 0.7, "title": "📋 Solid Deal", "msg": "Strong result. Revisit the Grammar tab if any reported-speech questions tripped you up."}, {"min": 0.4, "title": "📝 Still Drafting", "msg": "Good start. Reread the highlighted phrases in the Reading tab and try again."}, {"min": 0.0, "title": "📂 Back to the Table", "msg": "Head back to the Reading and Grammar tabs, then give it another go."}]};</script>
+<script>
+/* Shared lesson behaviour: tabs, glossary tooltips, quiz scoring. */
+(function () {
+  "use strict";
+  var LESSON = window.LESSON || {};
+
+  /* ── Tabs (ARIA tablist, arrow keys, #hash deep links) ── */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tabbtn"));
+  var panels = Array.prototype.slice.call(document.querySelectorAll(".panel"));
+  var nav = document.querySelector(".tabnav");
+  function setTabHeight() {
+    if (nav) document.documentElement.style.setProperty("--tabh", nav.offsetHeight + "px");
+  }
+  function showTab(id, opts) {
+    opts = opts || {};
+    var found = false;
+    tabs.forEach(function (b) {
+      var on = b.getAttribute("data-tab") === id;
+      if (on) found = true;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.tabIndex = on ? 0 : -1;
+    });
+    if (!found) return;
+    panels.forEach(function (p) { p.classList.toggle("active", p.id === "panel-" + id); });
+    if (opts.focus) { var t = document.querySelector('.tabbtn[data-tab="' + id + '"]'); if (t) t.focus(); }
+    if (!opts.silent) {
+      // Deep link (#vocabulary etc.). Skipped silently where the page runs in a sandboxed
+      // preview (about:srcdoc), which does not allow changing the URL.
+      try {
+        if (history.replaceState && location.protocol !== "about:") history.replaceState(null, "", "#" + id);
+      } catch (err) { /* ignore: URL updates are optional */ }
+      var top = nav ? nav.getBoundingClientRect().top + window.pageYOffset : 0;
+      if (window.pageYOffset > top) window.scrollTo({ top: top, behavior: "smooth" });
+    }
+  }
+  tabs.forEach(function (b, i) {
+    b.addEventListener("click", function () { showTab(b.getAttribute("data-tab")); });
+    b.addEventListener("keydown", function (e) {
+      var n = null;
+      if (e.key === "ArrowRight") n = (i + 1) % tabs.length;
+      if (e.key === "ArrowLeft") n = (i - 1 + tabs.length) % tabs.length;
+      if (e.key === "Home") n = 0;
+      if (e.key === "End") n = tabs.length - 1;
+      if (n !== null) { e.preventDefault(); showTab(tabs[n].getAttribute("data-tab"), { focus: true }); }
+    });
+  });
+  document.querySelectorAll("[data-goto]").forEach(function (a) {
+    a.addEventListener("click", function (e) { e.preventDefault(); showTab(a.getAttribute("data-goto")); });
+  });
+  var initial = "";
+  try { initial = (location.hash || "").replace("#", ""); } catch (err) { initial = ""; }
+  showTab(initial && document.getElementById("panel-" + initial) ? initial : tabs[0].getAttribute("data-tab"), { silent: true });
+  setTabHeight();
+  window.addEventListener("resize", setTabHeight);
+
+  /* ── Glossary tooltips ── */
+  var tip = document.getElementById("tooltip");
+  function place(el) {
+    var r = el.getBoundingClientRect();
+    var top = r.top - tip.offsetHeight - 10;
+    if (top < 8) top = r.bottom + 10;
+    var left = r.left + r.width / 2 - tip.offsetWidth / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tip.offsetWidth - 8));
+    tip.style.top = top + "px";
+    tip.style.left = left + "px";
+  }
+  function showTip(el) {
+    tip.innerHTML = "";
+    var c = document.createElement("span"); c.className = "tip-cat"; c.textContent = el.getAttribute("data-cat");
+    var t = document.createElement("span"); t.className = "tip-term"; t.textContent = el.getAttribute("data-term");
+    tip.appendChild(c); tip.appendChild(t);
+    tip.appendChild(document.createTextNode(el.getAttribute("data-def")));
+    tip.style.display = "block";
+    place(el);
+  }
+  function hideTip() { tip.style.display = "none"; }
+  document.querySelectorAll(".hl").forEach(function (el) {
+    el.setAttribute("role", "button");
+    el.setAttribute("aria-label", el.textContent + ": " + el.getAttribute("data-def"));
+    el.addEventListener("mouseenter", function () { showTip(el); });
+    el.addEventListener("mouseleave", hideTip);
+    el.addEventListener("focus", function () { showTip(el); });
+    el.addEventListener("blur", hideTip);
+    el.addEventListener("click", function (e) { e.stopPropagation(); showTip(el); });
+  });
+  document.addEventListener("click", hideTip);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+  window.addEventListener("scroll", hideTip, { passive: true });
+
+  /* ── Quiz ── */
+  var blocks = Array.prototype.slice.call(document.querySelectorAll(".qblock"));
+  var TOTAL = blocks.length;
+  if (!TOTAL) return;
+  var answered = {}, correct = {};
+  var tiers = LESSON.tiers || [];
+  var progTxt = document.getElementById("quiz-progress");
+  var meter = document.getElementById("quiz-meter");
+
+  function count(obj) { return Object.keys(obj).filter(function (k) { return obj[k]; }).length; }
+  function update() {
+    var a = Object.keys(answered).length, s = count(correct);
+    if (progTxt) progTxt.textContent = "Answered " + a + "/" + TOTAL + " · Score " + s;
+    if (meter) meter.style.width = (a / TOTAL * 100) + "%";
+    if (a === TOTAL) showScore(s);
+  }
+  function showScore(s) {
+    var pct = s / TOTAL, tier = tiers[tiers.length - 1] || { title: "", msg: "" };
+    for (var i = 0; i < tiers.length; i++) { if (pct >= tiers[i].min) { tier = tiers[i]; break; } }
+    document.getElementById("score-num").textContent = s + "/" + TOTAL;
+    document.getElementById("score-title").textContent = tier.title;
+    document.getElementById("score-msg").textContent = tier.msg;
+    var bar = document.getElementById("score-bar");
+    bar.classList.add("show");
+    bar.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+  blocks.forEach(function (block) {
+    var btns = block.querySelectorAll(".opt-btn");
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var q = block.id;
+        if (answered[q]) return;
+        var ok = btn.getAttribute("data-correct") === "true", right = "";
+        answered[q] = true; correct[q] = ok;
+        btns.forEach(function (b) {
+          b.disabled = true;
+          if (b.getAttribute("data-correct") === "true") { b.classList.add("reveal-correct"); right = b.getAttribute("data-letter"); }
+        });
+        btn.classList.remove("reveal-correct");
+        btn.classList.add(ok ? "correct" : "wrong");
+        block.classList.add(ok ? "answered-correct" : "answered-wrong");
+        var fb = block.querySelector(".feedback");
+        fb.innerHTML = "";
+        var icon = document.createElement("span"); icon.className = "fb-icon"; icon.textContent = ok ? "✓" : "✗";
+        fb.appendChild(icon);
+        fb.appendChild(document.createTextNode(btn.getAttribute("data-expl") + (ok ? "" : " The correct answer is " + right + ".")));
+        fb.className = "feedback show " + (ok ? "correct" : "wrong");
+        update();
+      });
+    });
+  });
+  function reset() {
+    answered = {}; correct = {};
+    blocks.forEach(function (b) { b.classList.remove("answered-correct", "answered-wrong"); });
+    document.querySelectorAll(".opt-btn").forEach(function (b) { b.disabled = false; b.classList.remove("correct", "wrong", "reveal-correct"); });
+    document.querySelectorAll(".feedback").forEach(function (f) { f.className = "feedback"; f.innerHTML = ""; });
+    document.getElementById("score-bar").classList.remove("show");
+    update();
+    var first = document.getElementById("panel-exercises");
+    if (first) first.scrollIntoView({ behavior: "smooth" });
+  }
+  document.querySelectorAll("[data-reset]").forEach(function (b) { b.addEventListener("click", reset); });
+  update();
+})();
+
+</script>
+</body>
+</html>

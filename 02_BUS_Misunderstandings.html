@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+LESSON-META
+course_unit: 1 (Remote Work & Communication)
+lesson: 2
+track: Listening
+level: B1
+title: "Misunderstandings"
+questions: 15
+built: 2026-10-23 (shared lesson system: one stylesheet, one script, per-lesson theme tokens)
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Misunderstandings · Lesson 2 · English Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Overpass+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #ffffff;
+  --ink-soft: #4a3d52;
+  --ink-muted: #6f6478;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-pill: 999px;
+  --bw: 1.5px;
+  --shadow: none;
+  --correct: #2c7d4f;
+  --wrong: #b8443f;
+  --light-correct: #e2f4e8;
+  --light-wrong: #fae3e1;
+  --highlight-vocab: #fbe6a2;
+  --highlight-idiom: #cfe3f1;
+  --highlight-express: #f6d3ad;
+  --highlight-vocab-strong: #d9a520;
+  --highlight-idiom-strong: #3d7fb5;
+  --highlight-express-strong: #d07a2c;
+  --ink: #241b2f;
+  --paper: #faf6f2;
+  --cream: #f1e6ec;
+  --rule: #cdb8d8;
+  --accent: #8c5e8a;
+  --accent2: #4f6496;
+  --gold: #d98e3f;
+  --font-display: 'Urbanist', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Overpass Mono', monospace;
+  --display-weight: 800;
+  --page-bg: #f4ecf0;
+  --tab-bg: #ffffff;
+  --tab-fg: #6f6478;
+  --tab-hover: #f7eff4;
+  --tab-active-bg: #ffffff;
+  --tab-active-fg: #8c5e8a;
+  --tab-active-line: #8c5e8a;
+  --font-tab: 'Overpass Mono', monospace;
+  --mast-bg: repeating-linear-gradient(115deg, rgba(140,94,138,0.08) 0 1px, transparent 1px 34px), repeating-linear-gradient(25deg, rgba(79,100,150,0.08) 0 1px, transparent 1px 34px), linear-gradient(160deg, #f1e4ec 0%, #faf6f2 62%);
+  --mast-border: 1px solid #cdb8d8;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SHARED LESSON SYSTEM · one stylesheet for every lesson in the course
+   Each lesson only sets tokens (colours, fonts, shape) and its own
+   masthead ornament. Every component below is identical everywhere.
+   ═══════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--page-bg, var(--paper));
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+  line-height: 1.72;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent); color: #fff; }
+a { color: var(--accent2); }
+img, svg { max-width: 100%; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 22px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ── MASTHEAD ─────────────────────────────────────────────────────── */
+.masthead {
+  background: var(--mast-bg, linear-gradient(180deg, var(--cream), var(--paper)));
+  color: var(--mast-fg, var(--ink));
+  text-align: center;
+  padding: 2.6rem 0 1.9rem;
+  border-bottom: var(--mast-border, 5px solid var(--accent));
+  position: relative;
+  overflow: hidden;
+}
+.masthead .wrap { position: relative; z-index: 1; }
+.eyebrow {
+  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--eyebrow, var(--accent2));
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 0.35rem 0.6rem;
+  margin-bottom: 1rem;
+}
+.eyebrow span + span::before { content: "·"; margin-right: 0.6rem; opacity: 0.6; }
+.headline {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  font-size: clamp(1.85rem, 4.8vw, 2.95rem); line-height: 1.12;
+  letter-spacing: var(--display-tracking, -0.01em);
+  text-transform: var(--display-case, none);
+  color: var(--mast-title, var(--ink));
+  max-width: 780px; margin: 0 auto 0.95rem; text-wrap: balance;
+}
+.deck {
+  font-size: 1.1rem; line-height: 1.6; max-width: 640px; margin: 0 auto 1rem;
+  color: var(--mast-sub, var(--ink-soft)); font-style: var(--deck-style, italic); text-wrap: pretty;
+}
+.byline { font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.02em; color: var(--mast-muted, var(--ink-muted)); margin-bottom: 1.3rem; }
+.byline a { color: inherit; text-underline-offset: 3px; }
+.factrow { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.55rem 0.7rem; }
+.fact {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 500;
+  padding: 0.38rem 0.9rem;
+  background: var(--chip-bg, var(--surface));
+  color: var(--chip-fg, var(--ink));
+  border: var(--chip-border, 1.5px solid var(--rule));
+  border-radius: var(--radius-pill, 999px);
+}
+.fact b { font-weight: 700; }
+.fact a { color: inherit; font-weight: 700; }
+.ornament { margin-top: 1.4rem; }
+
+/* ── TABS ─────────────────────────────────────────────────────────── */
+.tabnav {
+  position: sticky; top: 0; z-index: 60;
+  background: var(--tab-bg, var(--ink));
+  box-shadow: 0 2px 12px rgba(0,0,0,0.14);
+}
+.tabnav .tabs { display: flex; max-width: 900px; margin: 0 auto; }
+.tabbtn {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.45rem;
+  border: none; background: transparent; cursor: pointer;
+  color: var(--tab-fg, rgba(255,255,255,0.78));
+  font-family: var(--font-tab, var(--font-display)); font-weight: 600; font-size: 0.93rem;
+  padding: 0.95rem 0.4rem 0.8rem;
+  border-bottom: 4px solid transparent;
+  transition: background 0.18s, color 0.18s;
+}
+.tabbtn .ti { font-size: 1.05em; line-height: 1; }
+.tabbtn:hover { background: var(--tab-hover, rgba(255,255,255,0.09)); }
+.tabbtn[aria-selected="true"] {
+  background: var(--tab-active-bg, var(--accent));
+  color: var(--tab-active-fg, #fff);
+  border-bottom-color: var(--tab-active-line, var(--gold));
+}
+:focus-visible { outline: 3px solid var(--focus, var(--gold)); outline-offset: 2px; }
+
+/* ── PANELS + SECTION HEADINGS ────────────────────────────────────── */
+.stage { padding-bottom: 3rem; }
+.panel { display: none; padding: 2.4rem 0 1rem; }
+.panel.active { display: block; animation: fadeIn 0.22s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.tag {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--tag-bg, var(--accent2)); color: var(--tag-fg, #fff);
+  padding: 0.26rem 0.72rem; border-radius: var(--radius-pill, 999px); margin-bottom: 0.75rem;
+}
+.sectitle {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  text-transform: var(--display-case, none); letter-spacing: var(--display-tracking, -0.01em);
+  font-size: clamp(1.45rem, 3.4vw, 1.85rem); line-height: 1.2; color: var(--sect, var(--accent));
+  margin-bottom: 0.4rem; text-wrap: balance;
+}
+.subtitle { color: var(--ink-muted); margin-bottom: 1.5rem; font-size: 0.96rem; max-width: 70ch; }
+.gsub {
+  display: flex; align-items: baseline; gap: 0.6rem;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  text-transform: var(--display-case, none);
+  font-size: 1.28rem; color: var(--sub, var(--accent2)); margin: 2.2rem 0 0.9rem;
+}
+.gsub .num { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; color: var(--accent); letter-spacing: 0.05em; }
+
+/* ── LEGEND + NOTES ───────────────────────────────────────────────── */
+.legend {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.2rem;
+  background: var(--cream); border: 1.5px dashed var(--rule);
+  border-radius: var(--radius, 12px); padding: 0.8rem 1.1rem; margin-bottom: 1.8rem; font-size: 0.87rem;
+}
+.legend-title { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.legend-item { display: flex; align-items: center; gap: 0.45rem; }
+.swatch, .dot { width: 15px; height: 15px; border-radius: 4px; display: inline-block; flex: 0 0 auto; border: 1px solid rgba(0,0,0,0.14); }
+.sw-v, .dot-v { background: var(--highlight-vocab); }
+.sw-i, .dot-i { background: var(--highlight-idiom); }
+.sw-e, .dot-e { background: var(--highlight-express); }
+.dot-t { background: var(--accent2); }
+.note {
+  background: var(--cream); border-left: 5px solid var(--accent2);
+  border-radius: var(--radius-sm, 8px); padding: 1rem 1.25rem; margin-bottom: 1.6rem; font-size: 0.97rem;
+}
+.note p + p { margin-top: 0.6rem; }
+.note-task { background: var(--surface); border: var(--bw, 1.5px) solid var(--ink); border-left: 7px solid var(--accent); }
+.note-tip { border-left-color: var(--gold); }
+.note .label {
+  display: block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem;
+}
+.note ul, .note ol { margin: 0.4rem 0 0 1.2rem; }
+.note li { margin-bottom: 0.25rem; }
+
+/* ── READING TEXT ─────────────────────────────────────────────────── */
+.excerpt {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.5rem 1.65rem; margin-bottom: 1.5rem;
+  box-shadow: var(--shadow, none); position: relative;
+}
+.exlabel {
+  display: flex; align-items: center; gap: 0.55rem;
+  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.07em; color: var(--exlabel, var(--accent));
+  margin-bottom: 0.7rem;
+}
+.exlabel .n {
+  display: inline-grid; place-items: center; min-width: 1.6rem; height: 1.6rem; padding: 0 0.35rem;
+  background: var(--accent); color: #fff; border-radius: var(--radius-pill, 999px); font-size: 0.72rem;
+}
+.excerpt p { margin-bottom: 0.95rem; text-wrap: pretty; }
+.excerpt p:last-child { margin-bottom: 0; }
+.dropcap > p:first-of-type::first-letter {
+  float: left; font-family: var(--font-display); font-weight: 700; font-size: 3.4em; line-height: 0.82;
+  padding: 0.08em 0.1em 0 0; color: var(--accent);
+}
+.sidebar {
+  background: var(--cream); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.3rem 1.4rem; margin: 0 0 1.5rem;
+}
+.sidebar h3 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.3rem; color: var(--accent2); }
+.sidebar > p { font-size: 0.93rem; color: var(--ink-soft); margin-bottom: 0.9rem; }
+
+/* transcript turns */
+.transcript { padding: 0; overflow: hidden; }
+.transcript > .exlabel { padding: 0.75rem 1.2rem; margin: 0; background: var(--ink); color: var(--paper); }
+.transcript > .exlabel .n { background: var(--accent); }
+.turn { display: grid; grid-template-columns: 6.4rem 1fr; gap: 0.9rem; padding: 0.95rem 1.2rem; border-top: 1px solid var(--line, rgba(0,0,0,0.07)); }
+.transcript > .turn:first-of-type { border-top: none; }
+.spk {
+  align-self: start; margin-top: 0.2rem;
+  font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  text-align: center; padding: 0.25rem 0.35rem; border-radius: var(--radius-sm, 6px);
+  background: var(--spk-bg, var(--ink-muted)); color: #fff;
+}
+.turn[data-speaker="pippa"] { --spk-bg: var(--accent); }
+.turn[data-speaker="phil"] { --spk-bg: var(--accent2); }
+.turn[data-speaker="voice"], .turn[data-speaker="neil"], .turn[data-speaker="beth"] { background: var(--voice-bg, var(--cream)); }
+.turn[data-speaker="voice"] { --spk-bg: #6b6257; }
+.turn[data-speaker="neil"] { --spk-bg: #7a5c2e; }
+.turn[data-speaker="beth"] { --spk-bg: #4d5a66; }
+.said p { margin-bottom: 0.6rem; }
+.said p:last-child { margin-bottom: 0; }
+
+/* highlights + tooltip */
+.hl {
+  border-radius: 4px; padding: 0.04em 0.18em; cursor: help; font-weight: 600;
+  border-bottom: 2px dotted currentColor; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+.hl-v { background: var(--highlight-vocab); color: var(--hl-v-fg, #6b4e06); }
+.hl-i { background: var(--highlight-idiom); color: var(--hl-i-fg, #174a7c); }
+.hl-e { background: var(--highlight-express); color: var(--hl-e-fg, #8a3f0e); }
+.hl:focus-visible { outline: 2px solid var(--accent2); outline-offset: 1px; }
+#tooltip {
+  position: fixed; display: none; z-index: 999; max-width: 290px; pointer-events: none;
+  background: #1b1a1f; color: #f7f3ea; font-family: var(--font-body); font-size: 0.87rem; line-height: 1.45;
+  padding: 0.7rem 0.9rem; border-radius: 9px; box-shadow: 0 10px 28px rgba(0,0,0,0.32);
+}
+#tooltip .tip-cat { display: block; font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.07em; text-transform: uppercase; color: #f2c55c; margin-bottom: 0.15rem; }
+#tooltip .tip-term { display: block; font-weight: 700; font-size: 0.98rem; margin-bottom: 0.2rem; }
+
+.pullquote {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: clamp(1.2rem, 3vw, 1.55rem); line-height: 1.35; text-align: center; color: var(--accent2);
+  padding: 1.6rem 1.2rem; margin: 2.2rem auto; max-width: 680px;
+  border-top: 3px solid var(--accent); border-bottom: 1px solid var(--rule);
+}
+.pullquote small { display: block; margin-top: 0.6rem; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); font-weight: 500; }
+
+/* ── VOCABULARY CARDS ─────────────────────────────────────────────── */
+.vgroup-title {
+  display: flex; align-items: center; gap: 0.55rem;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: 1.2rem; color: var(--ink); margin: 2rem 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--rule);
+}
+.vgroup-title .count { margin-left: auto; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; color: var(--ink-muted); text-transform: none; }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(245px, 1fr)); gap: 0.9rem; }
+.vcard {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-top: 5px solid var(--card-top, var(--highlight-vocab-strong, #d9a520));
+  border-radius: var(--radius, 12px); padding: 0.95rem 1.15rem 1.05rem; box-shadow: var(--shadow, none);
+  display: flex; flex-direction: column;
+}
+.vcard.idiom { --card-top: var(--highlight-idiom-strong, #3d7fb5); }
+.vcard.expr { --card-top: var(--highlight-express-strong, #d07a2c); }
+.vcard.toolkit { --card-top: var(--accent2); }
+.vterm { font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; line-height: 1.3; text-transform: none; }
+.vpos { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); margin: 0.15rem 0 0.45rem; }
+.vdef { font-size: 0.93rem; margin-bottom: 0.55rem; }
+.vex { font-size: 0.89rem; font-style: italic; color: var(--ink-soft); padding-left: 0.7rem; border-left: 2px solid var(--rule); }
+.vex strong { font-style: normal; }
+.vsrc { margin-top: auto; padding-top: 0.6rem; font-family: var(--font-mono); font-size: 0.63rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+
+/* use-in-context cards (Vocabulary in Use) */
+.usegrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.9rem; margin-bottom: 1rem; }
+.usecard {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-left: 5px solid var(--accent); border-radius: var(--radius, 12px); padding: 0.9rem 1.1rem;
+}
+.usehead { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--accent); margin-bottom: 0.15rem; text-transform: none; }
+.usemeta { font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 0.45rem; }
+.usecard ul { padding-left: 1.1rem; font-size: 0.93rem; }
+.usecard li { margin-bottom: 0.3rem; }
+
+/* ── GRAMMAR / GENERIC TABLES ─────────────────────────────────────── */
+.formula {
+  font-family: var(--font-mono); font-size: 0.92rem; text-align: center; letter-spacing: 0.01em;
+  background: var(--ink); color: var(--paper); border-radius: var(--radius-sm, 8px);
+  padding: 0.95rem 1.2rem; margin-bottom: 0.8rem;
+}
+.formula b { color: var(--gold); font-weight: 600; }
+.tablewrap { overflow-x: auto; margin-bottom: 1.4rem; border-radius: var(--radius-sm, 8px); border: 1px solid var(--rule); }
+table.gtable { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: var(--surface); }
+table.gtable th {
+  background: var(--th-bg, var(--ink)); color: var(--th-fg, #fff); text-align: left; vertical-align: bottom;
+  font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.65rem 0.85rem;
+}
+table.gtable td { padding: 0.68rem 0.85rem; border-top: 1px solid var(--rule); vertical-align: top; }
+table.gtable tr:nth-child(even) td { background: var(--zebra, var(--cream)); }
+details summary {
+  cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 0.35rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600; color: var(--accent2);
+  padding: 0.2rem 0.55rem; border: 1px solid currentColor; border-radius: var(--radius-pill, 999px);
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: "▸"; transition: transform 0.15s; }
+details[open] summary::before { transform: rotate(90deg); }
+details[open] summary { margin-bottom: 0.45rem; }
+details .ans { display: block; }
+
+/* ── SPEAKING: SCRIPT LINES + RUBRIC ──────────────────────────────── */
+.script-line {
+  background: var(--surface); border: 1px solid var(--rule); border-left: 6px solid var(--accent);
+  border-radius: var(--radius-sm, 8px); padding: 0.9rem 1.1rem; margin-bottom: 0.7rem;
+}
+.script-line .beat { display: inline-block; font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: var(--accent2); padding: 0.12rem 0.5rem; border-radius: var(--radius-pill, 999px); margin-bottom: 0.4rem; }
+.script-note { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-muted); margin-top: 0.4rem; }
+.figure {
+  background: var(--fig-bg, var(--surface)); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.3rem 1.4rem 1rem; margin-bottom: 1.6rem; box-shadow: var(--shadow, none);
+}
+.figure-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 0.4rem 1rem; margin-bottom: 0.9rem; }
+.figure-kicker { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.figure-title { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; line-height: 1.25; color: var(--ink); text-transform: none; }
+.figure-meta { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); }
+.figure-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.3rem 1rem; margin-top: 0.8rem; padding-top: 0.6rem; border-top: 1px solid var(--rule); font-family: var(--font-mono); font-size: 0.66rem; color: var(--ink-muted); }
+.figure svg text { font-family: var(--font-mono); }
+
+/* ── EXERCISES ────────────────────────────────────────────────────── */
+.quizbar {
+  position: sticky; top: calc(var(--tabh, 3.4rem) + 0.5rem); z-index: 40;
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  background: var(--ink); color: var(--paper); border-radius: var(--radius-sm, 8px);
+  padding: 0.55rem 0.9rem; margin-bottom: 1.4rem; font-family: var(--font-mono); font-size: 0.8rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+.quizbar .meter { flex: 1; min-width: 120px; height: 7px; background: rgba(255,255,255,0.18); border-radius: 999px; overflow: hidden; }
+.quizbar .meter i { display: block; height: 100%; width: 0; background: var(--gold); transition: width 0.25s; }
+.quizbar button { background: var(--accent); color: #fff; border: none; border-radius: var(--radius-pill, 999px); padding: 0.3rem 0.85rem; font: inherit; font-weight: 700; cursor: pointer; }
+.quizbar button:hover { filter: brightness(1.1); }
+.exsection-title {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: 1.32rem; color: var(--sect, var(--accent)); margin: 2rem 0 1rem; padding-bottom: 0.35rem;
+  border-bottom: 3px solid var(--gold);
+}
+.qblock {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.15rem 1.25rem; margin-bottom: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.qblock.answered-correct { border-color: var(--correct); box-shadow: inset 4px 0 0 var(--correct); }
+.qblock.answered-wrong { border-color: var(--wrong); box-shadow: inset 4px 0 0 var(--wrong); }
+.qtext { font-weight: 700; margin-bottom: 0.8rem; text-wrap: pretty; }
+.opt-btn {
+  display: flex; align-items: baseline; gap: 0.75rem; width: 100%; text-align: left;
+  background: var(--paper); color: var(--ink); cursor: pointer;
+  border: 1.5px solid var(--rule); border-radius: var(--radius-sm, 8px);
+  padding: 0.6rem 0.85rem; margin-bottom: 0.45rem;
+  font-family: var(--font-body); font-size: 0.97rem; line-height: 1.5;
+  transition: background 0.15s, border-color 0.15s;
+}
+.opt-letter {
+  flex: 0 0 auto; display: inline-grid; place-items: center; width: 1.55rem; height: 1.55rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 700;
+  border: 1.5px solid var(--rule); border-radius: 50%; background: var(--surface);
+}
+.opt-btn:hover:not(:disabled) { border-color: var(--accent2); background: var(--cream); }
+.opt-btn:disabled { cursor: default; }
+.opt-btn.correct, .opt-btn.reveal-correct { background: var(--light-correct); border-color: var(--correct); }
+.opt-btn.correct { font-weight: 700; color: #1d4a30; }
+.opt-btn.wrong { background: var(--light-wrong); border-color: var(--wrong); color: #7a2e2e; font-weight: 700; }
+.opt-btn.correct .opt-letter, .opt-btn.reveal-correct .opt-letter { background: var(--correct); border-color: var(--correct); color: #fff; }
+.opt-btn.wrong .opt-letter { background: var(--wrong); border-color: var(--wrong); color: #fff; }
+.feedback { display: none; margin-top: 0.55rem; padding: 0.7rem 0.9rem; border-radius: var(--radius-sm, 8px); font-size: 0.93rem; }
+.feedback.show { display: block; }
+.feedback.correct { background: var(--light-correct); color: #1d4a30; }
+.feedback.wrong { background: var(--light-wrong); color: #7a2e2e; }
+.fb-icon { font-weight: 800; margin-right: 0.35rem; }
+#score-bar {
+  display: none; text-align: center; background: var(--ink); color: var(--paper);
+  border-radius: var(--radius, 12px); padding: 1.9rem 1.4rem; margin-top: 2rem;
+}
+#score-bar.show { display: block; }
+#score-num { font-family: var(--font-display); font-size: 3rem; line-height: 1.1; color: var(--gold); }
+#score-title { font-family: var(--font-display); font-size: 1.45rem; margin: 0.35rem 0; }
+#score-msg { font-size: 0.95rem; opacity: 0.85; margin-bottom: 1.1rem; }
+.reset-btn {
+  background: var(--accent); color: #fff; border: none; cursor: pointer;
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.86rem;
+  padding: 0.7rem 1.6rem; border-radius: var(--radius-pill, 999px);
+}
+.reset-btn:hover { filter: brightness(1.1); }
+
+/* ── FOOTER: COURSE NAVIGATION ────────────────────────────────────── */
+.coursefoot { border-top: 1px solid var(--rule); background: var(--cream); padding: 1.4rem 0 2.2rem; margin-top: 1rem; }
+.coursefoot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.8rem; }
+.coursefoot > .wrap > a {
+  display: inline-flex; flex-direction: column; text-decoration: none; color: var(--ink);
+  border: 1.5px solid var(--rule); border-radius: var(--radius-sm, 8px); background: var(--surface);
+  padding: 0.55rem 0.9rem; min-width: 210px; max-width: 48%;
+}
+.coursefoot > .wrap > a:hover { border-color: var(--accent); }
+.coursefoot > .wrap > a.next { text-align: right; margin-left: auto; }
+.coursefoot small { font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.coursefoot strong { font-family: var(--font-display); font-size: 0.98rem; text-transform: none; }
+.coursefoot .unitmap { width: 100%; font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); text-align: center; margin-top: 0.4rem; }
+.coursefoot .unitmap a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
+.coursefoot .unitmap a:hover { color: var(--accent); }
+
+/* ── RESPONSIVE + PRINT ───────────────────────────────────────────── */
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .wrap { padding: 0 16px; }
+  .masthead { padding: 2rem 0 1.5rem; }
+  .tabbtn { flex-direction: column; gap: 0.15rem; font-size: 0.7rem; padding: 0.65rem 0.15rem 0.55rem; }
+  .excerpt { padding: 1.2rem 1.05rem; }
+  .turn { grid-template-columns: 1fr; gap: 0.35rem; }
+  .spk { justify-self: start; }
+  table.gtable { font-size: 0.8rem; }
+  table.gtable th, table.gtable td { padding: 0.5rem 0.55rem; }
+  .coursefoot > .wrap > a { max-width: 100%; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media print {
+  .tabnav, .quizbar, #score-bar, .coursefoot, #tooltip { display: none !important; }
+  .panel { display: block !important; page-break-before: always; }
+  .panel:first-of-type { page-break-before: auto; }
+  details > *:not(summary) { display: block !important; }
+  .masthead { background: none !important; color: #000 !important; }
+  body { background: #fff !important; }
+}
+
+/* ── AT-A-GLANCE AIDS: timeline + stat grid ───────────────────────── */
+.glance { margin: 2rem 0 1.5rem; }
+.glance > h3 { font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none); font-size: 1.2rem; color: var(--accent2); margin-bottom: 0.3rem; }
+.glance > p { font-size: 0.92rem; color: var(--ink-muted); margin-bottom: 1rem; }
+.timeline { list-style: none; position: relative; padding-left: 1.6rem; }
+.timeline::before { content: ""; position: absolute; left: 0.45rem; top: 0.4rem; bottom: 0.4rem; width: 3px; background: var(--rule); border-radius: 2px; }
+.timeline li { position: relative; margin-bottom: 0.85rem; }
+.timeline li::before { content: ""; position: absolute; left: -1.38rem; top: 0.42rem; width: 13px; height: 13px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); }
+.timeline .when { display: inline-block; font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--accent); min-width: 7.5rem; }
+.timeline .what { font-size: 0.95rem; }
+.statgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.8rem; }
+.stat { background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule)); border-radius: var(--radius, 12px); padding: 0.85rem 1rem; }
+.stat b { display: block; font-family: var(--font-display); font-size: 1.9rem; line-height: 1.1; color: var(--accent); }
+.stat span { display: block; font-size: 0.88rem; line-height: 1.4; }
+.stat small { display: block; margin-top: 0.3rem; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+.ladder-scale { list-style: none; display: grid; gap: 0.45rem; }
+.ladder-scale li { display: grid; grid-template-columns: 8.5rem 1fr 13rem; gap: 0.8rem; align-items: center; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius-sm, 8px); padding: 0.6rem 0.9rem; border-left: 6px solid var(--lv, var(--accent)); }
+.ladder-scale li:nth-child(1) { --lv: #3f8f6b; } .ladder-scale li:nth-child(2) { --lv: #79a04a; } .ladder-scale li:nth-child(3) { --lv: #d1a32a; } .ladder-scale li:nth-child(4) { --lv: #d9772c; } .ladder-scale li:nth-child(5) { --lv: #b8443f; }
+.ladder-scale .lv { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--lv); }
+.ladder-scale .ph { font-weight: 700; }
+.ladder-scale .use { font-size: 0.85rem; color: var(--ink-muted); }
+@media (max-width: 640px) { .ladder-scale li { grid-template-columns: 1fr; gap: 0.15rem; } }
+
+/* ── LESSON THEME: Misunderstandings ── */
+.tabbtn { font-size: 0.8rem; letter-spacing: 0.02em; }
+.wires { width: 220px; height: 40px; }
+</style>
+</head>
+<body>
+<div id="tooltip" role="tooltip"></div>
+<a class="sr-only" href="#panel-transcript">Skip to lesson</a>
+
+<div class="topband" aria-hidden="true"></div>
+<header class="masthead">
+
+<div class="wrap">
+  <p class="eyebrow"><span>Unit 1: Remote Work & Communication</span><span>Lesson 2</span><span>Listening</span><span>B1</span></p>
+  <h1 class="headline">Misunderstandings</h1>
+  <p class="deck">Phil and Pippa talk through what to say when you don’t understand someone at work, and what to do when you suspect someone hasn’t understood you.</p>
+  <p class="byline">BBC Learning English · Office English podcast</p>
+  <div class="factrow"><span class="fact">🎙 Podcast: <b>Office English</b></span><span class="fact">🎯 Level: <b>B1</b></span><span class="fact">🗂 Focus: <b>clarifying &amp; checking</b></span><span class="fact">🔗 <a href="https://www.bbc.co.uk/learningenglish/english/features/office-english/250428" target="_blank" rel="noopener">Listen to the episode</a></span></div>
+  <div class="ornament"><svg class="wires" viewBox="0 0 220 40" aria-hidden="true"><path d="M5 30 C 70 30, 80 8, 110 20 S 160 35, 215 10" fill="none" stroke="#8c5e8a" stroke-width="3" stroke-linecap="round"/><path d="M5 10 C 60 10, 90 34, 115 22 S 170 4, 215 30" fill="none" stroke="#4f6496" stroke-width="3" stroke-linecap="round"/><circle cx="5" cy="30" r="4" fill="#8c5e8a"/><circle cx="215" cy="10" r="4" fill="#8c5e8a"/><circle cx="5" cy="10" r="4" fill="#4f6496"/><circle cx="215" cy="30" r="4" fill="#4f6496"/></svg></div>
+</div>
+</header>
+
+<nav class="tabnav" aria-label="Lesson sections"><div class="tabs" role="tablist">
+<button type="button" role="tab" class="tabbtn" id="tab-transcript" data-tab="transcript" aria-controls="panel-transcript" aria-selected="true"><span class="ti" aria-hidden="true">🔀</span><span>Transcript</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-vocabulary" data-tab="vocabulary" aria-controls="panel-vocabulary" aria-selected="false"><span class="ti" aria-hidden="true">🗒️</span><span>Vocabulary</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-inuse" data-tab="inuse" aria-controls="panel-inuse" aria-selected="false"><span class="ti" aria-hidden="true">🔁</span><span>Vocabulary in Use</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-exercises" data-tab="exercises" aria-controls="panel-exercises" aria-selected="false"><span class="ti" aria-hidden="true">✅</span><span>Exercises</span></button>
+</div></nav>
+<main class="wrap stage">
+<section id="panel-transcript" class="panel active" role="tabpanel" aria-labelledby="tab-transcript">
+<span class="tag">Listening · Podcast transcript</span>
+<h2 class="sectitle">Misunderstandings: the Full Transcript</h2>
+<p class="subtitle">Listen to the episode, then read along in seven parts. Phil and Pippa host; Neil and Beth are BBC colleagues sharing their own experiences.</p>
+<div class="note"><span class="label">Before you listen</span>
+<ul><li>Think of a time you misunderstood an instruction at work or school. What happened?</li>
+<li>Is it easy for you to tell your manager or teacher “I don’t understand”? Why, or why not?</li>
+<li>As you listen, write down every phrase the speakers use to <em>check</em> understanding.</li></ul></div>
+<div class="legend" aria-label="Highlight key"><span class="legend-title">Highlight key</span><span class="legend-item"><span class="swatch sw-v"></span>Vocabulary</span><span class="legend-item"><span class="swatch sw-i"></span>Idiom / Set Phrase</span><span class="legend-item"><span class="swatch sw-e"></span>Useful Expression</span><span class="legend-item" style="margin-left:auto;color:var(--ink-muted)">Hover, tap or tab to a highlight for its meaning.</span></div>
+<div class="excerpt transcript">
+<span class="exlabel"><span class="n">1</span>Real reactions from the office</span>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>Do you ever find you don't understand people at work?</p></div></div>
+
+<div class="turn" data-speaker="neil"><div class="spk">Neil</div><div class="said"><p>If I don't understand a task at work, I feel <span class="hl hl-v" data-cat="Vocabulary" data-def="Feeling annoyed or upset because you cannot do or understand something." data-term="frustrated" tabindex="0">frustrated</span>. It can be a bit stressful.</p></div></div>
+
+<div class="turn" data-speaker="beth"><div class="spk">Beth</div><div class="said"><p>It's really annoying. And you have to ask other people to help you with something.</p></div></div>
+
+<div class="turn" data-speaker="neil"><div class="spk">Neil</div><div class="said"><p>Nobody likes to keep asking how to do something so you can end up feeling a bit stupid, really.</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>In today's episode of Office English, we're talking about what to say when you don't understand.</p></div></div>
+</div>
+<div class="excerpt transcript">
+<span class="exlabel"><span class="n">2</span>Welcome to Office English</span>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>Hello and welcome to Office English. In this series, we talk about the language you need in the modern workplace. I'm Phil.</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>And I'm Pippa. Find a transcript for this podcast on our website bbclearningenglish.com.</p></div></div>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>We've just heard from some of our BBC Learning English colleagues that it can be frustrating and <span class="hl hl-v" data-cat="Vocabulary" data-def="Making you feel awkward or ashamed in front of others." data-term="embarrassing" tabindex="0">embarrassing</span> when there are misunderstandings at work. Is that something you've experienced, Pippa?</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>Yes. I think it can feel quite <span class="hl hl-v" data-cat="Vocabulary" data-def="Uncomfortable or difficult to deal with." data-term="awkward" tabindex="0">awkward</span> if you realise that you and a colleague have <span class="hl hl-v" data-cat="Vocabulary" data-def="Understood or explained the meaning of something in a particular way." data-term="interpreted" tabindex="0">interpreted</span> something in a different way. Sometimes it just is annoying because it leads to kind of wasted time, wasted effort, and it can lead to conflict. Not in my experience. Usually, you know, we just said, 'we've got <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="Used when two people have misunderstood each other, often because of confusing or unclear communication." data-term="our wires crossed" tabindex="0">our wires crossed</span> there and we've misunderstood each other.'</p></div></div>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>It can depend what the misunderstanding's about, of course. If we're thinking about conflict, some misunderstandings might be more dangerous than others. Today we're going to talk about what to do when you don't understand, or when you think someone might have misunderstood you.</p></div></div>
+</div>
+<div class="excerpt transcript">
+<span class="exlabel"><span class="n">3</span>When you don't understand your boss</span>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>Let's start with a <span class="hl hl-v" data-cat="Vocabulary" data-def="A possible situation or sequence of events, often used to imagine what could happen." data-term="scenario" tabindex="0">scenario</span>, Phil. So, imagine your boss has given you a task to do, but you're not sure if you've understood them correctly. You don't want to do the task wrong, but you also don't want your boss to think you're not good enough, you're a bit stupid. What should you say to them?</p></div></div>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>You could just ask them to explain it again, you know, '<span class="hl hl-e" data-cat="Useful Expression" data-def="A polite way to confirm you've understood an instruction correctly." data-term="Can I just check that I've understood that right?" tabindex="0">Can I just check that I've understood that right?</span>'</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>Yeah. That's nice because it's still polite. You could also say '<span class="hl hl-e" data-cat="Useful Expression" data-def="A polite way to ask for more detail without sounding like you weren't listening." data-term="I'm sorry but could I just clarify?" tabindex="0">I'm sorry but could I just clarify?</span>' I think people would usually rather explain it more times and it be done right than think you have understood them and then you do it wrong, because that actually is going to waste more time. What about if somebody can't ask their boss? Maybe they're just not able to, or they're a bit worried to ask for a clarification from their boss. What would you recommend then?</p></div></div>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>It might be that you've got a colleague who's really experienced in that area, and you're <span class="hl hl-v" data-cat="Vocabulary" data-def="Sure that something is true, or sure of your own abilities." data-term="confident" tabindex="0">confident</span> that they know, they know what they're talking about. So, you could always ask them.</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>Yeah, you could say something like, 'can you <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="Ask someone to explain something to you step by step." data-term="walk me through" tabindex="0">walk me through</span> how you usually do this?' And then you've just made sure that you're understanding the process. This is particularly useful if you're new, I guess.</p></div></div>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>Sometimes I think it can also be useful to know why you're doing something that can help avoid misunderstandings. So, you might be asked something like, 'Are we doing this because...' and then giving what you think is the reason for something.</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>Yeah, it will depend on your kind of workplace culture where you work and the kind of thing you've been asked to do. Some places, it's not normal to kind of question your boss. You wouldn't want to kind of give the impression that you think you know better, or you have kind of thought that they're wrong. So, it's just about kind of clarifying rather than kind of questioning the whole task altogether.</p></div></div>
+</div>
+<div class="excerpt transcript">
+<span class="exlabel"><span class="n">4</span>When you don't understand a colleague</span>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>OK, so that's some ideas for when you don't understand your boss. What about if you don't understand something that a colleague says. For example, you might be in a meeting and a colleague makes a <span class="hl hl-v" data-cat="Vocabulary" data-def="Something you say or add during a discussion or meeting." data-term="contribution" tabindex="0">contribution</span>, but you don't understand what they mean.</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>Yeah that's a tricky one, I think. I would often start with an apology. So I might say 'I'm sorry Phil, but could you explain that a little bit more?' And just get you to kind of tell me more about it.</p></div></div>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>Yeah. Or another way of saying it is '<span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="A polite way of saying you don't understand what someone has just said." data-term="I'm not sure I follow you" tabindex="0">I'm not sure I follow you</span>. Can you just talk me through that again?'</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>Another phrase you could use is '<span class="hl hl-e" data-cat="Useful Expression" data-def="Used to check you've completely understood what someone meant before acting on it." data-term="I just want to be sure I've got you 100% right" tabindex="0">I just want to be sure I've got you 100% right</span>. Do you mean...' And then again, explain what you think they've said. So, then you're just kind of checking that you're both interpreting what's been said in the same way. Right. We've talked about lots of things we can say when we don't understand other people at work. But what if we think somebody doesn't understand us, Phil?</p></div></div>
+</div>
+<div class="excerpt transcript">
+<span class="exlabel"><span class="n">5</span>Checking that you've been understood</span>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>Well, we can always ask other people '<span class="hl hl-e" data-cat="Useful Expression" data-def="A quick, friendly way to check whether your explanation was clear." data-term="Does that make sense?" tabindex="0">Does that make sense?</span>' Or invite questions maybe.</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>Yeah. Sometimes I'll say things like 'if any of this is confusing just let me know' or '<span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="Informal way of telling someone to let you know if they need help or have a question." data-term="just shout" tabindex="0">just shout</span>'. I would put that in an email as well, often. If I've sent a really long email with lots of complicated instructions, I'd usually end with '<span class="hl hl-e" data-cat="Useful Expression" data-def="An open invitation, often used in emails, for the reader to ask questions if something isn't clear." data-term="If any of this doesn't make any sense, let me know" tabindex="0">If any of this doesn't make any sense, let me know</span>' because sometimes it makes sense to you, but you maybe haven't explained it as well as you could have done.</p></div></div>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>Also, yeah, you, sometimes you might want to say things in different ways, particularly, I don't know, you're in a meeting explaining something and you could see lots of <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="The confused or empty expressions people have when they don't understand something." data-term="blank faces" tabindex="0">blank faces</span>, or you're getting the feeling that people haven't understood exactly what you said. You might say, '<span class="hl hl-e" data-cat="Useful Expression" data-def="Signals that you're about to restate something in a simpler or more direct way." data-term="let me make myself really clear" tabindex="0">let me make myself really clear</span>. What I mean is...' and then you find a different way to explain what you've just said.</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>Yeah. So, rather than just using the same language all the time, particularly, I guess, in an international workplace where people are speaking English as their second language, you kind of want to use a few different ways of saying it so that you make sure that everyone knows what you're talking about. And maybe in that kind of workplace, trying not to use a lot of very complicated language, trying to keep things very simple and very clear.</p></div></div>
+</div>
+<div class="excerpt transcript">
+<span class="exlabel"><span class="n">6</span>When misunderstandings happen anyway</span>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>So, we have lots of ways we can try and avoid confusion and misunderstandings at work. But sometimes they happen. Let's listen to our BBC colleagues Neil and Beth again.</p></div></div>
+
+<div class="turn" data-speaker="beth"><div class="spk">Beth</div><div class="said"><p>It's not a problem that you have misunderstood. It's just it's got to be explained.</p></div></div>
+
+<div class="turn" data-speaker="neil"><div class="spk">Neil</div><div class="said"><p>I think first of all, you have to draw attention to the fact there has been a misunderstanding. Then you have to explain how you saw something from your perspective, and then maybe that will reveal why a misunderstanding happened, and that helps to get it all <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="Resolved or settled calmly after a problem or disagreement." data-term="smoothed out" tabindex="0">smoothed out</span>.</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>So yeah, as we mentioned at the start of the programme, if there's been a misunderstanding, sometimes it can lead to conflict. Sometimes maybe someone's misunderstood someone, they've become <span class="hl hl-v" data-cat="Vocabulary" data-def="Feeling hurt or upset because of something someone said or did." data-term="offended" tabindex="0">offended</span>. But also it just might mean that somebody ended up doing something wrong. They've ended up doing a task in the wrong way or wasted some time on a task they didn't need to do in the first place.</p></div></div>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>Yeah, and it can also often be best to deal with the <span class="hl hl-v" data-cat="Vocabulary" data-def="The results or effects of an action or decision." data-term="consequences" tabindex="0">consequences</span> of the misunderstanding first, rather than, you know, getting angry and blaming people. Sort out the issue first.</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>Yes. And then once you've dealt with the consequences, it can be useful to know why the misunderstanding happened. But you probably want to focus on why it happened and making sure that in the future you avoid the <span class="hl hl-v" data-cat="Vocabulary" data-def="A failure to communicate clearly, leading to confusion or misunderstanding." data-term="miscommunication" tabindex="0">miscommunication</span>. That's it for this episode of Office English. We'd love to hear about the English you use in the office and answer your questions. Email learningenglish@bbc.co.uk.</p></div></div>
+</div>
+<div class="excerpt transcript">
+<span class="exlabel"><span class="n">7</span>Sign off</span>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>Next time we're going to talk about cold calling, which is where you have to contact people you don't know at work.</p></div></div>
+
+<div class="turn" data-speaker="pippa"><div class="spk">Pippa</div><div class="said"><p>I hate cold calling, but I'm looking forward to talking about it. See you then, bye.</p></div></div>
+
+<div class="turn" data-speaker="phil"><div class="spk">Phil</div><div class="said"><p>Bye.</p></div></div>
+</div>
+<blockquote class="pullquote">“First of all, you have to draw attention to the fact there has been a misunderstanding. Then you have to explain how you saw something from your perspective.”<small>Neil, BBC Learning English</small></blockquote>
+<div class="note note-tip"><span class="label">After you listen: discuss</span>
+<ul><li>Pippa says some workplaces don’t expect you to question your boss. Is that true in your culture or company?</li>
+<li>Which phrase from today would you use in an email, and which would you only say in a meeting?</li>
+<li>Phil says to deal with the <em>consequences</em> of a misunderstanding first, and find the cause later. Do you agree?</li></ul></div>
+</section>
+<section id="panel-vocabulary" class="panel" role="tabpanel" aria-labelledby="tab-vocabulary">
+<span class="tag">Vocabulary</span>
+<h2 class="sectitle">Key Words &amp; Phrases</h2>
+<p class="subtitle">Every highlighted term from the transcript, with a clear meaning and a new example sentence.</p>
+<div class="note"><strong>Vocabulary</strong>: single words worth learning. <strong>Idioms &amp; Set Phrases</strong>: fixed expressions whose meaning is not always literal. <strong>Useful Expressions</strong>: the clarifying and checking phrases Pippa and Phil use.</div>
+<h3 class="vgroup-title"><span class="dot dot-v"></span>Vocabulary</h3>
+<div class="vgrid">
+<div class="vcard"><div class="vterm">frustrated</div><div class="vpos">adjective</div><div class="vdef">feeling annoyed or upset because you cannot do or understand something.</div><div class="vex">Maria felt <strong>frustrated</strong> when the new software crashed twice before lunch.</div></div>
+<div class="vcard"><div class="vterm">embarrassing</div><div class="vpos">adjective</div><div class="vdef">making you feel awkward or ashamed in front of others.</div><div class="vex">Forgetting a client's name mid-meeting was <strong>embarrassing</strong>, but nobody seemed to mind.</div></div>
+<div class="vcard"><div class="vterm">awkward</div><div class="vpos">adjective</div><div class="vdef">uncomfortable or difficult to deal with.</div><div class="vex">There was an <strong>awkward</strong> silence after he realised he'd replied to the wrong thread.</div></div>
+<div class="vcard"><div class="vterm">interpreted</div><div class="vpos">verb</div><div class="vdef">understood or explained the meaning of something in a particular way.</div><div class="vex">Two team members <strong>interpreted</strong> the brief completely differently.</div></div>
+<div class="vcard"><div class="vterm">scenario</div><div class="vpos">noun</div><div class="vdef">a possible situation or sequence of events, often used to imagine what could happen.</div><div class="vex">Let's walk through a <strong>scenario</strong> where the client asks for a same-day turnaround.</div></div>
+<div class="vcard"><div class="vterm">confident</div><div class="vpos">adjective</div><div class="vdef">sure that something is true, or sure of your own abilities.</div><div class="vex">She felt <strong>confident</strong> explaining the new policy because she'd read it twice.</div></div>
+<div class="vcard"><div class="vterm">contribution</div><div class="vpos">noun</div><div class="vdef">something you say or add during a discussion or meeting.</div><div class="vex">His <strong>contribution</strong> about the budget sparked a longer conversation than planned.</div></div>
+<div class="vcard"><div class="vterm">offended</div><div class="vpos">adjective</div><div class="vdef">feeling hurt or upset because of something someone said or did.</div><div class="vex">He seemed <strong>offended</strong> when his idea was rejected without discussion.</div></div>
+<div class="vcard"><div class="vterm">consequences</div><div class="vpos">noun</div><div class="vdef">the results or effects of an action or decision.</div><div class="vex">Before approving the change, the team mapped out the possible <strong>consequences</strong>.</div></div>
+<div class="vcard"><div class="vterm">miscommunication</div><div class="vpos">noun</div><div class="vdef">a failure to communicate clearly, leading to confusion or misunderstanding.</div><div class="vex">The missed deadline turned out to be a simple <strong>miscommunication</strong>, not a lack of effort.</div></div>
+</div>
+<h3 class="vgroup-title"><span class="dot dot-i"></span>Idioms &amp; Set Phrases</h3>
+<div class="vgrid">
+<div class="vcard idiom"><div class="vterm">our wires crossed</div><div class="vpos">idiom</div><div class="vdef">used when two people have misunderstood each other, often because of confusing or unclear communication.</div><div class="vex">I think we've got <strong>our wires crossed</strong>, I thought you were sending the file, not me.</div></div>
+<div class="vcard idiom"><div class="vterm">walk me through</div><div class="vpos">set phrase</div><div class="vdef">ask someone to explain something to you step by step.</div><div class="vex">Could you <strong>walk me through</strong> how the approval process actually works?</div></div>
+<div class="vcard idiom"><div class="vterm">I'm not sure I follow you</div><div class="vpos">set phrase</div><div class="vdef">a polite way of saying you don't understand what someone has just said.</div><div class="vex"><strong>I'm not sure I follow you</strong>, could you give a quick example?</div></div>
+<div class="vcard idiom"><div class="vterm">just shout</div><div class="vpos">idiom</div><div class="vdef">informal way of telling someone to let you know if they need help or have a question.</div><div class="vex">If anything's unclear once you start, <strong>just shout</strong>.</div></div>
+<div class="vcard idiom"><div class="vterm">blank faces</div><div class="vpos">idiom</div><div class="vdef">the confused or empty expressions people have when they don't understand something.</div><div class="vex">He looked around the room and saw nothing but <strong>blank faces</strong>.</div></div>
+<div class="vcard idiom"><div class="vterm">smoothed out</div><div class="vpos">idiom</div><div class="vdef">resolved or settled calmly after a problem or disagreement.</div><div class="vex">Once we compared notes, the whole misunderstanding got <strong>smoothed out</strong> quickly.</div></div>
+</div>
+<h3 class="vgroup-title"><span class="dot dot-e"></span>Useful Expressions</h3>
+<div class="vgrid">
+<div class="vcard expr"><div class="vterm">Can I just check that I've understood that right?</div><div class="vpos">clarifying phrase</div><div class="vdef">a polite way to confirm you've understood an instruction correctly.</div><div class="vex">Before I start, <strong>can I just check that I've understood that right?</strong></div></div>
+<div class="vcard expr"><div class="vterm">I'm sorry but could I just clarify?</div><div class="vpos">clarifying phrase</div><div class="vdef">a polite way to ask for more detail without sounding like you weren't listening.</div><div class="vex"><strong>I'm sorry but could I just clarify</strong>, do you mean today or tomorrow?</div></div>
+<div class="vcard expr"><div class="vterm">I just want to be sure I've got you 100% right</div><div class="vpos">clarifying phrase</div><div class="vdef">used to check you've completely understood what someone meant before acting on it.</div><div class="vex"><strong>I just want to be sure I've got you 100% right</strong>, so you'll handle the call and I'll handle the email?</div></div>
+<div class="vcard expr"><div class="vterm">Does that make sense?</div><div class="vpos">checking phrase</div><div class="vdef">a quick, friendly way to check whether your explanation was clear.</div><div class="vex">So we send the draft first and the invoice after. <strong>Does that make sense?</strong></div></div>
+<div class="vcard expr"><div class="vterm">let me make myself really clear</div><div class="vpos">checking phrase</div><div class="vdef">signals that you're about to restate something in a simpler or more direct way.</div><div class="vex"><strong>Let me make myself really clear</strong>, the deadline is Friday, not Monday.</div></div>
+<div class="vcard expr"><div class="vterm">If any of this doesn't make any sense, let me know</div><div class="vpos">checking phrase</div><div class="vdef">an open invitation, often used in emails, for the reader to ask questions if something isn't clear.</div><div class="vex">I've listed the next steps below. <strong>If any of this doesn't make any sense, let me know</strong>.</div></div>
+</div>
+</section>
+<section id="panel-inuse" class="panel" role="tabpanel" aria-labelledby="tab-inuse">
+<span class="tag">Vocabulary in Use</span>
+<h2 class="sectitle">See the Language in New Situations</h2>
+<p class="subtitle">There is no grammar focus in this episode. Instead, this tab puts the key language for clarifying and checking understanding into new workplace situations, so you can use it beyond the podcast.</p>
+<h3 class="gsub"><span class="num">01</span>New Examples</h3>
+<div class="usegrid">
+<div class="usecard"><div class="usehead">frustrated</div><ul>
+<li>After the third version of the report got rejected, James admitted he was feeling <strong>frustrated</strong>.</li>
+<li>It's completely normal to feel <strong>frustrated</strong> when a new system doesn't work the way the training promised.</li>
+</ul></div>
+<div class="usecard"><div class="usehead">awkward</div><ul>
+<li>The handover call got a bit <strong>awkward</strong> once both managers realised they'd given the client different deadlines.</li>
+<li>There's an <strong>awkward</strong> pause in most onboarding chats right before someone admits they've forgotten their login.</li>
+</ul></div>
+<div class="usecard"><div class="usehead">confident</div><ul>
+<li>Once she'd read the onboarding guide twice, she felt <strong>confident</strong> enough to answer client questions alone.</li>
+<li>He sounded <strong>confident</strong> on the call, but he double-checked the figures with his manager right after.</li>
+</ul></div>
+<div class="usecard"><div class="usehead">miscommunication</div><ul>
+<li>The two departments blamed each other for weeks before realising it was just a <strong>miscommunication</strong> about dates.</li>
+<li>A single <strong>miscommunication</strong> about the shipping address cost the warehouse an extra day of work.</li>
+</ul></div>
+<div class="usecard"><div class="usehead">we've got our wires crossed</div><ul>
+<li>I booked the room for 2pm and you booked it for 3pm, <strong>we've clearly got our wires crossed</strong>.</li>
+<li>Looks like <strong>we've got our wires crossed</strong> on who was sending the invoice to the client.</li>
+</ul></div>
+<div class="usecard"><div class="usehead">walk me through</div><ul>
+<li>Before I touch the live server, can you <strong>walk me through</strong> the deployment steps one more time?</li>
+<li>New hires usually ask a teammate to <strong>walk them through</strong> the expenses system in their first week.</li>
+</ul></div>
+<div class="usecard"><div class="usehead">I'm not sure I follow you</div><ul>
+<li><strong>I'm not sure I follow you</strong>, do you mean we delay the launch or just the press release?</li>
+<li>She paused the presenter politely and said, <strong>I'm not sure I follow you</strong>, could you go back a slide?</li>
+</ul></div>
+<div class="usecard"><div class="usehead">smoothed out</div><ul>
+<li>Once finance and sales compared spreadsheets, the pricing confusion was <strong>smoothed out</strong> in ten minutes.</li>
+<li>The rough start to the project got <strong>smoothed out</strong> after the first proper planning meeting.</li>
+</ul></div>
+<div class="usecard"><div class="usehead">Does that make sense?</div><ul>
+<li>After explaining the new approval flow, she added, <strong>Does that make sense</strong>, or should I draw a diagram?</li>
+<li>He finished the demo and asked the client, <strong>Does that make sense</strong> so far?</li>
+</ul></div>
+<div class="usecard"><div class="usehead">let me make myself really clear</div><ul>
+<li><strong>Let me make myself really clear</strong>, this deadline cannot move, whatever happens with the supplier.</li>
+<li>Seeing the confused faces on the call, the director said, <strong>let me make myself really clear</strong>, before repeating the plan slowly.</li>
+</ul></div>
+</div>
+<h3 class="gsub"><span class="num">02</span>Practice</h3>
+<p class="subtitle">Try each task first, then reveal the model answer.</p>
+<div class="tablewrap"><table class="gtable">
+<tr><th>Task</th><th>Model Answer</th></tr>
+<tr>
+<td>Could you ___ me ___ the new expenses process? I've never submitted a claim before. (walk / through)</td>
+<td><details><summary>Show answer</summary><span class="ans">Could you walk me through the new expenses process? I've never submitted a claim before.</span></details></td>
+</tr>
+<tr>
+<td>I think we've got our ___ ___, I was expecting you to send the file first. (wires / crossed)</td>
+<td><details><summary>Show answer</summary><span class="ans">I think we've got our wires crossed, I was expecting you to send the file first.</span></details></td>
+</tr>
+<tr>
+<td>I'm not sure I ___ you, are we launching on Monday or on Wednesday? (follow)</td>
+<td><details><summary>Show answer</summary><span class="ans">I'm not sure I follow you, are we launching on Monday or on Wednesday?</span></details></td>
+</tr>
+<tr>
+<td>After a long chat, the confusion about the invoice finally got ___ ___. (smoothed / out)</td>
+<td><details><summary>Show answer</summary><span class="ans">After a long chat, the confusion about the invoice finally got smoothed out.</span></details></td>
+</tr>
+<tr>
+<td>___ that make sense, or would it help if I sent a written summary too? (Does)</td>
+<td><details><summary>Show answer</summary><span class="ans">Does that make sense, or would it help if I sent a written summary too?</span></details></td>
+</tr>
+</table></div>
+<h3 class="gsub"><span class="num">03</span>Quick Reference</h3>
+<div class="tablewrap"><table class="gtable">
+<tr><th>Term</th><th>Meaning</th><th>Workplace Situation</th></tr>
+<tr><td>frustrated</td><td>Feeling annoyed because you can't do or understand something</td><td>After several failed attempts to fix a recurring bug</td></tr>
+<tr><td>awkward</td><td>Uncomfortable or difficult to handle</td><td>Realising you and a colleague gave a client two different answers</td></tr>
+<tr><td>confident</td><td>Sure of your understanding or ability</td><td>Explaining a process you've just learned to someone newer</td></tr>
+<tr><td>miscommunication</td><td>A breakdown in understanding between people</td><td>Two departments blaming each other over a missed deadline</td></tr>
+<tr><td>we've got our wires crossed</td><td>Two people have misunderstood each other</td><td>Discovering you and a colleague booked the same room for different times</td></tr>
+<tr><td>walk me through</td><td>Explain something to me step by step</td><td>Learning a new system from a teammate before your first shift alone</td></tr>
+<tr><td>I'm not sure I follow you</td><td>A polite way to say you don't understand</td><td>A meeting where an explanation got too technical too quickly</td></tr>
+<tr><td>smoothed out</td><td>A problem or disagreement gets resolved calmly</td><td>After two teams compare notes and fix a scheduling mix-up</td></tr>
+<tr><td>Does that make sense?</td><td>Checking that your explanation was clear</td><td>Finishing a demo and checking in with the listener</td></tr>
+<tr><td>let me make myself really clear</td><td>Signalling you're about to restate something more simply</td><td>Repeating instructions after noticing confused faces on a call</td></tr>
+</table></div>
+</section>
+<section id="panel-exercises" class="panel" role="tabpanel" aria-labelledby="tab-exercises">
+<span class="tag">Exercises</span>
+<h2 class="sectitle">Test Yourself</h2>
+<p class="subtitle">15 questions in 2 sections. Choose an answer for instant feedback: every option, right or wrong, comes with an explanation, and the correct answer is always revealed.</p>
+<div class="quizbar" role="status"><span id="quiz-progress">Answered 0/15 · Score 0</span><span class="meter" aria-hidden="true"><i id="quiz-meter"></i></span><button type="button" data-reset>↺ Reset</button></div>
+<h3 class="exsection-title">A · Listening Comprehension</h3>
+<div class="qblock" id="qA1"><p class="qtext">1. Why does Neil say he feels frustrated when he doesn't understand a task at work?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Neil doesn't mention any disagreement with colleagues, only his own frustration with unclear tasks." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Because he dislikes working with Beth and Pippa on shared tasks.</span></button>
+<button class="opt-btn" data-correct="true" data-expl='Correct: Neil says not understanding a task "can be a bit stressful," linking his frustration to the difficulty of finishing the work.' data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Because not understanding a task makes the work feel stressful to finish.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Neil never criticises how his manager gives instructions in this clip." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Because he thinks his manager explains instructions too quickly every time.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Neil actually says people avoid asking repeatedly because it can feel embarrassing, not because he prefers working alone." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Because he prefers working alone rather than asking anyone for help.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qA2"><p class="qtext">2. According to Beth and Neil, why do people often avoid asking a colleague the same question more than once?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: No rule like this is mentioned anywhere in the clip." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Because most workplaces only allow one clarifying question per topic.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Being busy isn't given as the reason for avoiding repeat questions." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Because colleagues are usually too busy to answer a second question.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Company policy is never discussed in this part of the episode." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Because repeated questions are normally against company policy.</span></button>
+<button class="opt-btn" data-correct="true" data-expl='Correct: Neil says nobody likes asking repeatedly "so you can end up feeling a bit stupid, really."' data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Because asking again can make someone feel a bit stupid or incapable.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qA3"><p class="qtext">3. Why does Pippa suggest asking "Can I just check that I've understood that right?" instead of simply guessing?</p>
+<button class="opt-btn" data-correct="true" data-expl='Correct: Pippa says people would rather explain again than have the task done wrong, "because that actually is going to waste more time."' data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Because getting it wrong after guessing usually wastes more time overall.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: There's no mention of instructions needing to be repeated word for word." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Because most managers expect every instruction to be repeated back exactly.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Asking isn't framed as a strict requirement, just a sensible habit." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Because asking questions is required before starting any new task.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Rudeness is never mentioned as the reason for checking understanding." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Because guessing is considered rude in most office environments generally.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qA4"><p class="qtext">4. Who does Phil suggest asking if you don't feel able to question your boss directly?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Phil's suggestion is about someone inside the same workplace, not an outside friend." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">A friend who works at a completely different company.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: HR is not mentioned anywhere in this discussion." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">The human resources department, since they handle most disputes.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: Phil recommends a colleague &quot;who's really experienced in that area&quot; and clearly knows the topic." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">A colleague who is experienced and clearly knows the subject well.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Phil explicitly offers an alternative rather than suggesting the person work it out alone." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Nobody, since Phil recommends always working it out alone.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qA5"><p class="qtext">5. What does Pippa say can help avoid questioning your boss directly in some workplace cultures?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: A formal complaint process is never suggested in the discussion." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Sending every question through a formal written complaint process.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Performance reviews are not mentioned at all in this part." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Waiting until a scheduled performance review to raise any doubts.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Pippa doesn't suggest going around your manager to someone else." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Asking a different manager instead of your own supervisor.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: Pippa explains it's &quot;about kind of clarifying rather than kind of questioning the whole task,&quot; so framing matters." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Framing your question as a clarification rather than a challenge.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qA6"><p class="qtext">6. What situation does Pippa describe when talking about a colleague's contribution in a meeting?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: The email scenario is discussed separately, later in the episode." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">A colleague emails a long list of complicated instructions instead.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: Pippa describes a colleague who &quot;makes a contribution&quot; that you &quot;don't understand what they mean.&quot;" data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">A colleague says something in a meeting that isn't fully understood.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Refusing to answer is never part of this example." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">A colleague refuses to answer a question raised during a meeting.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Arriving late isn't mentioned in this particular scenario." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">A colleague arrives late and misses the start of a meeting.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qA7"><p class="qtext">7. How does Pippa begin when she doesn’t understand what a colleague said in a meeting?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: she deals with it in the meeting itself." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">She waits until after the meeting and sends an email.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: Pippa says she would “often start with an apology” and then ask for more explanation." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">She starts with an apology: “I’m sorry Phil, but could you explain that a little bit more?”</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Phil suggests that when you can’t ask your boss, not for a colleague in a meeting." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">She asks a more experienced colleague to explain it later.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: she later suggests restating what you think they meant (“Do you mean…”), not repeating their exact words." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">She repeats exactly what the colleague said, word for word.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qA8"><p class="qtext">8. Why does Pippa suggest varying your language when explaining something at work?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Style guides are never mentioned in this part of the discussion." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Because repeating the exact same sentence is against most company style guides.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Pippa isn't talking about speed, but about being understood." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Because using different wording is faster than explaining something once.</span></button>
+<button class="opt-btn" data-correct="true" data-expl='Correct: Pippa says this matters especially where people "are speaking English as their second language," so different wording helps understanding.' data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Because not everyone understands the same explanation in the same way.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Pippa's advice applies to spoken explanations too, such as in meetings." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Because varying your language is mainly useful for written emails only.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<h3 class="exsection-title">B · Vocabulary in Context</h3>
+<div class="qblock" id="qB1"><p class="qtext">9. In the episode, what does it mean when Pippa says she and a colleague "got their wires crossed"?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: A strong disagreement about leadership isn't what the phrase describes here." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">They disagreed strongly about who should lead a specific project.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Doing the same task twice is a possible result, not the meaning of the phrase itself." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">They both finished the same task twice without realising it.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: The phrase isn't about working on unrelated tasks." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">They were working on two completely unrelated tasks all day.</span></button>
+<button class="opt-btn" data-correct="true" data-expl='Correct: "Got our wires crossed" means two people have understood the same situation differently.' data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">They each understood the same situation in a different way.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qB2"><p class="qtext">10. Which situation best matches how Pippa uses the word "awkward" in the episode?</p>
+<button class="opt-btn" data-correct="true" data-expl='Correct: Pippa uses "awkward" to describe the uncomfortable feeling of realising a misunderstanding with a colleague.' data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Realising you and a colleague understood the same task differently.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Positive feedback wouldn't typically be described as awkward." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Receiving some positive feedback from your manager about a project.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: A more convenient meeting time isn't an awkward situation." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Finding out a meeting has been moved to a more convenient time slot.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: An extended deadline is generally good news, not an awkward moment." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Learning that a deadline has been extended by a couple of extra weeks.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qB3"><p class="qtext">11. If a colleague says "I'm not sure I follow you," what are they most likely asking for?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: The phrase isn't a request to change the subject." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">A completely different topic to discuss instead of the current one.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: It has nothing to do with leaving a meeting." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Permission to leave the meeting a few minutes early today.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: &quot;I'm not sure I follow you&quot; is a polite way of asking someone to explain something more clearly." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">A clearer or slower explanation of what you just said.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: It isn't specifically a request for written materials." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">A written copy of the presentation slides after the meeting.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qB4"><p class="qtext">12. What does it mean when Neil says a misunderstanding gets "smoothed out"?</p>
+<button class="opt-btn" data-correct="false" data-expl='Not quite: Ignoring the issue is the opposite of what "smoothed out" suggests.' data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">The misunderstanding is ignored until everyone simply forgets about it.</span></button>
+<button class="opt-btn" data-correct="true" data-expl='Correct: Neil describes explaining perspectives so the misunderstanding "helps to get it all smoothed out," meaning resolved calmly.' data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">The misunderstanding is resolved calmly once it's properly explained.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Passing the issue to a manager isn't part of Neil's explanation." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">The misunderstanding is passed on to a manager to deal with instead.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Writing it down for later review isn't mentioned." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">The misunderstanding is written down so it can be reviewed later.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qB5"><p class="qtext">13. What does Phil mean by "blank faces" when describing a meeting?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Smiling and enjoyment isn't what &quot;blank faces&quot; describes." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Colleagues who are smiling and clearly enjoying the presentation.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Taking notes wouldn't usually be called having a &quot;blank face.&quot;" data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Colleagues who are taking detailed notes throughout the meeting.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Active disagreement would look quite different from a blank expression." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Colleagues who are actively disagreeing with what's being said.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: &quot;Blank faces&quot; describes confused or empty expressions that suggest people haven't followed what was said." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Colleagues whose expressions show they haven't understood something.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qB6"><p class="qtext">14. How does Pippa use the word "scenario" at the start of the discussion about asking a boss for help?</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: Pippa says &quot;let's start with a scenario,&quot; introducing an imagined example situation to discuss." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">To introduce an imagined situation they can use as an example.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: She frames it as hypothetical, not something that definitely happened." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">To describe something that has definitely already happened to her.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: There's no document referenced by the word &quot;scenario&quot; here." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">To refer to a document the listener should read before continuing.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: A scenario isn't presented as a fixed workplace rule." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">To name a specific rule that every workplace must always follow.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div class="qblock" id="qB7"><p class="qtext">15. What is Pippa suggesting when she tells listeners to tell colleagues to "just shout" if something's unclear?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: &quot;Just shout&quot; isn't literally about volume, it's an informal invitation to speak up." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">To raise your voice so that everyone in the office can hear you.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: It's an informal invitation, not a request for formal paperwork." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">To send a formal written request before asking any question.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: &quot;Just shout&quot; informally means to feel free to say something right away if there's an issue." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">To feel free to speak up right away if anything isn't clear.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: The phrase encourages speaking up immediately, not waiting for a later meeting." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">To wait until the next scheduled meeting to mention the issue.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div id="score-bar" aria-live="polite"><div id="score-num"></div><div id="score-title"></div><div id="score-msg"></div><button type="button" class="reset-btn" data-reset>Try Again</button></div>
+
+</section>
+</main>
+<footer class="coursefoot"><div class="wrap"><a class="prev" href="https://teacher-victor.github.io/Business-English/01_RDG_RemoteWork.html"><small>← Previous · Lesson 1 · Reading</small><strong>Hybrid Work, One Year Later</strong></a><a class="next" href="https://teacher-victor.github.io/Business-English/03_SPK_RemoteWork.html"><small>Next · Lesson 3 · Speaking →</small><strong>Quarterly Snapshot: Remote vs. Office</strong></a><p class="unitmap">Unit 1: Remote Work & Communication · <a href="https://teacher-victor.github.io/Business-English/01_RDG_RemoteWork.html">1 Reading</a> → <b>2 Listening</b> → <a href="https://teacher-victor.github.io/Business-English/03_SPK_RemoteWork.html">3 Speaking</a> → <a href="https://teacher-victor.github.io/Business-English/04_TED_IceCream.html">4 Video</a></p></div></footer>
+<script>window.LESSON = {"tiers": [{"min": 0.9, "title": "🏆 Crystal Clear", "msg": "Outstanding. You have a real feel for clarifying and checking understanding at work."}, {"min": 0.7, "title": "👍 Message Received", "msg": "Solid work. A quick review of a few phrases and this will be second nature."}, {"min": 0.4, "title": "📶 Some Static", "msg": "Good start. Another pass through the Transcript and Vocabulary in Use tabs will help."}, {"min": 0.0, "title": "🔀 Crossed Wires", "msg": "Give the Transcript tab another look, then try again."}]};</script>
+<script>
+/* Shared lesson behaviour: tabs, glossary tooltips, quiz scoring. */
+(function () {
+  "use strict";
+  var LESSON = window.LESSON || {};
+
+  /* ── Tabs (ARIA tablist, arrow keys, #hash deep links) ── */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tabbtn"));
+  var panels = Array.prototype.slice.call(document.querySelectorAll(".panel"));
+  var nav = document.querySelector(".tabnav");
+  function setTabHeight() {
+    if (nav) document.documentElement.style.setProperty("--tabh", nav.offsetHeight + "px");
+  }
+  function showTab(id, opts) {
+    opts = opts || {};
+    var found = false;
+    tabs.forEach(function (b) {
+      var on = b.getAttribute("data-tab") === id;
+      if (on) found = true;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.tabIndex = on ? 0 : -1;
+    });
+    if (!found) return;
+    panels.forEach(function (p) { p.classList.toggle("active", p.id === "panel-" + id); });
+    if (opts.focus) { var t = document.querySelector('.tabbtn[data-tab="' + id + '"]'); if (t) t.focus(); }
+    if (!opts.silent) {
+      // Deep link (#vocabulary etc.). Skipped silently where the page runs in a sandboxed
+      // preview (about:srcdoc), which does not allow changing the URL.
+      try {
+        if (history.replaceState && location.protocol !== "about:") history.replaceState(null, "", "#" + id);
+      } catch (err) { /* ignore: URL updates are optional */ }
+      var top = nav ? nav.getBoundingClientRect().top + window.pageYOffset : 0;
+      if (window.pageYOffset > top) window.scrollTo({ top: top, behavior: "smooth" });
+    }
+  }
+  tabs.forEach(function (b, i) {
+    b.addEventListener("click", function () { showTab(b.getAttribute("data-tab")); });
+    b.addEventListener("keydown", function (e) {
+      var n = null;
+      if (e.key === "ArrowRight") n = (i + 1) % tabs.length;
+      if (e.key === "ArrowLeft") n = (i - 1 + tabs.length) % tabs.length;
+      if (e.key === "Home") n = 0;
+      if (e.key === "End") n = tabs.length - 1;
+      if (n !== null) { e.preventDefault(); showTab(tabs[n].getAttribute("data-tab"), { focus: true }); }
+    });
+  });
+  document.querySelectorAll("[data-goto]").forEach(function (a) {
+    a.addEventListener("click", function (e) { e.preventDefault(); showTab(a.getAttribute("data-goto")); });
+  });
+  var initial = "";
+  try { initial = (location.hash || "").replace("#", ""); } catch (err) { initial = ""; }
+  showTab(initial && document.getElementById("panel-" + initial) ? initial : tabs[0].getAttribute("data-tab"), { silent: true });
+  setTabHeight();
+  window.addEventListener("resize", setTabHeight);
+
+  /* ── Glossary tooltips ── */
+  var tip = document.getElementById("tooltip");
+  function place(el) {
+    var r = el.getBoundingClientRect();
+    var top = r.top - tip.offsetHeight - 10;
+    if (top < 8) top = r.bottom + 10;
+    var left = r.left + r.width / 2 - tip.offsetWidth / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tip.offsetWidth - 8));
+    tip.style.top = top + "px";
+    tip.style.left = left + "px";
+  }
+  function showTip(el) {
+    tip.innerHTML = "";
+    var c = document.createElement("span"); c.className = "tip-cat"; c.textContent = el.getAttribute("data-cat");
+    var t = document.createElement("span"); t.className = "tip-term"; t.textContent = el.getAttribute("data-term");
+    tip.appendChild(c); tip.appendChild(t);
+    tip.appendChild(document.createTextNode(el.getAttribute("data-def")));
+    tip.style.display = "block";
+    place(el);
+  }
+  function hideTip() { tip.style.display = "none"; }
+  document.querySelectorAll(".hl").forEach(function (el) {
+    el.setAttribute("role", "button");
+    el.setAttribute("aria-label", el.textContent + ": " + el.getAttribute("data-def"));
+    el.addEventListener("mouseenter", function () { showTip(el); });
+    el.addEventListener("mouseleave", hideTip);
+    el.addEventListener("focus", function () { showTip(el); });
+    el.addEventListener("blur", hideTip);
+    el.addEventListener("click", function (e) { e.stopPropagation(); showTip(el); });
+  });
+  document.addEventListener("click", hideTip);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+  window.addEventListener("scroll", hideTip, { passive: true });
+
+  /* ── Quiz ── */
+  var blocks = Array.prototype.slice.call(document.querySelectorAll(".qblock"));
+  var TOTAL = blocks.length;
+  if (!TOTAL) return;
+  var answered = {}, correct = {};
+  var tiers = LESSON.tiers || [];
+  var progTxt = document.getElementById("quiz-progress");
+  var meter = document.getElementById("quiz-meter");
+
+  function count(obj) { return Object.keys(obj).filter(function (k) { return obj[k]; }).length; }
+  function update() {
+    var a = Object.keys(answered).length, s = count(correct);
+    if (progTxt) progTxt.textContent = "Answered " + a + "/" + TOTAL + " · Score " + s;
+    if (meter) meter.style.width = (a / TOTAL * 100) + "%";
+    if (a === TOTAL) showScore(s);
+  }
+  function showScore(s) {
+    var pct = s / TOTAL, tier = tiers[tiers.length - 1] || { title: "", msg: "" };
+    for (var i = 0; i < tiers.length; i++) { if (pct >= tiers[i].min) { tier = tiers[i]; break; } }
+    document.getElementById("score-num").textContent = s + "/" + TOTAL;
+    document.getElementById("score-title").textContent = tier.title;
+    document.getElementById("score-msg").textContent = tier.msg;
+    var bar = document.getElementById("score-bar");
+    bar.classList.add("show");
+    bar.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+  blocks.forEach(function (block) {
+    var btns = block.querySelectorAll(".opt-btn");
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var q = block.id;
+        if (answered[q]) return;
+        var ok = btn.getAttribute("data-correct") === "true", right = "";
+        answered[q] = true; correct[q] = ok;
+        btns.forEach(function (b) {
+          b.disabled = true;
+          if (b.getAttribute("data-correct") === "true") { b.classList.add("reveal-correct"); right = b.getAttribute("data-letter"); }
+        });
+        btn.classList.remove("reveal-correct");
+        btn.classList.add(ok ? "correct" : "wrong");
+        block.classList.add(ok ? "answered-correct" : "answered-wrong");
+        var fb = block.querySelector(".feedback");
+        fb.innerHTML = "";
+        var icon = document.createElement("span"); icon.className = "fb-icon"; icon.textContent = ok ? "✓" : "✗";
+        fb.appendChild(icon);
+        fb.appendChild(document.createTextNode(btn.getAttribute("data-expl") + (ok ? "" : " The correct answer is " + right + ".")));
+        fb.className = "feedback show " + (ok ? "correct" : "wrong");
+        update();
+      });
+    });
+  });
+  function reset() {
+    answered = {}; correct = {};
+    blocks.forEach(function (b) { b.classList.remove("answered-correct", "answered-wrong"); });
+    document.querySelectorAll(".opt-btn").forEach(function (b) { b.disabled = false; b.classList.remove("correct", "wrong", "reveal-correct"); });
+    document.querySelectorAll(".feedback").forEach(function (f) { f.className = "feedback"; f.innerHTML = ""; });
+    document.getElementById("score-bar").classList.remove("show");
+    update();
+    var first = document.getElementById("panel-exercises");
+    if (first) first.scrollIntoView({ behavior: "smooth" });
+  }
+  document.querySelectorAll("[data-reset]").forEach(function (b) { b.addEventListener("click", reset); });
+  update();
+})();
+
+</script>
+</body>
+</html>
