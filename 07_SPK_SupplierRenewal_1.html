@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+LESSON-META
+course_unit: 2 (Negotiation & Delegation)
+lesson: 7
+track: Speaking
+level: B2
+title: "Boardroom Briefing: Supplier Contract Renewal"
+questions: 11
+built: 2026-10-23 (shared lesson system: one stylesheet, one script, per-lesson theme tokens)
+-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boardroom Briefing: Supplier Contract Renewal · Lesson 7 · English Class</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --surface: #ffffff;
+  --ink-soft: #3a4552;
+  --ink-muted: #5f6c7a;
+  --radius: 4px;
+  --radius-sm: 3px;
+  --radius-pill: 3px;
+  --bw: 1px;
+  --shadow: none;
+  --correct: #2c7d4f;
+  --wrong: #b8443f;
+  --light-correct: #e2f4e8;
+  --light-wrong: #fae3e1;
+  --highlight-vocab: #fbe6a2;
+  --highlight-idiom: #cfe3f1;
+  --highlight-express: #f6d3ad;
+  --highlight-vocab-strong: #d9a520;
+  --highlight-idiom-strong: #3d7fb5;
+  --highlight-express-strong: #d07a2c;
+  --ink: #16213a;
+  --paper: #f6f3ec;
+  --cream: #ebe5d6;
+  --rule: #bdb39b;
+  --accent: #9c2b2b;
+  --accent2: #35506b;
+  --gold: #c49a3a;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'Spline Sans Mono', monospace;
+  --card-border: #16213a;
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   SHARED LESSON SYSTEM · one stylesheet for every lesson in the course
+   Each lesson only sets tokens (colours, fonts, shape) and its own
+   masthead ornament. Every component below is identical everywhere.
+   ═══════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--page-bg, var(--paper));
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1.06rem;
+  line-height: 1.72;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--accent); color: #fff; }
+a { color: var(--accent2); }
+img, svg { max-width: 100%; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 22px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ── MASTHEAD ─────────────────────────────────────────────────────── */
+.masthead {
+  background: var(--mast-bg, linear-gradient(180deg, var(--cream), var(--paper)));
+  color: var(--mast-fg, var(--ink));
+  text-align: center;
+  padding: 2.6rem 0 1.9rem;
+  border-bottom: var(--mast-border, 5px solid var(--accent));
+  position: relative;
+  overflow: hidden;
+}
+.masthead .wrap { position: relative; z-index: 1; }
+.eyebrow {
+  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--eyebrow, var(--accent2));
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 0.35rem 0.6rem;
+  margin-bottom: 1rem;
+}
+.eyebrow span + span::before { content: "·"; margin-right: 0.6rem; opacity: 0.6; }
+.headline {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  font-size: clamp(1.85rem, 4.8vw, 2.95rem); line-height: 1.12;
+  letter-spacing: var(--display-tracking, -0.01em);
+  text-transform: var(--display-case, none);
+  color: var(--mast-title, var(--ink));
+  max-width: 780px; margin: 0 auto 0.95rem; text-wrap: balance;
+}
+.deck {
+  font-size: 1.1rem; line-height: 1.6; max-width: 640px; margin: 0 auto 1rem;
+  color: var(--mast-sub, var(--ink-soft)); font-style: var(--deck-style, italic); text-wrap: pretty;
+}
+.byline { font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.02em; color: var(--mast-muted, var(--ink-muted)); margin-bottom: 1.3rem; }
+.byline a { color: inherit; text-underline-offset: 3px; }
+.factrow { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.55rem 0.7rem; }
+.fact {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 500;
+  padding: 0.38rem 0.9rem;
+  background: var(--chip-bg, var(--surface));
+  color: var(--chip-fg, var(--ink));
+  border: var(--chip-border, 1.5px solid var(--rule));
+  border-radius: var(--radius-pill, 999px);
+}
+.fact b { font-weight: 700; }
+.fact a { color: inherit; font-weight: 700; }
+.ornament { margin-top: 1.4rem; }
+
+/* ── TABS ─────────────────────────────────────────────────────────── */
+.tabnav {
+  position: sticky; top: 0; z-index: 60;
+  background: var(--tab-bg, var(--ink));
+  box-shadow: 0 2px 12px rgba(0,0,0,0.14);
+}
+.tabnav .tabs { display: flex; max-width: 900px; margin: 0 auto; }
+.tabbtn {
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.45rem;
+  border: none; background: transparent; cursor: pointer;
+  color: var(--tab-fg, rgba(255,255,255,0.78));
+  font-family: var(--font-tab, var(--font-display)); font-weight: 600; font-size: 0.93rem;
+  padding: 0.95rem 0.4rem 0.8rem;
+  border-bottom: 4px solid transparent;
+  transition: background 0.18s, color 0.18s;
+}
+.tabbtn .ti { font-size: 1.05em; line-height: 1; }
+.tabbtn:hover { background: var(--tab-hover, rgba(255,255,255,0.09)); }
+.tabbtn[aria-selected="true"] {
+  background: var(--tab-active-bg, var(--accent));
+  color: var(--tab-active-fg, #fff);
+  border-bottom-color: var(--tab-active-line, var(--gold));
+}
+:focus-visible { outline: 3px solid var(--focus, var(--gold)); outline-offset: 2px; }
+
+/* ── PANELS + SECTION HEADINGS ────────────────────────────────────── */
+.stage { padding-bottom: 3rem; }
+.panel { display: none; padding: 2.4rem 0 1rem; }
+.panel.active { display: block; animation: fadeIn 0.22s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+.tag {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--tag-bg, var(--accent2)); color: var(--tag-fg, #fff);
+  padding: 0.26rem 0.72rem; border-radius: var(--radius-pill, 999px); margin-bottom: 0.75rem;
+}
+.sectitle {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  text-transform: var(--display-case, none); letter-spacing: var(--display-tracking, -0.01em);
+  font-size: clamp(1.45rem, 3.4vw, 1.85rem); line-height: 1.2; color: var(--sect, var(--accent));
+  margin-bottom: 0.4rem; text-wrap: balance;
+}
+.subtitle { color: var(--ink-muted); margin-bottom: 1.5rem; font-size: 0.96rem; max-width: 70ch; }
+.gsub {
+  display: flex; align-items: baseline; gap: 0.6rem;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  text-transform: var(--display-case, none);
+  font-size: 1.28rem; color: var(--sub, var(--accent2)); margin: 2.2rem 0 0.9rem;
+}
+.gsub .num { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; color: var(--accent); letter-spacing: 0.05em; }
+
+/* ── LEGEND + NOTES ───────────────────────────────────────────────── */
+.legend {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.2rem;
+  background: var(--cream); border: 1.5px dashed var(--rule);
+  border-radius: var(--radius, 12px); padding: 0.8rem 1.1rem; margin-bottom: 1.8rem; font-size: 0.87rem;
+}
+.legend-title { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.legend-item { display: flex; align-items: center; gap: 0.45rem; }
+.swatch, .dot { width: 15px; height: 15px; border-radius: 4px; display: inline-block; flex: 0 0 auto; border: 1px solid rgba(0,0,0,0.14); }
+.sw-v, .dot-v { background: var(--highlight-vocab); }
+.sw-i, .dot-i { background: var(--highlight-idiom); }
+.sw-e, .dot-e { background: var(--highlight-express); }
+.dot-t { background: var(--accent2); }
+.note {
+  background: var(--cream); border-left: 5px solid var(--accent2);
+  border-radius: var(--radius-sm, 8px); padding: 1rem 1.25rem; margin-bottom: 1.6rem; font-size: 0.97rem;
+}
+.note p + p { margin-top: 0.6rem; }
+.note-task { background: var(--surface); border: var(--bw, 1.5px) solid var(--ink); border-left: 7px solid var(--accent); }
+.note-tip { border-left-color: var(--gold); }
+.note .label {
+  display: block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem;
+}
+.note ul, .note ol { margin: 0.4rem 0 0 1.2rem; }
+.note li { margin-bottom: 0.25rem; }
+
+/* ── READING TEXT ─────────────────────────────────────────────────── */
+.excerpt {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.5rem 1.65rem; margin-bottom: 1.5rem;
+  box-shadow: var(--shadow, none); position: relative;
+}
+.exlabel {
+  display: flex; align-items: center; gap: 0.55rem;
+  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.07em; color: var(--exlabel, var(--accent));
+  margin-bottom: 0.7rem;
+}
+.exlabel .n {
+  display: inline-grid; place-items: center; min-width: 1.6rem; height: 1.6rem; padding: 0 0.35rem;
+  background: var(--accent); color: #fff; border-radius: var(--radius-pill, 999px); font-size: 0.72rem;
+}
+.excerpt p { margin-bottom: 0.95rem; text-wrap: pretty; }
+.excerpt p:last-child { margin-bottom: 0; }
+.dropcap > p:first-of-type::first-letter {
+  float: left; font-family: var(--font-display); font-weight: 700; font-size: 3.4em; line-height: 0.82;
+  padding: 0.08em 0.1em 0 0; color: var(--accent);
+}
+.sidebar {
+  background: var(--cream); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.3rem 1.4rem; margin: 0 0 1.5rem;
+}
+.sidebar h3 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.3rem; color: var(--accent2); }
+.sidebar > p { font-size: 0.93rem; color: var(--ink-soft); margin-bottom: 0.9rem; }
+
+/* transcript turns */
+.transcript { padding: 0; overflow: hidden; }
+.transcript > .exlabel { padding: 0.75rem 1.2rem; margin: 0; background: var(--ink); color: var(--paper); }
+.transcript > .exlabel .n { background: var(--accent); }
+.turn { display: grid; grid-template-columns: 6.4rem 1fr; gap: 0.9rem; padding: 0.95rem 1.2rem; border-top: 1px solid var(--line, rgba(0,0,0,0.07)); }
+.transcript > .turn:first-of-type { border-top: none; }
+.spk {
+  align-self: start; margin-top: 0.2rem;
+  font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  text-align: center; padding: 0.25rem 0.35rem; border-radius: var(--radius-sm, 6px);
+  background: var(--spk-bg, var(--ink-muted)); color: #fff;
+}
+.turn[data-speaker="pippa"] { --spk-bg: var(--accent); }
+.turn[data-speaker="phil"] { --spk-bg: var(--accent2); }
+.turn[data-speaker="voice"], .turn[data-speaker="neil"], .turn[data-speaker="beth"] { background: var(--voice-bg, var(--cream)); }
+.turn[data-speaker="voice"] { --spk-bg: #6b6257; }
+.turn[data-speaker="neil"] { --spk-bg: #7a5c2e; }
+.turn[data-speaker="beth"] { --spk-bg: #4d5a66; }
+.said p { margin-bottom: 0.6rem; }
+.said p:last-child { margin-bottom: 0; }
+
+/* highlights + tooltip */
+.hl {
+  border-radius: 4px; padding: 0.04em 0.18em; cursor: help; font-weight: 600;
+  border-bottom: 2px dotted currentColor; box-decoration-break: clone; -webkit-box-decoration-break: clone;
+}
+.hl-v { background: var(--highlight-vocab); color: var(--hl-v-fg, #6b4e06); }
+.hl-i { background: var(--highlight-idiom); color: var(--hl-i-fg, #174a7c); }
+.hl-e { background: var(--highlight-express); color: var(--hl-e-fg, #8a3f0e); }
+.hl:focus-visible { outline: 2px solid var(--accent2); outline-offset: 1px; }
+#tooltip {
+  position: fixed; display: none; z-index: 999; max-width: 290px; pointer-events: none;
+  background: #1b1a1f; color: #f7f3ea; font-family: var(--font-body); font-size: 0.87rem; line-height: 1.45;
+  padding: 0.7rem 0.9rem; border-radius: 9px; box-shadow: 0 10px 28px rgba(0,0,0,0.32);
+}
+#tooltip .tip-cat { display: block; font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.07em; text-transform: uppercase; color: #f2c55c; margin-bottom: 0.15rem; }
+#tooltip .tip-term { display: block; font-weight: 700; font-size: 0.98rem; margin-bottom: 0.2rem; }
+
+.pullquote {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: clamp(1.2rem, 3vw, 1.55rem); line-height: 1.35; text-align: center; color: var(--accent2);
+  padding: 1.6rem 1.2rem; margin: 2.2rem auto; max-width: 680px;
+  border-top: 3px solid var(--accent); border-bottom: 1px solid var(--rule);
+}
+.pullquote small { display: block; margin-top: 0.6rem; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); font-weight: 500; }
+
+/* ── VOCABULARY CARDS ─────────────────────────────────────────────── */
+.vgroup-title {
+  display: flex; align-items: center; gap: 0.55rem;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: 1.2rem; color: var(--ink); margin: 2rem 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--rule);
+}
+.vgroup-title .count { margin-left: auto; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; color: var(--ink-muted); text-transform: none; }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(245px, 1fr)); gap: 0.9rem; }
+.vcard {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-top: 5px solid var(--card-top, var(--highlight-vocab-strong, #d9a520));
+  border-radius: var(--radius, 12px); padding: 0.95rem 1.15rem 1.05rem; box-shadow: var(--shadow, none);
+  display: flex; flex-direction: column;
+}
+.vcard.idiom { --card-top: var(--highlight-idiom-strong, #3d7fb5); }
+.vcard.expr { --card-top: var(--highlight-express-strong, #d07a2c); }
+.vcard.toolkit { --card-top: var(--accent2); }
+.vterm { font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; line-height: 1.3; text-transform: none; }
+.vpos { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); margin: 0.15rem 0 0.45rem; }
+.vdef { font-size: 0.93rem; margin-bottom: 0.55rem; }
+.vex { font-size: 0.89rem; font-style: italic; color: var(--ink-soft); padding-left: 0.7rem; border-left: 2px solid var(--rule); }
+.vex strong { font-style: normal; }
+.vsrc { margin-top: auto; padding-top: 0.6rem; font-family: var(--font-mono); font-size: 0.63rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+
+/* use-in-context cards (Vocabulary in Use) */
+.usegrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.9rem; margin-bottom: 1rem; }
+.usecard {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-left: 5px solid var(--accent); border-radius: var(--radius, 12px); padding: 0.9rem 1.1rem;
+}
+.usehead { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--accent); margin-bottom: 0.15rem; text-transform: none; }
+.usemeta { font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 0.45rem; }
+.usecard ul { padding-left: 1.1rem; font-size: 0.93rem; }
+.usecard li { margin-bottom: 0.3rem; }
+
+/* ── GRAMMAR / GENERIC TABLES ─────────────────────────────────────── */
+.formula {
+  font-family: var(--font-mono); font-size: 0.92rem; text-align: center; letter-spacing: 0.01em;
+  background: var(--ink); color: var(--paper); border-radius: var(--radius-sm, 8px);
+  padding: 0.95rem 1.2rem; margin-bottom: 0.8rem;
+}
+.formula b { color: var(--gold); font-weight: 600; }
+.tablewrap { overflow-x: auto; margin-bottom: 1.4rem; border-radius: var(--radius-sm, 8px); border: 1px solid var(--rule); }
+table.gtable { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: var(--surface); }
+table.gtable th {
+  background: var(--th-bg, var(--ink)); color: var(--th-fg, #fff); text-align: left; vertical-align: bottom;
+  font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.65rem 0.85rem;
+}
+table.gtable td { padding: 0.68rem 0.85rem; border-top: 1px solid var(--rule); vertical-align: top; }
+table.gtable tr:nth-child(even) td { background: var(--zebra, var(--cream)); }
+details summary {
+  cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 0.35rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600; color: var(--accent2);
+  padding: 0.2rem 0.55rem; border: 1px solid currentColor; border-radius: var(--radius-pill, 999px);
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: "▸"; transition: transform 0.15s; }
+details[open] summary::before { transform: rotate(90deg); }
+details[open] summary { margin-bottom: 0.45rem; }
+details .ans { display: block; }
+
+/* ── SPEAKING: SCRIPT LINES + RUBRIC ──────────────────────────────── */
+.script-line {
+  background: var(--surface); border: 1px solid var(--rule); border-left: 6px solid var(--accent);
+  border-radius: var(--radius-sm, 8px); padding: 0.9rem 1.1rem; margin-bottom: 0.7rem;
+}
+.script-line .beat { display: inline-block; font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: var(--accent2); padding: 0.12rem 0.5rem; border-radius: var(--radius-pill, 999px); margin-bottom: 0.4rem; }
+.script-note { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-muted); margin-top: 0.4rem; }
+.figure {
+  background: var(--fig-bg, var(--surface)); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.3rem 1.4rem 1rem; margin-bottom: 1.6rem; box-shadow: var(--shadow, none);
+}
+.figure-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 0.4rem 1rem; margin-bottom: 0.9rem; }
+.figure-kicker { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.figure-title { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; line-height: 1.25; color: var(--ink); text-transform: none; }
+.figure-meta { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); }
+.figure-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.3rem 1rem; margin-top: 0.8rem; padding-top: 0.6rem; border-top: 1px solid var(--rule); font-family: var(--font-mono); font-size: 0.66rem; color: var(--ink-muted); }
+.figure svg text { font-family: var(--font-mono); }
+
+/* ── EXERCISES ────────────────────────────────────────────────────── */
+.quizbar {
+  position: sticky; top: calc(var(--tabh, 3.4rem) + 0.5rem); z-index: 40;
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  background: var(--ink); color: var(--paper); border-radius: var(--radius-sm, 8px);
+  padding: 0.55rem 0.9rem; margin-bottom: 1.4rem; font-family: var(--font-mono); font-size: 0.8rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+.quizbar .meter { flex: 1; min-width: 120px; height: 7px; background: rgba(255,255,255,0.18); border-radius: 999px; overflow: hidden; }
+.quizbar .meter i { display: block; height: 100%; width: 0; background: var(--gold); transition: width 0.25s; }
+.quizbar button { background: var(--accent); color: #fff; border: none; border-radius: var(--radius-pill, 999px); padding: 0.3rem 0.85rem; font: inherit; font-weight: 700; cursor: pointer; }
+.quizbar button:hover { filter: brightness(1.1); }
+.exsection-title {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: 1.32rem; color: var(--sect, var(--accent)); margin: 2rem 0 1rem; padding-bottom: 0.35rem;
+  border-bottom: 3px solid var(--gold);
+}
+.qblock {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.15rem 1.25rem; margin-bottom: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.qblock.answered-correct { border-color: var(--correct); box-shadow: inset 4px 0 0 var(--correct); }
+.qblock.answered-wrong { border-color: var(--wrong); box-shadow: inset 4px 0 0 var(--wrong); }
+.qtext { font-weight: 700; margin-bottom: 0.8rem; text-wrap: pretty; }
+.opt-btn {
+  display: flex; align-items: baseline; gap: 0.75rem; width: 100%; text-align: left;
+  background: var(--paper); color: var(--ink); cursor: pointer;
+  border: 1.5px solid var(--rule); border-radius: var(--radius-sm, 8px);
+  padding: 0.6rem 0.85rem; margin-bottom: 0.45rem;
+  font-family: var(--font-body); font-size: 0.97rem; line-height: 1.5;
+  transition: background 0.15s, border-color 0.15s;
+}
+.opt-letter {
+  flex: 0 0 auto; display: inline-grid; place-items: center; width: 1.55rem; height: 1.55rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 700;
+  border: 1.5px solid var(--rule); border-radius: 50%; background: var(--surface);
+}
+.opt-btn:hover:not(:disabled) { border-color: var(--accent2); background: var(--cream); }
+.opt-btn:disabled { cursor: default; }
+.opt-btn.correct, .opt-btn.reveal-correct { background: var(--light-correct); border-color: var(--correct); }
+.opt-btn.correct { font-weight: 700; color: #1d4a30; }
+.opt-btn.wrong { background: var(--light-wrong); border-color: var(--wrong); color: #7a2e2e; font-weight: 700; }
+.opt-btn.correct .opt-letter, .opt-btn.reveal-correct .opt-letter { background: var(--correct); border-color: var(--correct); color: #fff; }
+.opt-btn.wrong .opt-letter { background: var(--wrong); border-color: var(--wrong); color: #fff; }
+.feedback { display: none; margin-top: 0.55rem; padding: 0.7rem 0.9rem; border-radius: var(--radius-sm, 8px); font-size: 0.93rem; }
+.feedback.show { display: block; }
+.feedback.correct { background: var(--light-correct); color: #1d4a30; }
+.feedback.wrong { background: var(--light-wrong); color: #7a2e2e; }
+.fb-icon { font-weight: 800; margin-right: 0.35rem; }
+#score-bar {
+  display: none; text-align: center; background: var(--ink); color: var(--paper);
+  border-radius: var(--radius, 12px); padding: 1.9rem 1.4rem; margin-top: 2rem;
+}
+#score-bar.show { display: block; }
+#score-num { font-family: var(--font-display); font-size: 3rem; line-height: 1.1; color: var(--gold); }
+#score-title { font-family: var(--font-display); font-size: 1.45rem; margin: 0.35rem 0; }
+#score-msg { font-size: 0.95rem; opacity: 0.85; margin-bottom: 1.1rem; }
+.reset-btn {
+  background: var(--accent); color: #fff; border: none; cursor: pointer;
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.86rem;
+  padding: 0.7rem 1.6rem; border-radius: var(--radius-pill, 999px);
+}
+.reset-btn:hover { filter: brightness(1.1); }
+
+/* ── FOOTER: COURSE NAVIGATION ────────────────────────────────────── */
+.coursefoot { border-top: 1px solid var(--rule); background: var(--cream); padding: 1.4rem 0 2.2rem; margin-top: 1rem; }
+.coursefoot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.8rem; }
+.coursefoot > .wrap > a {
+  display: inline-flex; flex-direction: column; text-decoration: none; color: var(--ink);
+  border: 1.5px solid var(--rule); border-radius: var(--radius-sm, 8px); background: var(--surface);
+  padding: 0.55rem 0.9rem; min-width: 210px; max-width: 48%;
+}
+.coursefoot > .wrap > a:hover { border-color: var(--accent); }
+.coursefoot > .wrap > a.next { text-align: right; margin-left: auto; }
+.coursefoot small { font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.coursefoot strong { font-family: var(--font-display); font-size: 0.98rem; text-transform: none; }
+.coursefoot .unitmap { width: 100%; font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); text-align: center; margin-top: 0.4rem; }
+.coursefoot .unitmap a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
+.coursefoot .unitmap a:hover { color: var(--accent); }
+
+/* ── RESPONSIVE + PRINT ───────────────────────────────────────────── */
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .wrap { padding: 0 16px; }
+  .masthead { padding: 2rem 0 1.5rem; }
+  .tabbtn { flex-direction: column; gap: 0.15rem; font-size: 0.7rem; padding: 0.65rem 0.15rem 0.55rem; }
+  .excerpt { padding: 1.2rem 1.05rem; }
+  .turn { grid-template-columns: 1fr; gap: 0.35rem; }
+  .spk { justify-self: start; }
+  table.gtable { font-size: 0.8rem; }
+  table.gtable th, table.gtable td { padding: 0.5rem 0.55rem; }
+  .coursefoot > .wrap > a { max-width: 100%; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media print {
+  .tabnav, .quizbar, #score-bar, .coursefoot, #tooltip { display: none !important; }
+  .panel { display: block !important; page-break-before: always; }
+  .panel:first-of-type { page-break-before: auto; }
+  details > *:not(summary) { display: block !important; }
+  .masthead { background: none !important; color: #000 !important; }
+  body { background: #fff !important; }
+}
+
+/* ── AT-A-GLANCE AIDS: timeline + stat grid ───────────────────────── */
+.glance { margin: 2rem 0 1.5rem; }
+.glance > h3 { font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none); font-size: 1.2rem; color: var(--accent2); margin-bottom: 0.3rem; }
+.glance > p { font-size: 0.92rem; color: var(--ink-muted); margin-bottom: 1rem; }
+.timeline { list-style: none; position: relative; padding-left: 1.6rem; }
+.timeline::before { content: ""; position: absolute; left: 0.45rem; top: 0.4rem; bottom: 0.4rem; width: 3px; background: var(--rule); border-radius: 2px; }
+.timeline li { position: relative; margin-bottom: 0.85rem; }
+.timeline li::before { content: ""; position: absolute; left: -1.38rem; top: 0.42rem; width: 13px; height: 13px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); }
+.timeline .when { display: inline-block; font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--accent); min-width: 7.5rem; }
+.timeline .what { font-size: 0.95rem; }
+.statgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.8rem; }
+.stat { background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule)); border-radius: var(--radius, 12px); padding: 0.85rem 1rem; }
+.stat b { display: block; font-family: var(--font-display); font-size: 1.9rem; line-height: 1.1; color: var(--accent); }
+.stat span { display: block; font-size: 0.88rem; line-height: 1.4; }
+.stat small { display: block; margin-top: 0.3rem; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+.ladder-scale { list-style: none; display: grid; gap: 0.45rem; }
+.ladder-scale li { display: grid; grid-template-columns: 8.5rem 1fr 13rem; gap: 0.8rem; align-items: center; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius-sm, 8px); padding: 0.6rem 0.9rem; border-left: 6px solid var(--lv, var(--accent)); }
+.ladder-scale li:nth-child(1) { --lv: #3f8f6b; } .ladder-scale li:nth-child(2) { --lv: #79a04a; } .ladder-scale li:nth-child(3) { --lv: #d1a32a; } .ladder-scale li:nth-child(4) { --lv: #d9772c; } .ladder-scale li:nth-child(5) { --lv: #b8443f; }
+.ladder-scale .lv { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--lv); }
+.ladder-scale .ph { font-weight: 700; }
+.ladder-scale .use { font-size: 0.85rem; color: var(--ink-muted); }
+@media (max-width: 640px) { .ladder-scale li { grid-template-columns: 1fr; gap: 0.15rem; } }
+
+/* ── LESSON THEME: Boardroom Briefing: Supplier Contract Renewal ── */
+body { background-image: repeating-linear-gradient(0deg, transparent 0 38px, rgba(22,33,58,0.035) 38px 39px); }
+.topband { height: 9px; background: repeating-linear-gradient(90deg, var(--accent) 0 18px, var(--paper) 18px 24px, var(--accent2) 24px 42px, var(--paper) 42px 48px); }
+.masthead { border-bottom: 3px solid var(--ink); }
+.bidpack { background: #fffdf8; border-top: 6px solid var(--accent); }
+.bm svg { width: 100%; height: auto; display: block; }
+.bm .grid { stroke: #e6dfcf; stroke-width: 1; } .bm .frame { fill: none; stroke: var(--ink); stroke-width: 1.4; }
+.bm .zone { fill: rgba(47,125,79,0.08); stroke: rgba(47,125,79,0.5); stroke-dasharray: 5 4; }
+.bm .zonelab { font-size: 12px; fill: #2f7d4f; font-weight: 600; letter-spacing: 0.06em; }
+.bm .tick { font-size: 13px; fill: #5f6c7a; } .bm .axt { font-size: 13px; fill: var(--ink); font-weight: 600; }
+.bm .bub { fill-opacity: 0.92; stroke: #fff; stroke-width: 2; } .bm .current { fill: none; stroke: #7d8fa3; stroke-width: 2; stroke-dasharray: 4 4; }
+.bm .qlab { font-size: 14px; font-weight: 700; fill: #fff; }
+.bm .name { font-family: var(--font-display) !important; font-size: 17px; font-weight: 700; fill: var(--ink); }
+.bm .sub { font-size: 12px; fill: #5f6c7a; }
+.bm .redline { fill: none; stroke: var(--accent); stroke-width: 2; stroke-linecap: round; }
+.bm .note { font-family: var(--font-display) !important; font-style: italic; font-size: 15px; fill: var(--accent); }
+.bm-key { font-size: 0.82rem; color: var(--ink-muted); margin: 0.3rem 0 1.1rem; }
+.dotkey, .ringkey { display: inline-block; width: 12px; height: 12px; border-radius: 50%; vertical-align: -1px; margin: 0 0.2rem 0 0.6rem; }
+.dotkey { background: #35506b; margin-left: 0; } .ringkey { border: 2px dashed #7d8fa3; }
+.tabtitle { font-family: var(--font-display); font-size: 1rem; margin-bottom: 0.5rem; border-top: 2px solid var(--ink); padding-top: 0.6rem; }
+.bidtab { border-color: var(--ink); }
+.bidtab th small { display: block; font-size: 0.6rem; font-weight: 400; letter-spacing: 0.04em; opacity: 0.75; text-transform: none; }
+.bidtab tr th[scope="row"] { background: #f3efe5; color: var(--ink); text-align: left; font-family: var(--font-body); font-size: 0.86rem; text-transform: none; letter-spacing: 0; border-top: 1px solid var(--rule); }
+.bidtab td.num { font-family: var(--font-mono); text-align: right; white-space: nowrap; }
+.bidtab td.w { font-family: var(--font-mono); font-size: 0.78rem; color: var(--ink-muted); text-align: center; }
+.bidtab td.best { background: #e6f3ea !important; color: #1d4a30; font-weight: 700; }
+.bidtab td.worst { color: var(--accent); text-decoration: underline wavy rgba(156,43,43,0.5); text-underline-offset: 4px; }
+.bidtab .mk, .mk { font-size: 0.7em; }
+.bidtab tr:nth-child(even) td { background: transparent; } .bidtab td { vertical-align: middle !important; }
+.bm .tagline { font-family: var(--font-mono); font-size: 11px; font-weight: 400; fill: #5f6c7a; }
+.best-k { color: #2f7d4f; } .worst-k { color: var(--accent); }
+.bidtab tr.totalrow td, .bidtab tr.totalrow th { border-top: 2px solid var(--ink); font-weight: 700; }
+.bidtab td.total { font-size: 1.05rem; }
+.memo { border-top: 6px solid var(--accent2); }
+.stamp { position: absolute; top: 20px; right: -36px; z-index: 2; transform: rotate(18deg); border: 2px solid var(--accent); color: var(--accent); font: 600 0.62rem var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase; padding: 0.3rem 2.6rem; opacity: 0.75; }
+</style>
+</head>
+<body>
+<div id="tooltip" role="tooltip"></div>
+<a class="sr-only" href="#panel-briefing">Skip to lesson</a>
+
+<div class="topband" aria-hidden="true"></div>
+<header class="masthead">
+<div class="stamp">Draft · Board Review</div>
+<div class="wrap">
+  <p class="eyebrow"><span>Unit 2: Negotiation & Delegation</span><span>Lesson 7</span><span>Speaking</span><span>B2</span></p>
+  <h1 class="headline">Boardroom Briefing: Supplier Contract Renewal</h1>
+  <p class="deck">Two years after the Orion deal in Lesson 5, Calder Appliances must choose again: three suppliers, three very different bids. Use the language from Lessons 5 and 6 to make the case for a winner.</p>
+  <p class="byline">Calder Appliances · Procurement Office · Bid Evaluation Pack for Board Review</p>
+  <div class="factrow"><span class="fact">📁 Task: <b>Recommendation pitch</b></span><span class="fact">🎯 Level: <b>B2</b></span><span class="fact">🧩 Framework: <b>What · So What · Now What</b></span><span class="fact">⏱ Talk: <b>3 to 4 minutes</b></span></div>
+  
+</div>
+</header>
+
+<nav class="tabnav" aria-label="Lesson sections"><div class="tabs" role="tablist">
+<button type="button" role="tab" class="tabbtn" id="tab-briefing" data-tab="briefing" aria-controls="panel-briefing" aria-selected="true"><span class="ti" aria-hidden="true">📁</span><span>Briefing</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-language" data-tab="language" aria-controls="panel-language" aria-selected="false"><span class="ti" aria-hidden="true">🗣</span><span>Language Bank</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-rehearsal" data-tab="rehearsal" aria-controls="panel-rehearsal" aria-selected="false"><span class="ti" aria-hidden="true">🎯</span><span>Rehearsal</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-exercises" data-tab="exercises" aria-controls="panel-exercises" aria-selected="false"><span class="ti" aria-hidden="true">✅</span><span>Exercises</span></button>
+</div></nav>
+<main class="wrap stage">
+<section id="panel-briefing" class="panel active" role="tabpanel" aria-labelledby="tab-briefing">
+<span class="tag">Speaking · Recommendation pitch</span>
+<h2 class="sectitle">Boardroom Briefing: Supplier Contract Renewal</h2>
+<p class="subtitle">Read the scenario, study the bid evaluation in Exhibit 1, then read the procurement memo. You will pitch one supplier to the board.</p>
+<div class="note"><span class="label">Scenario</span>You work in procurement at <strong>Calder Appliances</strong>, the company from Lesson 5. Calder buys about 40,000 electronic control units a year for its ovens and dishwashers. Two years ago, Lena Marsh renewed the contract with Orion Supply at $18.40 a unit. That contract now ends in four months, and this time procurement has asked three suppliers for bids. The board will choose one at its next meeting.</div>
+<div class="note note-task"><span class="label">Your task</span>You are the Procurement Lead. In 3 to 4 minutes, present the three bids: say <strong>what</strong> the numbers are, explain <strong>so what</strong> (why they matter), then say <strong>now what</strong>: one clear recommendation, followed by questions.</div>
+
+<figure class="figure bidpack" aria-labelledby="bp-title">
+  <div class="figure-head">
+    <div><div class="figure-kicker">Exhibit 1 · Bid evaluation, component contract renewal</div>
+    <div class="figure-title" id="bp-title">No bid wins on everything: you pay for speed and quality</div></div>
+    <div class="figure-meta">Procurement Office · Ref. PR-2026-114</div>
+  </div>
+  <div class="bm"><svg viewBox="0 0 640 390" role="img" aria-labelledby="bm-t"><title id="bm-t">Price per unit against lead time. Northwell: $21.10, 3 weeks, quality 8.6. Orion: $18.40, 6 weeks, quality 7.2. Ferro: $16.90, 9 weeks, quality 6.5.</title><rect x="92" y="181.0" width="254.0" height="137.0" class="zone"/><text x="102" y="201.0" class="zonelab">IDEAL ZONE · fast and affordable</text><line x1="92.0" y1="44" x2="92.0" y2="318" class="grid"/><text x="92.0" y="338" text-anchor="middle" class="tick">0</text><line x1="193.6" y1="44" x2="193.6" y2="318" class="grid"/><text x="193.6" y="338" text-anchor="middle" class="tick">2</text><line x1="295.2" y1="44" x2="295.2" y2="318" class="grid"/><text x="295.2" y="338" text-anchor="middle" class="tick">4</text><line x1="396.8" y1="44" x2="396.8" y2="318" class="grid"/><text x="396.8" y="338" text-anchor="middle" class="tick">6</text><line x1="498.4" y1="44" x2="498.4" y2="318" class="grid"/><text x="498.4" y="338" text-anchor="middle" class="tick">8</text><line x1="600.0" y1="44" x2="600.0" y2="318" class="grid"/><text x="600.0" y="338" text-anchor="middle" class="tick">10</text><line x1="92" y1="318.0" x2="600" y2="318.0" class="grid"/><text x="82" y="323.0" text-anchor="end" class="tick">$15</text><line x1="92" y1="249.5" x2="600" y2="249.5" class="grid"/><text x="82" y="254.5" text-anchor="end" class="tick">$17</text><line x1="92" y1="181.0" x2="600" y2="181.0" class="grid"/><text x="82" y="186.0" text-anchor="end" class="tick">$19</text><line x1="92" y1="112.5" x2="600" y2="112.5" class="grid"/><text x="82" y="117.5" text-anchor="end" class="tick">$21</text><line x1="92" y1="44.0" x2="600" y2="44.0" class="grid"/><text x="82" y="49.0" text-anchor="end" class="tick">$23</text><rect x="92" y="44" width="508" height="274" class="frame"/><text x="346.0" y="364" text-anchor="middle" class="axt">Lead time from order to delivery (weeks) → slower</text><text transform="translate(26 181.0) rotate(-90)" text-anchor="middle" class="axt">Price per unit → more expensive</text><circle cx="396.8" cy="201.6" r="29.8" class="current"/><circle cx="396.8" cy="201.6" r="22.8" fill="#7d8fa3" class="bub"/><text x="396.8" y="206.6" text-anchor="middle" class="qlab">7.2</text><text x="431.6" y="197.6" text-anchor="start" class="name">Orion <tspan class="tagline">(current)</tspan></text><text x="431.6" y="216.6" text-anchor="start" class="sub">$18.40 · 6 wks</text><circle cx="244.4" cy="109.1" r="35.4" fill="#35506b" class="bub"/><text x="244.4" y="114.1" text-anchor="middle" class="qlab">8.6</text><text x="291.8" y="105.1" text-anchor="start" class="name">Northwell</text><text x="291.8" y="124.1" text-anchor="start" class="sub">$21.10 · 3 wks</text><circle cx="549.2" cy="252.9" r="16.5" fill="#c49a3a" class="bub"/><text x="549.2" y="257.9" text-anchor="middle" class="qlab">6.5</text><text x="520.7" y="248.9" text-anchor="end" class="name">Ferro</text><text x="520.7" y="267.9" text-anchor="end" class="sub">$16.90 · 9 wks</text><path d="M 300.4 63.074999999999946 C 288.4 63.074999999999946, 278.4 69.07499999999995, 270.4 79.07499999999995" class="redline"/><path d="M 270.4 79.07499999999995 l 11 -3 m -11 3 l 1 -11" class="redline"/><text x="306.4" y="67.07499999999995" class="note">best quality and speed, but highest price</text><path d="M 519.2 298.92500000000007 C 535.2 296.92500000000007, 545.2 286.92500000000007, 547.2 271.92500000000007" class="redline"/><path d="M 547.2 271.92500000000007 l -6 9 m 6 -9 l 6 9" class="redline"/><text x="513.2" y="302.92500000000007" text-anchor="end" class="note">cheapest, but slowest and most returns</text></svg></div>
+  <p class="bm-key"><span class="dotkey"></span> Bubble size and the number inside = quality score out of 10. <span class="ringkey"></span> Dashed ring = current vendor.</p>
+  <h4 class="tabtitle">Bid tabulation sheet</h4>
+  <div class="tablewrap bidtab"><table class="gtable">
+<tr><th scope="col">Criterion</th><th scope="col">Weight</th><th scope="col">Orion<small>current vendor</small></th><th scope="col">Northwell<small>preferred</small></th><th scope="col">Ferro<small>lowest price</small></th></tr>
+<tr><th scope="row">Price per unit</th><td class="w">40%</td><td class="num ">$18.40</td><td class="num worst">$21.10 <span class="mk">▼</span></td><td class="num best">$16.90 <span class="mk">▲</span></td></tr><tr><th scope="row">Annual cost<small>at 40,000 units a year</small></th><td class="w"></td><td class="num ">$736,000</td><td class="num worst">$844,000 <span class="mk">▼</span></td><td class="num best">$676,000 <span class="mk">▲</span></td></tr><tr><th scope="row">Lead time</th><td class="w">30%</td><td class="num ">6 weeks</td><td class="num best">3 weeks <span class="mk">▲</span></td><td class="num worst">9 weeks <span class="mk">▼</span></td></tr><tr><th scope="row">Quality score<small>supplier audit, out of 10</small></th><td class="w">30%</td><td class="num ">7.2 / 10</td><td class="num best">8.6 / 10 <span class="mk">▲</span></td><td class="num worst">6.5 / 10 <span class="mk">▼</span></td></tr><tr><th scope="row">Units returned<small>faulty units, last 12 months</small></th><td class="w"></td><td class="num ">2.4%</td><td class="num best">0.9% <span class="mk">▲</span></td><td class="num worst">4.8% <span class="mk">▼</span></td></tr><tr><th scope="row">On-time delivery</th><td class="w"></td><td class="num ">91%</td><td class="num best">98% <span class="mk">▲</span></td><td class="num worst">84% <span class="mk">▼</span></td></tr>
+<tr class="totalrow"><th scope="row">Weighted score<small>out of 10</small></th><td class="w">100%</td><td class="num total">7.3</td><td class="num total best">8.8</td><td class="num total">7.0</td></tr>
+</table></div>
+  <div class="figure-foot"><span><span class="mk best-k">▲</span> best bid on this line · <span class="mk worst-k">▼</span> weakest bid on this line</span><span>Weighted score: each criterion scored 0 to 10 (best bid = 10), then weighted price 40%, lead time 30%, quality 30%.</span></div>
+</figure>
+<div class="note note-tip"><span class="label">How to read Exhibit 1</span>In the bubble map, the <strong>best place to be is bottom left</strong>: cheap and fast. Nobody is in the ideal zone, so every choice is a trade-off. In the table, read across each line to see who is best (▲) and weakest (▼), then look at the weighted score at the bottom.</div>
+<div class="legend" aria-label="Highlight key"><span class="legend-title">Highlight key</span><span class="legend-item"><span class="swatch sw-v"></span>Vocabulary</span><span class="legend-item"><span class="swatch sw-i"></span>Idiom / Set Phrase</span><span class="legend-item"><span class="swatch sw-e"></span>Useful Expression</span><span class="legend-item" style="margin-left:auto;color:var(--ink-muted)">Hover, tap or tab to a highlight for its meaning.</span></div>
+<div class="excerpt memo">
+<span class="exlabel">Procurement Office · Briefing Memo to the Board</span>
+<p>Our contract with Orion Supply comes up for <span class="hl hl-v" data-cat="Vocabulary" data-def="The act of extending a contract or agreement for a further period." data-term="renewal" tabindex="0">renewal</span> in four months. We have started early on purpose: testing a new supplier’s parts takes about ten weeks, so switching is still a real option, and every bidder knows it. All three suppliers responded. The headline is simple: no supplier is best at everything, so the decision depends on what we value most: price, speed or quality.</p>
+<p>First, a look back. Two years ago, we renewed with Orion at $18.40 a unit, with a 3 percent limit on faulty units. Orion has kept that promise: its return rate is now 2.4 percent, down from 3.6. But it has not become faster. Stock still takes six weeks to arrive, and almost one delivery in ten is late.</p>
+<p>Orion, our current vendor, sits in the middle on every measure. Northwell Components is the most expensive at $21.10 a unit, about $108,000 a year more than Orion at our volume, but it delivers in three weeks and has by far the best quality record, with fewer than one in a hundred units returned. Ferro Industrial is the cheapest, but its nine-week lead time and 4.8 percent return rate worry us: our quality team estimates that returns and delays could cancel out most of the savings. As Lena Marsh wrote after the last renewal, we do not need the lowest price; we need parts that work. Choosing Ferro on price alone would also weaken our <span class="hl hl-v" data-cat="Vocabulary" data-def="Power or influence used to gain an advantage in a negotiation." data-term="leverage" tabindex="0">leverage</span>, because with stock arriving nine weeks after we order it, we would depend on them far more than they depend on us.</p>
+<p>My recommendation is to go into the renewal talks with Northwell as our preferred partner. Quality and the three-week lead time should be <span class="hl hl-e" data-cat="Useful Expression" data-def="Not open to discussion or change; a fixed requirement." data-term="non-negotiable" tabindex="0">non-negotiable</span>; price is where we negotiate. If Northwell will not move on price, they could <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="To make an offer more attractive by adding extra benefits." data-term="sweeten the deal" tabindex="0">sweeten the deal</span> with longer payment terms or a two-year warranty. This is not the moment to <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="To negotiate in an aggressive, uncompromising way." data-term="play hardball" tabindex="0">play hardball</span>, however: we want a long relationship, not a one-off win.</p>
+<p>Next steps: <span class="hl hl-e" data-cat="Useful Expression" data-def="A direct way of formally passing a task to someone. (Lesson 6)" data-term="I’m handing this over to…" tabindex="0">I am handing</span> the final cost-of-ownership check over to finance, and I would like to <span class="hl hl-v" data-cat="Vocabulary" data-def="To give part of your own work or a task to someone else to do." data-term="delegate" tabindex="0">delegate</span> the contract wording to legal, so that we can <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="To organize or deal with something so that it is clear and settled." data-term="sort out" tabindex="0">sort out</span> the details in parallel. We will ask Northwell and Orion to <span class="hl hl-e" data-cat="Useful Expression" data-def="To agree to take part in a negotiation or discussion." data-term="come to the table" tabindex="0">come to the table</span> with their <span class="hl hl-e" data-cat="Useful Expression" data-def="The last offer a party is willing to make, with no further room to negotiate." data-term="best and final offer" tabindex="0">best and final offer</span> by 14 November. Handled well, this renewal can be <span class="hl hl-e" data-cat="Useful Expression" data-def="An outcome that benefits both sides of an agreement." data-term="a win-win" tabindex="0">a win-win</span> for both companies.</p>
+</div>
+</section>
+<section id="panel-language" class="panel" role="tabpanel" aria-labelledby="tab-language">
+<span class="tag">Language Bank</span>
+<h2 class="sectitle">Earlier Language, Ready to Pitch</h2>
+<p class="subtitle">Recycle the negotiation language from Lesson 5 and the delegating language from Lesson 6, then use the phrase bank to compare options and recommend one.</p>
+<div class="note">Every term in the recap appears in the memo or the model script. The tag at the bottom of each card shows where you first met it.</div>
+<h3 class="vgroup-title"><span class="dot dot-v"></span>Vocabulary Recap</h3>
+<div class="vgrid">
+<div class="vcard"><div class="vterm">renewal</div><div class="vpos">noun</div><div class="vdef">The act of extending a contract or agreement for a further period.</div><div class="vex">The <strong>renewal</strong> decision must be made before the contract ends.</div><div class="vsrc">Lesson 5 · Reading</div></div>
+<div class="vcard"><div class="vterm">leverage</div><div class="vpos">noun</div><div class="vdef">Power or influence that gives you an advantage in a negotiation.</div><div class="vex">Starting four months early gives us <strong>leverage</strong>: we still have time to switch.</div><div class="vsrc">Lesson 5 · Reading</div></div>
+<div class="vcard"><div class="vterm">concession</div><div class="vpos">noun</div><div class="vdef">Something given up or agreed to in order to reach an agreement.</div><div class="vex">A longer warranty would be a fair <strong>concession</strong>.</div><div class="vsrc">Lesson 5 · Reading</div></div>
+<div class="vcard"><div class="vterm">delegate</div><div class="vpos">verb</div><div class="vdef">To give part of your own work or a task to someone else to do.</div><div class="vex">I’d like to <strong>delegate</strong> the contract wording to legal.</div><div class="vsrc">Lesson 6 · Listening</div></div>
+</div>
+<h3 class="vgroup-title"><span class="dot dot-i"></span>Idioms &amp; Set Phrases Recap</h3>
+<div class="vgrid">
+<div class="vcard idiom"><div class="vterm">sweeten the deal</div><div class="vpos">idiom</div><div class="vdef">To make an offer more attractive by adding extra benefits.</div><div class="vex">They could <strong>sweeten the deal</strong> with a longer warranty.</div><div class="vsrc">Lesson 5 · Reading</div></div>
+<div class="vcard idiom"><div class="vterm">play hardball</div><div class="vpos">idiom</div><div class="vdef">To negotiate in an aggressive, uncompromising way.</div><div class="vex">There’s no need to <strong>play hardball</strong> with a long-term partner.</div><div class="vsrc">Lesson 5 · Reading</div></div>
+<div class="vcard idiom"><div class="vterm">sort out</div><div class="vpos">phrasal verb</div><div class="vdef">To organize or deal with something so that it is clear and settled.</div><div class="vex">Legal can <strong>sort out</strong> the contract details in parallel.</div><div class="vsrc">Lesson 6 · Listening</div></div>
+</div>
+<h3 class="vgroup-title"><span class="dot dot-e"></span>Useful Expressions Recap</h3>
+<div class="vgrid">
+<div class="vcard expr"><div class="vterm">non-negotiable</div><div class="vpos">negotiation phrase</div><div class="vdef">Not open to discussion or change; a fixed requirement.</div><div class="vex">The three-week lead time should be <strong>non-negotiable</strong>.</div><div class="vsrc">Lesson 5 · Reading</div></div>
+<div class="vcard expr"><div class="vterm">come to the table</div><div class="vpos">negotiation phrase</div><div class="vdef">To agree to take part in a negotiation or discussion.</div><div class="vex">We’ll ask both suppliers to <strong>come to the table</strong> this week.</div><div class="vsrc">Lesson 5 · Reading</div></div>
+<div class="vcard expr"><div class="vterm">best and final offer</div><div class="vpos">negotiation phrase</div><div class="vdef">The last offer a party is willing to make, with no room to negotiate.</div><div class="vex">We want their <strong>best and final offer</strong> by 14 November.</div><div class="vsrc">Lesson 5 · Reading</div></div>
+<div class="vcard expr"><div class="vterm">a win-win</div><div class="vpos">negotiation phrase</div><div class="vdef">An outcome that benefits both sides of an agreement.</div><div class="vex">Handled well, this can be <strong>a win-win</strong>.</div><div class="vsrc">Lesson 5 · Reading</div></div>
+<div class="vcard expr"><div class="vterm">I’m handing this over to…</div><div class="vpos">delegating phrase</div><div class="vdef">A direct way of formally passing a task to someone.</div><div class="vex"><strong>I’m handing</strong> the cost check <strong>over to</strong> finance.</div><div class="vsrc">Lesson 6 · Listening</div></div>
+</div>
+<h3 class="vgroup-title"><span class="dot dot-t"></span>Presentation Phrase Bank</h3>
+<div class="vgrid">
+<div class="vcard toolkit"><div class="vterm">Stating the headline number</div><div class="vpos">move</div><div class="vdef">Put the key figure on the table before you interpret it.</div><div class="vex">“Northwell delivers in three weeks and scores 8.6 for quality.”</div></div>
+<div class="vcard toolkit"><div class="vterm">Naming the trade-off</div><div class="vpos">move</div><div class="vdef">Show what you gain and what you pay.</div><div class="vex">“The trade-off is clear: we pay more per unit, but we get speed and quality.”</div></div>
+<div class="vcard toolkit"><div class="vterm">Comparing</div><div class="vpos">move</div><div class="vdef">Set two options side by side with a specific contrast.</div><div class="vex">“Compared to Orion, Northwell costs $2.70 more per unit but arrives three weeks sooner.”</div></div>
+<div class="vcard toolkit"><div class="vterm">Hedging vs. certainty</div><div class="vpos">move</div><div class="vdef">Match your verb to the strength of your evidence.</div><div class="vex">“Our quality team estimates…” (an estimate) vs. “The bids show…” (a fact)</div></div>
+<div class="vcard toolkit"><div class="vterm">Recommending</div><div class="vpos">move</div><div class="vdef">Turn the insight into one specific, nameable action.</div><div class="vex">“I’d recommend Northwell as our preferred partner, pending a finance check.”</div></div>
+<div class="vcard toolkit"><div class="vterm">Handling an objection</div><div class="vpos">move</div><div class="vdef">Accept the point, then return to your evidence.</div><div class="vex">“That’s a fair point. However, if you look at the return rate…”</div></div>
+</div>
+</section>
+<section id="panel-rehearsal" class="panel" role="tabpanel" aria-labelledby="tab-rehearsal">
+<span class="tag">Rehearsal</span>
+<h2 class="sectitle">The Three-Part Pitch: What, So What, Now What</h2>
+<p class="subtitle">A recommendation pitch needs only three moves. Learn them, hear them in a model, prepare for the board’s questions, then score yourself.</p>
+<div class="note">Say <strong>What</strong> the numbers are, explain <strong>So What</strong> (what they mean for this decision), then say <strong>Now What</strong> you want the board to do. A good pitch spends the most time on <em>So What</em>, because that is where you earn the recommendation.</div>
+<h3 class="gsub"><span class="num">01</span>The Framework</h3>
+<div class="tablewrap"><table class="gtable">
+<tr><th>Part</th><th>Time</th><th>Purpose</th><th>Sample phrase</th></tr>
+<tr><td><strong>1. What</strong></td><td>about 60 sec</td><td>State the headline numbers plainly, before you interpret them.</td><td>“Three suppliers bid: Orion at $18.40 a unit, Northwell at $21.10 and Ferro at $16.90.”</td></tr>
+<tr><td><strong>2. So What</strong></td><td>about 90 sec</td><td>Explain the trade-off and why it matters for this decision.</td><td>“The cheapest bid isn’t the cheapest choice once you count returns and delays.”</td></tr>
+<tr><td><strong>3. Now What</strong></td><td>about 45 sec</td><td>Make one specific recommendation, name the next steps, open the floor.</td><td>“I’d recommend Northwell, pending a quick cost check from finance.”</td></tr>
+</table></div>
+<h3 class="gsub"><span class="num">02</span>Model Script</h3>
+<div class="script-line"><span class="beat">What</span><br>“Our contract with Orion ends in four months, and three suppliers have bid for the renewal. On price, Ferro is cheapest at $16.90 a unit, Orion is at $18.40 and Northwell is at $21.10. On speed and quality, the order is reversed: Northwell delivers in three weeks with a quality score of 8.6, and Ferro takes nine weeks with a score of 6.5.”<div class="script-note">→ Numbers first, grouped by criterion, with no opinion yet.</div></div>
+<div class="script-line"><span class="beat">So What</span><br>“The trade-off is clear. Northwell would cost us about $108,000 a year more than Orion, but fewer than one percent of its units come back. Ferro looks cheap, but almost five percent of its units are returned, and our quality team estimates that returns and delays could cancel out most of the savings. On our weighted score, Northwell comes first with 8.8.”<div class="script-note">→ Names the trade-off, hedges the estimate (“estimates”, “could”), states the facts with confidence.</div></div>
+<div class="script-line"><span class="beat">Now What</span><br>“So I’d recommend Northwell as our preferred partner. Quality and lead time are non-negotiable for us; price is where we will negotiate, and we’ll ask for their best and final offer by 14 November. I’m handing the cost-of-ownership check over to finance this week. I’m happy to take any questions.”<div class="script-note">→ One recommendation, the next steps with owners and a date, then an open door.</div></div>
+<h3 class="gsub"><span class="num">03</span>Anticipate the Board’s Questions</h3>
+<p class="subtitle">Boards push back. Prepare an answer for each question before you reveal the model.</p>
+<div class="tablewrap"><table class="gtable">
+<tr><th>The board asks…</th><th>A strong answer</th></tr>
+<tr><td>“Why not just negotiate Orion down again, like last time?”</td><td><details><summary>Show answer</summary>“We can, and Orion’s bid is a good fallback. But two years ago we fixed Orion’s quality, not its speed. Even at a lower price, a six-week lead time and one late delivery in ten would still hold our factory back.”</details></td></tr>
+<tr><td>“Why should we pay $108,000 more a year?”</td><td><details><summary>Show answer</summary>“That’s a fair question. The extra cost buys us three-week deliveries and a return rate under one percent. Our quality team estimates that Ferro’s returns and delays alone could cost us most of the difference.”</details></td></tr>
+<tr><td>“Why not just stay with Orion? It’s easier.”</td><td><details><summary>Show answer</summary>“Orion is a reasonable middle option, but it doesn’t lead on anything. If we renew with Orion, we should at least use Northwell’s bid as leverage to improve their lead time.”</details></td></tr>
+<tr><td>“What if Northwell won’t lower its price?”</td><td><details><summary>Show answer</summary>“Then we ask them to sweeten the deal in other ways, for example longer payment terms or a two-year warranty. Price isn’t the only concession they can make.”</details></td></tr>
+<tr><td>“How sure are you about the cost of Ferro’s returns?”</td><td><details><summary>Show answer</summary>“It’s an estimate, not a certainty, which is why I’ve asked finance to run a full cost-of-ownership check before we sign.”</details></td></tr>
+</table></div>
+<h3 class="gsub"><span class="num">04</span>Self-Assessment Checklist</h3>
+<div class="tablewrap"><table class="gtable rubric">
+<tr><th>Check</th><th>What to look for</th></tr>
+<tr><td><strong>Numbers first</strong></td><td>Did you state the key figures before interpreting them, not the other way round?</td></tr>
+<tr><td><strong>Trade-off named</strong></td><td>Did you say clearly what the board gains and what it pays with your choice?</td></tr>
+<tr><td><strong>One clear ask</strong></td><td>Does your recommendation name exactly one supplier, with next steps, owners and a date?</td></tr>
+<tr><td><strong>Borrowed language</strong></td><td>Did you reuse at least three terms from Lessons 5 and 6?</td></tr>
+<tr><td><strong>Earned confidence</strong></td><td>Did you hedge only the estimates, and sound sure about the bids themselves?</td></tr>
+</table></div>
+<h3 class="gsub"><span class="num">05</span>Negotiation Language Makeover</h3>
+<p class="subtitle">Improve each line yourself, then compare.</p>
+<div class="tablewrap"><table class="gtable">
+<tr><th>Flat or unsure phrasing</th><th>Boardroom-ready version</th></tr>
+<tr><td>“Umm, I guess Northwell wins, I think?”</td><td><details><summary>Show answer</summary>“What stands out is that Northwell gives us the strongest balance of speed and quality, with the top weighted score of 8.8.”</details></td></tr>
+<tr><td>“Ferro’s cheap, but whatever, who cares.”</td><td><details><summary>Show answer</summary>“Ferro’s lower price comes with real trade-offs in lead time and quality that the board should weigh carefully.”</details></td></tr>
+<tr><td>“I dunno, maybe go with Orion, they’re fine I guess.”</td><td><details><summary>Show answer</summary>“Orion remains a reasonable middle option, though it doesn’t lead on price, speed or quality.”</details></td></tr>
+<tr><td>“We should just tell Northwell to drop the price or we leave.”</td><td><details><summary>Show answer</summary>“This isn’t the moment to play hardball. We’ll ask for their best and final offer, and if price can’t move, we’ll ask them to sweeten the deal.”</details></td></tr>
+<tr><td>“Questions? Sure, whatever, go ahead.”</td><td><details><summary>Show answer</summary>“I’m happy to take any questions before we move to a decision.”</details></td></tr>
+</table></div>
+</section>
+<section id="panel-exercises" class="panel" role="tabpanel" aria-labelledby="tab-exercises">
+<span class="tag">Exercises</span>
+<h2 class="sectitle">Test Yourself</h2>
+<p class="subtitle">11 questions in 2 sections. Choose an answer for instant feedback: every option, right or wrong, comes with an explanation, and the correct answer is always revealed.</p>
+<div class="quizbar" role="status"><span id="quiz-progress">Answered 0/11 · Score 0</span><span class="meter" aria-hidden="true"><i id="quiz-meter"></i></span><button type="button" data-reset>↺ Reset</button></div>
+<h3 class="exsection-title">A · Reading the Bid Evaluation</h3>
+
+<div class="qblock" id="qA1"><p class="qtext">1. Based on Exhibit 1, which supplier combines the fastest delivery with the top quality rating?</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: Northwell has the shortest lead time (3 weeks) and the highest quality score (8.6) of the three." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Northwell Components</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Orion sits in the middle on both lead time and quality, not at the top of either." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Orion Supply</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Ferro has the longest lead time and the lowest quality score of the three, not the best of either." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Ferro Industrial</span></button>
+<button class="opt-btn" data-correct="false" data-expl="One supplier clearly leads on both measures; it isn't a tie between all three." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">None; all three are tied</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA2"><p class="qtext">2. Orion Supply, the current vendor, is described in the memo as sitting:</p>
+<button class="opt-btn" data-correct="false" data-expl="Orion is not the cheapest; Ferro undercuts it on price." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Lowest of the three on price alone</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the memo says Orion is not the cheapest, not the fastest, and not the highest quality: the middle option throughout." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">In the middle on every measure</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Orion's quality score (7.2) is below Northwell's (8.6), not the highest." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Highest of the three on quality</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Orion's six-week lead time is neither the shortest (Northwell) nor the longest (Ferro)." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Tied for fastest lead time</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA3"><p class="qtext">3. At 40,000 units a year, roughly how much more would Northwell cost than Orion?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: $2.70 more per unit × 40,000 units is much more than that." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">About $27,000 a year more.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: $844,000 (Northwell) minus $736,000 (Orion) is $108,000, as the memo says." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">About $108,000 a year more.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: that is the difference between Northwell and Ferro ($844,000 − $676,000)." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">About $168,000 a year more.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: Northwell’s unit price is $2.70 higher, so the annual cost is higher too." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">They would cost exactly the same.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA4"><p class="qtext">4. What specific risk does the memo raise about choosing Ferro mainly for its price?</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the memo warns the price savings could be outweighed by returns and delays caused by the longer lead time and lower quality." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">The savings could be outweighed by returns and delays</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Staff retraining isn't mentioned anywhere in the memo." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Staff would need extensive retraining on new equipment</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Legal action isn't mentioned anywhere in the memo." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">The company could face legal action from Northwell</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The memo doesn't suggest Ferro would raise its price afterward." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Ferro would likely raise its price soon after signing</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA5"><p class="qtext">5. What does the memo ultimately recommend the board do next?</p>
+<button class="opt-btn" data-correct="false" data-expl="The memo doesn't recommend cancelling the process or reopening bidding." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Cancel the renewal process and reopen bidding</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The memo warns against choosing Ferro purely on price, given the risks around lead time and quality." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Choose Ferro immediately to lock in the lowest price</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the memo recommends moving forward with Northwell, with finance running a cost-of-ownership check first." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Move forward with Northwell, pending a finance check</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The memo makes a clear recommendation now rather than deferring the decision to next year." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Delay any decision until the following fiscal year</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA6"><p class="qtext">6. The memo says procurement started four months early “on purpose”. Which lesson from the Orion deal in Lesson 5 is it following?</p>
+<button class="opt-btn" data-correct="false" data-expl="That is one of Lena’s lessons, but it is about trading, not timing." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Never give a concession without getting one back.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: testing a new supplier takes about ten weeks, so starting early keeps switching a real option." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Start early, because time is leverage.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The opposite: the memo warns against choosing Ferro on price alone." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Always accept the cheapest bid.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Finance only does the cost check; procurement leads the talks." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Let finance run the negotiation.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<h3 class="exsection-title">B · Choosing Your Words</h3>
+
+<div class="qblock" id="qB1"><p class="qtext">7. A board member asks why price isn't the only thing that matters here. Which response best hedges while still making a clear point?</p>
+<button class="opt-btn" data-correct="false" data-expl="This overstates certainty and ignores the rest of the data in Exhibit 1." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">"Price is honestly the only thing that matters."</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: 'the numbers suggest' hedges appropriately while still making a clear, specific point." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">"The numbers suggest price alone misses the risk."</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This dismisses the question instead of actually answering it." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">"I have no real idea why price wouldn't matter most."</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This is a vague generalization, not an answer based on the bids." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">"People always just pick the cheapest option, really."</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB2"><p class="qtext">8. Which sentence most directly compares two suppliers using language from the phrase bank?</p>
+<button class="opt-btn" data-correct="false" data-expl="This is vague praise, not a direct side-by-side comparison." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">"Northwell is good, and Ferro is also fine, I suppose."</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This lists the suppliers in sequence rather than comparing their figures." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">"We looked at Northwell, and then we looked at Ferro too."</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This is a flat, uninformative statement with no real comparison in it." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">"Ferro exists as one option among several available."</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: 'compared to' directly sets two suppliers side by side with a specific contrast." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">"Northwell, compared to Ferro, costs more but is faster."</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB3"><p class="qtext">9. Which closing line best combines a firm recommendation with an invitation for discussion?</p>
+<button class="opt-btn" data-correct="false" data-expl="This is vague and doesn't state any recommendation at all." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">"So that's everything, I guess, unless anyone has questions."</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This also contradicts the memo's own recommendation, which favors Northwell over Ferro." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">"Ferro is cheaper, so I suppose that just settles it."</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: this names a clear recommendation and then opens the floor for questions." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">"I'd recommend Northwell, and I'm happy to take questions."</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This is a vague, unfinished-sounding close with no actual recommendation." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">"Anyway, that's basically the whole situation, I think."</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB4"><p class="qtext">10. Which phrase signals a confident conclusion after weighing several possibilities?</p>
+<button class="opt-btn" data-correct="false" data-expl="This is an opening phrase for starting a presentation, not a concluding one." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">"To start, let's look at the bids together."</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: 'one thing is clear' signals a single, confident conclusion after weighing the evidence." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">"One thing is clear: price alone can't drive this."</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This sequencing phrase belongs in the middle of a presentation, not at a conclusion." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">"Moving on to the next supplier's numbers now."</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This is overly hedged and avoids reaching any conclusion at all." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">"Maybe, possibly, price could matter, who really knows."</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB5"><p class="qtext">11. A board member asks for your honest read on Ferro. Which response is both frank and professional?</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: “honestly” signals a frank opinion, and the sentence still names a specific, professional concern: the lead time." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">"Honestly, Ferro's price tempts me, but the lead time worries me."</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This is emotional and exaggerated (“a disaster”) rather than a professional judgement based on the data." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">"Honestly, Ferro is a disaster; picking them was a mistake."</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This evades the board member's direct question instead of answering it." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">"I'd rather not say what I think about Ferro at all."</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This is dismissive and inaccurate: Exhibit 1 shows three clearly different suppliers." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">"Ferro, Orion, Northwell all seem basically identical."</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div id="score-bar" aria-live="polite"><div id="score-num"></div><div id="score-title"></div><div id="score-msg"></div><button type="button" class="reset-btn" data-reset>Try Again</button></div>
+
+</section>
+</main>
+<footer class="coursefoot"><div class="wrap"><a class="prev" href="https://teacher-victor.github.io/Business-English/06_BUS_Delegating.html"><small>← Previous · Lesson 6 · Listening</small><strong>Delegating</strong></a><a class="next" href="https://teacher-victor.github.io/Business-English/08_TED_LeftHanded.html"><small>Next · Lesson 8 · Video →</small><strong>Why Are Some People Left-Handed?</strong></a><p class="unitmap">Unit 2: Negotiation & Delegation · <a href="https://teacher-victor.github.io/Business-English/05_RDG_Negotiation.html">5 Reading</a> → <a href="https://teacher-victor.github.io/Business-English/06_BUS_Delegating.html">6 Listening</a> → <b>7 Speaking</b> → <a href="https://teacher-victor.github.io/Business-English/08_TED_LeftHanded.html">8 Video</a></p></div></footer>
+<script>window.LESSON = {"tiers": [{"min": 0.9, "title": "📁 Boardroom Ready", "msg": "Outstanding. You are ready to present this renewal decision with confidence."}, {"min": 0.7, "title": "🎯 Nearly There", "msg": "Strong result. Revisit the Language Bank if any questions tripped you up."}, {"min": 0.4, "title": "📝 Keep Rehearsing", "msg": "Good start. Reread the Briefing and Rehearsal tabs and try again."}, {"min": 0.0, "title": "🗂 Back to the Dossier", "msg": "Head back to the Briefing and Language Bank tabs, then give it another go."}]};</script>
+<script>
+/* Shared lesson behaviour: tabs, glossary tooltips, quiz scoring. */
+(function () {
+  "use strict";
+  var LESSON = window.LESSON || {};
+
+  /* ── Tabs (ARIA tablist, arrow keys, #hash deep links) ── */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tabbtn"));
+  var panels = Array.prototype.slice.call(document.querySelectorAll(".panel"));
+  var nav = document.querySelector(".tabnav");
+  function setTabHeight() {
+    if (nav) document.documentElement.style.setProperty("--tabh", nav.offsetHeight + "px");
+  }
+  function showTab(id, opts) {
+    opts = opts || {};
+    var found = false;
+    tabs.forEach(function (b) {
+      var on = b.getAttribute("data-tab") === id;
+      if (on) found = true;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.tabIndex = on ? 0 : -1;
+    });
+    if (!found) return;
+    panels.forEach(function (p) { p.classList.toggle("active", p.id === "panel-" + id); });
+    if (opts.focus) { var t = document.querySelector('.tabbtn[data-tab="' + id + '"]'); if (t) t.focus(); }
+    if (!opts.silent) {
+      // Deep link (#vocabulary etc.). Skipped silently where the page runs in a sandboxed
+      // preview (about:srcdoc), which does not allow changing the URL.
+      try {
+        if (history.replaceState && location.protocol !== "about:") history.replaceState(null, "", "#" + id);
+      } catch (err) { /* ignore: URL updates are optional */ }
+      var top = nav ? nav.getBoundingClientRect().top + window.pageYOffset : 0;
+      if (window.pageYOffset > top) window.scrollTo({ top: top, behavior: "smooth" });
+    }
+  }
+  tabs.forEach(function (b, i) {
+    b.addEventListener("click", function () { showTab(b.getAttribute("data-tab")); });
+    b.addEventListener("keydown", function (e) {
+      var n = null;
+      if (e.key === "ArrowRight") n = (i + 1) % tabs.length;
+      if (e.key === "ArrowLeft") n = (i - 1 + tabs.length) % tabs.length;
+      if (e.key === "Home") n = 0;
+      if (e.key === "End") n = tabs.length - 1;
+      if (n !== null) { e.preventDefault(); showTab(tabs[n].getAttribute("data-tab"), { focus: true }); }
+    });
+  });
+  document.querySelectorAll("[data-goto]").forEach(function (a) {
+    a.addEventListener("click", function (e) { e.preventDefault(); showTab(a.getAttribute("data-goto")); });
+  });
+  var initial = "";
+  try { initial = (location.hash || "").replace("#", ""); } catch (err) { initial = ""; }
+  showTab(initial && document.getElementById("panel-" + initial) ? initial : tabs[0].getAttribute("data-tab"), { silent: true });
+  setTabHeight();
+  window.addEventListener("resize", setTabHeight);
+
+  /* ── Glossary tooltips ── */
+  var tip = document.getElementById("tooltip");
+  function place(el) {
+    var r = el.getBoundingClientRect();
+    var top = r.top - tip.offsetHeight - 10;
+    if (top < 8) top = r.bottom + 10;
+    var left = r.left + r.width / 2 - tip.offsetWidth / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tip.offsetWidth - 8));
+    tip.style.top = top + "px";
+    tip.style.left = left + "px";
+  }
+  function showTip(el) {
+    tip.innerHTML = "";
+    var c = document.createElement("span"); c.className = "tip-cat"; c.textContent = el.getAttribute("data-cat");
+    var t = document.createElement("span"); t.className = "tip-term"; t.textContent = el.getAttribute("data-term");
+    tip.appendChild(c); tip.appendChild(t);
+    tip.appendChild(document.createTextNode(el.getAttribute("data-def")));
+    tip.style.display = "block";
+    place(el);
+  }
+  function hideTip() { tip.style.display = "none"; }
+  document.querySelectorAll(".hl").forEach(function (el) {
+    el.setAttribute("role", "button");
+    el.setAttribute("aria-label", el.textContent + ": " + el.getAttribute("data-def"));
+    el.addEventListener("mouseenter", function () { showTip(el); });
+    el.addEventListener("mouseleave", hideTip);
+    el.addEventListener("focus", function () { showTip(el); });
+    el.addEventListener("blur", hideTip);
+    el.addEventListener("click", function (e) { e.stopPropagation(); showTip(el); });
+  });
+  document.addEventListener("click", hideTip);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+  window.addEventListener("scroll", hideTip, { passive: true });
+
+  /* ── Quiz ── */
+  var blocks = Array.prototype.slice.call(document.querySelectorAll(".qblock"));
+  var TOTAL = blocks.length;
+  if (!TOTAL) return;
+  var answered = {}, correct = {};
+  var tiers = LESSON.tiers || [];
+  var progTxt = document.getElementById("quiz-progress");
+  var meter = document.getElementById("quiz-meter");
+
+  function count(obj) { return Object.keys(obj).filter(function (k) { return obj[k]; }).length; }
+  function update() {
+    var a = Object.keys(answered).length, s = count(correct);
+    if (progTxt) progTxt.textContent = "Answered " + a + "/" + TOTAL + " · Score " + s;
+    if (meter) meter.style.width = (a / TOTAL * 100) + "%";
+    if (a === TOTAL) showScore(s);
+  }
+  function showScore(s) {
+    var pct = s / TOTAL, tier = tiers[tiers.length - 1] || { title: "", msg: "" };
+    for (var i = 0; i < tiers.length; i++) { if (pct >= tiers[i].min) { tier = tiers[i]; break; } }
+    document.getElementById("score-num").textContent = s + "/" + TOTAL;
+    document.getElementById("score-title").textContent = tier.title;
+    document.getElementById("score-msg").textContent = tier.msg;
+    var bar = document.getElementById("score-bar");
+    bar.classList.add("show");
+    bar.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+  blocks.forEach(function (block) {
+    var btns = block.querySelectorAll(".opt-btn");
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var q = block.id;
+        if (answered[q]) return;
+        var ok = btn.getAttribute("data-correct") === "true", right = "";
+        answered[q] = true; correct[q] = ok;
+        btns.forEach(function (b) {
+          b.disabled = true;
+          if (b.getAttribute("data-correct") === "true") { b.classList.add("reveal-correct"); right = b.getAttribute("data-letter"); }
+        });
+        btn.classList.remove("reveal-correct");
+        btn.classList.add(ok ? "correct" : "wrong");
+        block.classList.add(ok ? "answered-correct" : "answered-wrong");
+        var fb = block.querySelector(".feedback");
+        fb.innerHTML = "";
+        var icon = document.createElement("span"); icon.className = "fb-icon"; icon.textContent = ok ? "✓" : "✗";
+        fb.appendChild(icon);
+        fb.appendChild(document.createTextNode(btn.getAttribute("data-expl") + (ok ? "" : " The correct answer is " + right + ".")));
+        fb.className = "feedback show " + (ok ? "correct" : "wrong");
+        update();
+      });
+    });
+  });
+  function reset() {
+    answered = {}; correct = {};
+    blocks.forEach(function (b) { b.classList.remove("answered-correct", "answered-wrong"); });
+    document.querySelectorAll(".opt-btn").forEach(function (b) { b.disabled = false; b.classList.remove("correct", "wrong", "reveal-correct"); });
+    document.querySelectorAll(".feedback").forEach(function (f) { f.className = "feedback"; f.innerHTML = ""; });
+    document.getElementById("score-bar").classList.remove("show");
+    update();
+    var first = document.getElementById("panel-exercises");
+    if (first) first.scrollIntoView({ behavior: "smooth" });
+  }
+  document.querySelectorAll("[data-reset]").forEach(function (b) { b.addEventListener("click", reset); });
+  update();
+})();
+
+</script>
+</body>
+</html>

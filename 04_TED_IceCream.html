@@ -3,748 +3,886 @@
 <head>
 <!--
 LESSON-META
-track: tedEd_edutainment
-title: "How did ancient civilizations make ice cream?"
-source_type: speech
-level: B2-C1
-theme: vintage-soda-fountain / ice-cream-parlour
-date: 2026-10-06
-note: Grammar tab removed and Exercises rebuilt to be video-content-only, per Edutainment track rules (no grammar focus; "the idea is more of the video than the rest").
+course_unit: 1 (Remote Work & Communication)
+lesson: 4
+track: Video
+level: B2–C1
+title: "How Did Ancient Civilizations Make Ice Cream?"
+questions: 15
+built: 2026-10-23 (shared lesson system: one stylesheet, one script, per-lesson theme tokens)
 -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>English Class: How did ancient civilizations make ice cream?</title>
+<title>How Did Ancient Civilizations Make Ice Cream? · Lesson 4 · English Class</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-
-/* ── RESET ───────────────────────────────────────────────────── */
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-/* ── TOKENS ──────────────────────────────────────────────────── */
 :root {
-  --ink:               #2b1810;
-  --paper:             #fffaf3;
-  --cream:             #ffe8d6;
-  --rule:              #d4a574;
-  --accent:            #e85d75;
-  --accent2:           #4fa88f;
-  --gold:              #f0a500;
-  --highlight-vocab:   #fef3c7;
-  --highlight-idiom:   #cfe9ff;
-  --highlight-express: #ffd8b8;
-  --correct:           #3f9d6f;
-  --wrong:             #d6494f;
-  --light-correct:     #e3f6ea;
-  --light-wrong:       #fbe4e4;
-
+  --surface: #ffffff;
+  --ink-soft: #4a3226;
+  --ink-muted: #7a5a48;
+  --radius: 18px;
+  --radius-sm: 12px;
+  --radius-pill: 999px;
+  --bw: 1.5px;
+  --shadow: none;
+  --correct: #2c7d4f;
+  --wrong: #b8443f;
+  --light-correct: #e2f4e8;
+  --light-wrong: #fae3e1;
+  --highlight-vocab: #fbe6a2;
+  --highlight-idiom: #cfe3f1;
+  --highlight-express: #f6d3ad;
+  --highlight-vocab-strong: #d9a520;
+  --highlight-idiom-strong: #3d7fb5;
+  --highlight-express-strong: #d07a2c;
+  --ink: #2b1810;
+  --paper: #fffaf3;
+  --cream: #ffeadb;
+  --rule: #e2c09c;
+  --accent: #d94a66;
+  --accent2: #2f8a74;
+  --gold: #f0a500;
   --font-display: 'Baloo 2', system-ui, sans-serif;
-  --font-body:    'Nunito', 'Segoe UI', sans-serif;
-  --font-mono:    'JetBrains Mono', 'Courier New', monospace;
+  --font-body: 'Nunito', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --display-weight: 800;
 }
 
-html { scroll-behavior: smooth; }
-
+/* ═══════════════════════════════════════════════════════════════════
+   SHARED LESSON SYSTEM · one stylesheet for every lesson in the course
+   Each lesson only sets tokens (colours, fonts, shape) and its own
+   masthead ornament. Every component below is identical everywhere.
+   ═══════════════════════════════════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body {
-  background:
-    repeating-linear-gradient(135deg, transparent 0 28px, rgba(212,165,116,0.08) 28px 30px),
-    var(--paper);
+  background: var(--page-bg, var(--paper));
   color: var(--ink);
   font-family: var(--font-body);
-  font-size: 1.05rem;
-  line-height: 1.7;
+  font-size: 1.06rem;
+  line-height: 1.72;
   min-height: 100vh;
-  padding-bottom: 60px;
+  -webkit-font-smoothing: antialiased;
 }
-
 ::selection { background: var(--accent); color: #fff; }
+a { color: var(--accent2); }
+img, svg { max-width: 100%; }
+.wrap { max-width: 900px; margin: 0 auto; padding: 0 22px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-.wrap { max-width: 880px; margin: 0 auto; padding: 0 20px; }
-
-/* ── SCALLOP DIVIDER ─────────────────────────────────────────── */
-.scallop {
-  height: 18px;
-  width: 100%;
-  background-image: radial-gradient(circle at 10px 0, transparent 10px, var(--accent) 10.5px);
-  background-size: 20px 18px;
-  background-repeat: repeat-x;
-}
-.scallop.flip { transform: rotate(180deg); }
-.scallop.mint { background-image: radial-gradient(circle at 10px 0, transparent 10px, var(--accent2) 10.5px); }
-
-/* ── MASTHEAD ────────────────────────────────────────────────── */
+/* ── MASTHEAD ─────────────────────────────────────────────────────── */
 .masthead {
-  background: linear-gradient(180deg, var(--cream), var(--paper));
-  border-bottom: 6px solid var(--accent);
-  padding: 2.4rem 0 1.6rem;
+  background: var(--mast-bg, linear-gradient(180deg, var(--cream), var(--paper)));
+  color: var(--mast-fg, var(--ink));
   text-align: center;
+  padding: 2.6rem 0 1.9rem;
+  border-bottom: var(--mast-border, 5px solid var(--accent));
   position: relative;
+  overflow: hidden;
 }
+.masthead .wrap { position: relative; z-index: 1; }
 .eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent2);
-  font-weight: 500;
-  margin-bottom: 0.9rem;
+  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+  letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--eyebrow, var(--accent2));
+  display: flex; justify-content: center; flex-wrap: wrap; gap: 0.35rem 0.6rem;
+  margin-bottom: 1rem;
 }
+.eyebrow span + span::before { content: "·"; margin-right: 0.6rem; opacity: 0.6; }
 .headline {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(2rem, 5vw, 3.1rem);
-  color: var(--ink);
-  line-height: 1.08;
-  text-shadow: 3px 3px 0 var(--gold);
-  margin-bottom: 0.9rem;
-  padding: 0 0.5rem;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  font-size: clamp(1.85rem, 4.8vw, 2.95rem); line-height: 1.12;
+  letter-spacing: var(--display-tracking, -0.01em);
+  text-transform: var(--display-case, none);
+  color: var(--mast-title, var(--ink));
+  max-width: 780px; margin: 0 auto 0.95rem; text-wrap: balance;
 }
 .deck {
-  font-size: 1.08rem;
-  max-width: 620px;
-  margin: 0 auto 0.9rem;
-  color: #4a3226;
-  font-style: italic;
+  font-size: 1.1rem; line-height: 1.6; max-width: 640px; margin: 0 auto 1rem;
+  color: var(--mast-sub, var(--ink-soft)); font-style: var(--deck-style, italic); text-wrap: pretty;
 }
-.byline {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  color: var(--rule);
-  margin-bottom: 1.3rem;
-}
-.factrow {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.6rem 1.2rem;
-}
+.byline { font-family: var(--font-mono); font-size: 0.76rem; letter-spacing: 0.02em; color: var(--mast-muted, var(--ink-muted)); margin-bottom: 1.3rem; }
+.byline a { color: inherit; text-underline-offset: 3px; }
+.factrow { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.55rem 0.7rem; }
 .fact {
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  background: var(--paper);
-  border: 2px solid var(--rule);
-  border-radius: 999px;
-  padding: 0.4rem 1rem;
-  font-weight: 500;
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 500;
+  padding: 0.38rem 0.9rem;
+  background: var(--chip-bg, var(--surface));
+  color: var(--chip-fg, var(--ink));
+  border: var(--chip-border, 1.5px solid var(--rule));
+  border-radius: var(--radius-pill, 999px);
 }
+.fact b { font-weight: 700; }
+.fact a { color: inherit; font-weight: 700; }
+.ornament { margin-top: 1.4rem; }
 
-/* ── TABS ────────────────────────────────────────────────────── */
+/* ── TABS ─────────────────────────────────────────────────────────── */
 .tabnav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  display: flex;
-  background: var(--ink);
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  position: sticky; top: 0; z-index: 60;
+  background: var(--tab-bg, var(--ink));
+  box-shadow: 0 2px 12px rgba(0,0,0,0.14);
 }
+.tabnav .tabs { display: flex; max-width: 900px; margin: 0 auto; }
 .tabbtn {
-  flex: 1;
-  border: none;
-  background: transparent;
-  color: #f3d9c6;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.95rem 0.4rem;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.45rem;
+  border: none; background: transparent; cursor: pointer;
+  color: var(--tab-fg, rgba(255,255,255,0.78));
+  font-family: var(--font-tab, var(--font-display)); font-weight: 600; font-size: 0.93rem;
+  padding: 0.95rem 0.4rem 0.8rem;
   border-bottom: 4px solid transparent;
+  transition: background 0.18s, color 0.18s;
 }
-.tabbtn:hover { background: rgba(255,255,255,0.08); }
-.tabbtn.active {
-  color: #fff;
-  background: var(--accent);
-  border-bottom: 4px solid var(--gold);
+.tabbtn .ti { font-size: 1.05em; line-height: 1; }
+.tabbtn:hover { background: var(--tab-hover, rgba(255,255,255,0.09)); }
+.tabbtn[aria-selected="true"] {
+  background: var(--tab-active-bg, var(--accent));
+  color: var(--tab-active-fg, #fff);
+  border-bottom-color: var(--tab-active-line, var(--gold));
 }
+:focus-visible { outline: 3px solid var(--focus, var(--gold)); outline-offset: 2px; }
 
-.panel { display: none; padding: 2.2rem 0 1rem; animation: fadeIn 0.25s ease; }
-.panel.active { display: block; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-.sectitle {
-  font-family: var(--font-display);
-  font-size: 1.7rem;
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 0.3rem;
-}
-.subtitle { color: #6b5342; margin-bottom: 1.5rem; font-size: 0.95rem; }
-
-/* ── READING ─────────────────────────────────────────────────── */
+/* ── PANELS + SECTION HEADINGS ────────────────────────────────────── */
+.stage { padding-bottom: 3rem; }
+.panel { display: none; padding: 2.4rem 0 1rem; }
+.panel.active { display: block; animation: fadeIn 0.22s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
 .tag {
-  display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  background: var(--accent2);
-  color: #fff;
-  padding: 0.25rem 0.7rem;
-  border-radius: 999px;
-  margin-bottom: 0.8rem;
+  display: inline-block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--tag-bg, var(--accent2)); color: var(--tag-fg, #fff);
+  padding: 0.26rem 0.72rem; border-radius: var(--radius-pill, 999px); margin-bottom: 0.75rem;
 }
+.sectitle {
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  text-transform: var(--display-case, none); letter-spacing: var(--display-tracking, -0.01em);
+  font-size: clamp(1.45rem, 3.4vw, 1.85rem); line-height: 1.2; color: var(--sect, var(--accent));
+  margin-bottom: 0.4rem; text-wrap: balance;
+}
+.subtitle { color: var(--ink-muted); margin-bottom: 1.5rem; font-size: 0.96rem; max-width: 70ch; }
+.gsub {
+  display: flex; align-items: baseline; gap: 0.6rem;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700);
+  text-transform: var(--display-case, none);
+  font-size: 1.28rem; color: var(--sub, var(--accent2)); margin: 2.2rem 0 0.9rem;
+}
+.gsub .num { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 600; color: var(--accent); letter-spacing: 0.05em; }
 
+/* ── LEGEND + NOTES ───────────────────────────────────────────────── */
 .legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  background: var(--cream);
-  border: 2px dashed var(--rule);
-  border-radius: 14px;
-  padding: 0.9rem 1.2rem;
-  margin-bottom: 1.8rem;
-  font-size: 0.88rem;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem 1.2rem;
+  background: var(--cream); border: 1.5px dashed var(--rule);
+  border-radius: var(--radius, 12px); padding: 0.8rem 1.1rem; margin-bottom: 1.8rem; font-size: 0.87rem;
 }
-.legend-item { display: flex; align-items: center; gap: 0.5rem; }
-.swatch { width: 16px; height: 16px; border-radius: 4px; display: inline-block; }
+.legend-title { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.legend-item { display: flex; align-items: center; gap: 0.45rem; }
+.swatch, .dot { width: 15px; height: 15px; border-radius: 4px; display: inline-block; flex: 0 0 auto; border: 1px solid rgba(0,0,0,0.14); }
+.sw-v, .dot-v { background: var(--highlight-vocab); }
+.sw-i, .dot-i { background: var(--highlight-idiom); }
+.sw-e, .dot-e { background: var(--highlight-express); }
+.dot-t { background: var(--accent2); }
+.note {
+  background: var(--cream); border-left: 5px solid var(--accent2);
+  border-radius: var(--radius-sm, 8px); padding: 1rem 1.25rem; margin-bottom: 1.6rem; font-size: 0.97rem;
+}
+.note p + p { margin-top: 0.6rem; }
+.note-task { background: var(--surface); border: var(--bw, 1.5px) solid var(--ink); border-left: 7px solid var(--accent); }
+.note-tip { border-left-color: var(--gold); }
+.note .label {
+  display: block; font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem;
+}
+.note ul, .note ol { margin: 0.4rem 0 0 1.2rem; }
+.note li { margin-bottom: 0.25rem; }
 
+/* ── READING TEXT ─────────────────────────────────────────────────── */
 .excerpt {
-  background: var(--paper);
-  border: 2px solid var(--rule);
-  border-radius: 18px;
-  padding: 1.5rem 1.6rem;
-  margin-bottom: 1.6rem;
-  position: relative;
-}
-.excerpt::before {
-  content: "🍦";
-  position: absolute;
-  top: -16px;
-  left: 20px;
-  font-size: 1.4rem;
-  background: var(--paper);
-  padding: 0 6px;
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.5rem 1.65rem; margin-bottom: 1.5rem;
+  box-shadow: var(--shadow, none); position: relative;
 }
 .exlabel {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--accent);
-  font-weight: 600;
-  margin-bottom: 0.6rem;
-  display: block;
+  display: flex; align-items: center; gap: 0.55rem;
+  font-family: var(--font-mono); font-size: 0.72rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.07em; color: var(--exlabel, var(--accent));
+  margin-bottom: 0.7rem;
 }
-.excerpt p { margin-bottom: 0.9rem; }
+.exlabel .n {
+  display: inline-grid; place-items: center; min-width: 1.6rem; height: 1.6rem; padding: 0 0.35rem;
+  background: var(--accent); color: #fff; border-radius: var(--radius-pill, 999px); font-size: 0.72rem;
+}
+.excerpt p { margin-bottom: 0.95rem; text-wrap: pretty; }
 .excerpt p:last-child { margin-bottom: 0; }
+.dropcap > p:first-of-type::first-letter {
+  float: left; font-family: var(--font-display); font-weight: 700; font-size: 3.4em; line-height: 0.82;
+  padding: 0.08em 0.1em 0 0; color: var(--accent);
+}
+.sidebar {
+  background: var(--cream); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.3rem 1.4rem; margin: 0 0 1.5rem;
+}
+.sidebar h3 { font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 0.3rem; color: var(--accent2); }
+.sidebar > p { font-size: 0.93rem; color: var(--ink-soft); margin-bottom: 0.9rem; }
 
-.hl-v, .hl-i, .hl-e {
-  border-radius: 4px;
-  padding: 0.05em 0.2em;
-  cursor: help;
-  font-weight: 600;
-  position: relative;
-  border-bottom: 2px dotted currentColor;
+/* transcript turns */
+.transcript { padding: 0; overflow: hidden; }
+.transcript > .exlabel { padding: 0.75rem 1.2rem; margin: 0; background: var(--ink); color: var(--paper); }
+.transcript > .exlabel .n { background: var(--accent); }
+.turn { display: grid; grid-template-columns: 6.4rem 1fr; gap: 0.9rem; padding: 0.95rem 1.2rem; border-top: 1px solid var(--line, rgba(0,0,0,0.07)); }
+.transcript > .turn:first-of-type { border-top: none; }
+.spk {
+  align-self: start; margin-top: 0.2rem;
+  font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  text-align: center; padding: 0.25rem 0.35rem; border-radius: var(--radius-sm, 6px);
+  background: var(--spk-bg, var(--ink-muted)); color: #fff;
 }
-.hl-v { background: var(--highlight-vocab); color: #7a5b06; }
-.hl-i { background: var(--highlight-idiom); color: #1a5a8a; }
-.hl-e { background: var(--highlight-express); color: #a04a10; }
+.turn[data-speaker="pippa"] { --spk-bg: var(--accent); }
+.turn[data-speaker="phil"] { --spk-bg: var(--accent2); }
+.turn[data-speaker="voice"], .turn[data-speaker="neil"], .turn[data-speaker="beth"] { background: var(--voice-bg, var(--cream)); }
+.turn[data-speaker="voice"] { --spk-bg: #6b6257; }
+.turn[data-speaker="neil"] { --spk-bg: #7a5c2e; }
+.turn[data-speaker="beth"] { --spk-bg: #4d5a66; }
+.said p { margin-bottom: 0.6rem; }
+.said p:last-child { margin-bottom: 0; }
 
-[data-tip] { position: relative; }
-[data-tip]:hover::after, [data-tip]:focus::after {
-  content: attr(data-tip);
-  position: absolute;
-  bottom: 130%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--ink);
-  color: #fff;
-  font-family: var(--font-body);
-  font-weight: 400;
-  font-size: 0.82rem;
-  line-height: 1.4;
-  padding: 0.6rem 0.8rem;
-  border-radius: 10px;
-  width: max-content;
-  max-width: 260px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-  z-index: 100;
-  white-space: normal;
+/* highlights + tooltip */
+.hl {
+  border-radius: 4px; padding: 0.04em 0.18em; cursor: help; font-weight: 600;
+  border-bottom: 2px dotted currentColor; box-decoration-break: clone; -webkit-box-decoration-break: clone;
 }
-[data-tip]:hover::before, [data-tip]:focus::before {
-  content: "";
-  position: absolute;
-  bottom: 118%;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 6px solid transparent;
-  border-top-color: var(--ink);
-  z-index: 100;
+.hl-v { background: var(--highlight-vocab); color: var(--hl-v-fg, #6b4e06); }
+.hl-i { background: var(--highlight-idiom); color: var(--hl-i-fg, #174a7c); }
+.hl-e { background: var(--highlight-express); color: var(--hl-e-fg, #8a3f0e); }
+.hl:focus-visible { outline: 2px solid var(--accent2); outline-offset: 1px; }
+#tooltip {
+  position: fixed; display: none; z-index: 999; max-width: 290px; pointer-events: none;
+  background: #1b1a1f; color: #f7f3ea; font-family: var(--font-body); font-size: 0.87rem; line-height: 1.45;
+  padding: 0.7rem 0.9rem; border-radius: 9px; box-shadow: 0 10px 28px rgba(0,0,0,0.32);
 }
+#tooltip .tip-cat { display: block; font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.07em; text-transform: uppercase; color: #f2c55c; margin-bottom: 0.15rem; }
+#tooltip .tip-term { display: block; font-weight: 700; font-size: 0.98rem; margin-bottom: 0.2rem; }
 
 .pullquote {
-  font-family: var(--font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--accent2);
-  text-align: center;
-  border-top: 3px dotted var(--rule);
-  border-bottom: 3px dotted var(--rule);
-  padding: 1.6rem 1rem;
-  margin: 2rem 0;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: clamp(1.2rem, 3vw, 1.55rem); line-height: 1.35; text-align: center; color: var(--accent2);
+  padding: 1.6rem 1.2rem; margin: 2.2rem auto; max-width: 680px;
+  border-top: 3px solid var(--accent); border-bottom: 1px solid var(--rule);
 }
+.pullquote small { display: block; margin-top: 0.6rem; font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); font-weight: 500; }
 
-/* ── VOCAB CARDS ─────────────────────────────────────────────── */
-.vocab-intro { background: var(--cream); border-radius: 14px; padding: 1rem 1.3rem; margin-bottom: 1.8rem; font-size: 0.93rem; }
+/* ── VOCABULARY CARDS ─────────────────────────────────────────────── */
 .vgroup-title {
-  font-family: var(--font-display);
-  font-size: 1.15rem;
-  margin: 1.6rem 0 0.9rem;
-  color: var(--ink);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  display: flex; align-items: center; gap: 0.55rem;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: 1.2rem; color: var(--ink); margin: 2rem 0 0.9rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--rule);
 }
-.vgroup-title .dot { width: 14px; height: 14px; border-radius: 4px; display: inline-block; }
-.vgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+.vgroup-title .count { margin-left: auto; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 500; color: var(--ink-muted); text-transform: none; }
+.vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(245px, 1fr)); gap: 0.9rem; }
 .vcard {
-  background: var(--paper);
-  border: 2px solid var(--rule);
-  border-radius: 14px;
-  padding: 1rem 1.2rem;
-  border-top: 5px solid var(--accent);
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-top: 5px solid var(--card-top, var(--highlight-vocab-strong, #d9a520));
+  border-radius: var(--radius, 12px); padding: 0.95rem 1.15rem 1.05rem; box-shadow: var(--shadow, none);
+  display: flex; flex-direction: column;
 }
-.vcard.idiom { border-top-color: #3a86c8; }
-.vcard.expr { border-top-color: var(--gold); }
-.vterm { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; }
-.vpos { font-family: var(--font-mono); font-size: 0.72rem; color: var(--rule); text-transform: uppercase; margin-bottom: 0.4rem; }
-.vdef { font-size: 0.92rem; margin-bottom: 0.5rem; }
-.vex { font-size: 0.88rem; font-style: italic; color: #5a4030; }
+.vcard.idiom { --card-top: var(--highlight-idiom-strong, #3d7fb5); }
+.vcard.expr { --card-top: var(--highlight-express-strong, #d07a2c); }
+.vcard.toolkit { --card-top: var(--accent2); }
+.vterm { font-family: var(--font-display); font-weight: 700; font-size: 1.08rem; line-height: 1.3; text-transform: none; }
+.vpos { font-family: var(--font-mono); font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); margin: 0.15rem 0 0.45rem; }
+.vdef { font-size: 0.93rem; margin-bottom: 0.55rem; }
+.vex { font-size: 0.89rem; font-style: italic; color: var(--ink-soft); padding-left: 0.7rem; border-left: 2px solid var(--rule); }
+.vex strong { font-style: normal; }
+.vsrc { margin-top: auto; padding-top: 0.6rem; font-family: var(--font-mono); font-size: 0.63rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
 
-/* ── GRAMMAR ─────────────────────────────────────────────────── */
-.gwhy { background: var(--cream); border-left: 5px solid var(--accent); border-radius: 10px; padding: 1rem 1.3rem; margin-bottom: 1.6rem; font-size: 0.95rem; }
-.gsub { font-family: var(--font-display); font-size: 1.25rem; margin: 1.8rem 0 0.8rem; color: var(--accent2); }
+/* use-in-context cards (Vocabulary in Use) */
+.usegrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.9rem; margin-bottom: 1rem; }
+.usecard {
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-left: 5px solid var(--accent); border-radius: var(--radius, 12px); padding: 0.9rem 1.1rem;
+}
+.usehead { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; color: var(--accent); margin-bottom: 0.15rem; text-transform: none; }
+.usemeta { font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 0.45rem; }
+.usecard ul { padding-left: 1.1rem; font-size: 0.93rem; }
+.usecard li { margin-bottom: 0.3rem; }
+
+/* ── GRAMMAR / GENERIC TABLES ─────────────────────────────────────── */
 .formula {
-  background: var(--ink);
-  color: #ffe8d6;
-  font-family: var(--font-mono);
-  font-size: 0.95rem;
-  padding: 1rem 1.3rem;
-  border-radius: 12px;
-  margin-bottom: 1.2rem;
-  text-align: center;
-  letter-spacing: 0.02em;
+  font-family: var(--font-mono); font-size: 0.92rem; text-align: center; letter-spacing: 0.01em;
+  background: var(--ink); color: var(--paper); border-radius: var(--radius-sm, 8px);
+  padding: 0.95rem 1.2rem; margin-bottom: 0.8rem;
 }
-table.gtable { width: 100%; border-collapse: collapse; margin-bottom: 1.4rem; font-size: 0.9rem; }
-table.gtable th { background: var(--accent); color: #fff; padding: 0.6rem 0.8rem; text-align: left; font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; }
-table.gtable td { padding: 0.6rem 0.8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
-table.gtable tr:nth-child(even) td { background: var(--cream); }
+.formula b { color: var(--gold); font-weight: 600; }
+.tablewrap { overflow-x: auto; margin-bottom: 1.4rem; border-radius: var(--radius-sm, 8px); border: 1px solid var(--rule); }
+table.gtable { width: 100%; border-collapse: collapse; font-size: 0.92rem; background: var(--surface); }
+table.gtable th {
+  background: var(--th-bg, var(--ink)); color: var(--th-fg, #fff); text-align: left; vertical-align: bottom;
+  font-family: var(--font-mono); font-size: 0.7rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.65rem 0.85rem;
+}
+table.gtable td { padding: 0.68rem 0.85rem; border-top: 1px solid var(--rule); vertical-align: top; }
+table.gtable tr:nth-child(even) td { background: var(--zebra, var(--cream)); }
+details summary {
+  cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 0.35rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 600; color: var(--accent2);
+  padding: 0.2rem 0.55rem; border: 1px solid currentColor; border-radius: var(--radius-pill, 999px);
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: "▸"; transition: transform 0.15s; }
+details[open] summary::before { transform: rotate(90deg); }
+details[open] summary { margin-bottom: 0.45rem; }
+details .ans { display: block; }
 
-/* ── EXERCISES ───────────────────────────────────────────────── */
-.exintro { background: var(--cream); border-radius: 14px; padding: 1rem 1.3rem; margin-bottom: 1.6rem; font-size: 0.93rem; }
+/* ── SPEAKING: SCRIPT LINES + RUBRIC ──────────────────────────────── */
+.script-line {
+  background: var(--surface); border: 1px solid var(--rule); border-left: 6px solid var(--accent);
+  border-radius: var(--radius-sm, 8px); padding: 0.9rem 1.1rem; margin-bottom: 0.7rem;
+}
+.script-line .beat { display: inline-block; font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #fff; background: var(--accent2); padding: 0.12rem 0.5rem; border-radius: var(--radius-pill, 999px); margin-bottom: 0.4rem; }
+.script-note { font-family: var(--font-mono); font-size: 0.74rem; color: var(--ink-muted); margin-top: 0.4rem; }
+.figure {
+  background: var(--fig-bg, var(--surface)); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.3rem 1.4rem 1rem; margin-bottom: 1.6rem; box-shadow: var(--shadow, none);
+}
+.figure-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 0.4rem 1rem; margin-bottom: 0.9rem; }
+.figure-kicker { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.figure-title { font-family: var(--font-display); font-weight: 700; font-size: 1.12rem; line-height: 1.25; color: var(--ink); text-transform: none; }
+.figure-meta { font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); }
+.figure-foot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.3rem 1rem; margin-top: 0.8rem; padding-top: 0.6rem; border-top: 1px solid var(--rule); font-family: var(--font-mono); font-size: 0.66rem; color: var(--ink-muted); }
+.figure svg text { font-family: var(--font-mono); }
+
+/* ── EXERCISES ────────────────────────────────────────────────────── */
+.quizbar {
+  position: sticky; top: calc(var(--tabh, 3.4rem) + 0.5rem); z-index: 40;
+  display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+  background: var(--ink); color: var(--paper); border-radius: var(--radius-sm, 8px);
+  padding: 0.55rem 0.9rem; margin-bottom: 1.4rem; font-family: var(--font-mono); font-size: 0.8rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+}
+.quizbar .meter { flex: 1; min-width: 120px; height: 7px; background: rgba(255,255,255,0.18); border-radius: 999px; overflow: hidden; }
+.quizbar .meter i { display: block; height: 100%; width: 0; background: var(--gold); transition: width 0.25s; }
+.quizbar button { background: var(--accent); color: #fff; border: none; border-radius: var(--radius-pill, 999px); padding: 0.3rem 0.85rem; font: inherit; font-weight: 700; cursor: pointer; }
+.quizbar button:hover { filter: brightness(1.1); }
 .exsection-title {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  color: var(--accent);
-  margin: 1.8rem 0 1rem;
+  font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none);
+  font-size: 1.32rem; color: var(--sect, var(--accent)); margin: 2rem 0 1rem; padding-bottom: 0.35rem;
   border-bottom: 3px solid var(--gold);
-  padding-bottom: 0.3rem;
 }
 .qblock {
-  background: var(--paper);
-  border: 2px solid var(--rule);
-  border-radius: 14px;
-  padding: 1.2rem 1.3rem;
-  margin-bottom: 1.1rem;
+  background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule));
+  border-radius: var(--radius, 12px); padding: 1.15rem 1.25rem; margin-bottom: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
-.qtext { font-weight: 700; margin-bottom: 0.8rem; }
+.qblock.answered-correct { border-color: var(--correct); box-shadow: inset 4px 0 0 var(--correct); }
+.qblock.answered-wrong { border-color: var(--wrong); box-shadow: inset 4px 0 0 var(--wrong); }
+.qtext { font-weight: 700; margin-bottom: 0.8rem; text-wrap: pretty; }
 .opt-btn {
-  display: block;
-  width: 100%;
-  text-align: left;
-  background: var(--paper);
-  border: 2px solid var(--rule);
-  border-radius: 10px;
-  padding: 0.6rem 0.9rem;
-  margin-bottom: 0.5rem;
-  cursor: pointer;
-  font-family: var(--font-body);
-  font-size: 0.94rem;
-  transition: all 0.15s;
+  display: flex; align-items: baseline; gap: 0.75rem; width: 100%; text-align: left;
+  background: var(--paper); color: var(--ink); cursor: pointer;
+  border: 1.5px solid var(--rule); border-radius: var(--radius-sm, 8px);
+  padding: 0.6rem 0.85rem; margin-bottom: 0.45rem;
+  font-family: var(--font-body); font-size: 0.97rem; line-height: 1.5;
+  transition: background 0.15s, border-color 0.15s;
+}
+.opt-letter {
+  flex: 0 0 auto; display: inline-grid; place-items: center; width: 1.55rem; height: 1.55rem;
+  font-family: var(--font-mono); font-size: 0.76rem; font-weight: 700;
+  border: 1.5px solid var(--rule); border-radius: 50%; background: var(--surface);
 }
 .opt-btn:hover:not(:disabled) { border-color: var(--accent2); background: var(--cream); }
 .opt-btn:disabled { cursor: default; }
-.opt-btn.correct { background: var(--light-correct); border-color: var(--correct); color: #205c3d; font-weight: 700; }
-.opt-btn.wrong { background: var(--light-wrong); border-color: var(--wrong); color: #8a2b2f; font-weight: 700; }
-.opt-btn.reveal-correct { background: var(--light-correct); border-color: var(--correct); font-weight: 700; }
-.feedback { display: none; margin-top: 0.6rem; padding: 0.7rem 0.9rem; border-radius: 10px; font-size: 0.9rem; }
+.opt-btn.correct, .opt-btn.reveal-correct { background: var(--light-correct); border-color: var(--correct); }
+.opt-btn.correct { font-weight: 700; color: #1d4a30; }
+.opt-btn.wrong { background: var(--light-wrong); border-color: var(--wrong); color: #7a2e2e; font-weight: 700; }
+.opt-btn.correct .opt-letter, .opt-btn.reveal-correct .opt-letter { background: var(--correct); border-color: var(--correct); color: #fff; }
+.opt-btn.wrong .opt-letter { background: var(--wrong); border-color: var(--wrong); color: #fff; }
+.feedback { display: none; margin-top: 0.55rem; padding: 0.7rem 0.9rem; border-radius: var(--radius-sm, 8px); font-size: 0.93rem; }
 .feedback.show { display: block; }
-.feedback.correct { background: var(--light-correct); color: #205c3d; }
-.feedback.wrong { background: var(--light-wrong); color: #8a2b2f; }
-.fb-icon { font-weight: 800; margin-right: 0.3rem; }
-
-.qblock.answered-correct { border-color: var(--correct); }
-.qblock.answered-wrong { border-color: var(--wrong); }
-
+.feedback.correct { background: var(--light-correct); color: #1d4a30; }
+.feedback.wrong { background: var(--light-wrong); color: #7a2e2e; }
+.fb-icon { font-weight: 800; margin-right: 0.35rem; }
 #score-bar {
-  display: none;
-  text-align: center;
-  background: var(--ink);
-  color: #fff;
-  border-radius: 18px;
-  padding: 1.8rem;
-  margin-top: 2rem;
+  display: none; text-align: center; background: var(--ink); color: var(--paper);
+  border-radius: var(--radius, 12px); padding: 1.9rem 1.4rem; margin-top: 2rem;
 }
 #score-bar.show { display: block; }
-#score-num { font-family: var(--font-display); font-size: 3rem; color: var(--gold); }
-#score-title { font-family: var(--font-display); font-size: 1.4rem; margin: 0.4rem 0; }
-#score-msg { font-size: 0.92rem; margin-bottom: 1rem; color: #f3d9c6; }
+#score-num { font-family: var(--font-display); font-size: 3rem; line-height: 1.1; color: var(--gold); }
+#score-title { font-family: var(--font-display); font-size: 1.45rem; margin: 0.35rem 0; }
+#score-msg { font-size: 0.95rem; opacity: 0.85; margin-bottom: 1.1rem; }
 .reset-btn {
-  background: var(--accent);
-  color: #fff;
-  border: none;
-  font-family: var(--font-display);
-  font-weight: 700;
-  padding: 0.7rem 1.6rem;
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 0.95rem;
+  background: var(--accent); color: #fff; border: none; cursor: pointer;
+  font-family: var(--font-mono); font-weight: 700; font-size: 0.86rem;
+  padding: 0.7rem 1.6rem; border-radius: var(--radius-pill, 999px);
 }
-.reset-btn:hover { background: var(--gold); }
+.reset-btn:hover { filter: brightness(1.1); }
 
-@media (max-width: 600px) {
-  .tabbtn { font-size: 0.78rem; padding: 0.75rem 0.2rem; }
-  .headline { font-size: 1.7rem; }
-  .vgrid { grid-template-columns: 1fr; }
-  table.gtable { font-size: 0.78rem; }
-  .excerpt { padding: 1.2rem 1rem; }
+/* ── FOOTER: COURSE NAVIGATION ────────────────────────────────────── */
+.coursefoot { border-top: 1px solid var(--rule); background: var(--cream); padding: 1.4rem 0 2.2rem; margin-top: 1rem; }
+.coursefoot .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.8rem; }
+.coursefoot > .wrap > a {
+  display: inline-flex; flex-direction: column; text-decoration: none; color: var(--ink);
+  border: 1.5px solid var(--rule); border-radius: var(--radius-sm, 8px); background: var(--surface);
+  padding: 0.55rem 0.9rem; min-width: 210px; max-width: 48%;
 }
+.coursefoot > .wrap > a:hover { border-color: var(--accent); }
+.coursefoot > .wrap > a.next { text-align: right; margin-left: auto; }
+.coursefoot small { font-family: var(--font-mono); font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-muted); }
+.coursefoot strong { font-family: var(--font-display); font-size: 0.98rem; text-transform: none; }
+.coursefoot .unitmap { width: 100%; font-family: var(--font-mono); font-size: 0.68rem; color: var(--ink-muted); text-align: center; margin-top: 0.4rem; }
+.coursefoot .unitmap a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
+.coursefoot .unitmap a:hover { color: var(--accent); }
+
+/* ── RESPONSIVE + PRINT ───────────────────────────────────────────── */
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .wrap { padding: 0 16px; }
+  .masthead { padding: 2rem 0 1.5rem; }
+  .tabbtn { flex-direction: column; gap: 0.15rem; font-size: 0.7rem; padding: 0.65rem 0.15rem 0.55rem; }
+  .excerpt { padding: 1.2rem 1.05rem; }
+  .turn { grid-template-columns: 1fr; gap: 0.35rem; }
+  .spk { justify-self: start; }
+  table.gtable { font-size: 0.8rem; }
+  table.gtable th, table.gtable td { padding: 0.5rem 0.55rem; }
+  .coursefoot > .wrap > a { max-width: 100%; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+@media print {
+  .tabnav, .quizbar, #score-bar, .coursefoot, #tooltip { display: none !important; }
+  .panel { display: block !important; page-break-before: always; }
+  .panel:first-of-type { page-break-before: auto; }
+  details > *:not(summary) { display: block !important; }
+  .masthead { background: none !important; color: #000 !important; }
+  body { background: #fff !important; }
+}
+
+/* ── AT-A-GLANCE AIDS: timeline + stat grid ───────────────────────── */
+.glance { margin: 2rem 0 1.5rem; }
+.glance > h3 { font-family: var(--font-display); font-weight: var(--display-weight, 700); text-transform: var(--display-case, none); font-size: 1.2rem; color: var(--accent2); margin-bottom: 0.3rem; }
+.glance > p { font-size: 0.92rem; color: var(--ink-muted); margin-bottom: 1rem; }
+.timeline { list-style: none; position: relative; padding-left: 1.6rem; }
+.timeline::before { content: ""; position: absolute; left: 0.45rem; top: 0.4rem; bottom: 0.4rem; width: 3px; background: var(--rule); border-radius: 2px; }
+.timeline li { position: relative; margin-bottom: 0.85rem; }
+.timeline li::before { content: ""; position: absolute; left: -1.38rem; top: 0.42rem; width: 13px; height: 13px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); }
+.timeline .when { display: inline-block; font-family: var(--font-mono); font-size: 0.74rem; font-weight: 700; color: var(--accent); min-width: 7.5rem; }
+.timeline .what { font-size: 0.95rem; }
+.statgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 0.8rem; }
+.stat { background: var(--surface); border: var(--bw, 1.5px) solid var(--card-border, var(--rule)); border-radius: var(--radius, 12px); padding: 0.85rem 1rem; }
+.stat b { display: block; font-family: var(--font-display); font-size: 1.9rem; line-height: 1.1; color: var(--accent); }
+.stat span { display: block; font-size: 0.88rem; line-height: 1.4; }
+.stat small { display: block; margin-top: 0.3rem; font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); }
+.ladder-scale { list-style: none; display: grid; gap: 0.45rem; }
+.ladder-scale li { display: grid; grid-template-columns: 8.5rem 1fr 13rem; gap: 0.8rem; align-items: center; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius-sm, 8px); padding: 0.6rem 0.9rem; border-left: 6px solid var(--lv, var(--accent)); }
+.ladder-scale li:nth-child(1) { --lv: #3f8f6b; } .ladder-scale li:nth-child(2) { --lv: #79a04a; } .ladder-scale li:nth-child(3) { --lv: #d1a32a; } .ladder-scale li:nth-child(4) { --lv: #d9772c; } .ladder-scale li:nth-child(5) { --lv: #b8443f; }
+.ladder-scale .lv { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--lv); }
+.ladder-scale .ph { font-weight: 700; }
+.ladder-scale .use { font-size: 0.85rem; color: var(--ink-muted); }
+@media (max-width: 640px) { .ladder-scale li { grid-template-columns: 1fr; gap: 0.15rem; } }
+
+/* ── LESSON THEME: How Did Ancient Civilizations Make Ice Cream? ── */
+body { background-image: repeating-linear-gradient(135deg, transparent 0 28px, rgba(212,165,116,0.07) 28px 30px); }
+.headline { text-shadow: 3px 3px 0 var(--gold); }
+.topband { height: 18px; background-image: radial-gradient(circle at 10px 0, transparent 10px, var(--accent) 10.5px); background-size: 20px 18px; background-repeat: repeat-x; transform: rotate(180deg); }
+.masthead { border-bottom: none; }
+.scallop { height: 18px; background-image: radial-gradient(circle at 10px 0, transparent 10px, var(--accent) 10.5px); background-size: 20px 18px; background-repeat: repeat-x; }
+.cones { font-size: 1.7rem; letter-spacing: 0.4rem; }
 </style>
 </head>
 <body>
+<div id="tooltip" role="tooltip"></div>
+<a class="sr-only" href="#panel-transcript">Skip to lesson</a>
 
+<div class="topband" aria-hidden="true"></div>
 <header class="masthead">
-  <p class="eyebrow">English Language Class · Documentary Narration · B2–C1</p>
-  <h1 class="headline">How did ancient civilizations make ice cream?</h1>
-  <p class="deck">From a foiled CIA plot in a Havana hotel freezer to Persian sky-cooled ice pools and George Washington's summer ice cream bill: the strange, contested history of the world's favourite frozen treat.</p>
-  <p class="byline">Source: <a href="https://youtu.be/7K3KdgDcdYc?si=x-wTzMFAyskUDavf" target="_blank" rel="noopener" style="color:inherit;">youtu.be/7K3KdgDcdYc</a></p>
-  <div class="factrow">
-    <span class="fact">🍦 Genre: History Documentary</span>
-    <span class="fact">🕰️ Timeline: 1st Century – Today</span>
-    <span class="fact">🎯 Level: B2–C1</span>
-  </div>
-</header>
-<div class="scallop"></div>
-
-<nav class="tabnav">
-  <button class="tabbtn active" onclick="switchTab('reading', this)">🍨 Reading</button>
-  <button class="tabbtn" onclick="switchTab('vocab', this)">📖 Vocabulary</button>
-  <button class="tabbtn" onclick="switchTab('exercises', this)">🥄 Exercises</button>
-</nav>
 
 <div class="wrap">
-
-<!-- ══════════════ READING ══════════════ -->
-<section id="panel-reading" class="panel active">
-  <span class="tag">History Documentary</span>
-  <h2 class="sectitle">How did ancient civilizations make ice cream?</h2>
-  <p class="subtitle">From a foiled CIA plot to the modern freezer truck: the full narration, hover or tap any highlighted term.</p>
-
-  <div class="legend">
-    <div class="legend-item"><span class="swatch" style="background:var(--highlight-vocab)"></span>Vocabulary</div>
-    <div class="legend-item"><span class="swatch" style="background:var(--highlight-idiom)"></span>Idiom / Set Phrase</div>
-    <div class="legend-item"><span class="swatch" style="background:var(--highlight-express)"></span>Useful Expression (hedging & reporting)</div>
-  </div>
-
-  <div class="excerpt">
-    <span class="exlabel">Excerpt 1 · A CIA Plot and a Milkshake</span>
-    <p>On a hot spring afternoon in 1963, two men, sent by the American CIA, snuck into the cafeteria of the Havana Libre Hotel. Their <span class="hl-v" title="Vocabulary · directive (n.) · an official or authoritative instruction telling someone what to do">directive</span> was to retrieve a poison pill from the freezer and slip it into the chocolate milkshake of Fidel Castro, the Cuban leader who was known to <span class="hl-v" title="Vocabulary · devour (v.) · to eat something quickly and hungrily">devour</span> up to 18 scoops of ice cream after lunch. <span class="hl-e" title="Useful Expression · exact details ... are contested (hedging) · a passive structure used to admit that a historical claim is disputed, without stating who disputes it">While exact details of the story are contested</span>, <span class="hl-e" title="Useful Expression · it's rumored that (hedging) · an impersonal passive structure that reports a claim while distancing the speaker from its accuracy">it's rumored that</span> the pill, however, froze to the freezer coils and broke, foiling the CIA's plan and granting Castro many more days to <span class="hl-v" title="Vocabulary · satiate (v.) · to fully satisfy an appetite or desire">satiate</span> his <span class="hl-i" title="Idiom · a sweet tooth · a strong liking for sweet foods">sweet tooth</span>.</p>
-    <p>Ice cream has held a unique role in our world's history, culture, and cravings, but where did it come from?</p>
-  </div>
-
-  <div class="excerpt">
-    <span class="exlabel">Excerpt 2 · Ancient Origins: Ice for the Elite</span>
-    <p>The first accounts of cold desserts and iced drinks date back as early as the first century. In civilizations including ancient Rome, Mughal India, and Tang dynasty China, these icy treats were mainly enjoyed by the royal elites. And finding the means to freeze these <span class="hl-v" title="Vocabulary · delicacies (n.) · rare or luxurious foods considered especially pleasing to eat">delicacies</span> wasn't always easy. Wealthy Mediterranean nobility sent laborers to trek up high mountains to harvest glacial ice and snow. Meanwhile, ancient Persians built shallow <span class="hl-v" title="Vocabulary · insulated (adj.) · protected so that heat or cold cannot easily pass in or out">insulated</span> pools of water and utilized a technique known as sky cooling. At night, the shallow pools would naturally radiate heat into the dry desert skies, causing them to dip below the <span class="hl-v" title="Vocabulary · ambient (adj.) · relating to the surrounding environment or conditions">ambient</span> temperature and freeze.</p>
-  </div>
-
-  <div class="excerpt">
-    <span class="exlabel">Excerpt 3 · From Sherbet to Cream</span>
-    <p>Yet the cream-based treat we know today made a much later debut. It was originally inspired by sherbet, or sharbat in Arabic, an icy drink <span class="hl-e" title="Useful Expression · believed to have originated (hedging) · passive verb + perfect infinitive, used to report an unverified historical origin without naming a source">believed to have originated</span> in Persia, and subsequently gained popularity in the Middle Ages. European travelers brought sharbat recipes home, and began creating their own chocolate, pinecone, and even eggplant flavored takes on the <span class="hl-v" title="Vocabulary · refreshment (n.) · a food or drink that restores energy or relieves thirst/heat">refreshment</span>. In 1692, Antonio Latini, a Neapolitan chef, recorded a recipe for a unique milk-based version, which <span class="hl-e" title="Useful Expression · some historians dub (hedging) · attributes a claim to an unnamed group of experts rather than stating it as settled fact">some historians dub</span> the first ice cream.</p>
-  </div>
-
-  <div class="excerpt">
-    <span class="exlabel">Excerpt 4 · Crossing the Atlantic</span>
-    <p>In the 18th century, ice cream expanded its reach as these recipes <span class="hl-i" title="Idiom · set sail · to begin a journey, literally by ship; here used figuratively for recipes travelling overseas">set sail</span> alongside European settlers to North America. Yet it was still mainly enjoyed by the upper classes as the process to make it was quite <span class="hl-v" title="Vocabulary · laborious (adj.) · requiring a lot of time and physical effort">laborious</span>, and its main ingredients (sugar, salt, and cream) were expensive. George Washington <span class="hl-e" title="Useful Expression · is said to have spent (hedging) · passive reporting verb + perfect infinitive, used for a specific historical figure's unverified but widely repeated claim">is said to have spent</span> the equivalent of $6,600 in today's dollars on ice cream in one summer alone.</p>
-  </div>
-
-  <div class="excerpt">
-    <span class="exlabel">Excerpt 5 · America's Golden Age</span>
-    <p>It was on American soil that the frozen dessert entered its <span class="hl-i" title="Idiom / Set Phrase · golden age · a period when something is at its most successful or flourishing">golden age</span>, as inventors and <span class="hl-v" title="Vocabulary · entrepreneurs (n.) · people who set up and run businesses, taking on financial risk to do so">entrepreneurs</span> began to engineer ways to <span class="hl-i" title="Idiom · bring ... to the masses · to make something available to ordinary people rather than only a wealthy few">bring it to the masses</span>. In Philadelphia in 1843, Nancy Johnson <span class="hl-v" title="Vocabulary · patented (v.) · officially registered an invention to gain the exclusive legal right to make or sell it">patented</span> a revolutionary ice cream-making machine featuring a crank and beater, which made the process easier for any home cook. And storing ice cream was no longer an <span class="hl-v" title="Vocabulary · obstacle (n.) · something that blocks progress or makes an action difficult">obstacle</span>, as by the mid-1830s, New England businessman "Ice King" Frederic Tudor had greatly improved the ice trade, shipping thousands of tons of ice to households across the globe. Soon, ice cream was <span class="hl-i" title="Idiom · on every street corner · available absolutely everywhere; extremely common and easy to find">on every street corner</span>.</p>
-  </div>
-
-  <div class="excerpt">
-    <span class="exlabel">Excerpt 6 · From Pushcarts to Soda Fountains</span>
-    <p>In the late 1880s, political turmoil brought Italian immigrants to cities like London, Glasgow, and New York, where many took up jobs as street vendors selling licks of ice cream for roughly a penny each. Meanwhile, American druggists discovered the appeal of combining soda, a drink <span class="hl-e" title="Useful Expression · thought to have therapeutic properties (hedging) · passive + perfect infinitive, reporting a once-popular but scientifically unconfirmed belief">thought to have therapeutic properties</span> at the time, with ice cream, and a new social spot was born: the soda fountain. When the sale of alcohol was banned in 1920, many American saloons reinvented themselves as soda fountains, and breweries like Anheuser-Busch and Yuengling <span class="hl-v" title="Vocabulary · pivoted (v.) · changed direction or strategy, especially in business">pivoted</span> to producing ice cream.</p>
-  </div>
-
-  <div class="excerpt">
-    <span class="exlabel">Excerpt 7 · The Freezer Age and Beyond</span>
-    <p>At the same time, refrigeration technology was improving rapidly. By the end of World War II, the average American home had a freezer that could house a quart of ice cream. Even trucks could be equipped with freezers full of frozen treats.</p>
-    <p>Today, ice cream continues to take on new forms. And while <span class="hl-e" title="Useful Expression · may never be solved (hedging) · a modal of possibility used to admit that some historical questions cannot be definitively answered">some of its mysteries may never be solved</span>, <span class="hl-e" title="Useful Expression · one thing is certain (hedging contrast) · a discourse marker that pivots from acknowledged uncertainty to one confidently stated fact">one thing is certain</span>: our love for ice cream will never <span class="hl-v" title="Vocabulary · thaw (v.) · to melt; here used figuratively to mean 'fade' or 'end'">thaw</span>.</p>
-  </div>
-
-  <p class="pullquote">"Our love for ice cream will never thaw."</p>
-</section>
-
-<!-- ══════════════ VOCABULARY ══════════════ -->
-<section id="panel-vocab" class="panel">
-  <span class="tag">Vocabulary</span>
-  <h2 class="sectitle">Key Words & Phrases</h2>
-  <div class="vocab-intro">Three families of language from the reading: <strong>Vocabulary</strong> (single words worth learning), <strong>Idioms &amp; Set Phrases</strong> (fixed expressions with a figurative meaning), and <strong>Useful Expressions</strong> (functional, hedging, and reporting phrases used throughout the narration).</div>
-
-  <h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-vocab)"></span>Vocabulary</h3>
-  <div class="vgrid">
-    <div class="vcard"><div class="vterm">directive</div><div class="vpos">noun</div><div class="vdef">An official instruction telling someone what to do.</div><div class="vex">The agents received a <strong>directive</strong> to complete the mission without being seen.</div></div>
-    <div class="vcard"><div class="vterm">devour</div><div class="vpos">verb</div><div class="vdef">To eat something quickly and hungrily.</div><div class="vex">He could <strong>devour</strong> an entire pizza in under ten minutes.</div></div>
-    <div class="vcard"><div class="vterm">satiate</div><div class="vpos">verb</div><div class="vdef">To fully satisfy an appetite or desire.</div><div class="vex">One bowl of pasta was enough to <strong>satiate</strong> her hunger.</div></div>
-    <div class="vcard"><div class="vterm">delicacies</div><div class="vpos">noun, plural</div><div class="vdef">Rare or luxurious foods considered especially pleasing.</div><div class="vex">The banquet table was covered in local <strong>delicacies</strong>.</div></div>
-    <div class="vcard"><div class="vterm">insulated</div><div class="vpos">adjective</div><div class="vdef">Protected so that heat or cold cannot easily pass in or out.</div><div class="vex">The <strong>insulated</strong> flask kept the coffee hot for hours.</div></div>
-    <div class="vcard"><div class="vterm">ambient</div><div class="vpos">adjective</div><div class="vdef">Relating to the surrounding environment or conditions.</div><div class="vex">The wine cellar stayed several degrees below <strong>ambient</strong> temperature.</div></div>
-    <div class="vcard"><div class="vterm">laborious</div><div class="vpos">adjective</div><div class="vdef">Requiring a lot of time and physical effort.</div><div class="vex">Hand-churning ice cream is a slow, <strong>laborious</strong> process.</div></div>
-    <div class="vcard"><div class="vterm">patented</div><div class="vpos">verb (past)</div><div class="vdef">Officially registered an invention to gain the exclusive right to make or sell it.</div><div class="vex">She <strong>patented</strong> her design before showing it to investors.</div></div>
-    <div class="vcard"><div class="vterm">entrepreneurs</div><div class="vpos">noun, plural</div><div class="vdef">People who start and run businesses, taking on financial risk.</div><div class="vex">A wave of young <strong>entrepreneurs</strong> opened cafés across the city.</div></div>
-    <div class="vcard"><div class="vterm">obstacle</div><div class="vpos">noun</div><div class="vdef">Something that blocks progress or makes an action difficult.</div><div class="vex">Poor roads were the main <strong>obstacle</strong> to getting supplies to the village.</div></div>
-    <div class="vcard"><div class="vterm">pivoted</div><div class="vpos">verb (past)</div><div class="vdef">Changed direction or strategy, especially in business.</div><div class="vex">The company <strong>pivoted</strong> from selling shoes to selling software.</div></div>
-    <div class="vcard"><div class="vterm">thaw</div><div class="vpos">verb</div><div class="vdef">To melt; figuratively, to fade or come to an end.</div><div class="vex">Their old rivalry finally began to <strong>thaw</strong> after years apart.</div></div>
-  </div>
-
-  <h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-idiom)"></span>Idioms &amp; Set Phrases</h3>
-  <div class="vgrid">
-    <div class="vcard idiom"><div class="vterm">a sweet tooth</div><div class="vpos">idiom</div><div class="vdef">A strong liking for sweet foods.</div><div class="vex">Grandpa has always had a <strong>sweet tooth</strong>: he never says no to dessert.</div></div>
-    <div class="vcard idiom"><div class="vterm">golden age</div><div class="vpos">set phrase</div><div class="vdef">A period when something is at its most successful or flourishing.</div><div class="vex">The 1990s are often called the <strong>golden age</strong> of hip hop.</div></div>
-    <div class="vcard idiom"><div class="vterm">set sail</div><div class="vpos">idiom</div><div class="vdef">To begin a journey; figuratively, to spread or travel outward.</div><div class="vex">The idea <strong>set sail</strong> from one small workshop and reached factories worldwide.</div></div>
-    <div class="vcard idiom"><div class="vterm">bring ... to the masses</div><div class="vpos">idiom</div><div class="vdef">To make something available to ordinary people, not just a wealthy few.</div><div class="vex">Cheap smartphones finally <strong>brought</strong> the internet <strong>to the masses</strong>.</div></div>
-    <div class="vcard idiom"><div class="vterm">on every street corner</div><div class="vpos">idiom</div><div class="vdef">Available absolutely everywhere; extremely common.</div><div class="vex">These days you'll find a coffee shop <strong>on every street corner</strong>.</div></div>
-  </div>
-
-  <h3 class="vgroup-title"><span class="dot" style="background:var(--highlight-express)"></span>Useful Expressions (Hedging &amp; Reporting)</h3>
-  <div class="vgrid">
-    <div class="vcard expr"><div class="vterm">it's rumored that</div><div class="vpos">reporting phrase</div><div class="vdef">Introduces a claim that is widely repeated but not confirmed.</div><div class="vex"><strong>It's rumored that</strong> the recipe was stolen from a rival bakery.</div></div>
-    <div class="vcard expr"><div class="vterm">exact details ... are contested</div><div class="vpos">hedging phrase</div><div class="vdef">Signals that historians or sources disagree about the specifics of an event.</div><div class="vex">The <strong>exact details</strong> of the battle <strong>are contested</strong> to this day.</div></div>
-    <div class="vcard expr"><div class="vterm">believed to have originated</div><div class="vpos">hedging phrase</div><div class="vdef">Reports an unverified origin without naming who believes it.</div><div class="vex">The dish is <strong>believed to have originated</strong> in southern Italy.</div></div>
-    <div class="vcard expr"><div class="vterm">some historians dub</div><div class="vpos">attributed hedge</div><div class="vdef">Attributes a label or claim to an unnamed group of experts.</div><div class="vex"><strong>Some historians dub</strong> this era the true start of the industrial age.</div></div>
-    <div class="vcard expr"><div class="vterm">is said to have spent</div><div class="vpos">hedging phrase</div><div class="vdef">Reports a specific, often surprising, historical claim without full confirmation.</div><div class="vex">The king <strong>is said to have spent</strong> a fortune on a single garden.</div></div>
-    <div class="vcard expr"><div class="vterm">thought to have therapeutic properties</div><div class="vpos">hedging phrase</div><div class="vdef">Reports a once-common belief that is not scientifically confirmed.</div><div class="vex">The herb was once <strong>thought to have</strong> healing <strong>properties</strong>.</div></div>
-    <div class="vcard expr"><div class="vterm">may never be solved</div><div class="vpos">modal hedge</div><div class="vdef">Admits that a question might remain permanently unanswered.</div><div class="vex">Some mysteries of ancient history <strong>may never be solved</strong>.</div></div>
-    <div class="vcard expr"><div class="vterm">one thing is certain</div><div class="vpos">discourse marker</div><div class="vdef">Shifts from acknowledged uncertainty to a single confident claim.</div><div class="vex">We don't know who invented it, but <strong>one thing is certain</strong>: it changed cooking forever.</div></div>
-  </div>
-</section>
-
-<!-- ══════════════ EXERCISES ══════════════ -->
-<section id="panel-exercises" class="panel">
-  <span class="tag">Exercises</span>
-  <h2 class="sectitle">Test Yourself</h2>
-  <div class="exintro">15 questions, all based on the video itself. Click an answer to see instant feedback: every option, right or wrong, comes with an explanation.</div>
-
-  <h3 class="exsection-title">A · Video Comprehension</h3>
-
-  <div class="qblock" id="qA1">
-    <p class="qtext">1. Why did the CIA's 1963 plot against Castro reportedly fail?</p>
-    <button class="opt-btn" data-q="qA1" data-correct="false" data-expl="Not quite: the video says nothing about the agents being caught before reaching the hotel freezer.">The agents were caught before reaching the hotel freezer.</button>
-    <button class="opt-btn" data-q="qA1" data-correct="false" data-expl="Not mentioned: no bodyguards finding the pill are described in the video.">Castro's bodyguards discovered the poison pill in time.</button>
-    <button class="opt-btn" data-q="qA1" data-correct="true" data-expl="Correct: the poison pill froze to the freezer coils and broke, foiling the plan.">The poison pill froze to the freezer coils and broke.</button>
-    <button class="opt-btn" data-q="qA1" data-correct="false" data-expl="Not what's described: the milkshake was never poisoned because the pill broke first.">The milkshake was tested and found to taste strange.</button>
-    <div class="feedback" id="fb-qA1"></div>
-  </div>
-
-  <div class="qblock" id="qA2">
-    <p class="qtext">2. How did ancient Persians reportedly freeze water without mountain ice?</p>
-    <button class="opt-btn" data-q="qA2" data-correct="true" data-expl="Correct: shallow insulated pools radiated heat into the desert sky at night, a technique called sky cooling.">By using shallow insulated pools that cooled overnight.</button>
-    <button class="opt-btn" data-q="qA2" data-correct="false" data-expl="This method belonged to wealthy Mediterranean nobility, not the Persians in this video.">By sending laborers up mountains to harvest fresh snow.</button>
-    <button class="opt-btn" data-q="qA2" data-correct="false" data-expl="Not mentioned in the video: no underground caves are described.">By storing water in deep, naturally cold underground caves.</button>
-    <button class="opt-btn" data-q="qA2" data-correct="false" data-expl="Salt-based freezing isn't part of this ancient Persian method in the video.">By mixing water with salt to lower its freezing point.</button>
-    <div class="feedback" id="fb-qA2"></div>
-  </div>
-
-  <div class="qblock" id="qA3">
-    <p class="qtext">3. What drink is said to have originally inspired the cream-based dessert we call ice cream?</p>
-    <button class="opt-btn" data-q="qA3" data-correct="false" data-expl="Soda came much later, linked to the soda fountain era, not the original inspiration for ice cream.">Soda, a drink once thought to have therapeutic properties.</button>
-    <button class="opt-btn" data-q="qA3" data-correct="false" data-expl="Not mentioned as an inspiration anywhere in the video.">Hot chocolate, brought to Europe by early traders.</button>
-    <button class="opt-btn" data-q="qA3" data-correct="false" data-expl="Milk is an ingredient in the later recipe, but it isn't named as the original inspiring drink.">Milk tea, a popular drink across many royal courts.</button>
-    <button class="opt-btn" data-q="qA3" data-correct="true" data-expl="Correct: sherbet (sharbat in Arabic) is described as the icy drink that inspired the cream-based treat.">Sherbet, an icy drink believed to have originated in Persia.</button>
-    <div class="feedback" id="fb-qA3"></div>
-  </div>
-
-  <div class="qblock" id="qA4">
-    <p class="qtext">4. What did Nancy Johnson's 1843 invention do?</p>
-    <button class="opt-btn" data-q="qA4" data-correct="false" data-expl="Large-scale ice shipping was Frederic Tudor's development, a separate part of the story.">It made large-scale ice shipping possible across the country.</button>
-    <button class="opt-btn" data-q="qA4" data-correct="true" data-expl="Correct: her crank-and-beater machine made ice cream making easier for any home cook.">It was a crank machine that made home ice cream easier.</button>
-    <button class="opt-btn" data-q="qA4" data-correct="false" data-expl="Prohibition and the soda fountain trend happened decades later and aren't linked to Johnson.">It turned old saloons into popular soda fountains.</button>
-    <button class="opt-btn" data-q="qA4" data-correct="false" data-expl="Street vending by Italian immigrants is a separate, later part of the story.">It let street vendors sell ice cream cheaply by the scoop.</button>
-    <div class="feedback" id="fb-qA4"></div>
-  </div>
-
-  <div class="qblock" id="qA5">
-    <p class="qtext">5. What 1920 event helped push American saloons toward becoming soda fountains?</p>
-    <button class="opt-btn" data-q="qA5" data-correct="false" data-expl="World War II is mentioned later in the video, linked to home freezers, not to soda fountains.">The end of the Second World War in Europe and Asia.</button>
-    <button class="opt-btn" data-q="qA5" data-correct="false" data-expl="Nancy Johnson's patent happened in 1843, decades before this event.">Nancy Johnson's ice cream machine being patented.</button>
-    <button class="opt-btn" data-q="qA5" data-correct="true" data-expl="Correct: when alcohol sales were banned in 1920, known as Prohibition, saloons reinvented themselves as soda fountains.">The nationwide ban on selling alcohol, known as Prohibition.</button>
-    <button class="opt-btn" data-q="qA5" data-correct="false" data-expl="Italian immigrant street vending is described as happening in the late 1880s, earlier than 1920.">A new wave of Italian immigration into major cities.</button>
-    <div class="feedback" id="fb-qA5"></div>
-  </div>
-
-  <div class="qblock" id="qA6">
-    <p class="qtext">6. According to the video, how many scoops of ice cream could Castro reportedly eat after lunch?</p>
-    <button class="opt-btn" data-q="qA6" data-correct="true" data-expl="Correct: the video says Castro was known to devour up to 18 scoops after lunch.">Up to eighteen scoops in a single sitting.</button>
-    <button class="opt-btn" data-q="qA6" data-correct="false" data-expl="No doctor or six-scoop limit is mentioned in the video.">Around six scoops, according to his doctor.</button>
-    <button class="opt-btn" data-q="qA6" data-correct="false" data-expl="The video gives a higher figure than ten, and no glass size is mentioned.">Exactly ten scoops, served in a tall glass.</button>
-    <button class="opt-btn" data-q="qA6" data-correct="false" data-expl="This overstates the figure given in the video, which is eighteen, not thirty.">More than thirty scoops over an entire day.</button>
-    <div class="feedback" id="fb-qA6"></div>
-  </div>
-
-  <div class="qblock" id="qA7">
-    <p class="qtext">7. Who was nicknamed the "Ice King" for improving the ice trade?</p>
-    <button class="opt-btn" data-q="qA7" data-correct="false" data-expl="Antonio Latini recorded an early milk-based recipe; he isn't linked to the ice trade.">Antonio Latini, a Neapolitan chef and recipe writer.</button>
-    <button class="opt-btn" data-q="qA7" data-correct="false" data-expl="Nancy Johnson invented a crank ice cream machine; the ice trade is a separate story.">Nancy Johnson, inventor of the crank ice cream machine.</button>
-    <button class="opt-btn" data-q="qA7" data-correct="false" data-expl="George Washington is mentioned as a buyer of ice cream, not as an ice trader.">George Washington, a major buyer of ice cream.</button>
-    <button class="opt-btn" data-q="qA7" data-correct="true" data-expl="Correct: Frederic Tudor, nicknamed the 'Ice King,' greatly improved the ice trade by the mid-1830s.">Frederic Tudor, a New England ice-trading businessman.</button>
-    <div class="feedback" id="fb-qA7"></div>
-  </div>
-
-  <div class="qblock" id="qA8">
-    <p class="qtext">8. The video says the first accounts of cold desserts and iced drinks date back to which period?</p>
-    <button class="opt-btn" data-q="qA8" data-correct="false" data-expl="The eighteenth century is when ice cream crossed the Atlantic, much later than the first accounts.">The eighteenth century, during European expansion.</button>
-    <button class="opt-btn" data-q="qA8" data-correct="true" data-expl="Correct: the video places the first accounts as early as the first century, among royal elites.">The first century, among royal elites in several empires.</button>
-    <button class="opt-btn" data-q="qA8" data-correct="false" data-expl="No Silk Road trade route is mentioned anywhere in the video.">The tenth century, following trade across the Silk Road.</button>
-    <button class="opt-btn" data-q="qA8" data-correct="false" data-expl="The sixteenth century isn't the period given in the video for these first accounts.">The sixteenth century, during early colonial trade.</button>
-    <div class="feedback" id="fb-qA8"></div>
-  </div>
-
-  <div class="qblock" id="qA9">
-    <p class="qtext">9. Who recorded a milk-based ice cream recipe in 1692, according to the video?</p>
-    <button class="opt-btn" data-q="qA9" data-correct="true" data-expl="Correct: the video names Antonio Latini, a chef working in Naples, in 1692.">Antonio Latini, a chef working in Naples.</button>
-    <button class="opt-btn" data-q="qA9" data-correct="false" data-expl="Frederic Tudor is linked to the ice trade, not to this 1692 recipe.">Frederic Tudor, a New England ice trader.</button>
-    <button class="opt-btn" data-q="qA9" data-correct="false" data-expl="Nancy Johnson's invention came much later, in 1843.">Nancy Johnson, an American inventor.</button>
-    <button class="opt-btn" data-q="qA9" data-correct="false" data-expl="George Washington is linked to ice cream spending, not to this 1692 recipe.">George Washington, an American president.</button>
-    <div class="feedback" id="fb-qA9"></div>
-  </div>
-
-  <div class="qblock" id="qA10">
-    <p class="qtext">10. What development, complete by the end of World War II, made storing ice cream at home easier?</p>
-    <button class="opt-btn" data-q="qA10" data-correct="false" data-expl="This event belongs to 1920, decades before the end of World War II.">A nationwide ban on selling alcoholic drinks.</button>
-    <button class="opt-btn" data-q="qA10" data-correct="false" data-expl="This invention belongs to 1843, decades before the end of World War II.">A new machine for churning ice cream by hand.</button>
-    <button class="opt-btn" data-q="qA10" data-correct="false" data-expl="This development belongs to the late 1880s, decades before the end of World War II.">A wave of Italian immigrants selling street treats.</button>
-    <button class="opt-btn" data-q="qA10" data-correct="true" data-expl="Correct: by the end of World War II, the average American home had a freezer that could hold a quart of ice cream.">Home freezers big enough to hold a quart of ice cream.</button>
-    <div class="feedback" id="fb-qA10"></div>
-  </div>
-
-  <h3 class="exsection-title">B · Vocabulary in Context</h3>
-
-  <div class="qblock" id="qB1">
-    <p class="qtext">11. In "their directive was to retrieve a poison pill," directive most nearly means:</p>
-    <button class="opt-btn" data-q="qB1" data-correct="false" data-expl="Directive doesn't refer to a physical location.">a secret hiding place known only to a few</button>
-    <button class="opt-btn" data-q="qB1" data-correct="true" data-expl="Correct: a directive is an official instruction telling someone what to do.">an official instruction telling someone what to do</button>
-    <button class="opt-btn" data-q="qB1" data-correct="false" data-expl="This confuses directive with a related but different word, 'destination.'">a planned destination at the end of a journey</button>
-    <button class="opt-btn" data-q="qB1" data-correct="false" data-expl="Directive is not related to timing or schedules.">a strict deadline set for finishing a task</button>
-    <div class="feedback" id="fb-qB1"></div>
-  </div>
-
-  <div class="qblock" id="qB2">
-    <p class="qtext">12. Someone with "a sweet tooth" is a person who:</p>
-    <button class="opt-btn" data-q="qB2" data-correct="false" data-expl="This is a literal dental reading, not the idiomatic meaning used in the video.">has ongoing problems with their teeth</button>
-    <button class="opt-btn" data-q="qB2" data-correct="false" data-expl="No connection to spicy food in this idiom.">strongly dislikes the taste of spicy food</button>
-    <button class="opt-btn" data-q="qB2" data-correct="true" data-expl="Correct: 'a sweet tooth' means a strong liking for sweet foods, as with Castro's ice cream habit.">strongly enjoys the taste of sweet foods</button>
-    <button class="opt-btn" data-q="qB2" data-correct="false" data-expl="The idiom is about taste preference, not eating speed.">always eats their meals very slowly</button>
-    <div class="feedback" id="fb-qB2"></div>
-  </div>
-
-  <div class="qblock" id="qB3">
-    <p class="qtext">13. "Ice cream entered its golden age" means this was a period when ice cream was:</p>
-    <button class="opt-btn" data-q="qB3" data-correct="true" data-expl="Correct: 'golden age' describes a period when something is at its most successful or flourishing.">at its most popular and widely available</button>
-    <button class="opt-btn" data-q="qB3" data-correct="false" data-expl="Golden age signals a peak, not a decline.">becoming rare and difficult to find</button>
-    <button class="opt-btn" data-q="qB3" data-correct="false" data-expl="Golden age doesn't refer to color or appearance.">changing color due to new ingredients</button>
-    <button class="opt-btn" data-q="qB3" data-correct="false" data-expl="The video describes it reaching ordinary people, not staying exclusive.">available only to a small wealthy class</button>
-    <div class="feedback" id="fb-qB3"></div>
-  </div>
-
-  <div class="qblock" id="qB4">
-    <p class="qtext">14. Making 18th-century ice cream was described as "laborious." This means the process was:</p>
-    <button class="opt-btn" data-q="qB4" data-correct="false" data-expl="Laborious means demanding, not quick.">quick and required very little effort</button>
-    <button class="opt-btn" data-q="qB4" data-correct="false" data-expl="No connection to legality in this word.">illegal in most parts of Europe</button>
-    <button class="opt-btn" data-q="qB4" data-correct="false" data-expl="The word describes effort, not enjoyment.">enjoyable and relaxing for most cooks</button>
-    <button class="opt-btn" data-q="qB4" data-correct="true" data-expl="Correct: laborious means requiring a lot of time and physical effort.">demanding a great deal of time and effort</button>
-    <div class="feedback" id="fb-qB4"></div>
-  </div>
-
-  <div class="qblock" id="qB5">
-    <p class="qtext">15. "Breweries ... pivoted to producing ice cream" means the breweries:</p>
-    <button class="opt-btn" data-q="qB5" data-correct="false" data-expl="Pivoted doesn't mean closing down; it means changing direction.">shut down their operations completely</button>
-    <button class="opt-btn" data-q="qB5" data-correct="true" data-expl="Correct: pivoted means changed direction or strategy, here from alcohol to ice cream.">changed their business to focus on ice cream</button>
-    <button class="opt-btn" data-q="qB5" data-correct="false" data-expl="The video says they moved into ice cream, not that they kept making alcohol.">kept producing alcohol in secret</button>
-    <button class="opt-btn" data-q="qB5" data-correct="false" data-expl="Pivoted refers to a change in business direction, not a merger.">merged with a major ice cream company</button>
-    <div class="feedback" id="fb-qB5"></div>
-  </div>
-
-  <div id="score-bar">
-    <div id="score-num">0/15</div>
-    <div id="score-title"></div>
-    <div id="score-msg"></div>
-    <button class="reset-btn" onclick="resetAll()">🍦 Try Again</button>
-  </div>
-</section>
-
+  <p class="eyebrow"><span>Unit 1: Remote Work & Communication</span><span>Lesson 4</span><span>Video</span><span>B2–C1</span></p>
+  <h1 class="headline">How Did Ancient Civilizations Make Ice Cream?</h1>
+  <p class="deck">From a failed CIA plot in a Havana hotel freezer to Persian sky-cooled pools and George Washington’s summer ice cream bill: the strange, contested history of the world’s favourite frozen treat.</p>
+  <p class="byline">TED-Ed · Source video: <a href="https://youtu.be/7K3KdgDcdYc" target="_blank" rel="noopener">youtu.be/7K3KdgDcdYc</a></p>
+  <div class="factrow"><span class="fact">🎬 Format: <b>TED-Ed video</b></span><span class="fact">🎯 Level: <b>B2–C1</b></span><span class="fact">🕰 Timeline: <b>1st century to today</b></span><span class="fact">🗣 Focus: <b>hedging &amp; reporting</b></span></div>
+  <div class="ornament"><div class="cones" aria-hidden="true">🍧🍦🍨🍦🍧</div></div>
 </div>
+</header>
+<div class="scallop" aria-hidden="true"></div>
+<nav class="tabnav" aria-label="Lesson sections"><div class="tabs" role="tablist">
+<button type="button" role="tab" class="tabbtn" id="tab-transcript" data-tab="transcript" aria-controls="panel-transcript" aria-selected="true"><span class="ti" aria-hidden="true">🍨</span><span>Transcript</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-vocabulary" data-tab="vocabulary" aria-controls="panel-vocabulary" aria-selected="false"><span class="ti" aria-hidden="true">📖</span><span>Vocabulary</span></button>
+<button type="button" role="tab" class="tabbtn" id="tab-exercises" data-tab="exercises" aria-controls="panel-exercises" aria-selected="false"><span class="ti" aria-hidden="true">🥄</span><span>Exercises</span></button>
+</div></nav>
+<main class="wrap stage">
+<section id="panel-transcript" class="panel active" role="tabpanel" aria-labelledby="tab-transcript">
+<span class="tag">Video · TED-Ed narration</span>
+<h2 class="sectitle">How Did Ancient Civilizations Make Ice Cream?</h2>
+<p class="subtitle">Watch the video, then read the full narration in seven parts, from a failed CIA plot to the modern ice cream truck.</p>
+<div class="note"><span class="label">Before you watch</span>
+<ul><li>What is your favourite ice cream flavour? Is there a flavour that is typical of your country?</li>
+<li>How do you think people kept food cold before electricity?</li>
+<li>Listen for phrases like <em>it’s rumored that</em> and <em>is said to have</em>. Why does the narrator use them so often?</li></ul></div>
+<div class="legend" aria-label="Highlight key"><span class="legend-title">Highlight key</span><span class="legend-item"><span class="swatch sw-v"></span>Vocabulary</span><span class="legend-item"><span class="swatch sw-i"></span>Idiom / Set Phrase</span><span class="legend-item"><span class="swatch sw-e"></span>Useful Expression</span><span class="legend-item" style="margin-left:auto;color:var(--ink-muted)">Hover, tap or tab to a highlight for its meaning.</span></div>
 
+<div class="excerpt">
+<span class="exlabel"><span class="n">1</span>A CIA Plot and a Milkshake</span>
+<p>On a hot spring afternoon in 1963, two men, sent by the American CIA, snuck into the cafeteria of the Havana Libre Hotel. Their <span class="hl hl-v" data-cat="Vocabulary" data-def="An official or authoritative instruction telling someone what to do." data-term="directive" tabindex="0">directive</span> was to retrieve a poison pill from the freezer and slip it into the chocolate milkshake of Fidel Castro, the Cuban leader who was known to <span class="hl hl-v" data-cat="Vocabulary" data-def="To eat something quickly and hungrily." data-term="devour" tabindex="0">devour</span> up to 18 scoops of ice cream after lunch. <span class="hl hl-e" data-cat="Useful Expression" data-def="A passive structure used to admit that a historical claim is disputed, without stating who disputes it." data-term="exact details ... are contested" tabindex="0">While exact details of the story are contested</span>, <span class="hl hl-e" data-cat="Useful Expression" data-def="An impersonal passive structure that reports a claim while distancing the speaker from its accuracy." data-term="it's rumored that" tabindex="0">it's rumored that</span> the pill, however, froze to the freezer coils and broke, foiling the CIA's plan and granting Castro many more days to <span class="hl hl-v" data-cat="Vocabulary" data-def="To fully satisfy an appetite or desire." data-term="satiate" tabindex="0">satiate</span> his <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="A strong liking for sweet foods." data-term="a sweet tooth" tabindex="0">sweet tooth</span>.</p>
+<p>Ice cream has held a unique role in our world's history, culture, and cravings, but where did it come from?</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">2</span>Ancient Origins: Ice for the Elite</span>
+<p>The first accounts of cold desserts and iced drinks date back as early as the first century. In civilizations including ancient Rome, Mughal India, and Tang dynasty China, these icy treats were mainly enjoyed by the royal elites. And finding the means to freeze these <span class="hl hl-v" data-cat="Vocabulary" data-def="Rare or luxurious foods considered especially pleasing to eat." data-term="delicacies" tabindex="0">delicacies</span> wasn't always easy. Wealthy Mediterranean nobility sent laborers to trek up high mountains to harvest glacial ice and snow. Meanwhile, ancient Persians built shallow <span class="hl hl-v" data-cat="Vocabulary" data-def="Protected so that heat or cold cannot easily pass in or out." data-term="insulated" tabindex="0">insulated</span> pools of water and utilized a technique known as sky cooling. At night, the shallow pools would naturally radiate heat into the dry desert skies, causing them to dip below the <span class="hl hl-v" data-cat="Vocabulary" data-def="Relating to the surrounding environment or conditions." data-term="ambient" tabindex="0">ambient</span> temperature and freeze.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">3</span>From Sherbet to Cream</span>
+<p>Yet the cream-based treat we know today made a much later debut. It was originally inspired by sherbet, or sharbat in Arabic, an icy drink <span class="hl hl-e" data-cat="Useful Expression" data-def="Passive verb + perfect infinitive, used to report an unverified historical origin without naming a source." data-term="believed to have originated" tabindex="0">believed to have originated</span> in Persia, and subsequently gained popularity in the Middle Ages. European travelers brought sharbat recipes home, and began creating their own chocolate, pinecone, and even eggplant flavored takes on the <span class="hl hl-v" data-cat="Vocabulary" data-def="A food or drink that restores energy or relieves thirst/heat." data-term="refreshment" tabindex="0">refreshment</span>. In 1692, Antonio Latini, a Neapolitan chef, recorded a recipe for a unique milk-based version, which <span class="hl hl-e" data-cat="Useful Expression" data-def="Attributes a claim to an unnamed group of experts rather than stating it as settled fact." data-term="some historians dub" tabindex="0">some historians dub</span> the first ice cream.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">4</span>Crossing the Atlantic</span>
+<p>In the 18th century, ice cream expanded its reach as these recipes <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="To begin a journey, literally by ship; here used figuratively for recipes travelling overseas." data-term="set sail" tabindex="0">set sail</span> alongside European settlers to North America. Yet it was still mainly enjoyed by the upper classes as the process to make it was quite <span class="hl hl-v" data-cat="Vocabulary" data-def="Requiring a lot of time and physical effort." data-term="laborious" tabindex="0">laborious</span>, and its main ingredients (sugar, salt, and cream) were expensive. George Washington <span class="hl hl-e" data-cat="Useful Expression" data-def="Passive reporting verb + perfect infinitive, used for a specific historical figure's unverified but widely repeated claim." data-term="is said to have spent" tabindex="0">is said to have spent</span> the equivalent of $6,600 in today's dollars on ice cream in one summer alone.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">5</span>America's Golden Age</span>
+<p>It was on American soil that the frozen dessert entered its <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="A period when something is at its most successful or flourishing." data-term="golden age" tabindex="0">golden age</span>, as inventors and <span class="hl hl-v" data-cat="Vocabulary" data-def="People who set up and run businesses, taking on financial risk to do so." data-term="entrepreneurs" tabindex="0">entrepreneurs</span> began to engineer ways to <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="To make something available to ordinary people rather than only a wealthy few." data-term="bring ... to the masses" tabindex="0">bring it to the masses</span>. In Philadelphia in 1843, Nancy Johnson <span class="hl hl-v" data-cat="Vocabulary" data-def="Officially registered an invention to gain the exclusive legal right to make or sell it." data-term="patented" tabindex="0">patented</span> a revolutionary ice cream-making machine featuring a crank and beater, which made the process easier for any home cook. And storing ice cream was no longer an <span class="hl hl-v" data-cat="Vocabulary" data-def="Something that blocks progress or makes an action difficult." data-term="obstacle" tabindex="0">obstacle</span>, as by the mid-1830s, New England businessman "Ice King" Frederic Tudor had greatly improved the ice trade, shipping thousands of tons of ice to households across the globe. Soon, ice cream was <span class="hl hl-i" data-cat="Idiom / Set Phrase" data-def="Available absolutely everywhere; extremely common and easy to find." data-term="on every street corner" tabindex="0">on every street corner</span>.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">6</span>From Pushcarts to Soda Fountains</span>
+<p>In the late 1880s, political turmoil brought Italian immigrants to cities like London, Glasgow, and New York, where many took up jobs as street vendors selling licks of ice cream for roughly a penny each. Meanwhile, American druggists discovered the appeal of combining soda, a drink <span class="hl hl-e" data-cat="Useful Expression" data-def="Passive + perfect infinitive, reporting a once-popular but scientifically unconfirmed belief." data-term="thought to have therapeutic properties" tabindex="0">thought to have therapeutic properties</span> at the time, with ice cream, and a new social spot was born: the soda fountain. When the sale of alcohol was banned in 1920, many American saloons reinvented themselves as soda fountains, and breweries like Anheuser-Busch and Yuengling <span class="hl hl-v" data-cat="Vocabulary" data-def="Changed direction or strategy, especially in business." data-term="pivoted" tabindex="0">pivoted</span> to producing ice cream.</p>
+</div>
+<div class="excerpt">
+<span class="exlabel"><span class="n">7</span>The Freezer Age and Beyond</span>
+<p>At the same time, refrigeration technology was improving rapidly. By the end of World War II, the average American home had a freezer that could house a quart of ice cream. Even trucks could be equipped with freezers full of frozen treats.</p>
+<p>Today, ice cream continues to take on new forms. And while <span class="hl hl-e" data-cat="Useful Expression" data-def="A modal of possibility used to admit that some historical questions cannot be definitively answered." data-term="may never be solved" tabindex="0">some of its mysteries may never be solved</span>, <span class="hl hl-e" data-cat="Useful Expression" data-def="A discourse marker that pivots from acknowledged uncertainty to one confidently stated fact." data-term="one thing is certain" tabindex="0">one thing is certain</span>: our love for ice cream will never <span class="hl hl-v" data-cat="Vocabulary" data-def="To melt; here used figuratively to mean 'fade' or 'end'." data-term="thaw" tabindex="0">thaw</span>.</p>
+</div>
+<blockquote class="pullquote">“Our love for ice cream will never thaw.”<small>The narrator, Part 7</small></blockquote>
+<section class="glance"><h3>Timeline at a glance</h3><p>The video jumps around in time. Use this list to keep the story in order.</p>
+<ol class="timeline">
+<li><span class="when">1st century</span><span class="what">First records of iced drinks and cold desserts, enjoyed by royal elites in Rome, Mughal India and Tang China.</span></li>
+<li><span class="when">Middle Ages</span><span class="what">Sharbat, an icy drink from Persia, becomes popular and travels to Europe.</span></li>
+<li><span class="when">1692</span><span class="what">Antonio Latini, a chef in Naples, records a milk-based recipe that some historians call the first ice cream.</span></li>
+<li><span class="when">18th century</span><span class="what">Recipes cross the Atlantic. George Washington is said to spend about $6,600 (in today’s money) in one summer.</span></li>
+<li><span class="when">Mid-1830s</span><span class="what">“Ice King” Frederic Tudor ships thousands of tons of ice around the world.</span></li>
+<li><span class="when">1843</span><span class="what">Nancy Johnson patents a hand-cranked ice cream machine in Philadelphia.</span></li>
+<li><span class="when">Late 1880s</span><span class="what">Italian immigrants sell ice cream on the streets of London, Glasgow and New York.</span></li>
+<li><span class="when">1920</span><span class="what">Alcohol is banned in the US; saloons become soda fountains and breweries make ice cream.</span></li>
+<li><span class="when">By 1945</span><span class="what">The average American home has a freezer that can hold a quart of ice cream.</span></li>
+<li><span class="when">1963</span><span class="what">The rumoured CIA plot: a poison pill freezes to the coils of a Havana hotel freezer.</span></li>
+</ol></section>
+<div class="note note-tip"><span class="label">After you watch: discuss</span>
+<ul><li>Which fact in the video surprised you most? Report it to a partner using a hedging phrase: “It’s said that…”, “It’s believed that…”</li>
+<li>Ice cream went from a luxury for kings to something “on every street corner”. Can you think of another product that did the same?</li>
+<li>Why do you think the video starts in 1963, not in the first century?</li></ul></div>
+</section>
+<section id="panel-vocabulary" class="panel" role="tabpanel" aria-labelledby="tab-vocabulary">
+<span class="tag">Vocabulary</span>
+<h2 class="sectitle">Key Words &amp; Phrases</h2>
+<p class="subtitle">Every highlighted term from the narration, with a clear meaning and a new example sentence.</p>
+<div class="note"><strong>Vocabulary</strong>: single words worth learning. <strong>Idioms &amp; Set Phrases</strong>: fixed expressions whose meaning is not always literal. <strong>Useful Expressions</strong>: hedging and reporting phrases the narrator uses for uncertain history.</div>
+<h3 class="vgroup-title"><span class="dot dot-v"></span>Vocabulary</h3>
+<div class="vgrid">
+<div class="vcard"><div class="vterm">directive</div><div class="vpos">noun</div><div class="vdef">An official instruction telling someone what to do.</div><div class="vex">The agents received a <strong>directive</strong> to complete the mission without being seen.</div></div>
+<div class="vcard"><div class="vterm">devour</div><div class="vpos">verb</div><div class="vdef">To eat something quickly and hungrily.</div><div class="vex">He could <strong>devour</strong> an entire pizza in under ten minutes.</div></div>
+<div class="vcard"><div class="vterm">satiate</div><div class="vpos">verb</div><div class="vdef">To fully satisfy an appetite or desire.</div><div class="vex">One bowl of pasta was enough to <strong>satiate</strong> her hunger.</div></div>
+<div class="vcard"><div class="vterm">delicacies</div><div class="vpos">noun, plural</div><div class="vdef">Rare or luxurious foods considered especially pleasing.</div><div class="vex">The banquet table was covered in local <strong>delicacies</strong>.</div></div>
+<div class="vcard"><div class="vterm">insulated</div><div class="vpos">adjective</div><div class="vdef">Protected so that heat or cold cannot easily pass in or out.</div><div class="vex">The <strong>insulated</strong> flask kept the coffee hot for hours.</div></div>
+<div class="vcard"><div class="vterm">ambient</div><div class="vpos">adjective</div><div class="vdef">Relating to the surrounding environment or conditions.</div><div class="vex">The wine cellar stayed several degrees below <strong>ambient</strong> temperature.</div></div>
+<div class="vcard"><div class="vterm">laborious</div><div class="vpos">adjective</div><div class="vdef">Requiring a lot of time and physical effort.</div><div class="vex">Hand-churning ice cream is a slow, <strong>laborious</strong> process.</div></div>
+<div class="vcard"><div class="vterm">patented</div><div class="vpos">verb (past)</div><div class="vdef">Officially registered an invention to gain the exclusive right to make or sell it.</div><div class="vex">She <strong>patented</strong> her design before showing it to investors.</div></div>
+<div class="vcard"><div class="vterm">entrepreneurs</div><div class="vpos">noun, plural</div><div class="vdef">People who start and run businesses, taking on financial risk.</div><div class="vex">A wave of young <strong>entrepreneurs</strong> opened cafés across the city.</div></div>
+<div class="vcard"><div class="vterm">obstacle</div><div class="vpos">noun</div><div class="vdef">Something that blocks progress or makes an action difficult.</div><div class="vex">Poor roads were the main <strong>obstacle</strong> to getting supplies to the village.</div></div>
+<div class="vcard"><div class="vterm">pivoted</div><div class="vpos">verb (past)</div><div class="vdef">Changed direction or strategy, especially in business.</div><div class="vex">The company <strong>pivoted</strong> from selling shoes to selling software.</div></div>
+<div class="vcard"><div class="vterm">thaw</div><div class="vpos">verb</div><div class="vdef">To melt; figuratively, to fade or come to an end.</div><div class="vex">Their old rivalry finally began to <strong>thaw</strong> after years apart.</div></div>
+</div>
+<h3 class="vgroup-title"><span class="dot dot-i"></span>Idioms &amp; Set Phrases</h3>
+<div class="vgrid">
+<div class="vcard idiom"><div class="vterm">a sweet tooth</div><div class="vpos">idiom</div><div class="vdef">A strong liking for sweet foods.</div><div class="vex">Grandpa has always had a <strong>sweet tooth</strong>: he never says no to dessert.</div></div>
+<div class="vcard idiom"><div class="vterm">golden age</div><div class="vpos">set phrase</div><div class="vdef">A period when something is at its most successful or flourishing.</div><div class="vex">The 1990s are often called the <strong>golden age</strong> of hip hop.</div></div>
+<div class="vcard idiom"><div class="vterm">set sail</div><div class="vpos">idiom</div><div class="vdef">To begin a journey; figuratively, to spread or travel outward.</div><div class="vex">The idea <strong>set sail</strong> from one small workshop and reached factories worldwide.</div></div>
+<div class="vcard idiom"><div class="vterm">bring ... to the masses</div><div class="vpos">idiom</div><div class="vdef">To make something available to ordinary people, not just a wealthy few.</div><div class="vex">Cheap smartphones finally <strong>brought</strong> the internet <strong>to the masses</strong>.</div></div>
+<div class="vcard idiom"><div class="vterm">on every street corner</div><div class="vpos">idiom</div><div class="vdef">Available absolutely everywhere; extremely common.</div><div class="vex">These days you'll find a coffee shop <strong>on every street corner</strong>.</div></div>
+</div>
+<h3 class="vgroup-title"><span class="dot dot-e"></span>Useful Expressions (Hedging &amp; Reporting)</h3>
+<div class="vgrid">
+<div class="vcard expr"><div class="vterm">it's rumored that</div><div class="vpos">reporting phrase</div><div class="vdef">Introduces a claim that is widely repeated but not confirmed.</div><div class="vex"><strong>It's rumored that</strong> the recipe was stolen from a rival bakery.</div></div>
+<div class="vcard expr"><div class="vterm">exact details ... are contested</div><div class="vpos">hedging phrase</div><div class="vdef">Signals that historians or sources disagree about the specifics of an event.</div><div class="vex">The <strong>exact details</strong> of the battle <strong>are contested</strong> to this day.</div></div>
+<div class="vcard expr"><div class="vterm">believed to have originated</div><div class="vpos">hedging phrase</div><div class="vdef">Reports an unverified origin without naming who believes it.</div><div class="vex">The dish is <strong>believed to have originated</strong> in southern Italy.</div></div>
+<div class="vcard expr"><div class="vterm">some historians dub</div><div class="vpos">attributed hedge</div><div class="vdef">Attributes a label or claim to an unnamed group of experts.</div><div class="vex"><strong>Some historians dub</strong> this era the true start of the industrial age.</div></div>
+<div class="vcard expr"><div class="vterm">is said to have spent</div><div class="vpos">hedging phrase</div><div class="vdef">Reports a specific, often surprising, historical claim without full confirmation.</div><div class="vex">The king <strong>is said to have spent</strong> a fortune on a single garden.</div></div>
+<div class="vcard expr"><div class="vterm">thought to have therapeutic properties</div><div class="vpos">hedging phrase</div><div class="vdef">Reports a once-common belief that is not scientifically confirmed.</div><div class="vex">The herb was once <strong>thought to have</strong> healing <strong>properties</strong>.</div></div>
+<div class="vcard expr"><div class="vterm">may never be solved</div><div class="vpos">modal hedge</div><div class="vdef">Admits that a question might remain permanently unanswered.</div><div class="vex">Some mysteries of ancient history <strong>may never be solved</strong>.</div></div>
+<div class="vcard expr"><div class="vterm">one thing is certain</div><div class="vpos">discourse marker</div><div class="vdef">Shifts from acknowledged uncertainty to a single confident claim.</div><div class="vex">We don't know who invented it, but <strong>one thing is certain</strong>: it changed cooking forever.</div></div>
+</div>
+</section>
+<section id="panel-exercises" class="panel" role="tabpanel" aria-labelledby="tab-exercises">
+<span class="tag">Exercises</span>
+<h2 class="sectitle">Test Yourself</h2>
+<p class="subtitle">15 questions in 2 sections. Choose an answer for instant feedback: every option, right or wrong, comes with an explanation, and the correct answer is always revealed.</p>
+<div class="quizbar" role="status"><span id="quiz-progress">Answered 0/15 · Score 0</span><span class="meter" aria-hidden="true"><i id="quiz-meter"></i></span><button type="button" data-reset>↺ Reset</button></div>
+<h3 class="exsection-title">A · Video Comprehension</h3>
+
+<div class="qblock" id="qA1"><p class="qtext">1. Why did the CIA's 1963 plot against Castro reportedly fail?</p>
+<button class="opt-btn" data-correct="false" data-expl="Not quite: the video says nothing about the agents being caught before reaching the hotel freezer." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">The agents were caught before reaching the hotel freezer.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not mentioned: no bodyguards finding the pill are described in the video." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Castro's bodyguards discovered the poison pill in time.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the poison pill froze to the freezer coils and broke, foiling the plan." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">The poison pill froze to the freezer coils and broke.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not what's described: the milkshake was never poisoned because the pill broke first." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">The milkshake was tested and found to taste strange.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA2"><p class="qtext">2. How did ancient Persians reportedly freeze water without mountain ice?</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: shallow insulated pools radiated heat into the desert sky at night, a technique called sky cooling." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">By using shallow insulated pools that cooled overnight.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This method belonged to wealthy Mediterranean nobility, not the Persians in this video." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">By sending laborers up mountains to harvest fresh snow.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not mentioned in the video: no underground caves are described." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">By storing water in deep, naturally cold underground caves.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Salt-based freezing isn't part of this ancient Persian method in the video." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">By mixing water with salt to lower its freezing point.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA3"><p class="qtext">3. What drink is said to have originally inspired the cream-based dessert we call ice cream?</p>
+<button class="opt-btn" data-correct="false" data-expl="Soda came much later, linked to the soda fountain era, not the original inspiration for ice cream." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Soda, a drink once thought to have therapeutic properties.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Not mentioned as an inspiration anywhere in the video." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Hot chocolate, brought to Europe by early traders.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Milk is an ingredient in the later recipe, but it isn't named as the original inspiring drink." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Milk tea, a popular drink across many royal courts.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: sherbet (sharbat in Arabic) is described as the icy drink that inspired the cream-based treat." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Sherbet, an icy drink believed to have originated in Persia.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA4"><p class="qtext">4. What did Nancy Johnson's 1843 invention do?</p>
+<button class="opt-btn" data-correct="false" data-expl="Large-scale ice shipping was Frederic Tudor's development, a separate part of the story." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">It made large-scale ice shipping possible across the country.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: her crank-and-beater machine made ice cream making easier for any home cook." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">It was a crank machine that made home ice cream easier.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Prohibition and the soda fountain trend happened decades later and aren't linked to Johnson." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">It turned old saloons into popular soda fountains.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Street vending by Italian immigrants is a separate, later part of the story." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">It let street vendors sell ice cream cheaply by the scoop.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA5"><p class="qtext">5. What 1920 event helped push American saloons toward becoming soda fountains?</p>
+<button class="opt-btn" data-correct="false" data-expl="World War II is mentioned later in the video, linked to home freezers, not to soda fountains." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">The end of the Second World War in Europe and Asia.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Nancy Johnson's patent happened in 1843, decades before this event." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Nancy Johnson's ice cream machine being patented.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: when alcohol sales were banned in 1920, known as Prohibition, saloons reinvented themselves as soda fountains." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">The nationwide ban on selling alcohol, known as Prohibition.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Italian immigrant street vending is described as happening in the late 1880s, earlier than 1920." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">A new wave of Italian immigration into major cities.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA6"><p class="qtext">6. According to the video, how many scoops of ice cream could Castro reportedly eat after lunch?</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the video says Castro was known to devour up to 18 scoops after lunch." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Up to eighteen scoops in a single sitting.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="No doctor or six-scoop limit is mentioned in the video." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Around six scoops, according to his doctor.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The video gives a higher figure than ten, and no glass size is mentioned." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Exactly ten scoops, served in a tall glass.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This overstates the figure given in the video, which is eighteen, not thirty." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">More than thirty scoops over an entire day.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA7"><p class="qtext">7. Who was nicknamed the "Ice King" for improving the ice trade?</p>
+<button class="opt-btn" data-correct="false" data-expl="Antonio Latini recorded an early milk-based recipe; he isn't linked to the ice trade." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Antonio Latini, a Neapolitan chef and recipe writer.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Nancy Johnson invented a crank ice cream machine; the ice trade is a separate story." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Nancy Johnson, inventor of the crank ice cream machine.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="George Washington is mentioned as a buyer of ice cream, not as an ice trader." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">George Washington, a major buyer of ice cream.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: Frederic Tudor, nicknamed the 'Ice King,' greatly improved the ice trade by the mid-1830s." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Frederic Tudor, a New England ice-trading businessman.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA8"><p class="qtext">8. The video says the first accounts of cold desserts and iced drinks date back to which period?</p>
+<button class="opt-btn" data-correct="false" data-expl="The eighteenth century is when ice cream crossed the Atlantic, much later than the first accounts." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">The eighteenth century, during European expansion.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the video places the first accounts as early as the first century, among royal elites." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">The first century, among royal elites in several empires.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="No Silk Road trade route is mentioned anywhere in the video." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">The tenth century, following trade across the Silk Road.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The sixteenth century isn't the period given in the video for these first accounts." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">The sixteenth century, during early colonial trade.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA9"><p class="qtext">9. Who recorded a milk-based ice cream recipe in 1692, according to the video?</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: the video names Antonio Latini, a chef working in Naples, in 1692." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">Antonio Latini, a chef working in Naples.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Frederic Tudor is linked to the ice trade, not to this 1692 recipe." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">Frederic Tudor, a New England ice trader.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Nancy Johnson's invention came much later, in 1843." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">Nancy Johnson, an American inventor.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="George Washington is linked to ice cream spending, not to this 1692 recipe." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">George Washington, an American president.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qA10"><p class="qtext">10. What development, complete by the end of World War II, made storing ice cream at home easier?</p>
+<button class="opt-btn" data-correct="false" data-expl="This event belongs to 1920, decades before the end of World War II." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">A nationwide ban on selling alcoholic drinks.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This invention belongs to 1843, decades before the end of World War II." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">A new machine for churning ice cream by hand.</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This development belongs to the late 1880s, decades before the end of World War II." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">A wave of Italian immigrants selling street treats.</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: by the end of World War II, the average American home had a freezer that could hold a quart of ice cream." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">Home freezers big enough to hold a quart of ice cream.</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<h3 class="exsection-title">B · Vocabulary in Context</h3>
+
+<div class="qblock" id="qB1"><p class="qtext">11. In "their directive was to retrieve a poison pill," directive most nearly means:</p>
+<button class="opt-btn" data-correct="false" data-expl="Directive doesn't refer to a physical location." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">a secret hiding place known only to a few</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: a directive is an official instruction telling someone what to do." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">an official instruction telling someone what to do</span></button>
+<button class="opt-btn" data-correct="false" data-expl="This confuses directive with a related but different word, 'destination.'" data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">a planned destination at the end of a journey</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Directive is not related to timing or schedules." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">a strict deadline set for finishing a task</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB2"><p class="qtext">12. Someone with "a sweet tooth" is a person who:</p>
+<button class="opt-btn" data-correct="false" data-expl="This is a literal dental reading, not the idiomatic meaning used in the video." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">has ongoing problems with their teeth</span></button>
+<button class="opt-btn" data-correct="false" data-expl="No connection to spicy food in this idiom." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">strongly dislikes the taste of spicy food</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: 'a sweet tooth' means a strong liking for sweet foods, as with Castro's ice cream habit." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">strongly enjoys the taste of sweet foods</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The idiom is about taste preference, not eating speed." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">always eats their meals very slowly</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB3"><p class="qtext">13. "Ice cream entered its golden age" means this was a period when ice cream was:</p>
+<button class="opt-btn" data-correct="true" data-expl="Correct: 'golden age' describes a period when something is at its most successful or flourishing." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">at its most popular and widely available</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Golden age signals a peak, not a decline." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">becoming rare and difficult to find</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Golden age doesn't refer to color or appearance." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">changing color due to new ingredients</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The video describes it reaching ordinary people, not staying exclusive." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">available only to a small wealthy class</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB4"><p class="qtext">14. Making 18th-century ice cream was described as "laborious." This means the process was:</p>
+<button class="opt-btn" data-correct="false" data-expl="Laborious means demanding, not quick." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">quick and required very little effort</span></button>
+<button class="opt-btn" data-correct="false" data-expl="No connection to legality in this word." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">illegal in most parts of Europe</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The word describes effort, not enjoyment." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">enjoyable and relaxing for most cooks</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: laborious means requiring a lot of time and physical effort." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">demanding a great deal of time and effort</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+
+<div class="qblock" id="qB5"><p class="qtext">15. "Breweries ... pivoted to producing ice cream" means the breweries:</p>
+<button class="opt-btn" data-correct="false" data-expl="Pivoted doesn't mean closing down; it means changing direction." data-letter="A" type="button"><span class="opt-letter">A</span><span class="opt-text">shut down their operations completely</span></button>
+<button class="opt-btn" data-correct="true" data-expl="Correct: pivoted means changed direction or strategy, here from alcohol to ice cream." data-letter="B" type="button"><span class="opt-letter">B</span><span class="opt-text">changed their business to focus on ice cream</span></button>
+<button class="opt-btn" data-correct="false" data-expl="The video says they moved into ice cream, not that they kept making alcohol." data-letter="C" type="button"><span class="opt-letter">C</span><span class="opt-text">kept producing alcohol in secret</span></button>
+<button class="opt-btn" data-correct="false" data-expl="Pivoted refers to a change in business direction, not a merger." data-letter="D" type="button"><span class="opt-letter">D</span><span class="opt-text">merged with a major ice cream company</span></button>
+<div aria-live="polite" class="feedback" role="status"></div></div>
+<div id="score-bar" aria-live="polite"><div id="score-num"></div><div id="score-title"></div><div id="score-msg"></div><button type="button" class="reset-btn" data-reset>Try Again</button></div>
+
+</section>
+</main>
+<footer class="coursefoot"><div class="wrap"><a class="prev" href="https://teacher-victor.github.io/Business-English/03_SPK_RemoteWork.html"><small>← Previous · Lesson 3 · Speaking</small><strong>Quarterly Snapshot: Remote vs. Office</strong></a><a class="next" href="https://teacher-victor.github.io/Business-English/05_RDG_Negotiation.html"><small>Next · Lesson 5 · Reading →</small><strong>The Renewal: Calder and Orion</strong></a><p class="unitmap">Unit 1: Remote Work & Communication · <a href="https://teacher-victor.github.io/Business-English/01_RDG_RemoteWork.html">1 Reading</a> → <a href="https://teacher-victor.github.io/Business-English/02_BUS_Misunderstandings.html">2 Listening</a> → <a href="https://teacher-victor.github.io/Business-English/03_SPK_RemoteWork.html">3 Speaking</a> → <b>4 Video</b></p></div></footer>
+<script>window.LESSON = {"tiers": [{"min": 0.9, "title": "🍨 Sundae Perfection", "msg": "Outstanding. You have mastered both the story and the vocabulary that tells it."}, {"min": 0.7, "title": "🍦 Two Scoops, Well Earned", "msg": "Strong result. Revisit the Vocabulary tab for any terms that tripped you up."}, {"min": 0.4, "title": "🍧 Getting There", "msg": "Good start. Reread the highlighted phrases in the Transcript tab and try again."}, {"min": 0.0, "title": "🧊 Still Melting", "msg": "Head back to the Transcript and Vocabulary tabs, then give it another go."}]};</script>
 <script>
-document.querySelectorAll('.hl-v, .hl-i, .hl-e').forEach(el => {
-  const tip = el.getAttribute('title');
-  if (tip) { el.setAttribute('data-tip', tip); el.removeAttribute('title'); }
-  el.setAttribute('tabindex', '0');
-});
+/* Shared lesson behaviour: tabs, glossary tooltips, quiz scoring. */
+(function () {
+  "use strict";
+  var LESSON = window.LESSON || {};
 
-function switchTab(id, btn) {
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tabbtn').forEach(b => b.classList.remove('active'));
-  document.getElementById('panel-' + id).classList.add('active');
-  btn.classList.add('active');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-const TOTAL = 15;
-let answered = {}, correct = {};
-
-function checkAnswer(btn) {
-  const qId = btn.dataset.q, isCorrect = btn.dataset.correct === 'true';
-  if (answered[qId]) return;
-  answered[qId] = true; correct[qId] = isCorrect;
-  const block = document.getElementById(qId);
-  const fb = document.getElementById('fb-' + qId);
-  block.querySelectorAll('.opt-btn').forEach(b => {
-    b.disabled = true;
-    if (b.dataset.correct === 'true') b.classList.add('reveal-correct');
+  /* ── Tabs (ARIA tablist, arrow keys, #hash deep links) ── */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll(".tabbtn"));
+  var panels = Array.prototype.slice.call(document.querySelectorAll(".panel"));
+  var nav = document.querySelector(".tabnav");
+  function setTabHeight() {
+    if (nav) document.documentElement.style.setProperty("--tabh", nav.offsetHeight + "px");
+  }
+  function showTab(id, opts) {
+    opts = opts || {};
+    var found = false;
+    tabs.forEach(function (b) {
+      var on = b.getAttribute("data-tab") === id;
+      if (on) found = true;
+      b.setAttribute("aria-selected", on ? "true" : "false");
+      b.tabIndex = on ? 0 : -1;
+    });
+    if (!found) return;
+    panels.forEach(function (p) { p.classList.toggle("active", p.id === "panel-" + id); });
+    if (opts.focus) { var t = document.querySelector('.tabbtn[data-tab="' + id + '"]'); if (t) t.focus(); }
+    if (!opts.silent) {
+      // Deep link (#vocabulary etc.). Skipped silently where the page runs in a sandboxed
+      // preview (about:srcdoc), which does not allow changing the URL.
+      try {
+        if (history.replaceState && location.protocol !== "about:") history.replaceState(null, "", "#" + id);
+      } catch (err) { /* ignore: URL updates are optional */ }
+      var top = nav ? nav.getBoundingClientRect().top + window.pageYOffset : 0;
+      if (window.pageYOffset > top) window.scrollTo({ top: top, behavior: "smooth" });
+    }
+  }
+  tabs.forEach(function (b, i) {
+    b.addEventListener("click", function () { showTab(b.getAttribute("data-tab")); });
+    b.addEventListener("keydown", function (e) {
+      var n = null;
+      if (e.key === "ArrowRight") n = (i + 1) % tabs.length;
+      if (e.key === "ArrowLeft") n = (i - 1 + tabs.length) % tabs.length;
+      if (e.key === "Home") n = 0;
+      if (e.key === "End") n = tabs.length - 1;
+      if (n !== null) { e.preventDefault(); showTab(tabs[n].getAttribute("data-tab"), { focus: true }); }
+    });
   });
-  btn.classList.remove('reveal-correct');
-  btn.classList.add(isCorrect ? 'correct' : 'wrong');
-  block.classList.add(isCorrect ? 'answered-correct' : 'answered-wrong');
-  fb.innerHTML = `<span class="fb-icon">${isCorrect ? '✓' : '✗'}</span> ${btn.dataset.expl}`;
-  fb.className = `feedback show ${isCorrect ? 'correct' : 'wrong'}`;
-  if (Object.keys(answered).length === TOTAL) showScore();
-}
+  document.querySelectorAll("[data-goto]").forEach(function (a) {
+    a.addEventListener("click", function (e) { e.preventDefault(); showTab(a.getAttribute("data-goto")); });
+  });
+  var initial = "";
+  try { initial = (location.hash || "").replace("#", ""); } catch (err) { initial = ""; }
+  showTab(initial && document.getElementById("panel-" + initial) ? initial : tabs[0].getAttribute("data-tab"), { silent: true });
+  setTabHeight();
+  window.addEventListener("resize", setTabHeight);
 
-document.querySelectorAll('.opt-btn').forEach(b => b.addEventListener('click', () => checkAnswer(b)));
+  /* ── Glossary tooltips ── */
+  var tip = document.getElementById("tooltip");
+  function place(el) {
+    var r = el.getBoundingClientRect();
+    var top = r.top - tip.offsetHeight - 10;
+    if (top < 8) top = r.bottom + 10;
+    var left = r.left + r.width / 2 - tip.offsetWidth / 2;
+    left = Math.max(8, Math.min(left, window.innerWidth - tip.offsetWidth - 8));
+    tip.style.top = top + "px";
+    tip.style.left = left + "px";
+  }
+  function showTip(el) {
+    tip.innerHTML = "";
+    var c = document.createElement("span"); c.className = "tip-cat"; c.textContent = el.getAttribute("data-cat");
+    var t = document.createElement("span"); t.className = "tip-term"; t.textContent = el.getAttribute("data-term");
+    tip.appendChild(c); tip.appendChild(t);
+    tip.appendChild(document.createTextNode(el.getAttribute("data-def")));
+    tip.style.display = "block";
+    place(el);
+  }
+  function hideTip() { tip.style.display = "none"; }
+  document.querySelectorAll(".hl").forEach(function (el) {
+    el.setAttribute("role", "button");
+    el.setAttribute("aria-label", el.textContent + ": " + el.getAttribute("data-def"));
+    el.addEventListener("mouseenter", function () { showTip(el); });
+    el.addEventListener("mouseleave", hideTip);
+    el.addEventListener("focus", function () { showTip(el); });
+    el.addEventListener("blur", hideTip);
+    el.addEventListener("click", function (e) { e.stopPropagation(); showTip(el); });
+  });
+  document.addEventListener("click", hideTip);
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") hideTip(); });
+  window.addEventListener("scroll", hideTip, { passive: true });
 
-function showScore() {
-  const score = Object.values(correct).filter(Boolean).length;
-  document.getElementById('score-num').textContent = score + '/15';
-  let title, msg;
-  if (score >= 13) { title = '🍨 Sundae Perfection!'; msg = "Outstanding: you've mastered both the story and the key vocabulary that tells it."; }
-  else if (score >= 10) { title = '🍦 Two Scoops, Well Earned'; msg = 'Strong result. Revisit the Vocabulary tab if any questions tripped you up.'; }
-  else if (score >= 6) { title = '🍧 Getting There'; msg = "Good start: reread the Reading tab's highlighted phrases and try again."; }
-  else { title = '🧊 Still Melting'; msg = 'Head back to the Reading and Grammar tabs, then give it another go.'; }
-  document.getElementById('score-title').textContent = title;
-  document.getElementById('score-msg').textContent = msg;
-  document.getElementById('score-bar').classList.add('show');
-}
+  /* ── Quiz ── */
+  var blocks = Array.prototype.slice.call(document.querySelectorAll(".qblock"));
+  var TOTAL = blocks.length;
+  if (!TOTAL) return;
+  var answered = {}, correct = {};
+  var tiers = LESSON.tiers || [];
+  var progTxt = document.getElementById("quiz-progress");
+  var meter = document.getElementById("quiz-meter");
 
-function resetAll() {
-  answered = {}; correct = {};
-  document.querySelectorAll('.qblock').forEach(b => b.classList.remove('answered-correct', 'answered-wrong'));
-  document.querySelectorAll('.opt-btn').forEach(b => { b.disabled = false; b.classList.remove('correct', 'wrong', 'reveal-correct'); });
-  document.querySelectorAll('.feedback').forEach(f => { f.className = 'feedback'; f.innerHTML = ''; });
-  document.getElementById('score-bar').classList.remove('show');
-  switchTab('exercises', document.querySelector('.tabbtn:nth-child(3)'));
-}
+  function count(obj) { return Object.keys(obj).filter(function (k) { return obj[k]; }).length; }
+  function update() {
+    var a = Object.keys(answered).length, s = count(correct);
+    if (progTxt) progTxt.textContent = "Answered " + a + "/" + TOTAL + " · Score " + s;
+    if (meter) meter.style.width = (a / TOTAL * 100) + "%";
+    if (a === TOTAL) showScore(s);
+  }
+  function showScore(s) {
+    var pct = s / TOTAL, tier = tiers[tiers.length - 1] || { title: "", msg: "" };
+    for (var i = 0; i < tiers.length; i++) { if (pct >= tiers[i].min) { tier = tiers[i]; break; } }
+    document.getElementById("score-num").textContent = s + "/" + TOTAL;
+    document.getElementById("score-title").textContent = tier.title;
+    document.getElementById("score-msg").textContent = tier.msg;
+    var bar = document.getElementById("score-bar");
+    bar.classList.add("show");
+    bar.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+  blocks.forEach(function (block) {
+    var btns = block.querySelectorAll(".opt-btn");
+    btns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var q = block.id;
+        if (answered[q]) return;
+        var ok = btn.getAttribute("data-correct") === "true", right = "";
+        answered[q] = true; correct[q] = ok;
+        btns.forEach(function (b) {
+          b.disabled = true;
+          if (b.getAttribute("data-correct") === "true") { b.classList.add("reveal-correct"); right = b.getAttribute("data-letter"); }
+        });
+        btn.classList.remove("reveal-correct");
+        btn.classList.add(ok ? "correct" : "wrong");
+        block.classList.add(ok ? "answered-correct" : "answered-wrong");
+        var fb = block.querySelector(".feedback");
+        fb.innerHTML = "";
+        var icon = document.createElement("span"); icon.className = "fb-icon"; icon.textContent = ok ? "✓" : "✗";
+        fb.appendChild(icon);
+        fb.appendChild(document.createTextNode(btn.getAttribute("data-expl") + (ok ? "" : " The correct answer is " + right + ".")));
+        fb.className = "feedback show " + (ok ? "correct" : "wrong");
+        update();
+      });
+    });
+  });
+  function reset() {
+    answered = {}; correct = {};
+    blocks.forEach(function (b) { b.classList.remove("answered-correct", "answered-wrong"); });
+    document.querySelectorAll(".opt-btn").forEach(function (b) { b.disabled = false; b.classList.remove("correct", "wrong", "reveal-correct"); });
+    document.querySelectorAll(".feedback").forEach(function (f) { f.className = "feedback"; f.innerHTML = ""; });
+    document.getElementById("score-bar").classList.remove("show");
+    update();
+    var first = document.getElementById("panel-exercises");
+    if (first) first.scrollIntoView({ behavior: "smooth" });
+  }
+  document.querySelectorAll("[data-reset]").forEach(function (b) { b.addEventListener("click", reset); });
+  update();
+})();
+
 </script>
 </body>
 </html>
